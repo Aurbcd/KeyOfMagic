@@ -1,26 +1,26 @@
 fileFormatVersion: 2
-guid: 107d2ef72a8ce7f4bbcd615de068a379
+guid: 5141bf270bcc06849b94b2461dd369f4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: ' 1'
-    100004: Caravan_1
-    100006: Church_1
-    100008: Electric_pole
-    100010: Ground
-    100012: Hood
-    100014: House_1
-    100016: House_2
-    100018: House_3
-    100020: Road_sign1
-    100022: Rock_1
-    100024: Rock_2
-    100026: Rock_3
-    100028: Rock_4
-    100030: Sky001
-    100032: Tree_1
-    100034: Tree_2
+    100000: ' 1'
+    100002: Caravan_1
+    100004: Church_1
+    100006: Electric_pole
+    100008: Ground
+    100010: Hood
+    100012: House_1
+    100014: House_2
+    100016: House_3
+    100018: Road_sign1
+    100020: Rock_1
+    100022: Rock_2
+    100024: Rock_3
+    100026: Rock_4
+    100028: Sky001
+    100030: Tree_1
+    100032: Tree_2
+    100034: //RootNode
     100036: Tree_3
     100038: Tree_4
     100040: Water
@@ -32,25 +32,25 @@ ModelImporter:
     100052: Wheel_Front_Left
     100054: Wheel_Front_Right
     100056: Wooden_barrel
-    400000: //RootNode
-    400002: ' 1'
-    400004: Caravan_1
-    400006: Church_1
-    400008: Electric_pole
-    400010: Ground
-    400012: Hood
-    400014: House_1
-    400016: House_2
-    400018: House_3
-    400020: Road_sign1
-    400022: Rock_1
-    400024: Rock_2
-    400026: Rock_3
-    400028: Rock_4
-    400030: Sky001
-    400032: Tree_1
-    400034: Tree_2
-    400036: Tree_3
+    400000: ' 1'
+    400002: Caravan_1
+    400004: Church_1
+    400006: Electric_pole
+    400008: Ground
+    400010: Hood
+    400012: House_1
+    400014: House_2
+    400016: House_3
+    400018: Road_sign1
+    400020: Rock_1
+    400022: Rock_2
+    400024: Rock_3
+    400026: Rock_4
+    400028: Sky001
+    400030: Tree_1
+    400032: Tree_2
+    400034: Tree_3
+    400036: //RootNode
     400038: Tree_4
     400040: Water
     400042: Wc
@@ -61,68 +61,77 @@ ModelImporter:
     400052: Wheel_Front_Left
     400054: Wheel_Front_Right
     400056: Wooden_barrel
-    2300000: //RootNode
-    2300002: ' 1'
-    2300004: Church_1
-    2300006: Electric_pole
-    2300008: Ground
-    2300010: Hood
-    2300012: House_1
-    2300014: House_2
-    2300016: House_3
-    2300018: Road_sign1
-    2300020: Rock_1
-    2300022: Rock_2
-    2300024: Rock_3
-    2300026: Rock_4
-    2300028: Tree_1
-    2300030: Tree_2
-    2300032: Tree_3
-    2300034: Tree_4
-    2300036: Water
-    2300038: Wc
-    2300040: Wc_door
-    2300042: Well1
-    2300044: Wheel_Back_Left
-    2300046: Wheel_Back_Right
-    2300048: Wheel_Front_Left
-    2300050: Wheel_Front_Right
-    2300052: Wooden_barrel
-    3300000: //RootNode
-    3300002: ' 1'
-    3300004: Church_1
-    3300006: Electric_pole
-    3300008: Ground
-    3300010: Hood
-    3300012: House_1
-    3300014: House_2
-    3300016: House_3
-    3300018: Road_sign1
-    3300020: Rock_1
-    3300022: Rock_2
-    3300024: Rock_3
-    3300026: Rock_4
-    3300028: Tree_1
-    3300030: Tree_2
-    3300032: Tree_3
-    3300034: Tree_4
-    3300036: Water
-    3300038: Wc
-    3300040: Wc_door
-    3300042: Well1
-    3300044: Wheel_Back_Left
-    3300046: Wheel_Back_Right
-    3300048: Wheel_Front_Left
-    3300050: Wheel_Front_Right
-    3300052: Wooden_barrel
-    4300000: Tree_3
-    4300002: House_1
-    4300004: House_2
-    4300006: House_3
-    4300008: Church_1
-    4300010: Electric_pole
-    4300012: Tree_1
-    4300014: Tree_2
+    2100000: 'Material #25'
+    2100002: 'Material #1658'
+    2100004: 'Material #1636'
+    2100006: 'Material #1753'
+    2100008: 'Material #1478'
+    2100010: 'Material #1435'
+    2100012: 'Material #1467'
+    2100014: 05 - Default
+    2100016: 'Material #1422'
+    2100018: 07 - Default
+    2100020: 'Material #26'
+    2300000: ' 1'
+    2300002: Church_1
+    2300004: Electric_pole
+    2300006: Ground
+    2300008: Hood
+    2300010: House_1
+    2300012: House_2
+    2300014: House_3
+    2300016: Road_sign1
+    2300018: Rock_1
+    2300020: Rock_2
+    2300022: Rock_3
+    2300024: Rock_4
+    2300026: Tree_1
+    2300028: Tree_2
+    2300030: Tree_3
+    2300032: Tree_4
+    2300034: Water
+    2300036: Wc
+    2300038: Wc_door
+    2300040: Well1
+    2300042: Wheel_Back_Left
+    2300044: Wheel_Back_Right
+    2300046: Wheel_Front_Left
+    2300048: Wheel_Front_Right
+    2300050: Wooden_barrel
+    3300000: ' 1'
+    3300002: Church_1
+    3300004: Electric_pole
+    3300006: Ground
+    3300008: Hood
+    3300010: House_1
+    3300012: House_2
+    3300014: House_3
+    3300016: Road_sign1
+    3300018: Rock_1
+    3300020: Rock_2
+    3300022: Rock_3
+    3300024: Rock_4
+    3300026: Tree_1
+    3300028: Tree_2
+    3300030: Tree_3
+    3300032: Tree_4
+    3300034: Water
+    3300036: Wc
+    3300038: Wc_door
+    3300040: Well1
+    3300042: Wheel_Back_Left
+    3300044: Wheel_Back_Right
+    3300046: Wheel_Front_Left
+    3300048: Wheel_Front_Right
+    3300050: Wooden_barrel
+    4300000: House_1
+    4300002: House_2
+    4300004: House_3
+    4300006: Church_1
+    4300008: Electric_pole
+    4300010: Tree_1
+    4300012: Tree_2
+    4300014: Tree_3
     4300016: Tree_4
     4300018: Rock_1
     4300020: Rock_2
@@ -141,67 +150,12 @@ ModelImporter:
     4300046: Wc_door
     4300048: Ground
     2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 05 - Default
-    second: {fileID: 2100000, guid: d20348929fde2c745a3924b96e3bbc76, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 07 - Default
-    second: {fileID: 2100000, guid: 26433f520a94ca14fbf619a3ff3afae7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1422'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1435'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1467'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1478'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1636'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1658'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #1753'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #25'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #26'
-    second: {fileID: 2100000, guid: a3ea7442208fd3a4db440bd1baa7dbf7, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -255,7 +209,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
