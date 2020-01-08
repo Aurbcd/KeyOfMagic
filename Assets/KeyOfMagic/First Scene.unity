@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -357,6 +357,7 @@ MonoBehaviour:
   LookAtPlayer: 0
   RotateAroundPlayer: 1
   RotationsSpeed: 5
+  fieldOfView: 60
 --- !u!1 &1082422776
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,9 +532,13 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1983202720, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 1983202721, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
       propertyPath: m_Speed
-      value: 5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1983202721, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
       propertyPath: m_AngularSpeed
@@ -545,7 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1983202721, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
       propertyPath: m_Acceleration
-      value: 20
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1972791196520126493, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
