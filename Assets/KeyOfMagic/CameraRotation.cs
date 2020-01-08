@@ -27,22 +27,25 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (RotateAroundPlayer)
+
+
+
+            Vector3 newPos = PlayerTransform.position + _cameraOffset;
+
+            transform.position = Vector3.Lerp(transform.position, newPos, SmoothFactor);
+        if (Input.GetMouseButton(1))
         {
-            Quaternion camTurnAngle =
-                Quaternion.AngleAxis(Input.GetAxis("Mouse X") * RotationsSpeed, Vector3.up);
-            _cameraOffset = camTurnAngle * _cameraOffset;
+            if (RotateAroundPlayer)
+            {
+                Quaternion camTurnAngle =
+                    Quaternion.AngleAxis(Input.GetAxis("Mouse X") * RotationsSpeed, Vector3.up);
+                _cameraOffset = camTurnAngle * _cameraOffset;
 
+            }
+            if (LookAtPlayer || RotateAroundPlayer)
+            {
+                transform.LookAt(PlayerTransform);
+            }
         }
-
-        Vector3 newPos = PlayerTransform.position + _cameraOffset;
-
-        transform.position = Vector3.Lerp(transform.position, newPos, SmoothFactor);
-
-        if (LookAtPlayer || RotateAroundPlayer)
-        {
-            transform.LookAt(PlayerTransform);
-        }
-
     }
 }
