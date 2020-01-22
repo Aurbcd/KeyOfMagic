@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: ceac60a13a035e747b89c4627ffafa29
+guid: c52a1ad28de5ec447a225e11be0fe132
+timeCreated: 1504768178
+licenseType: Store
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Leaves
     100002: Leaves_1
@@ -15,9 +17,6 @@ ModelImporter:
     400006: Leaves_3
     400008: //RootNode
     400010: Tree_1
-    2100000: Green.10
-    2100002: Brown.2
-    2100004: Brown.3
     2300000: Leaves_1
     2300002: Leaves_2
     2300004: Leaves_3
@@ -30,12 +29,10 @@ ModelImporter:
     4300002: Leaves_2
     4300004: Leaves_3
     4300006: Tree_1
-  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -48,8 +45,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -64,7 +59,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -75,23 +69,16 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -106,6 +93,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
