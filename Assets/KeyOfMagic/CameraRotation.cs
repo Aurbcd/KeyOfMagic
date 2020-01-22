@@ -7,6 +7,7 @@ public class CameraRotation : MonoBehaviour
 
     public Transform PlayerTransform;
     private Vector3 _cameraOffset;
+    private Vector3 vectorRotation;
     [Range(0.01f, 1.0f)]
     public float SmoothFactor = 0.5f;
     public bool LookAtPlayer = false;
@@ -23,7 +24,7 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-
+        vectorRotation = gameObject.GetComponent<Transform>().position - PlayerTransform.position;
         Vector3 newPos = PlayerTransform.position + _cameraOffset;
 
         //Debug.Log(Vector3.Angle(_cameraOffset, new Vector3(1, 0, 0)));
@@ -41,7 +42,7 @@ public class CameraRotation : MonoBehaviour
                             Quaternion.AngleAxis(Input.GetAxis("Mouse X") * RotationsSpeed, Vector3.up);
 
                         Quaternion camTurnAngleX =
-                            Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * RotationsSpeed, Vector3.left);
+                            Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * RotationsSpeed, vectorRotation);
                         _cameraOffset = camTurnAngleY * camTurnAngleX * _cameraOffset;
 
                     }

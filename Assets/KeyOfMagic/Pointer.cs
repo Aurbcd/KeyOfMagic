@@ -8,28 +8,30 @@ public class Pointer : MonoBehaviour
 
     Vector3 newPosition = Vector3.zero;
     public int speed = 5;
-    public GameObject Point;
-    public float x;
+    public GameObject point;
+    public float opacity;
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(0, 0, 50 * Time.deltaTime);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            x = 1.0f;
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hit))
+            if(Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == 9)
             {
                 newPosition = hit.point;
                 newPosition.y = newPosition.y + 0.1f; 
                 transform.position = newPosition;
+                opacity = 1.0f;
             }
         }
-        Debug.Log(x);
-        x = x - 0.25f * Time.deltaTime;
-        this.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, x);
+        if (opacity >= 0)
+        {
+            opacity = opacity - 0.25f * Time.deltaTime;
+        }
+        this.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, opacity);
     }
 }
