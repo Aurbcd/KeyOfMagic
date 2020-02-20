@@ -6,17 +6,16 @@ using UnityEngine.AI;
 public class ClickToMove : MonoBehaviour
 {
     private Animator mAnimator;
-    
     private NavMeshAgent mNavMeshAgent;
     private bool mRunning = false;
     private bool isGrounded = true;
-    public float jumpForce = 5f;
-    private Vector3 jump;
-    private Vector3 velocity;
+    public bool selectionne = false;
+    //private float jumpForce = 5f;
+    //private Vector3 jump;
+    //private Vector3 velocity;
     private Vector3 destination;
 
     public static Vector3 playerPosition;
-    public bool combatMode = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class ClickToMove : MonoBehaviour
 
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        //jump = new Vector3(0.0f, 2.0f, 0.0f);
 
     }
 
@@ -42,8 +41,14 @@ public class ClickToMove : MonoBehaviour
             {
                 if (hit.collider.tag == "Sol")
                 {
+                    selectionne = false;
+                    Debug.Log("Sol Touché");
                     destination = hit.point;
                     mNavMeshAgent.destination = destination;
+                }
+                if (hit.collider.tag == "Ennemy")
+                {
+                    selectionne = true;
                 }
             }
         }

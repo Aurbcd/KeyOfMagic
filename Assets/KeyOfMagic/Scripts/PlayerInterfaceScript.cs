@@ -20,6 +20,5 @@ public class PlayerInterfaceScript : MonoBehaviour
     {
         scale.z = PlayerHealth.playerHealthPoints / 100;
         text.text = "PV : " + PlayerHealth.playerHealthPoints.ToString();
-        redHealth.GetComponent<RectTransform>().localScale = scale;
     }
 }

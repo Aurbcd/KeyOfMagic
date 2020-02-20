@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterMovement : MonoBehaviour
+public class Monster : MonoBehaviour
 {
     public int healthPoints;
     public string monsterName;
+    public bool estSelectionne = false;
 
     private NavMeshAgent mNavMeshAgent;
-    private bool mRunning = false;
-    private bool isGrounded = true;
 
     private float distanceToPlayer;
 
@@ -37,6 +36,25 @@ public class MonsterMovement : MonoBehaviour
         if (distanceToPlayer < 15)
         {
             StopMovement();
+        }
+        
+
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+
+        if (Input.GetMouseButton(0))
+        {
+            if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
+            {
+                estSelectionne = true;
+            }
+        }
+
+        if (estSelectionne)
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
 
     }
