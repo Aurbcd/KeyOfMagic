@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterScript : MonoBehaviour
+public class MonsterMovement : MonoBehaviour
 {
     public int healthPoints;
     public string monsterName;
@@ -29,12 +29,12 @@ public class MonsterScript : MonoBehaviour
             StopMovement();
         }
 
-        if (distanceToPlayer < 10)
+        if (distanceToPlayer < 20)
         {
             MoveInDirection(ClickToMove.playerPosition);
         }
         
-        if (distanceToPlayer < 5)
+        if (distanceToPlayer < 15)
         {
             StopMovement();
         }

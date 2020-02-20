@@ -38,10 +38,13 @@ public class ClickToMove : MonoBehaviour
 
         if(Input.GetMouseButton(0))
         {
-            if(Physics.Raycast(ray, out hit, 100) )
+            if(Physics.Raycast(ray, out hit, 100))
             {
-                destination = hit.point;
-                mNavMeshAgent.destination = destination;
+                if (hit.collider.tag == "Sol")
+                {
+                    destination = hit.point;
+                    mNavMeshAgent.destination = destination;
+                }
             }
         }
 
