@@ -9,6 +9,7 @@ public class MonsterStatText : MonoBehaviour
     public float PVMax = 200;
 
     public GameObject TextName;
+    public GameObject SpriteSelection;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,17 @@ public class MonsterStatText : MonoBehaviour
             TextName.transform.LookAt(Camera.main.transform.position);
             TextName.transform.Rotate(0, 180, 0);
             TextName.GetComponent<TextMesh>().text = "" + monsterName + " | " + PV;  //EN ATTENDANT UNE BARRE DE VIE
+        }
+
+        if (gameObject.GetComponent<MonsterMouvSelection>().estSelectionne)
+        {
+            SpriteSelection.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.75f);
+            SpriteSelection.transform.LookAt(Camera.main.transform.position);
+            SpriteSelection.transform.Rotate(0, 180, 0);
+        }
+        if(gameObject.GetComponent<MonsterMouvSelection>().estSelectionne == false)
+        {
+            SpriteSelection.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0f);
         }
     }
 }

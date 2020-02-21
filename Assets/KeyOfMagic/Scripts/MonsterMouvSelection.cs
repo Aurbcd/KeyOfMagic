@@ -36,8 +36,6 @@ public class MonsterMouvSelection : MonoBehaviour
             StopMovement();
         }
 
-        Debug.Log(gameObject.GetComponent<MonsterStatText>().PV);
-
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
