@@ -42,7 +42,6 @@ public class ClickToMove : MonoBehaviour
                 if (hit.collider.tag == "Sol")
                 {
                     selectionne = false;
-                    Debug.Log("Sol Touché");
                     destination = hit.point;
                     mNavMeshAgent.destination = destination;
                 }

@@ -287,6 +287,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &336402524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7123758577512874200, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+    type: 3}
+  m_PrefabInstance: {fileID: 6572569497771397889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &353734401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2034,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 723756069566046939, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 111ccf6c74d24114f9023fcd6c68cf79, type: 2}
     - target: {fileID: 1664014399735710677, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
       propertyPath: PV
@@ -2043,6 +2054,11 @@ PrefabInstance:
       propertyPath: redHealth
       value: 
       objectReference: {fileID: 1186099880}
+    - target: {fileID: 1664014399735710677, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: SpriteSelection
+      value: 
+      objectReference: {fileID: 336402524}
     - target: {fileID: 5547307885072421177, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
       propertyPath: m_Name
