@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Monster : MonoBehaviour
+public class MonsterMouvSelection : MonoBehaviour
 {
-    public int healthPoints;
-    public string monsterName;
     public bool estSelectionne = false;
 
     private NavMeshAgent mNavMeshAgent;
@@ -37,8 +35,8 @@ public class Monster : MonoBehaviour
         {
             StopMovement();
         }
-        
 
+        Debug.Log(gameObject.GetComponent<MonsterStatText>().PV);
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -54,7 +52,19 @@ public class Monster : MonoBehaviour
 
         if (estSelectionne)
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
+            gameObject.GetComponent<Renderer>().material.color = Color.red; //Affichage Sélectionné
+            if (distanceToPlayer < 20)
+            {
+                if (Input.GetKeyDown("g"))  //ATTENTION : EN ATTENDANT LES SORTS
+                {
+                    gameObject.GetComponent<MonsterStatText>().PV -= 10;
+                }
+            }
+            
+            if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
+            {
+                Destroy(gameObject);  
+            }
         }
 
     }

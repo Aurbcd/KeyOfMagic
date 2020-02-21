@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2126660696}
-  redHealth: {fileID: 0}
+  redHealth: {fileID: 1186099880}
 --- !u!114 &1747044124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,10 +2028,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1664014399735710677, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: PV
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664014399735710677, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: monsterName
+      value: Le Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664014399735710677, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: redHealth
+      value: 
+      objectReference: {fileID: 1186099880}
+    - target: {fileID: 5547307885072421177, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
+        type: 3}
+      propertyPath: m_Name
+      value: Nom
+      objectReference: {fileID: 0}
     - target: {fileID: 6572569499185163300, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
       propertyPath: m_Name
-      value: Ennemi
+      value: Cube
       objectReference: {fileID: 0}
     - target: {fileID: 6572569499185163300, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
@@ -2086,7 +2106,7 @@ PrefabInstance:
     - target: {fileID: 6572569499185163306, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
       propertyPath: monsterName
-      value: Cube
+      value: Le Cube
       objectReference: {fileID: 0}
     - target: {fileID: 6572569499185163307, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
@@ -2096,7 +2116,7 @@ PrefabInstance:
     - target: {fileID: 6572569499185163307, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.493
       objectReference: {fileID: 0}
     - target: {fileID: 6572569499185163307, guid: 2426c3bf5e92c7c4fb1f2539b7b84963,
         type: 3}
@@ -2158,7 +2178,8 @@ PrefabInstance:
       propertyPath: m_BaseOffset
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1596208694717336882, guid: 2426c3bf5e92c7c4fb1f2539b7b84963, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2426c3bf5e92c7c4fb1f2539b7b84963, type: 3}
 --- !u!1001 &6694365668034116769
 PrefabInstance:
