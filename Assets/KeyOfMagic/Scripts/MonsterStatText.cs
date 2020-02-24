@@ -12,7 +12,7 @@ public class MonsterStatText : MonoBehaviour
     public GameObject SpriteSelection;
 
     public HealthBar BarreDeVie;
-    public GameObject Barre;
+    private CanvasGroup Barre;
 
 
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class MonsterStatText : MonoBehaviour
     {
         BarreDeVie.SetMaxHealth(PVMax);
         BarreDeVie.SetHealth(PV);
+        Barre = BarreDeVie.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -40,13 +41,16 @@ public class MonsterStatText : MonoBehaviour
             SpriteSelection.transform.Rotate(0, 180, 0);
 
             //Barre.GetComponent<CanvasRenderer>().SetAlpha(0.5f);                                                                      // Aligner Barre
-            Barre.transform.LookAt(Camera.main.transform.position);
-            Barre.transform.Rotate(0, 180, 0);
+
+            Barre.alpha = 0.5f;
+/*             Barre.transform.LookAt(Camera.main.transform.position);
+            Barre.transform.Rotate(0, 180, 0); */
         }
         if(gameObject.GetComponent<MonsterMouvSelection>().estSelectionne == false)
         {
             SpriteSelection.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0f);
             //Barre.GetComponent<CanvasRenderer>().SetAlpha(0f);
+            Barre.alpha = 0f;
         }
     }
 }
