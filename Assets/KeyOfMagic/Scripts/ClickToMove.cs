@@ -8,7 +8,7 @@ public class ClickToMove : MonoBehaviour
     private Animator mAnimator;
     private NavMeshAgent mNavMeshAgent;
     private bool mRunning = false;
-    private bool isGrounded = true;
+//    private bool isGrounded = true;
     public bool selectionne = false;
     //private float jumpForce = 5f;
     //private Vector3 jump;
@@ -83,7 +83,7 @@ public class ClickToMove : MonoBehaviour
 
     void OnCollisionStay()
     {
-        isGrounded = true;
+        //isGrounded = true;
         mNavMeshAgent.enabled = true;
     }
 }
