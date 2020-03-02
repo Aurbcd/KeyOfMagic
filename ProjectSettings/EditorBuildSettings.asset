@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/KeyOfMagic/First Scene.unity
-    guid: 4ea6870a437130a4b8486f92cbd51baf
+  m_Scenes: []
   m_configObjects: {}

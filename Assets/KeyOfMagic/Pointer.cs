@@ -20,15 +20,12 @@ public class Pointer : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hit))
+            if(Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == 9)
             {
-                if (hit.collider.tag == "Sol")
-                {
-                    newPosition = hit.point;
-                    newPosition.y = newPosition.y + 0.1f;
-                    transform.position = newPosition;
-                    opacity = 1.0f;
-                }
+                newPosition = hit.point;
+                newPosition.y = newPosition.y + 0.1f; 
+                transform.position = newPosition;
+                opacity = 1.0f;
             }
         }
         if (opacity >= 0)
