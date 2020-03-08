@@ -36,7 +36,6 @@ public class MonsterStatText : MonoBehaviour
             SpriteSelection.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.75f);
             SpriteSelection.transform.LookAt(Camera.main.transform.position);
             SpriteSelection.transform.Rotate(0, 180, 0);
-
             CanvasGBarre.alpha = 0.75f;
         }
         if(gameObject.GetComponent<MonsterMouvSelection>().estSelectionne == false)
