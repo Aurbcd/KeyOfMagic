@@ -14,7 +14,7 @@ public class ClickToMove : MonoBehaviour
     //private Vector3 jump;
     //private Vector3 velocity;
     private Vector3 destination;
-
+    public GameObject pausePanel;
     public static Vector3 playerPosition;
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class ClickToMove : MonoBehaviour
 
         RaycastHit hit;
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && !pausePanel.activeSelf)
         {
             if(Physics.Raycast(ray, out hit, 100))
             {
