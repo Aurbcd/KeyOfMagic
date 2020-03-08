@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-    public static int playerHealthPoints;
-    // Start is called before the first frame update
+    public int playerHealthPoints;
+    public int playerShieldPoints;
+    public string ShieldElement;
 
     void Start() 
     {
         playerHealthPoints = 100;
+        playerShieldPoints = 0;
+        ShieldElement = "";
     }
 
     // Update is called once per frame

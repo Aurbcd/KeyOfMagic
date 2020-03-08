@@ -9,7 +9,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
     private NavMeshAgent mNavMeshAgent;
 
-    private float distanceToPlayer;
+    public float distanceToPlayer;
 
     void Start()
     {
@@ -45,25 +45,22 @@ public class MonsterMouvSelection : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
             {
                 estSelectionne = true;
+                string ID = GetInstanceID().ToString();
+                System.IO.File.WriteAllText("instanceSelectionne.txt", ID);
+            }
+            if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject != gameObject)
+            {
+                estSelectionne = false;
+                System.IO.File.WriteAllText("instanceSelectionne.txt", "0");
             }
         }
 
-        if (estSelectionne)
+   
+        if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
-            gameObject.GetComponent<Renderer>().material.color = Color.red; //Affichage Sélectionné
-            if (distanceToPlayer < 20)
-            {
-                if (Input.GetKeyDown("g"))  //ATTENTION : EN ATTENDANT LES SORTS
-                {
-                    gameObject.GetComponent<MonsterStatText>().PV -= 10;
-                }
-            }
-            
-            if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
-            {
-                Destroy(gameObject);  
-            }
+            Destroy(gameObject);  
         }
+      
 
     }
 
