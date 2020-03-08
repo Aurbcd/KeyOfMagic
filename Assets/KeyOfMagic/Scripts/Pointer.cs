@@ -23,7 +23,7 @@ public class Pointer : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.tag == "Sol" && !pausePanel.activeSelf)
+                if (hit.collider.tag == "Sol" && !pausePanel.activeSelf )
                 {
                     newPosition = hit.point;
                     newPosition.y = newPosition.y + 0.1f;

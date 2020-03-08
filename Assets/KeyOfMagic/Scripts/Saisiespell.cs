@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class Saisiespell : MonoBehaviour
 {
@@ -10,9 +11,26 @@ public class Saisiespell : MonoBehaviour
     List<string> list = new List<string> {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
     public int tempsSansAppuyé = 0;
+    public GameObject spellsPanel;
+    public GameObject spellsText;
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        StreamReader sr = new StreamReader("spells.txt");
+
+        string line = sr.ReadLine();
+        string spells = "";
+        while (line != null)
+        {
+            spells += line + "\n";
+            line = sr.ReadLine();
+        }
+        sr.Close();
+        
+        spellsText.GetComponent<UnityEngine.UI.Text>().text = spells;
+
     }
 
     public static Object FindObjectFromInstanceID(int iid)
@@ -82,6 +100,15 @@ public class Saisiespell : MonoBehaviour
             spell = "";
             Debug.Log("Saisie de sort reset");
         }
+
+        if (Input.GetKeyDown("tab")) {
+            spellsPanel.SetActive(true);
+        }
+        else if (Input.GetKeyUp("tab"))
+        {
+            spellsPanel.SetActive(false);
+        }
+
     }
 
     public static bool Estunsort(string spell)
