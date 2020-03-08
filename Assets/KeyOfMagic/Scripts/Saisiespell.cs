@@ -37,10 +37,7 @@ public class Saisiespell : MonoBehaviour
                 Debug.Log(spell);
                 System.Threading.Thread.Sleep(150);
                 if (Estunsort(spell))
-                {
-                    StreamReader sr = new StreamReader("instanceSelectionne.txt"); //recupere le monstre selectionné
-                    int ID= int.Parse(sr.ReadLine());
-                    
+                {                  
                     if (spell == "amoi") // SORT
                     {
                         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
