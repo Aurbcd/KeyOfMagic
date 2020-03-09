@@ -1,4 +1,2 @@
-sort
 amoi
-
 AMOI

@@ -9,15 +9,18 @@ public class Saisiespell : MonoBehaviour
 
     public string spell;
     List<string> list = new List<string> {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-"q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+"q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
     public GameObject spellsText;
+    public static extern short EtatDeCaps(int keyCode);
+    bool CapsOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CapsOn = (((ushort)EtatDeCaps(0x14)) & 0xffff) != 0;
+
         StreamReader sr = new StreamReader("spells.txt");
 
         string line = sr.ReadLine();
@@ -29,33 +32,41 @@ public class Saisiespell : MonoBehaviour
         }
         sr.Close();
         
-        spellsText.GetComponent<UnityEngine.UI.Text>().text = spells;
-
+        spellsText.GetComponent<Text>().text = spells;
     }
 
-    public static Object FindObjectFromInstanceID(int iid)
-    {
-        return (Object)typeof(UnityEngine.Object)
-                .GetMethod("FindObjectFromInstanceID", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)
-                .Invoke(null, new object[] { iid });
 
-    }
     // Update is called once per frame
     void Update()
     {
-        foreach (string vKey in list)
+
+        if (Input.GetKeyDown(KeyCode.CapsLock))
         {
-            if (spell != "")
+            Debug.Log(spellsText.GetComponent<Text>().text);
+            CapsOn = !CapsOn;
+        }
+        if (GetComponent<ClickToMove>().selectionne)
+        {
+            foreach (string vKey in list)
             {
+                //if (spell != "")
+                //{
                 //GUI.TextField(new Rect(10, 10, 200, 20), spell, 25);
-            }
-            if (Input.GetKey(vKey) & (list.Contains(vKey.ToString())))
-            {
-                spell += vKey;
-                Debug.Log(spell);
-                System.Threading.Thread.Sleep(150);
+                //}
+                if (Input.GetKey(vKey) & list.Contains(vKey.ToString()) & !Input.GetKey(KeyCode.LeftShift) & !CapsOn)
+                {
+                    spell += vKey;
+                    Debug.Log(spell);
+                    System.Threading.Thread.Sleep(150);
+                }
+                if (Input.GetKey(vKey) & list.Contains(vKey.ToString()) & (Input.GetKey(KeyCode.LeftShift) || CapsOn))
+                {
+                    spell += vKey.ToUpper();
+                    Debug.Log(spell);
+                    System.Threading.Thread.Sleep(150);
+                }
                 if (Estunsort(spell))
-                {                  
+                {
                     if (spell == "amoi") // SORT
                     {
                         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
@@ -68,6 +79,7 @@ public class Saisiespell : MonoBehaviour
                                     //METTRE LES EFFETS DU SORT
                                     monstre.GetComponent<MonsterStatText>().PV -= 10;
                                     //METTRE LES EFFETS DU SORT
+                                    spell = "";
                                 }
                             }
                         }
@@ -76,39 +88,37 @@ public class Saisiespell : MonoBehaviour
                     if (spell == "AMOI") // SORT
                     {
                         GetComponent<PlayerStats>().ShieldElement = "Eau";
-                        GetComponent<PlayerStats>().playerShieldPoints += 100; 
+                        GetComponent<PlayerStats>().playerShieldPoints += 100;
+                        spell = "";
                     }
-
-                    spell = "";
-                    Debug.Log("c'est un spell connu");
                 }
+            }
+
+            if (!Input.anyKey)
+            {
+                tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
+            }
+            else
+            {
+                tempsSansAppuyé = 0;
+            }
+
+            if (tempsSansAppuyé == 120 && spell != "") //Reset sort au bout de 3 secondes
+            {
+                tempsSansAppuyé = 0;
+                spell = "";
+                Debug.Log("Saisie de sort reset");
             }
         }
 
-        if (!Input.anyKey)
+        if (Input.GetKeyDown("tab"))
         {
-            tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
-        }
-        else
-        {
-            tempsSansAppuyé = 0;
-        }
-
-        if (tempsSansAppuyé == 120 && spell!="") //Reset sort au bout de 3 secondes
-        {
-            tempsSansAppuyé = 0;
-            spell = "";
-            Debug.Log("Saisie de sort reset");
-        }
-
-        if (Input.GetKeyDown("tab")) {
             spellsPanel.SetActive(true);
         }
         else if (Input.GetKeyUp("tab"))
         {
             spellsPanel.SetActive(false);
         }
-
     }
 
     public static bool Estunsort(string spell)
