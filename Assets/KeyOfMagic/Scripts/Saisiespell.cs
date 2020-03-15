@@ -42,7 +42,6 @@ public class Saisiespell : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.CapsLock))
         {
-            Debug.Log(spellsText.GetComponent<Text>().text);
             CapsOn = !CapsOn;
         }
         if (GetComponent<ClickToMove>().selectionne)
@@ -72,7 +71,7 @@ public class Saisiespell : MonoBehaviour
                         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
                         foreach (GameObject monstre in ListeMonstre)
                         {
-                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer < 20)
+                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
                             {
                                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                                 {
@@ -87,8 +86,10 @@ public class Saisiespell : MonoBehaviour
 
                     if (spell == "AMOI") // SORT
                     {
+                        //METTRE LES EFFETS DU SORT
                         GetComponent<PlayerStats>().ShieldElement = "Eau";
                         GetComponent<PlayerStats>().playerShieldPoints += 100;
+                        //METTRE LES EFFETS DU SORT
                         spell = "";
                     }
                 }
