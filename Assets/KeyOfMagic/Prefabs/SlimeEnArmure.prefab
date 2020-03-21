@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2090211978388389755}
   - component: {fileID: 2123929997907907105}
   - component: {fileID: 2307101205925351333}
+  - component: {fileID: 5940740640536000500}
   m_Layer: 5
   m_Name: Barre
   m_TagString: Untagged
@@ -113,6 +114,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &5940740640536000500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3531423299666826897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f297c43fc6b9f478c15653d3a656de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3809386905918579871
 GameObject:
   m_ObjectHideFlags: 0
