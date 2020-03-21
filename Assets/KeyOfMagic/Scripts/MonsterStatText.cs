@@ -33,7 +33,7 @@ public class MonsterStatText : MonoBehaviour
 
         if (gameObject.GetComponent<MonsterMouvSelection>().estSelectionne)
         {
-            CanvasGBarre.alpha = 0.75f;
+            CanvasGBarre.alpha = 1f;
         }
         if(gameObject.GetComponent<MonsterMouvSelection>().estSelectionne == false)
         {

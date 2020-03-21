@@ -31,8 +31,15 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
+        if(distanceToPlayer < 22) 
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
+        }
+
+
         if (distanceToPlayer < 20)
         {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
             mAnimator.SetBool("Attacking", false);
             mAnimator.SetBool("Moving", true);
