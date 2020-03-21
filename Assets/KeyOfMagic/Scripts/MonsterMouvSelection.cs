@@ -65,7 +65,7 @@ public class MonsterMouvSelection : MonoBehaviour
         if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
             mAnimator.SetBool("IsDead", true);
-            Destroy(transform.gameObject, 5);
+            Destroy(transform.gameObject, 2);
         }
       
 

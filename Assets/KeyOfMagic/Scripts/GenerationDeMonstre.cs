@@ -10,21 +10,12 @@ public class GenerationDeMonstre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instantiate(enemy, spawn.position, Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            if(player.GetComponent<PlayerStats>().playerHealthPoints <=0)
-            {
-                return;
-            }
-            Debug.Log("Oui");
-            Instantiate(enemy, spawn.position, Quaternion.identity);
-        }        
     }
 }

@@ -46,6 +46,7 @@ public class Saisiespell : MonoBehaviour
         }
         if (GetComponent<ClickToMove>().selectionne)
         {
+
             foreach (string vKey in list)
             {
                 //if (spell != "")
@@ -68,6 +69,7 @@ public class Saisiespell : MonoBehaviour
                 {
                     if (spell == "amoi") // SORT
                     {
+                        Debug.Log("oui");
                         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
                         foreach (GameObject monstre in ListeMonstre)
                         {
@@ -105,7 +107,7 @@ public class Saisiespell : MonoBehaviour
                 tempsSansAppuyé = 0;
             }
 
-            if (tempsSansAppuyé == 120 && spell != "") //Reset sort au bout de 3 secondes
+            if (tempsSansAppuyé >= 120 && spell != "") //Reset sort au bout de 3 secondes
             {
                 tempsSansAppuyé = 0;
                 spell = "";
