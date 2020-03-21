@@ -88,7 +88,8 @@ public class Saisiespell : MonoBehaviour
                     {
                         //METTRE LES EFFETS DU SORT
                         GetComponent<PlayerStats>().shieldElement = "Eau";
-                        GetComponent<PlayerStats>().playerShieldPoints += 100;
+                        GetComponent<PlayerStats>().playerShieldPoints = 100;
+                        GetComponent<PlayerStats>().playerMaxShieldPoints = 100;
                         //METTRE LES EFFETS DU SORT
                         spell = "";
                     }

@@ -20,7 +20,6 @@ public class MonsterMouvSelection : MonoBehaviour
     void Update()
     {
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
-        Debug.Log(distanceToPlayer);
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
             StopMovement();

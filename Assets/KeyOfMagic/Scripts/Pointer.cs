@@ -36,6 +36,6 @@ public class Pointer : MonoBehaviour
         {
             opacity = opacity - 0.25f * Time.deltaTime;
         }
-        GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, opacity);
+        this.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, opacity);
     }
 }
