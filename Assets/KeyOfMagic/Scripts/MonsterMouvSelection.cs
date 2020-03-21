@@ -17,11 +17,13 @@ public class MonsterMouvSelection : MonoBehaviour
     {
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         mAnimator = GetComponent<Animator>();
+        mAnimator.updateMode = AnimatorUpdateMode.Normal;
     }
 
     // Update is called once per frame
     void Update()
     {
+        mAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
@@ -62,7 +64,8 @@ public class MonsterMouvSelection : MonoBehaviour
    
         if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
-            Destroy(gameObject);  
+            mAnimator.SetBool("IsDead", true);
+            Destroy(transform.gameObject, 5);
         }
       
 
