@@ -87,7 +87,7 @@ public class Saisiespell : MonoBehaviour
                     if (spell == "AMOI") // SORT
                     {
                         //METTRE LES EFFETS DU SORT
-                        GetComponent<PlayerStats>().ShieldElement = "Eau";
+                        GetComponent<PlayerStats>().shieldElement = "Eau";
                         GetComponent<PlayerStats>().playerShieldPoints += 100;
                         //METTRE LES EFFETS DU SORT
                         spell = "";
