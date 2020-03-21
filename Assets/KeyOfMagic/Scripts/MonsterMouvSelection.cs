@@ -20,7 +20,7 @@ public class MonsterMouvSelection : MonoBehaviour
     void Update()
     {
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
-
+        Debug.Log(distanceToPlayer);
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
             StopMovement();
@@ -45,13 +45,10 @@ public class MonsterMouvSelection : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
             {
                 estSelectionne = true;
-                string ID = GetInstanceID().ToString();
-                System.IO.File.WriteAllText("instanceSelectionne.txt", ID);
             }
-            if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject != gameObject)
+            else
             {
                 estSelectionne = false;
-                System.IO.File.WriteAllText("instanceSelectionne.txt", "0");
             }
         }
 

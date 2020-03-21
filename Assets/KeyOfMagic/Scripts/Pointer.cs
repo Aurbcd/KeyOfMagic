@@ -10,6 +10,7 @@ public class Pointer : MonoBehaviour
     public int speed = 5;
     public GameObject point;
     public float opacity;
+    public GameObject pausePanel;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +23,7 @@ public class Pointer : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.tag == "Sol")
+                if (hit.collider.tag == "Sol" && !pausePanel.activeSelf )
                 {
                     newPosition = hit.point;
                     newPosition.y = newPosition.y + 0.1f;
@@ -35,6 +36,6 @@ public class Pointer : MonoBehaviour
         {
             opacity = opacity - 0.25f * Time.deltaTime;
         }
-        this.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, opacity);
+        GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, opacity);
     }
 }
