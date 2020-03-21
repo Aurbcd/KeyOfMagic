@@ -125,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62560135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6c894b956c60b14dac0a7b098f5bb99, type: 3}
   m_Name: 
@@ -153,6 +153,23 @@ MonoBehaviour:
   playerShieldPoints: 0
   playerMaxShieldPoints: 0
   shieldElement: 
+--- !u!114 &62560143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62560135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bb7d6fad8164c4f9c529b4489f1bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 2144146042}
+  spell: 
+  "tempsSansAppuy\xE9": 0
+  spellsPanel: {fileID: 0}
+  spellsText: {fileID: 0}
 --- !u!1 &136784262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1331,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnSlimeRouge
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1421,7 +1438,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnSlimeEnArmure
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2534,6 +2551,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054952202}
   m_CullTransparentMesh: 0
+--- !u!114 &2144146042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972791197830044448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1972791197830044448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2647,6 +2676,86 @@ PrefabInstance:
     - target: {fileID: 1972791196520416317, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165497794966729564, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870040421691587738, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870040421691587738, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870040421691587738, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543883905412311881, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_CustomCaretColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_CaretColor.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
