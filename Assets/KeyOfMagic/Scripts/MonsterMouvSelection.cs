@@ -9,31 +9,38 @@ public class MonsterMouvSelection : MonoBehaviour
 
     private NavMeshAgent mNavMeshAgent;
 
+    private Animator mAnimator;
+
     public float distanceToPlayer;
 
     void Start()
     {
         mNavMeshAgent = GetComponent<NavMeshAgent>();
+        mAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
-        Debug.Log(distanceToPlayer);
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
             StopMovement();
+            mAnimator.SetBool("Moving", false);
         }
 
         if (distanceToPlayer < 20)
         {
             MoveInDirection(ClickToMove.playerPosition);
+            mAnimator.SetBool("Attacking", false);
+            mAnimator.SetBool("Moving", true);
         }
         
         if (distanceToPlayer < 15)
         {
             StopMovement();
+            mAnimator.SetBool("Moving", false);
+            mAnimator.SetBool("Attacking", true);
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
