@@ -60,7 +60,7 @@ public class Saisiespell : MonoBehaviour
 
                     if (spell == "AMOI") // SORT
                     {
-                        GetComponent<PlayerStats>().ShieldElement = "Eau";
+                        GetComponent<PlayerStats>().shieldElement = "Eau";
                         GetComponent<PlayerStats>().playerShieldPoints += 100; 
                     }
 

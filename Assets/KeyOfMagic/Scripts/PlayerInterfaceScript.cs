@@ -11,14 +11,14 @@ public class PlayerInterfaceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text.text = "PV : " + PlayerHealth.playerHealthPoints.ToString();
-        scale = new Vector3(1, 1, 1);
+/*         text.text = "PV : " + PlayerHealth.playerHealthPoints.ToString();
+        scale = new Vector3(1, 1, 1); */
     }
 
     // Update is called once per frame
     void Update()
     {
-        scale.z = PlayerHealth.playerHealthPoints / 100;
-        text.text = "PV : " + PlayerHealth.playerHealthPoints.ToString();
+/*         scale.z = PlayerHealth.playerHealthPoints / 100;
+        text.text = "PV : " + PlayerHealth.playerHealthPoints.ToString(); */
     }
 }

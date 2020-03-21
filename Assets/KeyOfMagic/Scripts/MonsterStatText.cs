@@ -29,7 +29,6 @@ public class MonsterStatText : MonoBehaviour
         Text.transform.Rotate(0, 180, 0);
         Text.text = "" + monsterName;
         Barre.SetHealth(PV);
-        Barre.fill.color =  Barre.gradient.Evaluate(Barre.slider.normalizedValue);
 
 
         if (gameObject.GetComponent<MonsterMouvSelection>().estSelectionne)
