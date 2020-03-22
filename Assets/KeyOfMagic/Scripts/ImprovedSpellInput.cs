@@ -82,8 +82,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 if (string.Compare(spell, "AMOI") == 0) // SORT
                 {
                     //METTRE LES EFFETS DU SORT
-                    GetComponent<PlayerStats>().shieldElement = "Eau";
-                    GetComponent<PlayerStats>().playerShieldPoints = 100;
+                    PlayerStats.shieldElement = "Eau";
+                    PlayerStats.playerShieldPoints = 100;
                     GetComponent<PlayerStats>().playerMaxShieldPoints = 100;
                     //METTRE LES EFFETS DU SORT
                     spell = "";
