@@ -13,43 +13,30 @@ public class ImprovedSpellInput : MonoBehaviour
     public GameObject spellsPanel;
     public Text spellsList;
     public Image shieldSpriteImage;
+    private SpellDatabase spellBook = new SpellDatabase();
+    List<string> spellListStorage = new List<string> { };
+    private string spellList = "Known spells :\n";
     bool isCapsLockOn;
     [DllImport("user32.dll")]
     public static extern short GetKeyState(int keyCode);
     // Start is called before the first frame update
     void Start()
     {
-        string spellList = "Spell List :\n";
-        foreach (SpellEntry spellEntry in XmlManager.ins.SpellDatabase.SpellBook)
-        {
-            if (spellEntry.element.Equals("Eau"))
-            {
-                spellList += "<color=#1c21ee>" + spellEntry.spellName + "</color>\n";
-            }
-            if (spellEntry.element.Equals("Feu"))
-            {
-                spellList += "<color=#f34012>" + spellEntry.spellName + "</color>\n";
-            }
-            if (spellEntry.element.Equals("Air"))
-            {
-                spellList += "<color=#4b0458>" + spellEntry.spellName + "</color>\n";
-            }
-            if (spellEntry.element.Equals("Terre"))
-            {
-                spellList += "<color=#4e342e>" + spellEntry.spellName + "</color>\n";
-            }
-            if (spellEntry.element.Equals("Electricite"))
-            {
-                spellList += "<color=#ffea00>" + spellEntry.spellName + "</color>\n";
-            }
+        //Initialisation du spellbook
 
+        foreach (SpellEntry spellEntry in spellBook.SpellBook)
+        {
+            var sName = spellEntry.spellName;
+            var hColor = XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(spellEntry.element)).hexColor;
+            spellListStorage.Add(sName);
+            spellListStorage.Sort();
+            spellList += "<color=" + hColor + ">" + sName + "</color> \n";
         }
-        Debug.Log(spellList);
         spellsList.text = spellList;
 
-        //   inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });  //Invoque la méthode ValueChangeCheck lorsque la valeur est changée 
-
         isCapsLockOn = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;//init stat
+
+        //Transparence du sprite du bouclier
         var tempColor = shieldSpriteImage.color;
         tempColor.a = 0f;
         shieldSpriteImage.color = tempColor;
@@ -114,66 +101,76 @@ public class ImprovedSpellInput : MonoBehaviour
                 shieldSpriteImage.color = tempColor;
             }
 
-
-            foreach (SpellEntry spellEntry in XmlManager.ins.SpellDatabase.SpellBook)
+            SpellEntry spellEntry = XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell));
+            if (spellEntry != null) //Test pour savoir si le sort est valide
             {
-                if (spell.Equals(spellEntry.spellName))
+               
+                //Mise à jour du spellbook du joueur;
+                if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell.ToLower())))) //Ne cherche que parmis les sorts offensifs
                 {
-                    if (spellEntry.offensive) //SI le sort est offensif
+                    spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell.ToLower()))); //Ajoute la version offensive du sort au spellbook
+                    spellListStorage.Add(spell.ToLower());
+                    spellListStorage.Sort();
+                    spellList = "Known spells :\n";
+                    foreach (string s in spellListStorage)
                     {
-                        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-                        foreach (GameObject monstre in ListeMonstre)
-                        {
-                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
-                            {
-                                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
-                                {
-
-                                    if (monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
-                                    {
-                                        monstre.GetComponent<MonsterStatText>().PV -= (int) (1.5*spellEntry.value);
-                                        Debug.Log(monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element));
-                                        Debug.Log((int)(1.5 * spellEntry.value));
-                                    }
-                                    else if (monstre.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
-                                    {
-                                        monstre.GetComponent<MonsterStatText>().PV -= (int) (0.5 * spellEntry.value);
-                                        Debug.Log((int)(0.5 * spellEntry.value));
-                                    }
-                                    else //Si le monstre est neutre contre l'élément du sort
-                                    {
-                                        monstre.GetComponent<MonsterStatText>().PV -= spellEntry.value;
-                                        Debug.Log(spellEntry.value);
-                                    }
- 
-                                    spell = "";
-                                    inputField.text = "";
-                                }
-                            }
-                        }
+                        spellList += "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(s)).element)).hexColor + ">" + s.ToLower() + "</color>\n";
                     }
-
-                    else //Si le sort est défensif
+                    spellsList.text = spellList;
+                }
+                if (spellEntry.offensive) //SI le sort est offensif
+                {
+                    GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+                    foreach (GameObject monstre in ListeMonstre)
                     {
-                        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-                        foreach (GameObject monstre in ListeMonstre){
-                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+                        if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+                        {
+                            if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                             {
-                                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+
+                                if (monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                                 {
-                                    PlayerStats.shieldElement = spellEntry.element;
-                                    PlayerStats.playerShieldPoints = spellEntry.value;
-                                    GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
-                                    spell = "";
-                                    inputField.text = "";
+                                    monstre.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
+                                    Debug.Log((int)(1.5 * spellEntry.value));
                                 }
+                                else if (monstre.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
+                                {
+                                    monstre.GetComponent<MonsterStatText>().PV -= (int)(0.5 * spellEntry.value);
+                                    Debug.Log((int)(0.5 * spellEntry.value));
+                                }
+                                else //Si le monstre est neutre contre l'élément du sort
+                                {
+                                    monstre.GetComponent<MonsterStatText>().PV -= spellEntry.value;
+                                    Debug.Log(spellEntry.value);
+                                }
+
+                                spell = "";
+                                inputField.text = "";
                             }
                         }
                     }
                 }
-            
-               
+
+                else //Si le sort est défensif
+                {
+                    GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+                    foreach (GameObject monstre in ListeMonstre)
+                    {
+                        if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+                        {
+                            if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                            {
+                                PlayerStats.shieldElement = spellEntry.element;
+                                PlayerStats.playerShieldPoints = spellEntry.value;
+                                GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
+                                spell = "";
+                                inputField.text = "";
+                            }
+                        }
+                    }
+                }
             }
+
             //FIN
 
             if (!Input.anyKey)
@@ -212,8 +209,6 @@ public class ImprovedSpellInput : MonoBehaviour
             spellsPanel.SetActive(false);
         }
     }
-
-
 /*     public void ValueChangeCheck()
     {
         Debug.Log("Value Changed");
