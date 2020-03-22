@@ -155,13 +155,20 @@ public class ImprovedSpellInput : MonoBehaviour
 
                     else //Si le sort est défensif
                     {
-                        //METTRE LES EFFETS DU SORT
-                        PlayerStats.shieldElement = spellEntry.element;
-                        PlayerStats.playerShieldPoints = spellEntry.value;
-                        GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
-                        //METTRE LES EFFETS DU SORT
-                        spell = "";
-                        inputField.text = "";
+                        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+                        foreach (GameObject monstre in ListeMonstre){
+                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+                            {
+                                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                                {
+                                    PlayerStats.shieldElement = spellEntry.element;
+                                    PlayerStats.playerShieldPoints = spellEntry.value;
+                                    GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
+                                    spell = "";
+                                    inputField.text = "";
+                                }
+                            }
+                        }
                     }
                 }
             

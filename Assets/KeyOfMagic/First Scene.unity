@@ -2594,6 +2594,8 @@ MonoBehaviour:
       value: 50
       element: Eau
       offensive: 1
+  ElementDatabase:
+    Elementdb: []
 --- !u!4 &1904016965
 Transform:
   m_ObjectHideFlags: 0

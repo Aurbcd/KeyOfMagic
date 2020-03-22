@@ -9,9 +9,11 @@ public class AI_SlimeRouge : MonoBehaviour
     private int valeurAleatoire;
     public float distanceToPlayer;
     private Animator mAnimator;
-    private string element;
+    public string element; //Used for display color
     public string choix;
     private bool boule;
+
+    public string affichage;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class AI_SlimeRouge : MonoBehaviour
         boule = true;
     }
     private void Update()
-    {
+    {   
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
@@ -98,7 +100,7 @@ public class AI_SlimeRouge : MonoBehaviour
         choixSpell();
         Debug.Log("Frero j'ai choisi");
         Debug.Log(choix);
-        string affichage = "";
+        affichage = "";
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
