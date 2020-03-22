@@ -10,8 +10,6 @@ public class AI_SlimeRouge : MonoBehaviour
     public float distanceToPlayer;
     private Animator mAnimator;
     private string element;
-    public float attackRepeatTime;
-    private float attackTime;
     public string choix;
     private bool boule;
 
@@ -19,7 +17,6 @@ public class AI_SlimeRouge : MonoBehaviour
     void Start()
     {
         mAnimator = GetComponent<Animator>();
-        attackTime = Time.time;
         boule = true;
     }
     private void Update()

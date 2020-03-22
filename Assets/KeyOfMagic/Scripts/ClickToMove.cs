@@ -47,6 +47,7 @@ public class ClickToMove : MonoBehaviour
                 if (hit.collider.tag == "Ennemy")
                 {
                     selectionne = true;
+                    transform.LookAt(hit.collider.transform);
                 }
             }
         }
