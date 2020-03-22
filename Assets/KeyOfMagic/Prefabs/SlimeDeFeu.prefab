@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 6572569499185163306}
   - component: {fileID: 2281746084761069653}
   - component: {fileID: 6572569499185163309}
-  - component: {fileID: 3714313205005252593}
   - component: {fileID: 114190508878000956}
   m_Layer: 0
   m_Name: SlimeDeFeu
@@ -545,6 +544,7 @@ MonoBehaviour:
   distanceToPlayer: 0
   element: 
   choix: 
+  displayText: {fileID: 4221106119751356392}
   affichage: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:
@@ -568,20 +568,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3714313205005252593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26a69e43fcf1b44ab8a2799c602952f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: {fileID: 4221106119751356392}
-  hexcolor: 
 --- !u!114 &114190508878000956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,15 +844,15 @@ RectTransform:
   m_GameObject: {fileID: 8587862194726917406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 4671697556922339665}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000166893, y: 0.00001513958}
-  m_SizeDelta: {x: 103.47, y: 20.619}
+  m_AnchoredPosition: {x: 0.0000097752, y: 0.00000023842}
+  m_SizeDelta: {x: 651.72, y: 139.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &387209947521813621
 CanvasRenderer:
@@ -896,7 +882,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

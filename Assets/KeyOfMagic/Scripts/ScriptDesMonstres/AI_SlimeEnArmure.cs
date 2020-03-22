@@ -1,21 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AI_SlimeEnArmure : MonoBehaviour
 {
     private int valeurAleatoire;
     public float distanceToPlayer;
     private Animator mAnimator;
-    private static string element;
+    public string element;
+    public string affichage;
     public string choix;
     private bool boule;
+    private string hexcolor;
+    public Text displayText;
 
     // Start is called before the first frame update
     void Start()
     {
         mAnimator = GetComponent<Animator>();
         boule = true;
+        displayText.text = "";
     }
     private void Update()
     {
@@ -23,6 +28,16 @@ public class AI_SlimeEnArmure : MonoBehaviour
         if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
             StartCoroutine(HeAttac());
+        }
+        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
+        {
+            hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
+            Debug.Log(hexcolor);
+            if (affichage != null)
+            {
+                displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
+                Debug.Log("<color=" + hexcolor + ">" + affichage + "</color>");
+            }
         }
     }
 
@@ -91,7 +106,7 @@ public class AI_SlimeEnArmure : MonoBehaviour
         boule = false;
         yield return new WaitForSeconds(2);
         choixSpell();
-        string affichage = "";
+        affichage = "";
         mAnimator.SetBool("Spelling", true);
         for (int i = 0; i < choix.Length; i++)
         {

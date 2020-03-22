@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AI_SlimeRouge : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AI_SlimeRouge : MonoBehaviour
     public string element; //Used for display color
     public string choix;
     private bool boule;
+    private string hexcolor;
+    public Text displayText;
 
     public string affichage;
 
@@ -20,6 +23,7 @@ public class AI_SlimeRouge : MonoBehaviour
     {
         mAnimator = GetComponent<Animator>();
         boule = true;
+        displayText.text = "";
     }
     private void Update()
     {   
@@ -28,6 +32,18 @@ public class AI_SlimeRouge : MonoBehaviour
         {
             StartCoroutine(HeAttac());
         }
+
+        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
+        {
+            hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
+            Debug.Log(hexcolor);
+            if (affichage != null)
+            {
+                displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
+                Debug.Log("<color=" + hexcolor + ">" + affichage + "</color>");
+            }
+        }
+
     }
 
     void choixSpell()
