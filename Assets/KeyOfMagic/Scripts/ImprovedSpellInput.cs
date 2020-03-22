@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Runtime.InteropServices;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
@@ -10,27 +11,48 @@ public class ImprovedSpellInput : MonoBehaviour
     public string spell;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
-    public GameObject spellsText;
-
+    public Text spellsList;
+    public Image shieldSpriteImage;
+    bool isCapsLockOn;
+    [DllImport("user32.dll")]
+    public static extern short GetKeyState(int keyCode);
     // Start is called before the first frame update
     void Start()
     {
-        StreamReader sr = new StreamReader("spells.txt");
-        string line = sr.ReadLine();
-        string spells = "";
-        while (line != null)
+        string spellList = "Spell List :\n";
+        foreach (SpellEntry spellEntry in XmlManager.ins.SpellDatabase.SpellBook)
         {
-            spells += line + "\n";
-            line = sr.ReadLine();
+            if (spellEntry.element.Equals("Eau"))
+            {
+                spellList += "<color=#1c21ee>" + spellEntry.spellName + "</color>\n";
+            }
+            if (spellEntry.element.Equals("Feu"))
+            {
+                spellList += "<color=#f34012>" + spellEntry.spellName + "</color>\n";
+            }
+            if (spellEntry.element.Equals("Air"))
+            {
+                spellList += "<color=#4b0458>" + spellEntry.spellName + "</color>\n";
+            }
+            if (spellEntry.element.Equals("Terre"))
+            {
+                spellList += "<color=#4e342e>" + spellEntry.spellName + "</color>\n";
+            }
+            if (spellEntry.element.Equals("Electricite"))
+            {
+                spellList += "<color=#ffea00>" + spellEntry.spellName + "</color>\n";
+            }
+
         }
-        sr.Close();
+        Debug.Log(spellList);
+        spellsList.text = spellList;
 
-        spellsText.GetComponent<Text>().text = spells;
+        //   inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });  //Invoque la méthode ValueChangeCheck lorsque la valeur est changée 
 
-     //   inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });  //Invoque la méthode ValueChangeCheck lorsque la valeur est changée 
-
-        inputField.customCaretColor = true;
-
+        isCapsLockOn = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;//init stat
+        var tempColor = shieldSpriteImage.color;
+        tempColor.a = 0f;
+        shieldSpriteImage.color = tempColor;
 
     }
 
@@ -39,6 +61,10 @@ public class ImprovedSpellInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            isCapsLockOn = !isCapsLockOn;
+        }
         if (GetComponent<ClickToMove>().selectionne)
         {
             inputField.ActivateInputField();
@@ -49,7 +75,23 @@ public class ImprovedSpellInput : MonoBehaviour
             {
                 if (spell[0].Equals('a') || spell[0].Equals('A'))
                 {
-                    text.color = new Color32(0, 28, 240, 255);
+                    text.color = new Color32(28, 33, 238, 255); //BLEU EAU
+                }
+                else if (spell[0].Equals('u') || spell[0].Equals('U'))
+                {
+                    text.color = new Color32(243, 64, 18, 255); //ROUGE FEU
+                }
+                else if (spell[0].Equals('e') || spell[0].Equals('e'))
+                {
+                    text.color = new Color32(75, 4, 88, 255); //MAUVE AIR
+                }
+                else if (spell[0].Equals('o') || spell[0].Equals('O'))
+                {
+                    text.color = new Color32(78, 52, 46, 255); //MARRON TERRE
+                }
+                else if (spell[0].Equals('i') || spell[0].Equals('I'))
+                {
+                    text.color = new Color32(255, 234, 0, 255); //JAUNE ELEC
                 }
                 else
                 {
@@ -58,38 +100,72 @@ public class ImprovedSpellInput : MonoBehaviour
 
             }
 
-            if (Estunsort(spell))
+            //Affichage de l'indicateur de majuscule
+            if ( (Input.GetKey("left shift") && !isCapsLockOn) || (Input.GetKey("right shift") && !isCapsLockOn) || isCapsLockOn )
             {
+                var tempColor = shieldSpriteImage.color;
+                tempColor.a = 1f;
+                shieldSpriteImage.color = tempColor;
+            }
+            else if(!Input.GetKey("left shift") && !isCapsLockOn && !Input.GetKey("right shift"))
+            {
+                var tempColor = shieldSpriteImage.color;
+                tempColor.a = 0f;
+                shieldSpriteImage.color = tempColor;
+            }
 
-                if (string.Compare(spell,"amoi") == 0) // SORT
+
+            foreach (SpellEntry spellEntry in XmlManager.ins.SpellDatabase.SpellBook)
+            {
+                if (spell.Equals(spellEntry.spellName))
                 {
-                    GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-                    foreach (GameObject monstre in ListeMonstre)
+                    if (spellEntry.offensive) //SI le sort est offensif
                     {
-                        if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+                        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+                        foreach (GameObject monstre in ListeMonstre)
                         {
-                            if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
                             {
-                                //METTRE LES EFFETS DU SORT
-                                monstre.GetComponent<MonsterStatText>().PV -= 10;
-                                //METTRE LES EFFETS DU SORT
-                                spell = "";
+                                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                                {
+
+                                    if (monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
+                                    {
+                                        monstre.GetComponent<MonsterStatText>().PV -= (int) (1.5*spellEntry.value);
+                                        Debug.Log(monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element));
+                                        Debug.Log((int)(1.5 * spellEntry.value));
+                                    }
+                                    else if (monstre.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
+                                    {
+                                        monstre.GetComponent<MonsterStatText>().PV -= (int) (0.5 * spellEntry.value);
+                                        Debug.Log((int)(0.5 * spellEntry.value));
+                                    }
+                                    else //Si le monstre est neutre contre l'élément du sort
+                                    {
+                                        monstre.GetComponent<MonsterStatText>().PV -= spellEntry.value;
+                                        Debug.Log(spellEntry.value);
+                                    }
+ 
+                                    spell = "";
+                                    inputField.text = "";
+                                }
                             }
                         }
                     }
-                }
 
-                if (string.Compare(spell, "AMOI") == 0) // SORT
-                {
-                    //METTRE LES EFFETS DU SORT
-                    GetComponent<PlayerStats>().shieldElement = "Eau";
-                    GetComponent<PlayerStats>().playerShieldPoints = 100;
-                    GetComponent<PlayerStats>().playerMaxShieldPoints = 100;
-                    //METTRE LES EFFETS DU SORT
-                    spell = "";
+                    else //Si le sort est défensif
+                    {
+                        //METTRE LES EFFETS DU SORT
+                        GetComponent<PlayerStats>().shieldElement = spellEntry.element;
+                        GetComponent<PlayerStats>().playerShieldPoints = spellEntry.value;
+                        GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
+                        //METTRE LES EFFETS DU SORT
+                        spell = "";
+                        inputField.text = "";
+                    }
                 }
-
-                inputField.text = "";
+            
+               
             }
             //FIN
 
@@ -114,7 +190,10 @@ public class ImprovedSpellInput : MonoBehaviour
         }
         else
         {
-            inputField.DeactivateInputField();
+            inputField.DeactivateInputField(); //On ne peut plus taper de sorts
+            var tempColor = shieldSpriteImage.color;
+            tempColor.a = 0f;
+            shieldSpriteImage.color = tempColor;
         }
 
         if (Input.GetKeyDown("tab"))
@@ -127,27 +206,6 @@ public class ImprovedSpellInput : MonoBehaviour
         }
     }
 
-    public static bool Estunsort(string spell)
-    {
-        StreamReader sr = new StreamReader("spells.txt");
-
-
-        string line = sr.ReadLine();
-
-
-        while (line != null)
-        {
-            if (line == spell)
-            {
-                sr.Close();
-                return true;
-            }
-            line = sr.ReadLine();
-
-        }
-        sr.Close();
-        return false;
-    }
 
 /*     public void ValueChangeCheck()
     {

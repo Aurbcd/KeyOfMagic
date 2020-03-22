@@ -9,6 +9,9 @@ public class MonsterStatText : MonoBehaviour
     public int PV = 150;
     public int PVMax = 200;
 
+    public string weakness;
+    public string resistance;
+
     public HealthBar Barre;
 
     public CanvasGroup CanvasGBarre;

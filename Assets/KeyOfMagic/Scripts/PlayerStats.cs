@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
-    public CanvasGroup canvasGHealthBar;
     public int playerHealthPoints;
     public ShieldBar shieldBar;
     public int playerShieldPoints;
     public int playerMaxShieldPoints;
     public string shieldElement;
+   
 
     void Start() 
     {
@@ -29,6 +29,5 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetHealth(playerHealthPoints);
         shieldBar.SetNewShield(playerMaxShieldPoints, shieldElement);
         shieldBar.SetShield(playerShieldPoints);
-
     }
 }
