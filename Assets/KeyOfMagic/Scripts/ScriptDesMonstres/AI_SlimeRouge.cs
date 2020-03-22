@@ -78,7 +78,7 @@ public class AI_SlimeRouge : MonoBehaviour
             }
             if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Air
             {
-                choix = "extek";
+                choix = "estek";
             }
             if (element.Equals("Air") && valeurAleatoire > 75)
             {
