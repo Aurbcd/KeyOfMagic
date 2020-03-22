@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
-    public int playerHealthPoints;
+    public CanvasGroup canvasGHealthBar;
+    public static int playerHealthPoints;
     public ShieldBar shieldBar;
-    public int playerShieldPoints;
+    public static int playerShieldPoints;
     public int playerMaxShieldPoints;
-    public string shieldElement;
-   
+    public static string shieldElement;
+    public static float Difficulte;
 
     void Start() 
     {
@@ -21,6 +22,7 @@ public class PlayerStats : MonoBehaviour
         shieldElement = "";
         healthBar.SetMaxHealth(playerHealthPoints);
         healthBar.SetHealth(playerHealthPoints);
+        Difficulte = 1;
     }
 
     // Update is called once per frame

@@ -49,7 +49,6 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             StopMovement();
             mAnimator.SetBool("Moving", false);
-            mAnimator.SetBool("Attacking", true);
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

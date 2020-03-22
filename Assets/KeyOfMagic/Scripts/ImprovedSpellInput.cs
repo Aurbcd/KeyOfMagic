@@ -156,8 +156,8 @@ public class ImprovedSpellInput : MonoBehaviour
                     else //Si le sort est défensif
                     {
                         //METTRE LES EFFETS DU SORT
-                        GetComponent<PlayerStats>().shieldElement = spellEntry.element;
-                        GetComponent<PlayerStats>().playerShieldPoints = spellEntry.value;
+                        PlayerStats.shieldElement = spellEntry.element;
+                        PlayerStats.playerShieldPoints = spellEntry.value;
                         GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
                         //METTRE LES EFFETS DU SORT
                         spell = "";

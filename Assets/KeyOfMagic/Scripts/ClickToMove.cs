@@ -24,7 +24,6 @@ public class ClickToMove : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
-
     }
 
     // Update is called once per frame
@@ -48,6 +47,7 @@ public class ClickToMove : MonoBehaviour
                 if (hit.collider.tag == "Ennemy")
                 {
                     selectionne = true;
+                    transform.LookAt(hit.collider.transform);
                 }
             }
         }
