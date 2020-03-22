@@ -614,9 +614,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
   element: 
-  affichage: 
   choix: 
   displayText: {fileID: 2045912459751061657}
+  affichage: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 13
+  m_Speed: 10
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 15000

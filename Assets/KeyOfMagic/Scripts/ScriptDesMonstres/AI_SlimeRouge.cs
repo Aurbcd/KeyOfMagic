@@ -15,9 +15,10 @@ public class AI_SlimeRouge : MonoBehaviour
     private bool boule;
     private string hexcolor;
     public Text displayText;
-
+    public Vector3 curPos;
+    public Vector3 LastPos;
     private int damage;
-
+    public bool aBougé;
     public string affichage;
 
     // Start is called before the first frame update
@@ -26,16 +27,24 @@ public class AI_SlimeRouge : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         boule = true;
         displayText.text = "";
+        LastPos = curPos;
+        aBougé = false;
     }
     private void Update()
-    {   
+    {
+        curPos = transform.position;
+        if (curPos != LastPos)
+        {
+            aBougé = true;
+            displayText.text = "";
+        }
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
             StartCoroutine(HeAttac());
         }
-
-        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
+        LastPos = curPos;
+        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
         {
             hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
             if (affichage != null)
@@ -43,7 +52,6 @@ public class AI_SlimeRouge : MonoBehaviour
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
             }
         }
-
     }
 
     void choixSpell()
@@ -109,20 +117,32 @@ public class AI_SlimeRouge : MonoBehaviour
     IEnumerator HeAttac()
     {
         boule = false;
-        yield return new WaitForSeconds(2);
         choixSpell();
         affichage = "";
         mAnimator.SetBool("Spelling", true);
+        aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
-        }   
-        mAnimator.SetBool("Attacking", true);
-        damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
-        GameObject Joueur= GameObject.Find("Player");
-        Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
-        mAnimator.SetBool("Spelling", false);
+            if (aBougé)
+            {
+                affichage = "";
+                break;
+            }
+        }
+        if (distanceToPlayer < 15 && !aBougé)
+        {
+            mAnimator.SetBool("Attacking", true);
+            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            GameObject Joueur= GameObject.Find("Player");
+            Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
+            mAnimator.SetBool("Spelling", false);
+        }else
+        {
+            mAnimator.SetBool("Attacking", false);
+            mAnimator.SetBool("Spelling", false);
+        }
         boule = true;
     }
 }

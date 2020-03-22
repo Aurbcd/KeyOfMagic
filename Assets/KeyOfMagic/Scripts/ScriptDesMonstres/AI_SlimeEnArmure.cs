@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class AI_SlimeEnArmure : MonoBehaviour
@@ -13,11 +15,11 @@ public class AI_SlimeEnArmure : MonoBehaviour
     private bool boule;
     private string hexcolor;
     public Text displayText;
-
+    public Vector3 curPos;
+    public Vector3 LastPos;
     private int damage;
-
+    public bool aBougé;
     public string affichage;
-
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +27,28 @@ public class AI_SlimeEnArmure : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         boule = true;
         displayText.text = "";
+        LastPos = curPos;
+        aBougé = false;
     }
     private void Update()
     {
+        curPos = transform.position;
+        if (curPos != LastPos)
+        {
+            aBougé = true;
+            displayText.text = "";
+        }
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
             StartCoroutine(HeAttac());
         }
-        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
+        LastPos = curPos;
+        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
         {
             hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
             if (affichage != null)
             {
-                Debug.Log(hexcolor);
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
             }
         }
@@ -107,20 +117,33 @@ public class AI_SlimeEnArmure : MonoBehaviour
     IEnumerator HeAttac()
     {
         boule = false;
-        yield return new WaitForSeconds(2);
         choixSpell();
         affichage = "";
         mAnimator.SetBool("Spelling", true);
+        aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
+            if (aBougé)
+            {
+                affichage = "";
+                break;
+            }
         }
-        mAnimator.SetBool("Attacking", true);
-        damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
-        GameObject Joueur = GameObject.Find("Player");
-        Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
-        mAnimator.SetBool("Spelling", false);
+        if (distanceToPlayer < 15 && !aBougé)
+        {
+            mAnimator.SetBool("Attacking", true);
+            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            GameObject Joueur = GameObject.Find("Player");
+            Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
+            mAnimator.SetBool("Spelling", false);
+        }
+        else
+        {
+            mAnimator.SetBool("Attacking", false);
+            mAnimator.SetBool("Spelling", false);
+        }
         boule = true;
     }
 }

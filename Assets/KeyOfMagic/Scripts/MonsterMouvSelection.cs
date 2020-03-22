@@ -13,11 +13,16 @@ public class MonsterMouvSelection : MonoBehaviour
 
     public float distanceToPlayer;
 
+    // Distance entre l'ennemi et sa position de base
+    private float DistanceBase;
+    private Vector3 basePositions;
+
     void Start()
     {
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         mAnimator = GetComponent<Animator>();
         mAnimator.updateMode = AnimatorUpdateMode.Normal;
+        basePositions = transform.position;
     }
 
     // Update is called once per frame
@@ -25,6 +30,7 @@ public class MonsterMouvSelection : MonoBehaviour
     {
         mAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
+        DistanceBase = Vector3.Distance(basePositions, transform.position);
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
             StopMovement();
@@ -67,13 +73,23 @@ public class MonsterMouvSelection : MonoBehaviour
             }
         }
 
-   
-        if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
+        if (distanceToPlayer > 22 && DistanceBase > 2)
         {
+            BackBase();
+        }
+        if (DistanceBase < 2)
+        {
+            mAnimator.SetBool("Backing", false);
+        }
+
+        if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
+        {
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
             mAnimator.SetBool("IsDead", true);
+            int random = Random.Range(0, 30);
+            //Apparition du loot
             Destroy(transform.gameObject, 2);
         }
-      
 
     }
 
@@ -85,5 +101,10 @@ public class MonsterMouvSelection : MonoBehaviour
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();
+    }
+    public void BackBase()
+    {
+        mAnimator.SetBool("Backing", true);
+        MoveInDirection(basePositions);
     }
 }

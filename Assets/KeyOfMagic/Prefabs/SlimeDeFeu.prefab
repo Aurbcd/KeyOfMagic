@@ -528,6 +528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estSelectionne: 0
+  PointA: {fileID: 0}
+  PointB: {fileID: 0}
   distanceToPlayer: 0
 --- !u!114 &2281746084761069653
 MonoBehaviour:
@@ -545,7 +547,9 @@ MonoBehaviour:
   element: 
   choix: 
   displayText: {fileID: 4221106119751356392}
-  player: {fileID: 1972791196520126493, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
+  curPos: {x: 0, y: 0, z: 0}
+  LastPos: {x: 0, y: 0, z: 0}
+  "aBoug\xE9": 0
   affichage: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:
@@ -557,7 +561,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 13
+  m_Speed: 10
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 15000

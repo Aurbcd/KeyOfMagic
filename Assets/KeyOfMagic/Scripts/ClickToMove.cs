@@ -14,13 +14,15 @@ public class ClickToMove : MonoBehaviour
     //private Vector3 jump;
     //private Vector3 velocity;
     private Vector3 destination;
+    bool doubleclick;
     public GameObject pausePanel;
     public static Vector3 playerPosition;
-
+    private float doubleClickTimeLimit = 0.25f;
+    bool walkauto = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(InputListener());
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
@@ -40,6 +42,7 @@ public class ClickToMove : MonoBehaviour
             {
                 if (hit.collider.tag == "Sol")
                 {
+                    walkauto = false;
                     selectionne = false;
                     destination = hit.point;
                     mNavMeshAgent.destination = destination;
@@ -49,11 +52,20 @@ public class ClickToMove : MonoBehaviour
                     selectionne = true;
                     transform.LookAt(hit.collider.transform);
                 }
+                if (hit.collider.tag == "Ennemy" && doubleclick)
+                {
+                    selectionne = true;
+                    mNavMeshAgent.destination = hit.collider.transform.position;
+                    walkauto = true;
+                }
             }
         }
+        if ((playerPosition - mNavMeshAgent.destination ).magnitude < 15 && walkauto)
+        {
+            mNavMeshAgent.ResetPath();
+            walkauto = false;
+        }
 
-
-        
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
         {
             mRunning = false;
@@ -79,6 +91,35 @@ public class ClickToMove : MonoBehaviour
         }
         */
 
+    }
+    private IEnumerator InputListener()
+    {
+        while (enabled)
+        { //Run as long as this is activ
+
+            if (Input.GetMouseButtonDown(0))
+                yield return ClickEvent();
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator ClickEvent()
+    {
+        //pause a frame so you don't pick up the same mouse down event.
+        yield return new WaitForEndOfFrame();
+
+        float count = 0f;
+        while (count < doubleClickTimeLimit)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                doubleclick = true;
+                yield break;
+            }
+            count += Time.deltaTime;// increment counter by change in time between frames
+            yield return null; // wait for the next frame
+        }
     }
 
     void OnCollisionStay()
