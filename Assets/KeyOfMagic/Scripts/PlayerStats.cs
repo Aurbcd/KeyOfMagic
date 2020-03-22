@@ -10,17 +10,19 @@ public class PlayerStats : MonoBehaviour
     public static int playerHealthPoints;
     public ShieldBar shieldBar;
     public static int playerShieldPoints;
+    public static int playerMaxHeathPoints;
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
 
     void Start() 
     {
+        playerMaxHeathPoints = 1000;
         playerHealthPoints = 100;
         playerShieldPoints = 0;
         playerMaxShieldPoints = 0;
         shieldElement = "";
-        healthBar.SetMaxHealth(playerHealthPoints);
+        healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
         Difficulte = 1;
     }
@@ -28,6 +30,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
         shieldBar.SetNewShield(playerMaxShieldPoints, shieldElement);
         shieldBar.SetShield(playerShieldPoints);

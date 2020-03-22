@@ -11,6 +11,11 @@ public class MonsterMouvSelection : MonoBehaviour
 
     private Animator mAnimator;
 
+    public GameObject potion;
+    
+    private bool loot;
+
+    private float Position;
     public float distanceToPlayer;
 
     // Distance entre l'ennemi et sa position de base
@@ -19,10 +24,12 @@ public class MonsterMouvSelection : MonoBehaviour
 
     void Start()
     {
+        loot = false;   
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         mAnimator = GetComponent<Animator>();
         mAnimator.updateMode = AnimatorUpdateMode.Normal;
         basePositions = transform.position;
+        potion = GameObject.Find("Potion");
     }
 
     // Update is called once per frame
@@ -84,10 +91,20 @@ public class MonsterMouvSelection : MonoBehaviour
 
         if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
-            gameObject.GetComponent<CapsuleCollider>().enabled = false;
             mAnimator.SetBool("IsDead", true);
-            int random = Random.Range(0, 30);
-            //Apparition du loot
+            if (!loot)
+            {
+                int NombreDePotions= Random.Range(0, (int)(PlayerStats.playerMaxHeathPoints*3/1000) + 1);
+                Debug.Log((int)(PlayerStats.playerMaxHeathPoints * 3 / 1000));
+                int i = 0;
+                while (i < NombreDePotions)
+                {
+                    Position = Random.Range(1f, 3f);
+                    i += 1;
+                    Instantiate(potion, transform.position + new Vector3(1f * Position, 1f * Position, 1 * Position), Quaternion.identity);
+                }
+                loot = true;
+            }
             Destroy(transform.gameObject, 2);
         }
 
