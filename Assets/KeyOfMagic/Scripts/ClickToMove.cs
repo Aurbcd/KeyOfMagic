@@ -14,11 +14,17 @@ public class ClickToMove : MonoBehaviour
     //private Vector3 jump;
     //private Vector3 velocity;
     private Vector3 destination;
-    bool doubleclick;
+    public bool doubleclick;
     public GameObject pausePanel;
     public static Vector3 playerPosition;
     private float doubleClickTimeLimit = 0.25f;
-    bool walkauto = true;
+    bool walkautomonstre = true;
+    bool walkautoItem = true;
+    //Curseur
+    public CursorMode cursormode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+    public Texture2D CursorRamasser;
+    public Texture2D CursorClassique;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,7 @@ public class ClickToMove : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
+        Cursor.SetCursor(CursorClassique, hotSpot, cursormode);
     }
 
     // Update is called once per frame
@@ -35,14 +42,24 @@ public class ClickToMove : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-
-        if(Input.GetMouseButton(0) && !pausePanel.activeSelf)
+        RaycastHit hit2;
+        Cursor.SetCursor(CursorClassique, hotSpot, cursormode);
+        if (Physics.Raycast(ray, out hit2, 100))
+        {
+            if (hit2.collider.tag == "Item")
+            {
+                Cursor.SetCursor(CursorRamasser, hotSpot, cursormode);
+            }
+        }
+        if (Input.GetMouseButton(0) && !pausePanel.activeSelf)
         {
             if(Physics.Raycast(ray, out hit, 100))
             {
+
                 if (hit.collider.tag == "Sol")
                 {
-                    walkauto = false;
+                    walkautomonstre = false;
+                    walkautoItem = false;
                     selectionne = false;
                     destination = hit.point;
                     mNavMeshAgent.destination = destination;
@@ -56,14 +73,26 @@ public class ClickToMove : MonoBehaviour
                 {
                     selectionne = true;
                     mNavMeshAgent.destination = hit.collider.transform.position;
-                    walkauto = true;
+                    walkautomonstre = true;
                 }
+                if (hit.collider.tag == "Item" && doubleclick)
+                {
+                    selectionne = true;
+                    mNavMeshAgent.destination = hit.collider.transform.position;
+                    walkautoItem = true;
+                }
+                doubleclick = false;
             }
         }
-        if ((playerPosition - mNavMeshAgent.destination ).magnitude < 15 && walkauto)
+        if ((playerPosition - mNavMeshAgent.destination ).magnitude < 15 && walkautomonstre)
         {
             mNavMeshAgent.ResetPath();
-            walkauto = false;
+            walkautomonstre = false;
+        }
+        if ((playerPosition - mNavMeshAgent.destination).magnitude < 3 && walkautoItem)
+        {
+            mNavMeshAgent.ResetPath();
+            walkautoItem = false;
         }
 
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)

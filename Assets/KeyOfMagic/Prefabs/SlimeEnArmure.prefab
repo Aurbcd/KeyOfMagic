@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 8898240440729422621}
   - component: {fileID: 6433152245786177500}
   - component: {fileID: 105787027658429126}
+  - component: {fileID: 7111580502015391503}
   m_Layer: 0
   m_Name: UICanvas
   m_TagString: Untagged
@@ -328,6 +329,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7111580502015391503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497698285804559565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f297c43fc6b9f478c15653d3a656de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5261042986625412336
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estSelectionne: 0
+  potion: {fileID: 7351476427020899052, guid: f43b9b57a63d0454ea2fb0162282aca9, type: 3}
   distanceToPlayer: 0
 --- !u!114 &2982545264216495050
 MonoBehaviour:
@@ -616,6 +630,9 @@ MonoBehaviour:
   element: 
   choix: 
   displayText: {fileID: 2045912459751061657}
+  curPos: {x: 0, y: 0, z: 0}
+  LastPos: {x: 0, y: 0, z: 0}
+  "aBoug\xE9": 0
   affichage: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:
