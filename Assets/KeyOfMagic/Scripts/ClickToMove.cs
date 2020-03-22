@@ -18,6 +18,7 @@ public class ClickToMove : MonoBehaviour
     public GameObject pausePanel;
     public static Vector3 playerPosition;
     private float doubleClickTimeLimit = 0.25f;
+    public Projector projector;
     bool walkauto = true;
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,14 @@ public class ClickToMove : MonoBehaviour
         StartCoroutine(InputListener());
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
+        projector.enabled = false;
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         playerPosition = GetComponent<Transform>().position;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -91,6 +94,16 @@ public class ClickToMove : MonoBehaviour
         }
         */
 
+
+        //Gestion de l'affichage de la range
+        if (selectionne)
+        {
+            projector.enabled = true;
+        }
+        else
+        {
+            projector.enabled = false;
+        }
     }
     private IEnumerator InputListener()
     {

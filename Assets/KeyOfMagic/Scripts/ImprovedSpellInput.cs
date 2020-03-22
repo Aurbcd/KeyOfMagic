@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
+    public Projector projector;
     public InputField inputField;
     public string spell;
     public int tempsSansAppuyé = 0;
@@ -52,6 +53,9 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             isCapsLockOn = !isCapsLockOn;
         }
+
+        projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
+
         if (GetComponent<ClickToMove>().selectionne)
         {
             inputField.ActivateInputField();
@@ -63,26 +67,33 @@ public class ImprovedSpellInput : MonoBehaviour
                 if (spell[0].Equals('a') || spell[0].Equals('A'))
                 {
                     text.color = new Color32(28, 33, 238, 255); //BLEU EAU
+                    projector.material.SetColor("_Color", new Color32(0, 82, 255, 255));
                 }
                 else if (spell[0].Equals('u') || spell[0].Equals('U'))
                 {
                     text.color = new Color32(243, 64, 18, 255); //ROUGE FEU
+                    projector.material.SetColor("_Color", text.color);
                 }
                 else if (spell[0].Equals('e') || spell[0].Equals('e'))
                 {
                     text.color = new Color32(75, 4, 88, 255); //MAUVE AIR
+                    projector.material.SetColor("_Color", text.color);
                 }
                 else if (spell[0].Equals('o') || spell[0].Equals('O'))
                 {
                     text.color = new Color32(78, 52, 46, 255); //MARRON TERRE
+                    projector.material.SetColor("_Color", text.color);
                 }
                 else if (spell[0].Equals('i') || spell[0].Equals('I'))
                 {
                     text.color = new Color32(255, 234, 0, 255); //JAUNE ELEC
+                    projector.material.SetColor("_Color", text.color);
                 }
                 else
                 {
                     text.color = new Color32(0, 0, 0, 255);
+                    
+                    projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
                 }
 
             }
