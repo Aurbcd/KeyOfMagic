@@ -31,5 +31,45 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetHealth(playerHealthPoints);
         shieldBar.SetNewShield(playerMaxShieldPoints, shieldElement);
         shieldBar.SetShield(playerShieldPoints);
+        if (playerShieldPoints <= 0)
+        {
+            shieldElement = "";
+        }
+    }
+
+    public void DamagePlayer(int damage, string attackElement){
+        if (shieldElement == "")
+        {
+            playerHealthPoints -= damage;
+        }
+        else
+        {
+            int scaledDamage = 0;
+
+            //Application des éléments
+            if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement). weakness == attackElement)
+            {
+                scaledDamage = (int) (2*damage);
+            }
+            else if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).resistance == attackElement)
+            {
+                scaledDamage = (int) (0.5*damage);
+            }
+            else
+            {
+                scaledDamage = damage;
+            }
+
+            //Application des dégâts et/ou au shield
+            if ( (playerShieldPoints - scaledDamage) >0 )
+            {
+                playerShieldPoints -= scaledDamage;
+            }
+            else
+            {
+                playerShieldPoints = 0;
+                playerHealthPoints -= (scaledDamage - playerShieldPoints);
+            }
+        }
     }
 }

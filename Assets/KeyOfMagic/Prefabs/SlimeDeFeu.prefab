@@ -545,6 +545,7 @@ MonoBehaviour:
   element: 
   choix: 
   displayText: {fileID: 4221106119751356392}
+  player: {fileID: 1972791196520126493, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
   affichage: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:

@@ -16,6 +16,9 @@ public class AI_SlimeRouge : MonoBehaviour
     private string hexcolor;
     public Text displayText;
 
+    public GameObject player;
+    private int damage;
+
     public string affichage;
 
     // Start is called before the first frame update
@@ -123,6 +126,8 @@ public class AI_SlimeRouge : MonoBehaviour
             Debug.Log(affichage);
         }
         mAnimator.SetBool("Attacking", true);
+        damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+        this.GetComponent<PlayerStats>().DamagePlayer(damage, element); //AURELIIEEEEEEEEEEEEEEN FAUT QUE TU ME TROUVES LE PLAYER
         mAnimator.SetBool("Spelling", false);
         //RECHERCHE SORT ARTHUR BOOOOOOOOYER
         Debug.Log("Au revoir");
