@@ -32,8 +32,6 @@ public class AI_SlimeRouge : MonoBehaviour
 
     void choixSpell()
     {
-        mAnimator.SetBool("Attacking", true);
-
             //SLIME ROUGE : FEU/AIR       
 
             //CHOIX 1 : élément
@@ -82,7 +80,7 @@ public class AI_SlimeRouge : MonoBehaviour
             }
             if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Air
             {
-                choix = "extek";
+                choix = "estek";
             }
             if (element.Equals("Air") && valeurAleatoire > 75)
             {
@@ -101,12 +99,15 @@ public class AI_SlimeRouge : MonoBehaviour
         Debug.Log("Frero j'ai choisi");
         Debug.Log(choix);
         affichage = "";
+        mAnimator.SetBool("Spelling", true);
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
             Debug.Log(affichage);
         }
+        mAnimator.SetBool("Attacking", true);
+        mAnimator.SetBool("Spelling", false);
         //RECHERCHE SORT ARTHUR BOOOOOOOOYER
         Debug.Log("Au revoir");
         boule = true;
