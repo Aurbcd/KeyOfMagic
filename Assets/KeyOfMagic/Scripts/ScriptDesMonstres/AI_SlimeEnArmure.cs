@@ -8,12 +8,16 @@ public class AI_SlimeEnArmure : MonoBehaviour
     private int valeurAleatoire;
     public float distanceToPlayer;
     private Animator mAnimator;
-    public string element;
-    public string affichage;
+    public string element; //Used for display color
     public string choix;
     private bool boule;
     private string hexcolor;
     public Text displayText;
+
+    private int damage;
+
+    public string affichage;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +36,10 @@ public class AI_SlimeEnArmure : MonoBehaviour
         if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
         {
             hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
-            Debug.Log(hexcolor);
             if (affichage != null)
             {
+                Debug.Log(hexcolor);
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
-                Debug.Log("<color=" + hexcolor + ">" + affichage + "</color>");
             }
         }
     }
@@ -112,9 +115,11 @@ public class AI_SlimeEnArmure : MonoBehaviour
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
-            Debug.Log(affichage);
         }
         mAnimator.SetBool("Attacking", true);
+        damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+        GameObject Joueur = GameObject.Find("Player");
+        Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
         mAnimator.SetBool("Spelling", false);
         boule = true;
     }

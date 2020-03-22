@@ -16,7 +16,6 @@ public class AI_SlimeRouge : MonoBehaviour
     private string hexcolor;
     public Text displayText;
 
-    public GameObject player;
     private int damage;
 
     public string affichage;
@@ -39,11 +38,9 @@ public class AI_SlimeRouge : MonoBehaviour
         if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null)
         {
             hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
-            Debug.Log(hexcolor);
             if (affichage != null)
             {
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
-                Debug.Log("<color=" + hexcolor + ">" + affichage + "</color>");
             }
         }
 
@@ -112,25 +109,20 @@ public class AI_SlimeRouge : MonoBehaviour
     IEnumerator HeAttac()
     {
         boule = false;
-        Debug.Log("Bonjour");
         yield return new WaitForSeconds(2);
         choixSpell();
-        Debug.Log("Frero j'ai choisi");
-        Debug.Log(choix);
         affichage = "";
         mAnimator.SetBool("Spelling", true);
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
-            Debug.Log(affichage);
-        }
+        }   
         mAnimator.SetBool("Attacking", true);
         damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
-        this.GetComponent<PlayerStats>().DamagePlayer(damage, element); //AURELIIEEEEEEEEEEEEEEN FAUT QUE TU ME TROUVES LE PLAYER
+        GameObject Joueur= GameObject.Find("Player");
+        Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
         mAnimator.SetBool("Spelling", false);
-        //RECHERCHE SORT ARTHUR BOOOOOOOOYER
-        Debug.Log("Au revoir");
         boule = true;
     }
 }

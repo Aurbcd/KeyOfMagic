@@ -134,6 +134,22 @@ MonoBehaviour:
   canvasGHealthBar: {fileID: 0}
   shieldBar: {fileID: 1750123520}
   playerMaxShieldPoints: 0
+--- !u!114 &62560142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62560135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpellDatabase:
+    SpellBook: []
+  ElementDatabase:
+    Elementdb: []
 --- !u!114 &62560143
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,17 +47,20 @@ public class PlayerStats : MonoBehaviour
             int scaledDamage = 0;
 
             //Application des éléments
-            if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement). weakness == attackElement)
+            if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).weakness == attackElement)
             {
                 scaledDamage = (int) (2*damage);
+                Debug.Log( attackElement + " est très efficace contre " + shieldElement);
             }
             else if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).resistance == attackElement)
             {
                 scaledDamage = (int) (0.5*damage);
+                Debug.Log(attackElement + " est pas efficace contre " + shieldElement);
             }
             else
             {
                 scaledDamage = damage;
+                Debug.Log("Neutre");
             }
 
             //Application des dégâts et/ou au shield
