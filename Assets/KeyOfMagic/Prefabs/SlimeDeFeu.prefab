@@ -420,7 +420,6 @@ GameObject:
   - component: {fileID: 6572569499185163303}
   - component: {fileID: 1664014399735710677}
   - component: {fileID: 6572569499185163306}
-  - component: {fileID: 5779292232802592764}
   - component: {fileID: 2281746084761069653}
   - component: {fileID: 6572569499185163309}
   m_Layer: 0
@@ -529,18 +528,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estSelectionne: 0
   distanceToPlayer: 0
---- !u!114 &5779292232802592764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6d93b5e64ced049a09efd5d7682e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2281746084761069653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
-  attackRepeatTime: 2
   choix: 
 --- !u!195 &6572569499185163309
 NavMeshAgent:
