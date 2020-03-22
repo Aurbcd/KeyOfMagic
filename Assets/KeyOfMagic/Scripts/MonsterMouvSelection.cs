@@ -73,12 +73,6 @@ public class MonsterMouvSelection : MonoBehaviour
             }
         }
 
-   
-        if(gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
-        {
-            mAnimator.SetBool("IsDead", true);
-            Destroy(transform.gameObject, 2);
-        }
         if (distanceToPlayer > 22 && DistanceBase > 2)
         {
             BackBase();
@@ -87,6 +81,16 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             mAnimator.SetBool("Backing", false);
         }
+
+        if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
+        {
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            mAnimator.SetBool("IsDead", true);
+            int random = Random.Range(0, 30);
+            //Apparition du loot
+            Destroy(transform.gameObject, 2);
+        }
+
     }
 
     public void MoveInDirection(Vector3 direction)

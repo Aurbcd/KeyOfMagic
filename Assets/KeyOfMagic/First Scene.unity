@@ -1975,7 +1975,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnSlimeRouge
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2082,7 +2082,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnSlimeEnArmure
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3486,6 +3486,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1983202721, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983202721, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
+      propertyPath: m_StoppingDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
