@@ -8,8 +8,18 @@ public class ClickToMove : MonoBehaviour {
     private NavMeshAgent mNavMeshAgent;
     private bool mRunning = false;
     //Affichage de sort
-    public GameObject sortEau;
+    public GameObject amoiAnim;
+    public GameObject AMOIAnim;
+
+
+
+
+
+
+
+    public bool animSortLance;
     public GameObject Gemme;
+    private GameObject clone;
     //private bool isGrounded = true;
     public static bool selectionne = false;
     //private float jumpForce = 5f;
@@ -149,11 +159,17 @@ public class ClickToMove : MonoBehaviour {
         if (pAttack)
         {
             mAnimator.SetTrigger("Attack1Trigger");
-            yield return new WaitForSeconds(0.25f);
-            GameObject clone = Instantiate(sortEau, Gemme.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.5f);
+            if (!animSortLance)
+            {
+                clone = Instantiate(amoiAnim, Gemme.transform.position, Quaternion.identity);
+                animSortLance = true;
+            }
+            yield return new WaitForSeconds(0.3f);
             Destroy(clone);
             pAttack = false;
+            yield return new WaitForSeconds(0.5f);
+            animSortLance = false;
         }
     }
 

@@ -20,7 +20,6 @@ public class ImprovedSpellInput : MonoBehaviour
     private string spellList = "Known spells :\n";
     bool isCapsLockOn;
     private GameObject monstreSelectionne;
-    private Animator mAnimator;
     [DllImport("user32.dll")]
     public static extern short GetKeyState(int keyCode);
     // Start is called before the first frame update
@@ -56,7 +55,7 @@ public class ImprovedSpellInput : MonoBehaviour
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
-            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                 {
@@ -72,7 +71,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
 
-        if (ClickToMove.selectionne && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+        if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
         {
             inputField.ActivateInputField();
             spell = inputField.text;
