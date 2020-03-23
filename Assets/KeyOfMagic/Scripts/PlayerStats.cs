@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     void Start() 
     {
         playerMaxHeathPoints = 1000;
-        playerHealthPoints = 100;
+        playerHealthPoints = 900;
         playerShieldPoints = 0;
         playerMaxShieldPoints = 0;
         shieldElement = "";
@@ -37,6 +37,10 @@ public class PlayerStats : MonoBehaviour
         if (playerShieldPoints <= 0)
         {
             shieldElement = "";
+        }
+        if(playerHealthPoints > playerMaxHeathPoints)
+        {
+            playerHealthPoints = playerMaxHeathPoints;
         }
     }
 

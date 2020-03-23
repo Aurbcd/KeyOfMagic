@@ -18,6 +18,7 @@ public class ImprovedSpellInput : MonoBehaviour
     List<string> spellListStorage = new List<string> { };
     private string spellList = "Known spells :\n";
     bool isCapsLockOn;
+    private Animator mAnimator;
     [DllImport("user32.dll")]
     public static extern short GetKeyState(int keyCode);
     // Start is called before the first frame update
@@ -126,11 +127,12 @@ public class ImprovedSpellInput : MonoBehaviour
                     foreach (string s in spellListStorage)
                     {
                         spellList += "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(s)).element)).hexColor + ">" + s.ToLower() + "</color>\n";
-                    }
+                    }   
                     spellsList.text = spellList;
                 }
                 if (spellEntry.offensive) //SI le sort est offensif
                 {
+                    ClickToMove.pAttack = true;
                     GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
                     foreach (GameObject monstre in ListeMonstre)
                     {
