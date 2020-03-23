@@ -59,7 +59,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
 
-        if (GetComponent<ClickToMove>().selectionne)
+        if (ClickToMove.selectionne)
         {
             inputField.ActivateInputField();
             spell = inputField.text;

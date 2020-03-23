@@ -9,9 +9,8 @@ public class ClickToMove : MonoBehaviour {
     private bool mRunning = false;
     //Affichage de sort
     public GameObject sortEau;
-    private Quaternion angle;
     //    private bool isGrounded = true;
-    public bool selectionne = false;
+    public static bool selectionne = false;
     //private float jumpForce = 5f;
     //private Vector3 jump;
     //private Vector3 velocity;
@@ -91,7 +90,6 @@ public class ClickToMove : MonoBehaviour {
 
         if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance) {
             mRunning = false;
-            //mNavMeshAgent.ResetPath();
         } else {
             mRunning = true;
         }
@@ -150,18 +148,7 @@ public class ClickToMove : MonoBehaviour {
         if (pAttack && selectionne)
         {
             mAnimator.SetTrigger("Attack1Trigger");
-            //GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-            //foreach (GameObject monstre in ListeMonstre)
-            //{
-            //    if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
-            //    {
-            //        if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
-            //        {
-            //            angle = Quaternion.LookRotation(playerPosition, monstre.transform.position);
-            //        }
-            //   }
-            //}
-            Instantiate(sortEau, playerPosition, angle);
+            Instantiate(sortEau, playerPosition, Quaternion.identity);
             yield return new WaitForSeconds(0.25f);
             pAttack = false;
         }

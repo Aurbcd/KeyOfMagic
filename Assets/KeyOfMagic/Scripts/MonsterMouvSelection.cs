@@ -92,10 +92,10 @@ public class MonsterMouvSelection : MonoBehaviour
         if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
             mAnimator.SetBool("IsDead", true);
+            ClickToMove.selectionne = false;
             if (!loot)
             {
                 int NombreDePotions= Random.Range(0, (int)(PlayerStats.playerMaxHeathPoints*3/1000) + 1);
-                Debug.Log((int)(PlayerStats.playerMaxHeathPoints * 3 / 1000));
                 int i = 0;
                 while (i < NombreDePotions)
                 {
