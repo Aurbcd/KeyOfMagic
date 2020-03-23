@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
+    public Canvas newSpellBlinker;
     public Projector projector;
     public InputField inputField;
     public string spell;
@@ -42,6 +43,7 @@ public class ImprovedSpellInput : MonoBehaviour
         tempColor.a = 0f;
         shieldSpriteImage.color = tempColor;
 
+        newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
     }
 
 
@@ -119,6 +121,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell.ToLower())))) //Ne cherche que parmis les sorts offensifs
                 {
+                    newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                     spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell.ToLower()))); //Ajoute la version offensive du sort au spellbook
                     spellListStorage.Add(spell.ToLower());
                     spellListStorage.Sort();
@@ -214,6 +217,7 @@ public class ImprovedSpellInput : MonoBehaviour
         if (Input.GetKeyDown("tab"))
         {
             spellsPanel.SetActive(true);
+            newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
         }
         else if (Input.GetKeyUp("tab"))
         {
