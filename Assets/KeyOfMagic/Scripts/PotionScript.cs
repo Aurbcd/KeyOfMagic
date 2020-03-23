@@ -18,7 +18,7 @@ public class PotionScript : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if(Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
+            if(Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject && PlayerStats.playerHealthPoints != PlayerStats.playerMaxHeathPoints)
             {   
                 if((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 5) {
                     PlayerStats.playerHealthPoints += PlayerStats.playerMaxHeathPoints * 10 / 100;
@@ -26,7 +26,7 @@ public class PotionScript : MonoBehaviour
                 }
             }
         }
-        if((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 2)
+        if((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 2 && PlayerStats.playerMaxHeathPoints != PlayerStats.playerHealthPoints)
         {
             PlayerStats.playerHealthPoints += PlayerStats.playerMaxHeathPoints * 10 / 100;
             Destroy(transform.gameObject);
