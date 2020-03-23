@@ -14,6 +14,7 @@ public class MonsterMouvSelection : MonoBehaviour
     public GameObject potion;
     
     private bool loot;
+    public bool IsDead;
 
     private float Position;
     public float distanceToPlayer;
@@ -24,7 +25,8 @@ public class MonsterMouvSelection : MonoBehaviour
 
     void Start()
     {
-        loot = false;   
+        loot = false;
+        IsDead = false;
         mNavMeshAgent = GetComponent<NavMeshAgent>();
         mAnimator = GetComponent<Animator>();
         mAnimator.updateMode = AnimatorUpdateMode.Normal;
@@ -92,7 +94,9 @@ public class MonsterMouvSelection : MonoBehaviour
         if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
             mAnimator.SetBool("IsDead", true);
+            IsDead = true;
             ClickToMove.selectionne = false;
+
             if (!loot)
             {
                 int NombreDePotions= Random.Range(0, (int)(PlayerStats.playerMaxHeathPoints*3/1000) + 1);

@@ -64,8 +64,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db6cce6cf7a8414e89307301546e15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionne: 0
+  sortEau: {fileID: 0}
+  doubleclick: 0
   pausePanel: {fileID: 0}
+  projector: {fileID: 0}
+  cursormode: 0
+  hotSpot: {x: 0, y: 0}
+  CursorRamasser: {fileID: 0}
+  CursorClassique: {fileID: 0}
 --- !u!1 &3339304713358601230
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +149,36 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Enter text...
+--- !u!1 &4895738804035755491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 233847306672573906}
+  m_Layer: 9
+  m_Name: Gemme
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &233847306672573906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895738804035755491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 1.623, z: 2.026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1972791196520416317}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5029828029280006071
 GameObject:
   m_ObjectHideFlags: 0
