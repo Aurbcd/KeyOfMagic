@@ -19,6 +19,7 @@ public class ImprovedSpellInput : MonoBehaviour
     List<string> spellListStorage = new List<string> { };
     private string spellList = "Known spells :\n";
     bool isCapsLockOn;
+    private GameObject monstreSelectionne;
     private Animator mAnimator;
     [DllImport("user32.dll")]
     public static extern short GetKeyState(int keyCode);
@@ -52,6 +53,18 @@ public class ImprovedSpellInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+        foreach (GameObject monstre in ListeMonstre)
+        {
+            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+            {
+                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                {
+                    monstreSelectionne = monstre;
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.CapsLock))
         {
             isCapsLockOn = !isCapsLockOn;
@@ -59,7 +72,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
 
-        if (ClickToMove.selectionne)
+        if (ClickToMove.selectionne && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
         {
             inputField.ActivateInputField();
             spell = inputField.text;
@@ -136,54 +149,33 @@ public class ImprovedSpellInput : MonoBehaviour
                 if (spellEntry.offensive) //SI le sort est offensif
                 {
                     ClickToMove.pAttack = true;
-                    GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-                    foreach (GameObject monstre in ListeMonstre)
+                    if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
-                        if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
-                        {
-                            if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
-                            {
-
-                                if (monstre.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
-                                {
-                                    monstre.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
-                                    Debug.Log((int)(1.5 * spellEntry.value));
-                                }
-                                else if (monstre.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
-                                {
-                                    monstre.GetComponent<MonsterStatText>().PV -= (int)(0.5 * spellEntry.value);
-                                    Debug.Log((int)(0.5 * spellEntry.value));
-                                }
-                                else //Si le monstre est neutre contre l'élément du sort
-                                {
-                                    monstre.GetComponent<MonsterStatText>().PV -= spellEntry.value;
-                                    Debug.Log(spellEntry.value);
-                                }
-
-                                spell = "";
-                                inputField.text = "";
-                            }
-                        }
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
+                        Debug.Log((int)(1.5 * spellEntry.value));
                     }
+                    else if (monstreSelectionne.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
+                    {
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(0.5 * spellEntry.value);
+                        Debug.Log((int)(0.5 * spellEntry.value));
+                    }
+                    else //Si le monstre est neutre contre l'élément du sort
+                    {
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= spellEntry.value;
+                        Debug.Log(spellEntry.value);
+                    }
+
+                    spell = "";
+                    inputField.text = "";
                 }
 
                 else //Si le sort est défensif
                 {
-                    GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
-                    foreach (GameObject monstre in ListeMonstre)
-                    {
-                        if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
-                        {
-                            if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
-                            {
-                                PlayerStats.shieldElement = spellEntry.element;
-                                PlayerStats.playerShieldPoints = spellEntry.value;
-                                GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
-                                spell = "";
-                                inputField.text = "";
-                            }
-                        }
-                    }
+                    PlayerStats.shieldElement = spellEntry.element;
+                    PlayerStats.playerShieldPoints = spellEntry.value;
+                    GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
+                    spell = "";
+                    inputField.text = "";
                 }
             }
 

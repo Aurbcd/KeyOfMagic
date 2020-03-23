@@ -1088,6 +1088,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6033918034802257873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &451299908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451299904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb3d041479ed6f418fd7d67f1fa753b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &466351412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1510,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &838612350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4895738804035755491, guid: 71854c37b51d54e41b1583bcd0dc6760,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972791197830044448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990357655
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,6 +3785,25 @@ PrefabInstance:
       propertyPath: sortEau
       value: 
       objectReference: {fileID: 451299904}
+    - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
+      propertyPath: Gemme
+      value: 
+      objectReference: {fileID: 838612350}
+    - target: {fileID: 233847306672573906, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 233847306672573906, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.623
+      objectReference: {fileID: 0}
+    - target: {fileID: 233847306672573906, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.026
+      objectReference: {fileID: 0}
     - target: {fileID: 1972791196510734505, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
       propertyPath: m_ApplyRootMotion

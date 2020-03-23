@@ -125,13 +125,13 @@ public class AI_SlimeRouge : MonoBehaviour
         {
             yield return new WaitForSeconds(1 * PlayerStats.Difficulte);
             affichage += choix[i];
-            if (aBougé)
+            if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {
                 affichage = "";
                 break;
             }
         }
-        if (distanceToPlayer < 15 && !aBougé)
+        if (distanceToPlayer < 15 && !aBougé && !GetComponent<MonsterMouvSelection>().IsDead)
         {
             mAnimator.SetBool("Attacking", true);
             damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;

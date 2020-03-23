@@ -9,7 +9,8 @@ public class ClickToMove : MonoBehaviour {
     private bool mRunning = false;
     //Affichage de sort
     public GameObject sortEau;
-    //    private bool isGrounded = true;
+    public GameObject Gemme;
+    //private bool isGrounded = true;
     public static bool selectionne = false;
     //private float jumpForce = 5f;
     //private Vector3 jump;
@@ -145,11 +146,13 @@ public class ClickToMove : MonoBehaviour {
     }
     private IEnumerator WaitForAnimation()
     {
-        if (pAttack && selectionne)
+        if (pAttack)
         {
             mAnimator.SetTrigger("Attack1Trigger");
-            Instantiate(sortEau, playerPosition, Quaternion.identity);
             yield return new WaitForSeconds(0.25f);
+            GameObject clone = Instantiate(sortEau, Gemme.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.25f);
+            Destroy(clone);
             pAttack = false;
         }
     }
