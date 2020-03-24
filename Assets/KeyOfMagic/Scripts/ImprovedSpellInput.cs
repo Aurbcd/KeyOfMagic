@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
+    public GameObject popUpTextResist;
     public GameObject popUpText;
     public Canvas newSpellBlinker;
     public Projector projector;
@@ -20,6 +21,7 @@ public class ImprovedSpellInput : MonoBehaviour
     private GameObject clone;
     public GameObject Gemme;
     private bool affichageEff;
+    private bool affichageRes;
 
 
     private Animator mAnimator;
@@ -173,6 +175,7 @@ public class ImprovedSpellInput : MonoBehaviour
                     {
                         monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(0.5 * spellEntry.value);
                         Debug.Log((int)(0.5 * spellEntry.value));
+                        affichageRes = true;
                     }
                     else //Si le monstre est neutre contre l'élément du sort
                     {
@@ -260,6 +263,19 @@ public class ImprovedSpellInput : MonoBehaviour
                         instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
                         instance.transform.position = monstreSelectionne.transform.position;
                         affichageEff = false;
+                    }
+                }
+            }
+            if (affichageRes) //Si le monstre est resistant contre l'élément du sort
+            {
+                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
+                for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
+                {
+                    if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
+                    {
+                        instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
+                        instance.transform.position = monstreSelectionne.transform.position;
+                        affichageRes = false;
                     }
                 }
             }
