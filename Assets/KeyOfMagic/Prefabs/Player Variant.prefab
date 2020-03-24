@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4550203635407392997
+--- !u!114 &722206610429522428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e98d182e6968744b850b07edc3ea25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &722206610429522428
+--- !u!114 &4550203635407392997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -552,11 +552,6 @@ PrefabInstance:
         type: 3}
       propertyPath: useUnscaledTime
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 430020460072824668, guid: 3360885a9c9230046a0e2ea8d28c50f0,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 30.49
       objectReference: {fileID: 0}
     - target: {fileID: 430020460072824669, guid: 3360885a9c9230046a0e2ea8d28c50f0,
         type: 3}

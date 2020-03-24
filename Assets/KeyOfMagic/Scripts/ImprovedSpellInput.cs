@@ -280,9 +280,9 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(0.2f);
+            pAttack = false;
             Destroy(clone);
             yield return new WaitForSeconds(0.5f);
-            pAttack = false;
             animSortLance = false;
         }
         if (pAttack && !choixOffDef)
@@ -295,10 +295,10 @@ public class ImprovedSpellInput : MonoBehaviour
                 clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
                 animSortLance = true;
             }
-            yield return new WaitForSeconds(0.3f);
-            pAttack = false;
             yield return new WaitForSeconds(0.5f);
+            pAttack = false;
             Destroy(clone);
+            yield return new WaitForSeconds(0.5f);
             animSortLance = false;
         }
     }
