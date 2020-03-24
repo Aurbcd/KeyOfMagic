@@ -508,8 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Slime rouge
-  PV: 150
-  PVMax: 200
+  PV: 2000
+  PVMax: 2000
   weakness: Eau
   resistance: Elec
   Barre: {fileID: 7205153855398608941}

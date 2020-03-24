@@ -17,14 +17,14 @@ public class PlayerStats : MonoBehaviour
 
     void Start() 
     {
-        playerMaxHeathPoints = 1000;
-        playerHealthPoints = 900;
+        playerMaxHeathPoints = 200;
+        playerHealthPoints = 200;
         playerShieldPoints = 0;
         playerMaxShieldPoints = 0;
         shieldElement = "";
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
-        Difficulte = 1;
+        Difficulte = 2;
     }
 
     // Update is called once per frame
