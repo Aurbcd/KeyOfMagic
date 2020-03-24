@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
+    public GameObject popUpText;
     public Canvas newSpellBlinker;
     public Projector projector;
     public InputField inputField;
@@ -165,6 +166,17 @@ public class ImprovedSpellInput : MonoBehaviour
                     if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
                         monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
+                       //PopUpTextController.CreateFloatingText(monstreSelectionne.transform);
+                        GameObject instance = Instantiate(popUpText,monstreSelectionne.transform.position, Quaternion.identity);
+                        //instance.transform.SetParent(GameObject.FindWithTag(" UI").transform, false);
+                        for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
+                        {
+                            if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
+                            {
+                                instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
+                            }
+                        }
+                        instance.transform.position = monstreSelectionne.transform.position;
                         Debug.Log((int)(1.5 * spellEntry.value));
                     }
                     else if (monstreSelectionne.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort

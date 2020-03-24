@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bb7d6fad8164c4f9c529b4489f1bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUpText: {fileID: 3336124030800009053, guid: 6f46aa5fa507eaf458e7cb2cb26b4d58,
+    type: 3}
   newSpellBlinker: {fileID: 4433927}
   projector: {fileID: 1050178986}
   inputField: {fileID: 2144146042}

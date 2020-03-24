@@ -9,10 +9,11 @@ public class PopUpTextController : MonoBehaviour
     public static void Initialize()
     {
         canvas = GameObject.Find("UICanvas");
-        popUpText = Resources.Load<PopUpText>("Assets/KeyOfMagic/Prefabs/PopupTextParent");
+        popUpText = Resources.Load<PopUpText>("/PopupTextParent");
     }
     public static void CreateFloatingText(Transform location)
     {
+        Debug.Log("coucou");
         PopUpText instance = Instantiate(popUpText);
         instance.transform.SetParent(canvas.transform, false);
 

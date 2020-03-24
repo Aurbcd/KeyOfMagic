@@ -11,6 +11,7 @@ public class PopUpText : MonoBehaviour
     void Start()
     {
         AnimatorClipInfo[] clipInfo = efficace.GetCurrentAnimatorClipInfo(0);
+        Destroy(gameObject, clipInfo[0].clip.length);
     }
 
     // Update is called once per frame
