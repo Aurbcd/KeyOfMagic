@@ -7,19 +7,6 @@ public class ClickToMove : MonoBehaviour {
     private Animator mAnimator;
     private NavMeshAgent mNavMeshAgent;
     private bool mRunning = false;
-    //Affichage de sort
-    public GameObject amoiAnim;
-    public GameObject AMOIAnim;
-
-
-
-
-
-
-
-    public bool animSortLance;
-    public GameObject Gemme;
-    private GameObject clone;
     //private bool isGrounded = true;
     public static bool selectionne = false;
     //private float jumpForce = 5f;
@@ -27,7 +14,6 @@ public class ClickToMove : MonoBehaviour {
     //private Vector3 velocity;
     private Vector3 destination;
     public bool doubleclick;
-    public static bool pAttack;
     public GameObject pausePanel;
     public static Vector3 playerPosition;
     private float doubleClickTimeLimit = 0.25f;
@@ -108,9 +94,6 @@ public class ClickToMove : MonoBehaviour {
         mAnimator.SetBool ("Moving", mRunning);
 
 
-        StartCoroutine(WaitForAnimation());
-
-
         /*
         if (Input.GetKeyDown("space") && isGrounded)
         {
@@ -152,24 +135,6 @@ public class ClickToMove : MonoBehaviour {
             }
             count += Time.deltaTime; // increment counter by change in time between frames
             yield return null; // wait for the next frame
-        }
-    }
-    private IEnumerator WaitForAnimation()
-    {
-        if (pAttack)
-        {
-            mAnimator.SetTrigger("Attack1Trigger");
-            yield return new WaitForSeconds(0.5f);
-            if (!animSortLance)
-            {
-                clone = Instantiate(amoiAnim, Gemme.transform.position, Quaternion.identity);
-                animSortLance = true;
-            }
-            yield return new WaitForSeconds(0.3f);
-            Destroy(clone);
-            pAttack = false;
-            yield return new WaitForSeconds(0.5f);
-            animSortLance = false;
         }
     }
 

@@ -10,7 +10,18 @@ public class ImprovedSpellInput : MonoBehaviour
     public Canvas newSpellBlinker;
     public Projector projector;
     public InputField inputField;
+    public static bool pAttack;
     public string spell;
+    public string choix;
+    public bool choixOffDef;
+    //Affichage de sort
+    public bool animSortLance;
+    private GameObject clone;
+    public GameObject Gemme;
+    
+
+
+    private Animator mAnimator;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
     public Text spellsList;
@@ -26,7 +37,7 @@ public class ImprovedSpellInput : MonoBehaviour
     void Start()
     {
         //Initialisation du spellbook
-
+        mAnimator = GetComponent<Animator>();
         foreach (SpellEntry spellEntry in spellBook.SpellBook)
         {
             var sName = spellEntry.spellName;
@@ -130,7 +141,9 @@ public class ImprovedSpellInput : MonoBehaviour
             SpellEntry spellEntry = XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell));
             if (spellEntry != null) //Test pour savoir si le sort est valide
             {
-               
+                choix = spellEntry.spellName;
+                choixOffDef = spellEntry.offensive;
+                pAttack = true;
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell.ToLower())))) //Ne cherche que parmis les sorts offensifs
                 {
@@ -147,7 +160,6 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
                 if (spellEntry.offensive) //SI le sort est offensif
                 {
-                    ClickToMove.pAttack = true;
                     if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
                         monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
@@ -216,9 +228,44 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             spellsPanel.SetActive(false);
         }
+        StartCoroutine(WaitForAnimation());
     }
-/*     public void ValueChangeCheck()
+
+
+
+    private IEnumerator WaitForAnimation()
     {
-        Debug.Log("Value Changed");
-    } */
+        if (pAttack && choixOffDef)
+        {
+            GameObject sortAnim = GameObject.Find("O" + choix + "Anim");
+            mAnimator.SetTrigger("Attack1Trigger");
+            yield return new WaitForSeconds(0.5f);
+            if (!animSortLance)
+            {
+                clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
+                animSortLance = true;
+            }
+            yield return new WaitForSeconds(0.3f);
+            Destroy(clone);
+            pAttack = false;
+            yield return new WaitForSeconds(0.5f);
+            animSortLance = false;
+        }
+        if (pAttack && !choixOffDef)
+        {
+            GameObject sortAnim = GameObject.Find("D" + choix + "Anim");
+            mAnimator.SetTrigger("Attack1Trigger");
+            yield return new WaitForSeconds(0.5f);
+            if (!animSortLance)
+            {
+                clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
+                animSortLance = true;
+            }
+            yield return new WaitForSeconds(0.3f);
+            pAttack = false;
+            yield return new WaitForSeconds(0.5f);
+            Destroy(clone);
+            animSortLance = false;
+        }
+    }
 }
