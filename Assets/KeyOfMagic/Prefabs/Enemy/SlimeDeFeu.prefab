@@ -511,7 +511,7 @@ MonoBehaviour:
   PV: 2000
   PVMax: 2000
   weakness: Eau
-  resistance: Elec
+  resistance: Electricite
   Barre: {fileID: 7205153855398608941}
   CanvasGBarre: {fileID: 8288141265081501994}
   Text: {fileID: 5733315573184057478}
