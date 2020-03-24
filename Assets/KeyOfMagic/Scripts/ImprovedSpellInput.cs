@@ -26,6 +26,8 @@ public class ImprovedSpellInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PopUpTextController.Initialize();
+
         //Initialisation du spellbook
 
         foreach (SpellEntry spellEntry in spellBook.SpellBook)
