@@ -13,6 +13,7 @@ public class PauseScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            GameIsPaused = !GameIsPaused;
             if (GameIsPaused)
             {
                 Resume();
@@ -26,7 +27,7 @@ public class PauseScript : MonoBehaviour
 
     public void Resume()
     {
-        GameIsPaused = false;
+        // GameIsPaused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
@@ -36,7 +37,7 @@ public class PauseScript : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        // GameIsPaused = true;
         AudioListener.volume = 0.3f;
     }
 
