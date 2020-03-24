@@ -14,7 +14,7 @@ public class SortScript : MonoBehaviour
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne || monstre.GetComponent<MonsterMouvSelection>().IsDead)
                 {
-                    transform.LookAt(monstre.transform);
+                    transform.LookAt(monstre.transform.position + new Vector3(0f,0.8f,0f));
                 }
             }
         }
