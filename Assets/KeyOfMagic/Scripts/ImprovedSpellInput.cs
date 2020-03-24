@@ -15,11 +15,11 @@ public class ImprovedSpellInput : MonoBehaviour
     public string spell;
     public string choix;
     public bool choixOffDef;
-    //Affichage de sort
+    //Affichage de sort et Efficace/Resistant
     public bool animSortLance;
     private GameObject clone;
     public GameObject Gemme;
-    
+    private bool affichageEff;
 
 
     private Animator mAnimator;
@@ -165,18 +165,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 {
                     if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
+                        affichageEff = true;
                         monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
-                       //PopUpTextController.CreateFloatingText(monstreSelectionne.transform);
-                        GameObject instance = Instantiate(popUpText,monstreSelectionne.transform.position, Quaternion.identity);
-                        //instance.transform.SetParent(GameObject.FindWithTag(" UI").transform, false);
-                        for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
-                        {
-                            if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
-                            {
-                                instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
-                            }
-                        }
-                        instance.transform.position = monstreSelectionne.transform.position;
                         Debug.Log((int)(1.5 * spellEntry.value));
                     }
                     else if (monstreSelectionne.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
@@ -259,10 +249,24 @@ public class ImprovedSpellInput : MonoBehaviour
                 clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
                 animSortLance = true;
             }
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.1f);
+            if(affichageEff) //Si le monstre est faible contre l'élément du sort
+            {
+                GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
+                for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
+                {
+                    if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
+                    {
+                        instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
+                        instance.transform.position = monstreSelectionne.transform.position;
+                        affichageEff = false;
+                    }
+                }
+            }
+            yield return new WaitForSeconds(0.2f);
             Destroy(clone);
-            pAttack = false;
             yield return new WaitForSeconds(0.5f);
+            pAttack = false;
             animSortLance = false;
         }
         if (pAttack && !choixOffDef)

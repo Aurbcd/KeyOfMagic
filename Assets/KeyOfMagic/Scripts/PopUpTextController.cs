@@ -13,7 +13,6 @@ public class PopUpTextController : MonoBehaviour
     }
     public static void CreateFloatingText(Transform location)
     {
-        Debug.Log("coucou");
         PopUpText instance = Instantiate(popUpText);
         instance.transform.SetParent(canvas.transform, false);
 
