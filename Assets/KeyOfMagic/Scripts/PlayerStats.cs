@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         shieldElement = "";
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
-        Difficulte = 2;
+        Difficulte = 1.5f;
     }
 
     // Update is called once per frame
