@@ -105,7 +105,7 @@ public class ImprovedSpellInput : MonoBehaviour
                     text.color = new Color32(243, 64, 18, 255); //ROUGE FEU
                     projector.material.SetColor("_Color", text.color);
                 }
-                else if (spell[0].Equals('e') || spell[0].Equals('e'))
+                else if (spell[0].Equals('e') || spell[0].Equals('E'))
                 {
                     text.color = new Color32(75, 4, 88, 255); //MAUVE AIR
                     projector.material.SetColor("_Color", text.color);
