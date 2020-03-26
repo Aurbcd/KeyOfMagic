@@ -19,6 +19,13 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
             return 0;
         }
     }
+    public string description
+    {
+        get
+        {
+            return "Vol de vie \n Diminution des dommages";
+        }
+    }
 
     public int rarete
     {
