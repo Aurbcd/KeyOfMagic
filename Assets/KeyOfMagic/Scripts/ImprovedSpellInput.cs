@@ -159,19 +159,14 @@ public class ImprovedSpellInput : MonoBehaviour
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Ne cherche que parmis les sorts offensifs
                 {
-                    Debug.Log("coucou");
                     newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                     spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell))); //Ajout au sort au spellbook
                     bool present = false;
                     //Ajout à la spellListStorage
-                        int i = 0;
                     foreach (SpellStorageEntry sse in spellListStorage)
                     {
-                        Debug.Log("bonjour");
-                        i++;
                         if (sse.nom.Equals(spell.ToLower()))
                         {
-                            Debug.Log("Sort présent");
                             present = true;
                             if (spell.ToLower().Equals(spell))
                             {
@@ -186,7 +181,6 @@ public class ImprovedSpellInput : MonoBehaviour
                     }
                     if (!present)
                     {
-                        Debug.Log("Nouveau sort");
                         if (spell.ToLower().Equals(spell))
                         {
                             spellListStorage.Add(new SpellStorageEntry(spell.ToLower(),spellEntry.value,-1));
