@@ -138,7 +138,8 @@ public class AI_SlimeRouge : MonoBehaviour
             GameObject Joueur= GameObject.Find("Player");
             Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
             mAnimator.SetBool("Spelling", false);
-        }else
+        }
+        else
         {
             mAnimator.SetBool("Attacking", false);
             mAnimator.SetBool("Spelling", false);

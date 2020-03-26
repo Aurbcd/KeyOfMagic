@@ -49,7 +49,7 @@ public class ScriptBouclier : MonoBehaviour
         {
             PS.Play();
             ParticleSystem.MainModule settings = GetComponent<ParticleSystem>().main;
-            settings.startColor = new ParticleSystem.MinMaxGradient(new Color(0.15f, 0.05f, 0.01f, 1f));
+            settings.startColor = new ParticleSystem.MinMaxGradient(new Color(0.07f, 2.7f, 0.4f, 1f));
         }
     }
 }
