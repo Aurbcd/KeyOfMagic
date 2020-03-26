@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
+    public static float DamageMultiplier;
 
 
     void Start() 

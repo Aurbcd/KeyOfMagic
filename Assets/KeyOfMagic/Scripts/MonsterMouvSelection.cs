@@ -19,6 +19,9 @@ public class MonsterMouvSelection : MonoBehaviour
     private float Position;
     public float distanceToPlayer;
 
+    //Mécanique d'objet de l'apparition de potion
+    public static float modificateurApparitionPotions = 1;
+
     // Distance entre l'ennemi et sa position de base
     private float DistanceBase;
     private Vector3 basePositions;
@@ -111,7 +114,6 @@ public class MonsterMouvSelection : MonoBehaviour
             }
             Destroy(transform.gameObject, 2);
         }
-
     }
 
     public void MoveInDirection(Vector3 direction)
