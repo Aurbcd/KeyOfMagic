@@ -24,6 +24,9 @@ public class ImprovedSpellInput : MonoBehaviour
     private bool affichageEff;
     private bool affichageRes;
 
+    //Mécanique d'objet sur l'hésitation
+    public static int tempsReset;
+
     private Animator mAnimator;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
@@ -39,7 +42,7 @@ public class ImprovedSpellInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        tempsReset = 120;
         PopUpTextController.Initialize();
 
         //Initialisation du spellbook
@@ -220,18 +223,21 @@ public class ImprovedSpellInput : MonoBehaviour
                     if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
                         affichageEff = true;
-                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(1.5 * spellEntry.value);
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)((1.5 * spellEntry.value)*PlayerStats.DamageMultiplier);
+                        PlayerStats.playerHealthPoints += (int)((1.5 * spellEntry.value) * PlayerStats.DamageMultiplier * PlayerStats.volDeVie /100);
                         Debug.Log((int)(1.5 * spellEntry.value));
                     }
                     else if (monstreSelectionne.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort
                     {
-                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(0.5 * spellEntry.value);
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)((0.5 * spellEntry.value) * PlayerStats.DamageMultiplier);
+                        PlayerStats.playerHealthPoints += (int)((0.5 * spellEntry.value) * PlayerStats.DamageMultiplier * PlayerStats.volDeVie);
                         Debug.Log((int)(0.5 * spellEntry.value));
                         affichageRes = true;
                     }
                     else //Si le monstre est neutre contre l'élément du sort
                     {
-                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= spellEntry.value;
+                        monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)(spellEntry.value * PlayerStats.DamageMultiplier);
+                        PlayerStats.playerHealthPoints += (int)(spellEntry.value * PlayerStats.DamageMultiplier * PlayerStats.volDeVie);
                         Debug.Log(spellEntry.value);
                     }
 
@@ -260,7 +266,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 tempsSansAppuyé = 0;
             }
 
-            if (tempsSansAppuyé >= 120 && spell != "") //Reset sort au bout de 3 secondes
+            if (tempsSansAppuyé >= tempsReset && spell != "") //Reset sort au bout de 3 secondes
             {
                 tempsSansAppuyé = 0;
                 spell = "";
@@ -383,7 +389,6 @@ public class ImprovedSpellInput : MonoBehaviour
         }
         if (!ClickToMove.selectionne)
         {
-            Debug.Log("oui");
             GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruire");
             foreach (GameObject s in aDetruire)
                Destroy(s);

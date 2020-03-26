@@ -14,7 +14,10 @@ public class PlayerStats : MonoBehaviour
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
-    public static float DamageMultiplier;
+    //mécaniques item
+    public static float DamageMultiplier; //Aucun est en pourcentage
+    public static float volDeVie;
+    public static float resistanceMultiplier;
 
 
     void Start() 
@@ -27,6 +30,9 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
         Difficulte = 1.5f;
+        DamageMultiplier = 1;
+        volDeVie = 0;
+        resistanceMultiplier = 1;
     }
 
     // Update is called once per frame
@@ -49,7 +55,7 @@ public class PlayerStats : MonoBehaviour
     public void DamagePlayer(int damage, string attackElement){
         if (shieldElement == "")
         {
-            playerHealthPoints -= damage;
+            playerHealthPoints -= (int)(damage * resistanceMultiplier);
         }
         else
         {
