@@ -8,7 +8,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chapeau de feu";
+            return "Chapeau draconnique";
         }
     }
 
@@ -25,6 +25,14 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
         get
         {
             return 2;
+        }
+    }
+
+    public string description
+    {
+        get
+        {
+            return "Augmente grandement votre vie \n Les ennemis sont plus rapides";
         }
     }
 

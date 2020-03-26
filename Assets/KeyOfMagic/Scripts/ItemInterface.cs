@@ -9,6 +9,8 @@ public interface ItemInterface{
     int Type { get; }
     Sprite Image { get; }
 
+    string description { get; }
+
     int rarete { get;  }
     void Ramasse();
 
