@@ -25,6 +25,10 @@ public class ClickToMove : MonoBehaviour {
     public Vector2 hotSpot = Vector2.zero;
     public Texture2D CursorRamasser;
     public Texture2D CursorClassique;
+    //Inventaire
+    public InventaireScript inventaire;
+
+
     // Start is called before the first frame update
     void Start () {
         StartCoroutine (InputListener ());
@@ -63,12 +67,29 @@ public class ClickToMove : MonoBehaviour {
                     selectionne = true;
                     transform.LookAt (hit.collider.transform);
                 }
+                if (hit.collider.tag == "Item")
+                {
+                    selectionne = false;
+                    transform.LookAt(hit.collider.transform);
+                    ItemInterface item = hit.collider.GetComponent<ItemInterface>();
+                    if(item != null && (playerPosition - hit.collider.transform.position).magnitude < 5)
+                    {
+                        inventaire.AjouterItem(item);
+                    }
+                }
                 if (hit.collider.tag == "Ennemy" && doubleclick) {
                     selectionne = true;
                     mNavMeshAgent.destination = hit.collider.transform.position;
                     walkautomonstre = true;
                 }
-                if (hit.collider.tag == "Item" && doubleclick) {
+                if (hit.collider.tag == "Potion" && doubleclick) {
+                    selectionne = true;
+                    mNavMeshAgent.destination = hit.collider.transform.position;
+                    walkautoItem = true;
+                }
+
+                if (hit.collider.tag == "Item" && doubleclick)
+                {
                     selectionne = true;
                     mNavMeshAgent.destination = hit.collider.transform.position;
                     walkautoItem = true;

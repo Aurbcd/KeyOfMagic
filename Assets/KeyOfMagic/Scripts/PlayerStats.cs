@@ -7,13 +7,14 @@ public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
     public CanvasGroup canvasGHealthBar;
-    public static int playerHealthPoints;
+    public static int playerHealthPoints;   
     public ShieldBar shieldBar;
     public static int playerShieldPoints;
     public static int playerMaxHeathPoints;
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
+
 
     void Start() 
     {
