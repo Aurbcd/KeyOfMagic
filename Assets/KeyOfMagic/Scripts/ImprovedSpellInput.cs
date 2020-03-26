@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System.Runtime.InteropServices;
+using TMPro;
 
 public class ImprovedSpellInput : MonoBehaviour
 {
@@ -27,11 +28,11 @@ public class ImprovedSpellInput : MonoBehaviour
     private Animator mAnimator;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
-    public Text spellsList;
+    public TextMeshProUGUI spellsList;
     public Image shieldSpriteImage;
     private SpellDatabase spellBook = new SpellDatabase();
-    List<string> spellListStorage = new List<string> { };
-    private string spellList = "Known spells :\n";
+    List<SpellStorageEntry> spellListStorage = new List<SpellStorageEntry> { };
+    private string spellList = "Sorts du grimoire :\n";
     bool isCapsLockOn;
     private GameObject monstreSelectionne;
     [DllImport("user32.dll")]
@@ -47,12 +48,18 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             var sName = spellEntry.spellName;
             var hColor = XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(spellEntry.element)).hexColor;
-            spellListStorage.Add(sName);
-            spellListStorage.Sort();
+            if (spellEntry.spellName.ToLower().Equals(spellEntry.spellName)) //If spell is lowercase
+            {
+                spellListStorage.Add(new SpellStorageEntry(spell.ToLower(), spellEntry.value, -1));
+            }
+            else
+            {
+                spellListStorage.Add(new SpellStorageEntry(spell.ToLower(), -1, spellEntry.value));
+            }
+            spellListStorage.Sort(delegate(SpellStorageEntry s1, SpellStorageEntry s2) {return s1.nom.CompareTo(s2.nom);});
             spellList += "<color=" + hColor + ">" + sName + "</color> \n";
         }
         spellsList.text = spellList;
-
         isCapsLockOn = (((ushort)GetKeyState(0x14)) & 0xffff) != 0;//init stat
 
         //Transparence du sprite du bouclier
@@ -112,8 +119,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
                 else if (spell[0].Equals('o') || spell[0].Equals('O'))
                 {
-                    text.color = new Color32(78, 52, 46, 255); //MARRON TERRE
-                    projector.material.SetColor("_Color", text.color);
+                    text.color = new Color32(2, 87, 13,255); //MARRON TERRE
+                    projector.material.SetColor("_Color", new Color32(5, 252, 17, 255));
                 }
                 else if (spell[0].Equals('i') || spell[0].Equals('I'))
                 {
@@ -150,18 +157,69 @@ public class ImprovedSpellInput : MonoBehaviour
                 choixOffDef = spellEntry.offensive;
                 pAttack = true;
                 //Mise à jour du spellbook du joueur;
-                if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell.ToLower())))) //Ne cherche que parmis les sorts offensifs
+                if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Ne cherche que parmis les sorts offensifs
                 {
+                    Debug.Log("coucou");
                     newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
-                    spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell.ToLower()))); //Ajoute la version offensive du sort au spellbook
-                    spellListStorage.Add(spell.ToLower());
-                    spellListStorage.Sort();
-                    spellList = "Known spells :\n";
-                    foreach (string s in spellListStorage)
+                    spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell))); //Ajout au sort au spellbook
+                    bool present = false;
+                    //Ajout à la spellListStorage
+                        int i = 0;
+                    foreach (SpellStorageEntry sse in spellListStorage)
                     {
-                        spellList += "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(s)).element)).hexColor + ">" + s.ToLower() + "</color>\n";
+                        Debug.Log("bonjour");
+                        i++;
+                        if (sse.nom.Equals(spell.ToLower()))
+                        {
+                            Debug.Log("Sort présent");
+                            present = true;
+                            if (spell.ToLower().Equals(spell))
+                            {
+                                sse.valAtk = spellEntry.value;
+                            }
+                            else
+                            {
+                                sse.valDef = spellEntry.value;
+                            }
+                            sse.nouveau = true;
+                        }
+                    }
+                    if (!present)
+                    {
+                        Debug.Log("Nouveau sort");
+                        if (spell.ToLower().Equals(spell))
+                        {
+                            spellListStorage.Add(new SpellStorageEntry(spell.ToLower(),spellEntry.value,-1));
+                        }
+                        else
+                        {
+                            spellListStorage.Add(new SpellStorageEntry(spell.ToLower(),-1,spellEntry.value));
+                        }
+                    }
+                    spellListStorage.Sort(delegate(SpellStorageEntry s1, SpellStorageEntry s2) {return s1.nom.CompareTo(s2.nom);});
+                    spellList = "Sorts du grimoire :\n";
+                    foreach (SpellStorageEntry sse in spellListStorage)
+                    {
+                        string nouvmark = "";
+                        string valAtk= "<sprite=2>";
+                        string valDef ="<sprite=2>";
+                        if (sse.nouveau)
+                        {
+                            nouvmark = "<sprite=0> ";
+                        }
+                        if (sse.valAtk >= 0)
+                        {
+                            valAtk = sse.valAtk.ToString();
+                        }
+                        if (sse.valDef >= 0)
+                        {
+                            valDef = sse.valDef.ToString();
+                        }
+
+                        spellList += nouvmark + "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(sse.nom)).element)).hexColor + ">" + sse.nom.ToLower() + "</color>     <sprite=3>  " + valAtk + "  |    <sprite=1>  " + valDef + "  \n";
                     }   
                     spellsList.text = spellList;
+                    
                 }
                 if (spellEntry.offensive) //SI le sort est offensif
                 {
@@ -230,10 +288,36 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             spellsPanel.SetActive(true);
             newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
+            foreach (SpellStorageEntry sse in spellListStorage)
+            {
+                sse.nouveau = false;
+            }
         }
         else if (Input.GetKeyUp("tab"))
         {
             spellsPanel.SetActive(false);
+            spellList = "Sorts du grimoire :\n";
+            foreach (SpellStorageEntry sse in spellListStorage)
+            {
+                string nouvmark = "";
+                string valAtk = "<sprite=2>";
+                string valDef = "<sprite=2>";
+                if (sse.nouveau)
+                {
+                    nouvmark = "<sprite=0> ";
+                }
+                if (sse.valAtk >= 0)
+                {
+                    valAtk = sse.valAtk.ToString();
+                }
+                if (sse.valDef >= 0)
+                {
+                    valDef = sse.valDef.ToString();
+                }
+
+                spellList += nouvmark + "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(sse.nom)).element)).hexColor + ">" + sse.nom.ToLower() + "</color>     <sprite=3>  " + valAtk + "  |    <sprite=1>  " + valDef + "  \n";
+            }
+            spellsList.text = spellList;
         }
         StartCoroutine(WaitForAnimation());
     }
@@ -302,4 +386,23 @@ public class ImprovedSpellInput : MonoBehaviour
             animSortLance = false;
         }
     }
+
+    public class SpellStorageEntry{
+        public string nom;
+        public int valAtk;
+        public int valDef;
+        public bool nouveau;
+
+        public SpellStorageEntry(string nom, int atk, int def){
+            this.nom = nom;
+            this.valAtk = atk;
+            this.valDef = def;
+            this.nouveau = true;
+        }
+
+        public override string ToString(){
+            return this.nom;
+        }
+    }
+    
 }

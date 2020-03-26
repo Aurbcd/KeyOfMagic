@@ -46,12 +46,12 @@
     <ElementEntry>
       <elementName>Terre</elementName>
       <color32>
-        <r>78</r>
-        <g>52</g>
-        <b>46</b>
+        <r>2</r>
+        <g>87</g>
+        <b>13</b>
         <a>255</a>
       </color32>
-      <hexColor>#4E342E</hexColor>
+      <hexColor>#02570D</hexColor>
       <weakness>Air</weakness>
       <resistance>Feu</resistance>
       <efficient>Electricite</efficient>
