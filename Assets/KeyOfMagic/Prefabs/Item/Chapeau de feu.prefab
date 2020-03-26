@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601ab5d48227a72429c01a8e9b700dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Image: {fileID: 0}
 --- !u!1001 &927817633691332858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,6 +141,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 72ec25c3682acda408109847c348224d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 72ec25c3682acda408109847c348224d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
