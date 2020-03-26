@@ -21,6 +21,8 @@ public class MonsterMouvSelection : MonoBehaviour
 
     //Mécanique d'objet de l'apparition de potion
     public static float modificateurApparitionPotions = 1;
+    public static int modificateurMinimumPotions = 0;
+    public static int modificateurMaximumPotions = 0;
 
     // Distance entre l'ennemi et sa position de base
     private float DistanceBase;
@@ -102,7 +104,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
             if (!loot)
             {
-                int NombreDePotions= Random.Range(0, (int)(PlayerStats.playerMaxHeathPoints*3/1000) + 1);
+                int NombreDePotions= Random.Range(0 + modificateurMinimumPotions, (int)(modificateurApparitionPotions * PlayerStats.playerMaxHeathPoints*3/200) + 1 + modificateurMaximumPotions);
                 int i = 0;
                 while (i < NombreDePotions)
                 {

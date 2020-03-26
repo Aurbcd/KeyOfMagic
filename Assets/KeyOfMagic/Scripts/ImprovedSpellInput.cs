@@ -24,7 +24,6 @@ public class ImprovedSpellInput : MonoBehaviour
     private bool affichageEff;
     private bool affichageRes;
 
-
     private Animator mAnimator;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
@@ -40,6 +39,7 @@ public class ImprovedSpellInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         PopUpTextController.Initialize();
 
         //Initialisation du spellbook
@@ -159,7 +159,6 @@ public class ImprovedSpellInput : MonoBehaviour
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Ne cherche que parmis les sorts offensifs
                 {
-                    Debug.Log("coucou");
                     newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                     spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell))); //Ajout au sort au spellbook
                     bool present = false;
@@ -334,6 +333,7 @@ public class ImprovedSpellInput : MonoBehaviour
             if (!animSortLance)
             {
                 clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
+                clone.tag = "ADetruire";
                 animSortLance = true;
             }
             yield return new WaitForSeconds(0.1f);
@@ -377,6 +377,7 @@ public class ImprovedSpellInput : MonoBehaviour
             if (!animSortLance)
             {
                 clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
+                clone.tag = "ADetruire";
                 animSortLance = true;
             }
             yield return new WaitForSeconds(0.5f);
@@ -384,6 +385,13 @@ public class ImprovedSpellInput : MonoBehaviour
             Destroy(clone);
             yield return new WaitForSeconds(0.5f);
             animSortLance = false;
+        }
+        if (!ClickToMove.selectionne)
+        {
+            Debug.Log("oui");
+            GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruire");
+            foreach (GameObject s in aDetruire)
+               Destroy(s);
         }
     }
 
