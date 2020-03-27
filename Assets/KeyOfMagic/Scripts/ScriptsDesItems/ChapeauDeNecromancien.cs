@@ -32,7 +32,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Vol de vie \n<sprite=1>  Diminution des dommages infligés";
+            return "<sprite=0>  Vol de vie \n<sprite=1>  Diminution des dégats infligés";
         }
     }
 
@@ -40,7 +40,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
+            return "\" Ce chapeau appartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
         }
     }
 

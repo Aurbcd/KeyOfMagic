@@ -69,6 +69,10 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             StopMovement();
             mAnimator.SetBool("Moving", false);
+            if (MouvBobScript.attack)
+            {
+                BobAttack();
+            }
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -129,6 +133,11 @@ public class MonsterMouvSelection : MonoBehaviour
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();
+    }
+    IEnumerable BobAttack()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<MonsterStatText>().PV += 10;
     }
     public void BackBase()
     {

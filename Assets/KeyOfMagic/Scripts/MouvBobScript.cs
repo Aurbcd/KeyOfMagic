@@ -8,7 +8,7 @@ public class MouvBobScript : MonoBehaviour
     private Animator mAnimator;
     private NavMeshAgent mNavMeshAgent;
     private GameObject montreSelectionne;
-    private bool attack=false;
+    public static bool attack=false;
     private string memoire="";
     void Start()
     {
@@ -45,16 +45,6 @@ public class MouvBobScript : MonoBehaviour
             memoire = BobScript.element;
         }
 
-
-        foreach(ItemInterface item in InventaireScript.items)
-        {
-            if (item.Nom == "Anneau de Bob")
-            {
-                attack = true;
-            }
-            else
-                attack = false;
-        }
         if (attack)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
