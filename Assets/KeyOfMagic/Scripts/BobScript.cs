@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BobScript : MonoBehaviour
 {
-    public static string element;
+    public static string element="";
 
     public Material[] Bobs;
 

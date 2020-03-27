@@ -26,7 +26,13 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
             return "<sprite=0>  Les ennemis sont ralentis";
         }
     }
-
+    public string lore
+    {
+        get
+        {
+            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
+        }
+    }
     public int rarete
     {
         get

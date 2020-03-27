@@ -434,17 +434,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114414381484605374, guid: daa9acc56f0a7c241a334d938150e1c5,
-        type: 3}
-      propertyPath: _Image
-      value: 
-      objectReference: {fileID: 21300000, guid: 2aa32c130dc05424583c5f504813b779,
-        type: 3}
-    - target: {fileID: 114414381484605374, guid: daa9acc56f0a7c241a334d938150e1c5,
-        type: 3}
-      propertyPath: canvasGroup
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 129541418470629865, guid: daa9acc56f0a7c241a334d938150e1c5,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1898,16 +1887,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6572569499185163309, guid: d4df664ac2e28a441af3e32a166287af,
-        type: 3}
-      propertyPath: m_Speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6572569499185163309, guid: d4df664ac2e28a441af3e32a166287af,
-        type: 3}
-      propertyPath: m_AngularSpeed
-      value: 50000
-      objectReference: {fileID: 0}
     - target: {fileID: 8841655246841851567, guid: d4df664ac2e28a441af3e32a166287af,
         type: 3}
       propertyPath: Bobs.Array.size
@@ -2532,24 +2511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672503017}
   m_CullTransparentMesh: 0
---- !u!1 &698543249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3916728056888137960, guid: daa9acc56f0a7c241a334d938150e1c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 117980757}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &698543251
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698543249}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &723507884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,6 +4116,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1285227472794103892, guid: f43b9b57a63d0454ea2fb0162282aca9,
+        type: 3}
+      propertyPath: m_Extents.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285227472794103892, guid: f43b9b57a63d0454ea2fb0162282aca9,
+        type: 3}
+      propertyPath: m_Extents.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285227472794103892, guid: f43b9b57a63d0454ea2fb0162282aca9,
+        type: 3}
+      propertyPath: m_Extents.y
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 7351476427020734156, guid: f43b9b57a63d0454ea2fb0162282aca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6476,12 +6452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114684841098075794, guid: b3e85a87321e98d4e82bd1f4b5459265,
-        type: 3}
-      propertyPath: _Image
-      value: 
-      objectReference: {fileID: 21300000, guid: 817978a104180f046a66eb942ae84455,
-        type: 3}
     - target: {fileID: 1591322530080062945, guid: b3e85a87321e98d4e82bd1f4b5459265,
         type: 3}
       propertyPath: m_Name

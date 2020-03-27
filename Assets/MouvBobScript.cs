@@ -8,6 +8,8 @@ public class MouvBobScript : MonoBehaviour
     private Animator mAnimator;
     private NavMeshAgent mNavMeshAgent;
     private GameObject montreSelectionne;
+    private bool attack=false;
+    private string memoire="";
     void Start()
     {
         mAnimator = GetComponent<Animator>();
@@ -37,17 +39,29 @@ public class MouvBobScript : MonoBehaviour
             }
         }
 
+        if (memoire != BobScript.element)
+        {
+            mAnimator.SetTrigger("changing");
+            memoire = BobScript.element;
+        }
+
+
         foreach(ItemInterface item in InventaireScript.items)
         {
             if (item.Nom == "Anneau de Bob")
             {
-                transform.localScale = new Vector3(1f, 1f, 1f);
-                if ((montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18)
-                    mAnimator.SetBool("Attacking", true);
-                else
-                    mAnimator.SetBool("Attacking", false);
+                attack = true;
             }
+            else
+                attack = false;
         }
-
+        if (attack)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            if ((montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18)
+                mAnimator.SetBool("Attacking", true);
+            else
+                mAnimator.SetBool("Attacking", false);
+        }
     }
 }

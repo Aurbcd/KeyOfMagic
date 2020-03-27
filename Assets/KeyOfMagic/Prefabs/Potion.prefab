@@ -4939,8 +4939,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7351476427020734156}
   - component: {fileID: 2070912727504570323}
-  - component: {fileID: 225189018719830569}
   - component: {fileID: 114143984587362186}
+  - component: {fileID: 1285227472794103892}
+  - component: {fileID: 3263094365154270697}
   m_Layer: 0
   m_Name: Potion
   m_TagString: Potion
@@ -4982,19 +4983,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &225189018719830569
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7351476427020899052}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9, y: 2.7, z: 1.9}
-  m_Center: {x: 0, y: 0.58, z: 0}
 --- !u!114 &114143984587362186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5007,3 +4995,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21cedf9594f216247b750e638781cbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &1285227472794103892
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351476427020899052}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.88, y: 1.425, z: 0.88}
+  m_MoveThreshold: 3.49
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.6, z: 0}
+  m_TimeToStationary: 1.77
+--- !u!136 &3263094365154270697
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351476427020899052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.9
+  m_Height: 2.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6, z: 0}
