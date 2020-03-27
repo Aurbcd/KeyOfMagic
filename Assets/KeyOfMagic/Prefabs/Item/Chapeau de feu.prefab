@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 54223146746519696}
   - component: {fileID: 65893969918328696}
   - component: {fileID: 114414381484605374}
+  - component: {fileID: 2969909348076123823}
   m_Layer: 10
   m_Name: Chapeau de feu
   m_TagString: Item

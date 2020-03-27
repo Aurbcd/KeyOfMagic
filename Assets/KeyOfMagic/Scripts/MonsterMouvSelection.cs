@@ -80,6 +80,7 @@ public class MonsterMouvSelection : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
             {
                 estSelectionne = true;
+                BobScript.element = GetComponent<MonsterStatText>().element;
             }
             else
             {

@@ -869,6 +869,7 @@ MonoBehaviour:
   monsterName: Slime en armure
   PV: 1500
   PVMax: 1500
+  element: Eau
   weakness: Electricite
   resistance: Terre
   Barre: {fileID: 8351326653955632851}

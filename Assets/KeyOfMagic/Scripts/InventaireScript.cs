@@ -6,7 +6,7 @@ using System;
 public class InventaireScript : MonoBehaviour
 {
     private List<int> itemsType = new List<int>();
-    private List<ItemInterface> items = new List<ItemInterface>();
+    public static List<ItemInterface> items = new List<ItemInterface>();
     public event EventHandler<InventoryEventArgs> ItemAjouté;
     public event EventHandler<InventoryEventArgs> ItemJeté;
 
