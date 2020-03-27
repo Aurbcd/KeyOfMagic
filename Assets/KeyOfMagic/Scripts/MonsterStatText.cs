@@ -9,6 +9,7 @@ public class MonsterStatText : MonoBehaviour
     public int PV = 150;
     public int PVMax = 200;
 
+    public string element;
     public string weakness;
     public string resistance;
 

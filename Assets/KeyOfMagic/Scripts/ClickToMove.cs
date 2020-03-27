@@ -145,7 +145,7 @@ public class ClickToMove : MonoBehaviour {
     }
 
     private IEnumerator ClickEvent () {
-        //pause a frame so you don't pick up the same mouse down event.
+        //pause a frame so you don't pick up the same mouse down even
         yield return new WaitForEndOfFrame ();
 
         float count = 0f;

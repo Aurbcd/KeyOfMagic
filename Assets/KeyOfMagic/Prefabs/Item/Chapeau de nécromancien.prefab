@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 54223146746519696}
   - component: {fileID: 65893969918328696}
   - component: {fileID: 114684841098075794}
+  - component: {fileID: 6480859960769732581}
   m_Layer: 10
   m_Name: "Chapeau de n\xE9cromancien"
   m_TagString: Item
@@ -76,6 +77,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Image: {fileID: 21300000, guid: 2aa32c130dc05424583c5f504813b779, type: 3}
+--- !u!208 &6480859960769732581
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591322530080062945}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.9, y: 0.75, z: 1.075}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.05, y: 0.9, z: -0.095}
+  m_TimeToStationary: 0.5
 --- !u!1001 &8483231937876954099
 PrefabInstance:
   m_ObjectHideFlags: 0
