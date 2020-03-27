@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     public static float shieldMultiplier;
     public static float resistanceMultiplier;
     private bool amHero = false;
+    private bool trouve;
 
 
     void Start() 
@@ -55,7 +56,7 @@ public class PlayerStats : MonoBehaviour
         }
         foreach (ItemInterface item in InventaireScript.items)
         {
-            bool trouve = false;
+            trouve = false;
             if (item.Nom.Equals("Habits de Héros"))
             {
                 amHero = true;

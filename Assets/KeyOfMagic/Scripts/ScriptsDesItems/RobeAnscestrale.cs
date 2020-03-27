@@ -26,7 +26,13 @@ public class RobeAnscestrale : MonoBehaviour, ItemInterface
             return "<sprite=0>  Augmente vos nombres de points de vie maximum \n<sprite=0>  Garanti l'apparition de potion à la mort d'un monstre";
         }
     }
-
+    public string lore
+    {
+        get
+        {
+            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
+        }
+    }
     public int rarete
     {
         get

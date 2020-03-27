@@ -20,11 +20,19 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
             return 1;
         }
     }
+
     public string description
     {
         get
         {
             return "<sprite=0>  Augmente vos nombres de points de vie maximum \n<sprite=0>  Augmente le nombre de potion à la mort d'un monstre \n<sprite=0>  Réduit les dégats subis \n<sprite=1>  Réduit votre vitesse de déplacement";
+        }
+    }
+    public string lore
+    {
+        get
+        {
+            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
         }
     }
 

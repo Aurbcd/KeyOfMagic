@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 54223146746519696}
   - component: {fileID: 65893969918328696}
   - component: {fileID: 114414381484605374}
-  - component: {fileID: 2969909348076123823}
+  - component: {fileID: 5237618605496299660}
   m_Layer: 10
   m_Name: Chapeau de feu
   m_TagString: Item
@@ -237,6 +237,22 @@ MonoBehaviour:
   "description_affich\xE9": {fileID: 6675430486112977778}
   "lore_affich\xE9": {fileID: 6303498688058966235}
   _Image: {fileID: 21300000, guid: 2aa32c130dc05424583c5f504813b779, type: 3}
+--- !u!208 &5237618605496299660
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591322530080062945}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.9, y: 0.75, z: 1.05}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.05, y: 0.9, z: -0.1}
+  m_TimeToStationary: 0.5
 --- !u!1 &2527147938159416262
 GameObject:
   m_ObjectHideFlags: 0

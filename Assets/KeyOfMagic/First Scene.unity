@@ -444,7 +444,7 @@ PrefabInstance:
         type: 3}
       propertyPath: canvasGroup
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2081709840}
     - target: {fileID: 129541418470629865, guid: daa9acc56f0a7c241a334d938150e1c5,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2532,24 +2532,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672503017}
   m_CullTransparentMesh: 0
---- !u!1 &698543249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3916728056888137960, guid: daa9acc56f0a7c241a334d938150e1c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 117980757}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &698543251
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698543249}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &723507884
 GameObject:
   m_ObjectHideFlags: 0
@@ -7557,6 +7539,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054952202}
   m_CullTransparentMesh: 0
+--- !u!225 &2081709840 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 9212388596349631964, guid: daa9acc56f0a7c241a334d938150e1c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 117980757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2083449995
 GameObject:
   m_ObjectHideFlags: 0
