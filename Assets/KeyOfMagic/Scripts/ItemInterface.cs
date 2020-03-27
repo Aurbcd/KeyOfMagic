@@ -10,7 +10,7 @@ public interface ItemInterface{
     Sprite Image { get; }
 
     string description { get; }
-
+    string lore{ get; }
     int rarete { get;  }
     void Ramasse();
 

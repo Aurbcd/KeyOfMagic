@@ -8,11 +8,14 @@ public class DisplayStatCard : MonoBehaviour
 {
 
     public CanvasGroup canvasGroup;
+    public TextMeshProUGUI titre;
+    public TextMeshProUGUI description;
     private bool isDisplayed;
-    public float fadeSpeed;
+    private float fadeSpeed = 5f;
     void Start()
     {
         canvasGroup.alpha = 0f;
+        
     }
 
     void Update()

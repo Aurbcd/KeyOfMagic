@@ -122,7 +122,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
                 else if (spell[0].Equals('o') || spell[0].Equals('O'))
                 {
-                    text.color = new Color32(2, 87, 13,255); //MARRON TERRE
+                    text.color = new Color32(2, 87, 13,255); //VERT TERRE
                     projector.material.SetColor("_Color", new Color32(5, 252, 17, 255));
                 }
                 else if (spell[0].Equals('i') || spell[0].Equals('I'))
