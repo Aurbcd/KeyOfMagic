@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     public static float volDeVie;
     public static float shieldMultiplier;
     public static float resistanceMultiplier;
+    private bool amHero = false;
 
 
     void Start() 
@@ -52,6 +53,19 @@ public class PlayerStats : MonoBehaviour
         {
             playerHealthPoints = playerMaxHeathPoints;
         }
+        foreach (ItemInterface item in InventaireScript.items)
+        {
+            bool trouve = false;
+            if (item.Nom.Equals("Habits de Héros"))
+            {
+                amHero = true;
+                trouve = true;
+            }
+        }
+        if(!trouve)
+        {
+            amHero = false;
+        }
     }
 
     public void DamagePlayer(int damage, string attackElement){
@@ -84,6 +98,10 @@ public class PlayerStats : MonoBehaviour
             if ( (playerShieldPoints - scaledDamage) >0 )
             {
                 playerShieldPoints -= scaledDamage;
+                if (amHero)
+                {
+                    playerShieldPoints = 0;
+                }
             }
             else
             {
