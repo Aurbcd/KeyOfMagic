@@ -57,7 +57,7 @@ public class MonsterMouvSelection : MonoBehaviour
         }
 
 
-        if (distanceToPlayer < 20)
+        if (distanceToPlayer < 20 && distanceToPlayer > 15)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
@@ -92,8 +92,9 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             BackBase();
         }
-        if (DistanceBase < 2)
+        if (DistanceBase < 2 && distanceToPlayer > 22)
         {
+            GetComponent<MonsterStatText>().PV += 3;
             mAnimator.SetBool("Backing", false);
         }
 
@@ -121,6 +122,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
     public void MoveInDirection(Vector3 direction)
     {
+        GetComponent<MonsterStatText>().PV += 3;
         mNavMeshAgent.destination = direction;
     }
 
@@ -130,6 +132,7 @@ public class MonsterMouvSelection : MonoBehaviour
     }
     public void BackBase()
     {
+        GetComponent<MonsterStatText>().PV += 3;
         mAnimator.SetBool("Backing", true);
         MoveInDirection(basePositions);
     }

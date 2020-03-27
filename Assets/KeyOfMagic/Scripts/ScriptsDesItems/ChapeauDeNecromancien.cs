@@ -64,11 +64,15 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
+        PlayerStats.volDeVie += 0.1f;
+        PlayerStats.DamageMultiplier -= 0.4f;
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
+        PlayerStats.volDeVie -= 0.1f;
+        PlayerStats.DamageMultiplier += 0.4f;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
     }

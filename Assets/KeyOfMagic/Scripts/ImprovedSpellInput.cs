@@ -224,7 +224,7 @@ public class ImprovedSpellInput : MonoBehaviour
                     {
                         affichageEff = true;
                         monstreSelectionne.GetComponent<MonsterStatText>().PV -= (int)((1.5 * spellEntry.value)*PlayerStats.DamageMultiplier);
-                        PlayerStats.playerHealthPoints += (int)((1.5 * spellEntry.value) * PlayerStats.DamageMultiplier * PlayerStats.volDeVie /100);
+                        PlayerStats.playerHealthPoints += (int)((1.5 * spellEntry.value) * PlayerStats.DamageMultiplier * PlayerStats.volDeVie);
                         Debug.Log((int)(1.5 * spellEntry.value));
                     }
                     else if (monstreSelectionne.GetComponent<MonsterStatText>().resistance.Equals(spellEntry.element)) //Si le monstre est résistant contre l'élément du sort

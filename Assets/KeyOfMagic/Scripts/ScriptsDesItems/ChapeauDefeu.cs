@@ -65,9 +65,9 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     public void Ramasse()
     {
         //On met ici les effets de l'objet
-        PlayerStats.playerMaxHeathPoints += 50;
-        PlayerStats.playerHealthPoints += 50;
-
+        PlayerStats.playerMaxHeathPoints += 200;
+        PlayerStats.playerHealthPoints += 200;
+        PlayerStats.Difficulte += 1;
 
         gameObject.SetActive(false);
     }
@@ -75,8 +75,9 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     public void Jete()
     {
         //Ne pas oublier de retirer ces effets (attention à l'ordre)
-        PlayerStats.playerHealthPoints -= 50;
-        PlayerStats.playerMaxHeathPoints -= 50;
+        PlayerStats.playerHealthPoints -= 200;
+        PlayerStats.playerMaxHeathPoints -= 200;
+        PlayerStats.Difficulte += 1;
 
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);

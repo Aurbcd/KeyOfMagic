@@ -34,6 +34,8 @@ public class MonsterStatText : MonoBehaviour
         Text.text = "" + monsterName;
         Barre.SetHealth(PV);
 
+        if (PV > PVMax)
+            PV = PVMax;
 
         if (gameObject.GetComponent<MonsterMouvSelection>().estSelectionne)
         {
