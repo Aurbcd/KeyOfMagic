@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     //mécaniques item
     public static float DamageMultiplier; //Aucun est en pourcentage
     public static float volDeVie;
+    public static float shieldMultiplier;
     public static float resistanceMultiplier;
 
 
@@ -33,6 +34,7 @@ public class PlayerStats : MonoBehaviour
         DamageMultiplier = 1;
         volDeVie = 0;
         resistanceMultiplier = 1;
+        shieldMultiplier = 1;
     }
 
     // Update is called once per frame

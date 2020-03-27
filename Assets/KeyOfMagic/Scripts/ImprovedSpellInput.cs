@@ -249,7 +249,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 {
                     PlayerStats.shieldElement = spellEntry.element;
                     PlayerStats.playerShieldPoints = spellEntry.value;
-                    GetComponent<PlayerStats>().playerMaxShieldPoints = spellEntry.value;
+                    GetComponent<PlayerStats>().playerMaxShieldPoints = (int)(spellEntry.value * PlayerStats.shieldMultiplier);
                     spell = "";
                     inputField.text = "";
                 }
