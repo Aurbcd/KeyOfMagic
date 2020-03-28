@@ -41,7 +41,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente grandement votre vie \n<sprite=1>  Les ennemis sont plus rapides";
+            return "<sprite=0>  Augmente grandement votre vie \n<sprite=1>  Les incantations ennemies sont plus rapides";
         }
     }
 
@@ -49,7 +49,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoir hors du commun.\" ";
+            return "\"Le Havre de la Nuit était une citée marchande prospère, mais il n'en reste aujourd'hui que des ruines. Dotée d'une force de défense pourtant hors du commun, la légende raconte qu'une seule magicienne l'aurait réduite en cendres, impassible face à l'assaut continu de la garde de la ville.  \"";
         }
     }
 

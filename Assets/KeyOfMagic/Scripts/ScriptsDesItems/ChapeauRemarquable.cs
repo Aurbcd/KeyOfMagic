@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChapeauRemarquable : MonoBehaviour, ItemInterface
 {
+    public CanvasGroup canvasGroup;
+    public TextMeshProUGUI titre;
+    public TextMeshProUGUI description_affiché;
+    public TextMeshProUGUI lore_affiché;
+    private bool isDisplayed;
+    private float fadeSpeed = 5f;
     public string Nom
     {
         get
@@ -23,14 +30,14 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Les ennemis sont ralentis \n<sprite=0>  Vos boucliers sont plus efficaces";
+            return "<sprite=0>  Les incantations ennemies sont ralenties \n<sprite=0>  Vos boucliers sont plus efficaces";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
+            return "\" Un chapeau aux détails d'une rare beauté, dont les motifs rafinés attirent l'oeil. En plus d'être un atout aux soirées chics, il permet de distraire les ennemis qui manquent de vigilance. \"";
         }
     }
     public int rarete
@@ -64,5 +71,37 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
         PlayerStats.shieldMultiplier -= 0.1f;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+    }
+
+    public void Start()
+    {
+
+        canvasGroup.alpha = 0f;
+        titre.text = this.Nom;
+        description_affiché.text = this.description;
+        lore_affiché.text = this.lore;
+
+    }
+
+    public void Update()
+    {
+        if (isDisplayed)
+        {
+            canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1f, fadeSpeed * Time.deltaTime);
+        }
+        else
+        {
+            canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0f, fadeSpeed * Time.deltaTime);
+        }
+    }
+
+    void OnMouseOver()
+    {
+        isDisplayed = true;
+    }
+
+    void OnMouseExit()
+    {
+        isDisplayed = false;
     }
 }

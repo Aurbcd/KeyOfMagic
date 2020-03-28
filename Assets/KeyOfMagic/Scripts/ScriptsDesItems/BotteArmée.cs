@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class BotteArmée : MonoBehaviour, ItemInterface
 {
+    public CanvasGroup canvasGroup;
+    public TextMeshProUGUI titre;
+    public TextMeshProUGUI description_affiché;
+    public TextMeshProUGUI lore_affiché;
+    private bool isDisplayed;
+    private float fadeSpeed = 5f;
     public string Nom
     {
         get
@@ -32,7 +39,7 @@ public class BotteArmée : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Ce chapeau apartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun.\" ";
+            return "\" Des bottes particulièrement confortables. Bien que possédant des renforts conséquents, leur poids ne semble pas contraindre leur porteur. Leur semelle très épaisse permet à l'utilisateur de marcher bien plus vite, puiqu'il n'a plus besoin de regarder où il met les pieds. \"";
         }
     }
 
@@ -67,5 +74,37 @@ public class BotteArmée : MonoBehaviour, ItemInterface
         PlayerStats.resistanceMultiplier += 0.1f;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+    }
+
+    public void Start()
+    {
+
+        canvasGroup.alpha = 0f;
+        titre.text = this.Nom;
+        description_affiché.text = this.description;
+        lore_affiché.text = this.lore;
+
+    }
+
+    public void Update()
+    {
+        if (isDisplayed)
+        {
+            canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1f, fadeSpeed * Time.deltaTime);
+        }
+        else
+        {
+            canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0f, fadeSpeed * Time.deltaTime);
+        }
+    }
+
+    void OnMouseOver()
+    {
+        isDisplayed = true;
+    }
+
+    void OnMouseExit()
+    {
+        isDisplayed = false;
     }
 }
