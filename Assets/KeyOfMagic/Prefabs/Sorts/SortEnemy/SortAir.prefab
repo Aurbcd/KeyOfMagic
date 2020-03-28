@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7385940636464647421}
   - component: {fileID: 1396181945020979949}
   - component: {fileID: 946505192305894088}
-  - component: {fileID: 2953736548735300638}
+  - component: {fileID: 114402263097395436}
   m_Layer: 0
-  m_Name: OamoiAnim
+  m_Name: SortAir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,13 +42,13 @@ ParticleSystem:
   m_GameObject: {fileID: 3835050707202631650}
   serializedVersion: 6
   lengthInSec: 5
-  simulationSpeed: 9.1
+  simulationSpeed: 30.92
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 12.31
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 34.74
+      scalar: 3.24
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 6.68
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -866,7 +866,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20.18
+      scalar: 0.05
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -982,8 +982,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0.9695587
+          time: 0.64038086
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -3501,7 +3501,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -3824,7 +3824,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -4655,8 +4655,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f11bf23e3ac19824e8fbd428b477f23d, type: 2}
-  - {fileID: 2100000, guid: f11bf23e3ac19824e8fbd428b477f23d, type: 2}
+  - {fileID: 2100000, guid: e1a6d3ade7f16a94394f840c7f67253f, type: 2}
+  - {fileID: 2100000, guid: e1a6d3ade7f16a94394f840c7f67253f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4699,7 +4699,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2953736548735300638
+--- !u!114 &114402263097395436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4708,6 +4708,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3835050707202631650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb3d041479ed6f418fd7d67f1fa753b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e3a67f7dd3abaf4b8661ab66d0a5648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

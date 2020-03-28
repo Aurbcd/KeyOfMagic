@@ -11,6 +11,7 @@ TagManager:
   - Potion
   - ADetruire
   - Bob
+  - ADetruireMonstre
   layers:
   - Default
   - TransparentFX

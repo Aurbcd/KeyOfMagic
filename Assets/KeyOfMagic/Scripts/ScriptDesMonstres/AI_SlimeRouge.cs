@@ -20,7 +20,9 @@ public class AI_SlimeRouge : MonoBehaviour
     private int damage;
     public bool aBougé;
     public string affichage;
-
+    private GameObject clone;
+    private GameObject sortAnim;
+    public List<GameObject> VisuelSorts;
     // Start is called before the first frame update
     void Start()
     {
@@ -133,11 +135,18 @@ public class AI_SlimeRouge : MonoBehaviour
         }
         if (distanceToPlayer < 15 && !aBougé && !GetComponent<MonsterMouvSelection>().IsDead)
         {
+            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("Sort" + element + " (UnityEngine.GameObject)"));
             mAnimator.SetBool("Attacking", true);
+            yield return new WaitForSeconds(0.25f);
             damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            clone = Instantiate(sortAnim, transform.position + new Vector3(0f,2f,0f), Quaternion.identity);
+            clone.tag = "ADetruireMonstre";
             GameObject Joueur= GameObject.Find("Player");
             Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
+            yield return new WaitForSeconds(0.25f);
+            mAnimator.SetBool("Attacking", false);
             mAnimator.SetBool("Spelling", false);
+            Destroy(clone);
         }
         else
         {

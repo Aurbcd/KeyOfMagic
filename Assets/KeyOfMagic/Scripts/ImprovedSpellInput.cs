@@ -23,6 +23,8 @@ public class ImprovedSpellInput : MonoBehaviour
     public GameObject Gemme;
     private bool affichageEff;
     private bool affichageRes;
+    private GameObject sortAnim;
+    public List<GameObject> VisuelSorts;
 
     //Mécanique d'objet sur l'hésitation
     public static int tempsReset;
@@ -328,7 +330,7 @@ public class ImprovedSpellInput : MonoBehaviour
     {
         if (pAttack && choixOffDef)
         {
-            GameObject sortAnim = GameObject.Find("O" + choix + "Anim");
+            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("O" + choix + "Anim" + " (UnityEngine.GameObject)"));
             mAnimator.SetTrigger("Attack1Trigger");
             yield return new WaitForSeconds(0.5f);
             if (!animSortLance)
@@ -372,7 +374,7 @@ public class ImprovedSpellInput : MonoBehaviour
         }
         if (pAttack && !choixOffDef)
         {
-            GameObject sortAnim = GameObject.Find("D" + choix + "Anim");
+            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("D" + choix + "Anim" + " (UnityEngine.GameObject)"));
             mAnimator.SetTrigger("Attack1Trigger");
             yield return new WaitForSeconds(0.5f);
             if (!animSortLance)
