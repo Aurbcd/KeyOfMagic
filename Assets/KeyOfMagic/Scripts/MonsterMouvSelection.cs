@@ -105,6 +105,9 @@ public class MonsterMouvSelection : MonoBehaviour
         if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
             mAnimator.SetBool("IsDead", true);
+            GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruireMonstre");
+            foreach (GameObject s in aDetruire)
+                Destroy(s);
             IsDead = true;
             ClickToMove.selectionne = false;
 
@@ -137,7 +140,7 @@ public class MonsterMouvSelection : MonoBehaviour
     IEnumerable BobAttack()
     {
         yield return new WaitForSeconds(1);
-        GetComponent<MonsterStatText>().PV += 10;
+        GetComponent<MonsterStatText>().PV -= 10;
     }
     public void BackBase()
     {

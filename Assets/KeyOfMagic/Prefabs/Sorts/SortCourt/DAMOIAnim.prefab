@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 300553544266005472}
   - component: {fileID: 4563208416250308743}
   m_Layer: 0
-  m_Name: AMOIAnim 1
+  m_Name: DAMOIAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
