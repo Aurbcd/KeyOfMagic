@@ -253,55 +253,6 @@ MonoBehaviour:
     SpellBook: []
   ElementDatabase:
     Elementdb: []
---- !u!114 &62560143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62560135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bb7d6fad8164c4f9c529b4489f1bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpTextResist: {fileID: 3336124030800009053, guid: 197148968b78b204cbec0050ea1acdf9,
-    type: 3}
-  popUpText: {fileID: 3336124030800009053, guid: 6f46aa5fa507eaf458e7cb2cb26b4d58,
-    type: 3}
-  newSpellBlinker: {fileID: 4433927}
-  projector: {fileID: 1050178986}
-  inputField: {fileID: 2144146042}
-  spell: 
-  choix: 
-  choixOffDef: 0
-  animSortLance: 0
-  Gemme: {fileID: 838612350}
-  VisuelSorts:
-  - {fileID: 3835050707202631650, guid: 3075564c6bc66934fb140844d6f79876, type: 3}
-  - {fileID: 3835050707202631650, guid: 3de6e5db77cee224fa5f5a5e01fd21ca, type: 3}
-  - {fileID: 3835050707202631650, guid: 7d32669fafebf484caf2211bc35fab97, type: 3}
-  - {fileID: 3835050707202631650, guid: 55485e3627f82b74b8b76847d229f380, type: 3}
-  - {fileID: 3835050707202631650, guid: 41710645ec6ac9147add9b64270f34bf, type: 3}
-  - {fileID: 670263812431943585, guid: 27d17cfc5326c3e40b750f76b998dc5c, type: 3}
-  - {fileID: 670263812431943585, guid: babb207d46bbcb04eb02d4d5fc0e405d, type: 3}
-  - {fileID: 670263812431943585, guid: ee713a2b906272b42a543a23e0ba3301, type: 3}
-  - {fileID: 670263812431943585, guid: ace70056c9343d0419933e1959cc7dca, type: 3}
-  - {fileID: 670263812431943585, guid: c350a9556b17cc348b5dd50f78a1c138, type: 3}
-  - {fileID: 3835050707202631650, guid: c2780736b71b77d4c9a22ba953238c5d, type: 3}
-  - {fileID: 3835050707202631650, guid: ee61b76e9d808074c9b00483dcf918be, type: 3}
-  - {fileID: 3835050707202631650, guid: 916a30e21708d4a47bf319ff6a8f0fa0, type: 3}
-  - {fileID: 3835050707202631650, guid: 944878013d763c94bacff12262cbf05f, type: 3}
-  - {fileID: 3835050707202631650, guid: 486766c70b210ab489e9dfe9ff219edc, type: 3}
-  - {fileID: 3958356365806743759, guid: 2b9bd9818b2c69c45b6419a23fde9a84, type: 3}
-  - {fileID: 3688634752232416654, guid: 25f2ffc09b5e6d947afabb12a213d120, type: 3}
-  - {fileID: 95195413383450130, guid: 00bfd2804ff7f694cacf5a9a30e42d2b, type: 3}
-  - {fileID: 4506787999873237425, guid: a20f61ae6058b49499beffb5c70aff56, type: 3}
-  - {fileID: 670263812431943585, guid: 16a3a49b74bf2e44eb78b9eba23cba07, type: 3}
-  "tempsSansAppuy\xE9": 4
-  spellsPanel: {fileID: 149027964}
-  spellsList: {fileID: 1815267113}
-  shieldSpriteImage: {fileID: 1854915357}
 --- !u!1 &70713085
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +337,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121486912200628177, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121486912200628177, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121486912200628177, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121486912200628177, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 129541418470629865, guid: daa9acc56f0a7c241a334d938150e1c5,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -410,6 +381,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215231318690102873, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1591322530080062945, guid: daa9acc56f0a7c241a334d938150e1c5,
         type: 3}
@@ -475,6 +476,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 796.307
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683602966514925016, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683602966514925016, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683602966514925016, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683602966514925016, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683602966514925016, guid: daa9acc56f0a7c241a334d938150e1c5,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3881836031423378761, guid: daa9acc56f0a7c241a334d938150e1c5,
         type: 3}
@@ -2003,7 +2029,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466351412}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
@@ -6517,18 +6543,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083449995}
   m_CullTransparentMesh: 0
---- !u!114 &2144146042 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
-    type: 3}
-  m_PrefabInstance: {fileID: 1972791197830044448}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1972791197830044448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6855,6 +6869,31 @@ PrefabInstance:
       propertyPath: m_NearClipPlane
       value: 9.09
       objectReference: {fileID: 0}
+    - target: {fileID: 8200998447441163474, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: newSpellBlinker
+      value: 
+      objectReference: {fileID: 4433927}
+    - target: {fileID: 8200998447441163474, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: projector
+      value: 
+      objectReference: {fileID: 1050178986}
+    - target: {fileID: 8200998447441163474, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: spellsPanel
+      value: 
+      objectReference: {fileID: 149027964}
+    - target: {fileID: 8200998447441163474, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: spellsList
+      value: 
+      objectReference: {fileID: 1815267113}
+    - target: {fileID: 8200998447441163474, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: shieldSpriteImage
+      value: 
+      objectReference: {fileID: 1854915357}
     - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.a

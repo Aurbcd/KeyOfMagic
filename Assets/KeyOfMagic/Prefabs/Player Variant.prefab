@@ -96,6 +96,55 @@ MonoBehaviour:
   CursorRamasser: {fileID: 0}
   CursorClassique: {fileID: 0}
   inventaire: {fileID: 0}
+--- !u!114 &8200998447441163474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972791196520126493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bb7d6fad8164c4f9c529b4489f1bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpTextResist: {fileID: 3336124030800009053, guid: 197148968b78b204cbec0050ea1acdf9,
+    type: 3}
+  popUpText: {fileID: 3336124030800009053, guid: 6f46aa5fa507eaf458e7cb2cb26b4d58,
+    type: 3}
+  newSpellBlinker: {fileID: 0}
+  projector: {fileID: 0}
+  inputField: {fileID: 8812052472016879327}
+  spell: 
+  choix: 
+  choixOffDef: 0
+  animSortLance: 0
+  Gemme: {fileID: 4895738804035755491}
+  VisuelSorts:
+  - {fileID: 670263812431943585, guid: 27d17cfc5326c3e40b750f76b998dc5c, type: 3}
+  - {fileID: 670263812431943585, guid: babb207d46bbcb04eb02d4d5fc0e405d, type: 3}
+  - {fileID: 670263812431943585, guid: ee713a2b906272b42a543a23e0ba3301, type: 3}
+  - {fileID: 670263812431943585, guid: ace70056c9343d0419933e1959cc7dca, type: 3}
+  - {fileID: 670263812431943585, guid: c350a9556b17cc348b5dd50f78a1c138, type: 3}
+  - {fileID: 3835050707202631650, guid: 3075564c6bc66934fb140844d6f79876, type: 3}
+  - {fileID: 3835050707202631650, guid: 3de6e5db77cee224fa5f5a5e01fd21ca, type: 3}
+  - {fileID: 3835050707202631650, guid: 7d32669fafebf484caf2211bc35fab97, type: 3}
+  - {fileID: 3835050707202631650, guid: 55485e3627f82b74b8b76847d229f380, type: 3}
+  - {fileID: 3835050707202631650, guid: 41710645ec6ac9147add9b64270f34bf, type: 3}
+  - {fileID: 670263812431943585, guid: 16a3a49b74bf2e44eb78b9eba23cba07, type: 3}
+  - {fileID: 4506787999873237425, guid: a20f61ae6058b49499beffb5c70aff56, type: 3}
+  - {fileID: 95195413383450130, guid: 00bfd2804ff7f694cacf5a9a30e42d2b, type: 3}
+  - {fileID: 3958356365806743759, guid: 2b9bd9818b2c69c45b6419a23fde9a84, type: 3}
+  - {fileID: 3835050707202631650, guid: c2780736b71b77d4c9a22ba953238c5d, type: 3}
+  - {fileID: 3835050707202631650, guid: ee61b76e9d808074c9b00483dcf918be, type: 3}
+  - {fileID: 3835050707202631650, guid: 916a30e21708d4a47bf319ff6a8f0fa0, type: 3}
+  - {fileID: 3835050707202631650, guid: 944878013d763c94bacff12262cbf05f, type: 3}
+  - {fileID: 3835050707202631650, guid: 486766c70b210ab489e9dfe9ff219edc, type: 3}
+  - {fileID: 3688634752232416654, guid: 25f2ffc09b5e6d947afabb12a213d120, type: 3}
+  "tempsSansAppuy\xE9": 4
+  spellsPanel: {fileID: 0}
+  spellsList: {fileID: 0}
+  shieldSpriteImage: {fileID: 0}
 --- !u!1 &3339304713358601230
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,15 +980,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11484642, guid: bad0018eb9256e6409155981dd5af9a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bad0018eb9256e6409155981dd5af9a2, type: 3}
---- !u!1 &1972791196520126493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: bad0018eb9256e6409155981dd5af9a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1972791196520029885}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1972791196520416317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bad0018eb9256e6409155981dd5af9a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972791196520029885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1972791196520126493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bad0018eb9256e6409155981dd5af9a2,
     type: 3}
   m_PrefabInstance: {fileID: 1972791196520029885}
   m_PrefabAsset: {fileID: 0}

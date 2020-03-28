@@ -11,6 +11,8 @@ public class BotteElfique : MonoBehaviour, ItemInterface
     public TextMeshProUGUI description_affiché;
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
+
+    private float fadeSpeed = 5f;
     public string Nom
     {
         get
