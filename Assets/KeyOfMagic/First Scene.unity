@@ -1997,6 +1997,7 @@ GameObject:
   - component: {fileID: 466351413}
   - component: {fileID: 466351415}
   - component: {fileID: 466351416}
+  - component: {fileID: 466351417}
   m_Layer: 0
   m_Name: MonstreManager
   m_TagString: Untagged
@@ -2062,6 +2063,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 802570676}
   enemy: {fileID: 6572569499185163300, guid: 0d738eae81c201e4ea90d889bc2d3c17, type: 3}
+  player: {fileID: 62560135}
+--- !u!114 &466351417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466351412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 1840663355}
+  enemy: {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
   player: {fileID: 62560135}
 --- !u!1 &649866994
 GameObject:
@@ -5505,6 +5521,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815267111}
   m_CullTransparentMesh: 0
+--- !u!1 &1840663354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840663355}
+  m_Layer: 0
+  m_Name: SpawnDiableteau
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1840663355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840663354}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 233.14, y: 0.99, z: 293.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1854915355
 GameObject:
   m_ObjectHideFlags: 0
