@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class AI_Diablotin : MonoBehaviour
+public class AI_EngeanceDeLaForet : MonoBehaviour
 {
     private int valeurAleatoire;
     public float distanceToPlayer;
@@ -58,26 +58,26 @@ public class AI_Diablotin : MonoBehaviour
 
     void choixSpell()
     {
-            //SLIME DIABLOTIN : TERRE/FEU       
+            //ENGEANCE DE LA FORET : TERRE/AIR       
 
             //CHOIX 1 : élément
             System.Random aleatoire = new System.Random();
             valeurAleatoire = aleatoire.Next(100);
 
-            //Bouclier Electricite : 75% Terre, 25% Feu 
+            //Bouclier Electricite : 75% Terre, 25% Air 
             if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 75)
             {
                 element = "Terre";
             }
             if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 75)
             {
-                element = "Feu";
+                element = "Air";
             }
 
-            //Bouclier Air : 75% Feu, 25% Terre
+            //Bouclier Terre : 75% Air, 25% Terre
             if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 75)
             {
-                element = "Feu";
+                element = "Air";
             }
             if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 75)
             {
@@ -87,7 +87,7 @@ public class AI_Diablotin : MonoBehaviour
             //Bouclier Autre : 60%/40%
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 60)
             {
-                element = "Feu";
+                element = "Air";
             }
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 60)
             {
@@ -96,24 +96,24 @@ public class AI_Diablotin : MonoBehaviour
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Feu") && valeurAleatoire <= 40) //Cas Feu
+            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Feu
             {
-                choix = "urbex";
+                choix = "estek";
             }
-            if (element.Equals("Feu") && valeurAleatoire > 60)
+            if (element.Equals("Air") && valeurAleatoire > 75)
             {
-                choix = "unifulopa";
+                choix = "eminitasi";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 40) //Cas Terre
+            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
             {
                 choix = "orno";
             }
-            if (element.Equals("Terre") && valeurAleatoire > 60)
+            if (element.Equals("Terre") && valeurAleatoire > 75)
             {
                 choix = "opinalica";
             }
 
-            //SLIME DIABLOTIN : TERRE/FEU  
+            //ENGEANCE DE LA FORET : TERRE/AIR       
     }
 
     IEnumerator HeAttac()

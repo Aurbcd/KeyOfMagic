@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
 
-public class BaguettedeSorcier : MonoBehaviour, ItemInterface
+public class BaguetteDeSorcier : MonoBehaviour, ItemInterface
 {
     public CanvasGroup canvasGroup;
     public TextMeshProUGUI titre;
@@ -71,7 +71,7 @@ public class BaguettedeSorcier : MonoBehaviour, ItemInterface
     {
         PlayerStats.DamageMultiplier -= 0.05f;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
 

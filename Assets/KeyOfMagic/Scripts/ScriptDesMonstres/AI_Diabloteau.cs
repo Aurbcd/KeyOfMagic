@@ -96,7 +96,7 @@ public class AI_Diabloteau : MonoBehaviour
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Eau") && valeurAleatoire <= 75) //Cas Feu
+            if (element.Equals("Eau") && valeurAleatoire <= 75) //Cas Eau
             {
                 choix = "amoi";
             }
@@ -104,7 +104,7 @@ public class AI_Diabloteau : MonoBehaviour
             {
                 choix = "atosophila";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Terre
             {
                 choix = "orno";
             }

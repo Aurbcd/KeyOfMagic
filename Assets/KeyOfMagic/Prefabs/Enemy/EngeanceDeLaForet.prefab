@@ -696,10 +696,10 @@ GameObject:
   - component: {fileID: 1664014399735710677}
   - component: {fileID: 6572569499185163306}
   - component: {fileID: 6572569499185163309}
-  - component: {fileID: 8193891589875840289}
+  - component: {fileID: 3992124327274016042}
   - component: {fileID: 114190508878000956}
   m_Layer: 10
-  m_Name: Diablotin
+  m_Name: EngeanceDeLaForet
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,9 +782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: Diablotin
-  PV: 1500
-  PVMax: 1500
+  monsterName: "Engeance de la For\xEAt"
+  PV: 1800
+  PVMax: 1800
   element: Terre
   weakness: Air
   resistance: Eau
@@ -829,7 +829,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8193891589875840289
+--- !u!114 &3992124327274016042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6572569499185163300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60960325db5d621469fa816134e32d9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a4068c7dfee5ba4088e42a0b46f61e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
@@ -850,8 +850,8 @@ MonoBehaviour:
   "aBoug\xE9": 0
   affichage: 
   VisuelSorts:
-  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
   - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
+  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
   - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
   - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
   - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
@@ -1392,6 +1392,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6720b7925cf573348bad38fb9bf381b5, type: 2}
+    - target: {fileID: 13700000, guid: e85a57352daf8d040ad0c1f28cdf66ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc01da8747aa97a4d8c7412fb739ff21, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85a57352daf8d040ad0c1f28cdf66ca, type: 3}
 --- !u!4 &2998156545342685237 stripped
