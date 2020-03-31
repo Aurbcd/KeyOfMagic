@@ -18,6 +18,12 @@ public class SortScript : MonoBehaviour
                 }
             }
         }
+        Die();
+    }
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this);
     }
 
     // Update is called once per frame

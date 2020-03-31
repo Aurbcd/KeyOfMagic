@@ -84,7 +84,6 @@ public class ImprovedSpellInput : MonoBehaviour
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                 {
-                    Debug.Log("nique"); 
                     monstre.GetComponent<Animator>().SetTrigger("Hit");
                 }
             }
