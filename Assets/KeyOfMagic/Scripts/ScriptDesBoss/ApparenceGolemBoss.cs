@@ -26,7 +26,7 @@ public class ApparenceGolemBoss : MonoBehaviour
             mats[4] = affichageDeLaTete[0];
             rend.materials = mats;
         }
-        if (element.Equals("Eletricite"))
+        if (element.Equals("Electricite"))
         {
             Material[] mats = rend.materials;
             mats[4] = affichageDeLaTete[1];
