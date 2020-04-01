@@ -53,6 +53,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
         if(distanceToPlayer < 22) 
         {
+            mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
@@ -91,7 +92,6 @@ public class MonsterMouvSelection : MonoBehaviour
                 estSelectionne = false;
             }
         }
-
         if (distanceToPlayer > 22 && DistanceBase > 2)
         {
             BackBase();

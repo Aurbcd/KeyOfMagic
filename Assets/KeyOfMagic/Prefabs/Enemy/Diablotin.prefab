@@ -316,7 +316,7 @@ RectTransform:
   - {fileID: 1589576544229107568}
   - {fileID: 758573909949510020}
   m_Father: {fileID: 6572569499185163307}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -716,9 +716,9 @@ Transform:
   m_LocalPosition: {x: 245.44, y: 0.9, z: 295.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4671697556922339665}
   - {fileID: 3189105623282639132}
   - {fileID: 2998156545342685237}
-  - {fileID: 4671697556922339665}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -783,8 +783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Diablotin
-  PV: 2000
-  PVMax: 2000
+  PV: 1500
+  PVMax: 1500
   element: Terre
   weakness: Air
   resistance: Eau
@@ -980,7 +980,7 @@ RectTransform:
   m_Children:
   - {fileID: 1877434443993339201}
   m_Father: {fileID: 6572569499185163307}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1374,7 +1374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: e85a57352daf8d040ad0c1f28cdf66ca, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400074, guid: e85a57352daf8d040ad0c1f28cdf66ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

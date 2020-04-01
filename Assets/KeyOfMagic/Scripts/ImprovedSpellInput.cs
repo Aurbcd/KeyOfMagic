@@ -75,7 +75,20 @@ public class ImprovedSpellInput : MonoBehaviour
         newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
     }
 
-
+    public void Hit()
+    {
+        GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
+        foreach (GameObject monstre in ListeMonstre)
+        {
+            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
+            {
+                if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
+                {
+                    monstre.GetComponent<Animator>().SetTrigger("Hit");
+                }
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -409,7 +422,6 @@ public class ImprovedSpellInput : MonoBehaviour
             this.valDef = def;
             this.nouveau = true;
         }
-
         public override string ToString(){
             return this.nom;
         }

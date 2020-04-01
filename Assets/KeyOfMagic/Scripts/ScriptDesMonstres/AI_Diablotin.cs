@@ -96,19 +96,19 @@ public class AI_Diablotin : MonoBehaviour
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Feu") && valeurAleatoire <= 75) //Cas Feu
+            if (element.Equals("Feu") && valeurAleatoire <= 40) //Cas Feu
             {
                 choix = "urbex";
             }
-            if (element.Equals("Feu") && valeurAleatoire > 75)
+            if (element.Equals("Feu") && valeurAleatoire > 60)
             {
                 choix = "unifulopa";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Terre") && valeurAleatoire <= 40) //Cas Terre
             {
                 choix = "orno";
             }
-            if (element.Equals("Terre") && valeurAleatoire > 75)
+            if (element.Equals("Terre") && valeurAleatoire > 60)
             {
                 choix = "opinalica";
             }
