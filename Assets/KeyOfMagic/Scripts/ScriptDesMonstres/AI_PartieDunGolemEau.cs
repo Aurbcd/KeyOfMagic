@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class AI_EngeanceDeLaForet : MonoBehaviour
+public class AI_PartieDunGolemEau : MonoBehaviour
 {
     private int valeurAleatoire;
     public float distanceToPlayer;
@@ -58,62 +58,62 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
 
     void choixSpell()
     {
-            //ENGEANCE DE LA FORET : TERRE/AIR       
+            //PARTIE D'UN GOLEM EAU : EAU/TERRE       
 
             //CHOIX 1 : élément
             System.Random aleatoire = new System.Random();
             valeurAleatoire = aleatoire.Next(100);
 
-            //Bouclier Electricite : 75% Terre, 25% Air 
+            //Bouclier Feu : 75% Eau, 25% Terre 
+            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire <= 75)
+            {
+                element = "Eau";
+            }
+            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire > 75)
+            {
+                element = "Terre";
+            }
+
+            //Bouclier Electricite : 75% Terre, 25% Eau
             if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 75)
             {
                 element = "Terre";
             }
             if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 75)
             {
-                element = "Air";
-            }
-
-            //Bouclier Terre : 75% Air, 25% Terre
-            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 75)
-            {
-                element = "Air";
-            }
-            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 75)
-            {
-                element = "Terre";
+                element = "Eau";
             }
 
             //Bouclier Autre : 60%/40%
-            if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 60)
+            if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire <= 60)
             {
-                element = "Air";
+                element = "Eau";
             }
-            if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 60)
+            if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire > 60)
             {
                 element = "Terre";
             }
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Feu
+            if (element.Equals("Eau") && valeurAleatoire <= 50) //Cas Eau
             {
-                choix = "estek";
+                choix = "awali";
             }
-            if (element.Equals("Air") && valeurAleatoire > 75)
+            if (element.Equals("Eau") && valeurAleatoire > 50)
             {
-                choix = "eminitasi";
+                choix = "atosophila";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Terre") && valeurAleatoire <= 50) //Cas Terre
             {
                 choix = "otera";
             }
-            if (element.Equals("Terre") && valeurAleatoire > 75)
+            if (element.Equals("Terre") && valeurAleatoire > 50)
             {
-                choix = "opinalica";
+                choix = "omisteria";
             }
 
-            //ENGEANCE DE LA FORET : TERRE/AIR       
+            //PARTIE D'UN GOLEM AIR : AIR/TERRE
     }
 
     IEnumerator HeAttac()

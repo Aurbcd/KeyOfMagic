@@ -99,7 +99,7 @@ public class AI_SlimeEnArmure : MonoBehaviour
         valeurAleatoire = aleatoire.Next(100);
         if (element.Equals("Eau") && valeurAleatoire <= 60) //Cas Feu
         {
-            choix = "amoi";
+            choix = "awali";
         }
         if (element.Equals("Eau") && valeurAleatoire > 40)
         {
