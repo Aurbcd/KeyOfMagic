@@ -353,6 +353,14 @@ public class ImprovedSpellInput : MonoBehaviour
                 animSortLance = true;
             }
             yield return new WaitForSeconds(0.1f);
+            //Calcul du décalage de l'affichage des popuptexts
+            int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
+            Vector3 decallage = new Vector3(0f, 0f, 0f);
+            if (hauteur > 4)
+            {
+                decallage.y += (float)hauteur - 3;
+            }
+
             if(affichageEff) //Si le monstre est faible contre l'élément du sort
             {
                 GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
@@ -361,27 +369,21 @@ public class ImprovedSpellInput : MonoBehaviour
                     if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
                     {
                         instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
-                        instance.transform.position = monstreSelectionne.transform.position;
+                        instance.transform.position = monstreSelectionne.transform.position + decallage;
                         affichageEff = false;
                     }
                 }
             }
+            
             if (affichageRes) //Si le monstre est resistant contre l'élément du sort
             {
-                int hauteur = (int) monstreSelectionne.GetComponent<BoxCollider>().size.y;
-                Vector3 decallage = new Vector3(0,0,0);
-                Debug.Log("hauteur :" + hauteur);
-                if (hauteur > 4)
-                {
-                    decallage.y += hauteur;
-                }
-                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position + decallage, Quaternion.identity);
+                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
                 for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
                 {
                     if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
                     {
                         instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
-                        instance.transform.position = monstreSelectionne.transform.position;
+                        instance.transform.position = monstreSelectionne.transform.position + decallage;
                         affichageRes = false;
                     }
                 }
