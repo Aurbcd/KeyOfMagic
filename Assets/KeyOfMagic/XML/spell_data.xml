@@ -2,26 +2,50 @@
 <SpellDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SpellBook>
     <SpellEntry>
-      <spellName>amoi</spellName>
+      <spellName>awali</spellName>
       <value>30</value>
       <element>Eau</element>
       <offensive>true</offensive>
     </SpellEntry>
     <SpellEntry>
-      <spellName>AMOI</spellName>
+      <spellName>AWALI</spellName>
       <value>45</value>
       <element>Eau</element>
       <offensive>false</offensive>
     </SpellEntry>
     <SpellEntry>
-      <spellName>atosophila</spellName>
+      <spellName>aloni</spellName>
+      <value>25</value>
+      <element>Eau</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ALONI</spellName>
       <value>70</value>
+      <element>Eau</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>atosophila</spellName>
+      <value>80</value>
       <element>Eau</element>
       <offensive>true</offensive>
     </SpellEntry>
     <SpellEntry>
       <spellName>ATOSOPHILA</spellName>
-      <value>105</value>
+      <value>160</value>
+      <element>Eau</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+      <SpellEntry>
+      <spellName>aliquamira</spellName>
+      <value>75</value>
+      <element>Eau</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ALIQUAMIRA</spellName>
+      <value>170</value>
       <element>Eau</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -33,7 +57,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>URBEX</spellName>
-      <value>40</value>
+      <value>50</value>
       <element>Feu</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -45,7 +69,19 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>UNIFULOPA</spellName>
-      <value>120</value>
+      <value>160</value>
+      <element>Feu</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ugniramil</spellName>
+      <value>90</value>
+      <element>Feu</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>UGNIRAMIL</spellName>
+      <value>140</value>
       <element>Feu</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -57,13 +93,13 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>ESTEK</spellName>
-      <value>40</value>
+      <value>50</value>
       <element>Air</element>
       <offensive>false</offensive>
     </SpellEntry>
     <SpellEntry>
       <spellName>eminitasi</spellName>
-      <value>60</value>
+      <value>70</value>
       <element>Air</element>
       <offensive>true</offensive>
     </SpellEntry>
@@ -74,14 +110,38 @@
       <offensive>false</offensive>
     </SpellEntry>
     <SpellEntry>
-      <spellName>orno</spellName>
+      <spellName>eterialam</spellName>
+      <value>80</value>
+      <element>Air</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ETERIALAM</spellName>
+      <value>160</value>
+      <element>Air</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>otera</spellName>
       <value>25</value>
       <element>Terre</element>
       <offensive>true</offensive>
     </SpellEntry>
     <SpellEntry>
-      <spellName>ORNO</spellName>
-      <value>45</value>
+      <spellName>OTERA</spellName>
+      <value>70</value>
+      <element>Terre</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>oreca</spellName>
+      <value>30</value>
+      <element>Terre</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ORECA</spellName>
+      <value>60</value>
       <element>Terre</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -97,6 +157,17 @@
       <element>Terre</element>
       <offensive>false</offensive>
     </SpellEntry>
+    <spellName>omisteria</spellName>
+      <value>70</value>
+      <element>Terre</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>OMISTERIA</spellName>
+      <value>180</value>
+      <element>Terre</element>
+      <offensive>false</offensive>
+    </SpellEntry>
     <SpellEntry>
       <spellName>inuji</spellName>
       <value>30</value>
@@ -105,7 +176,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>INUJI</spellName>
-      <value>45</value>
+      <value>60</value>
       <element>Electricite</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -117,7 +188,19 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>ISTALIPLO</spellName>
-      <value>120</value>
+      <value>160</value>
+      <element>Electricite</element>
+      <offensive>false</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>istaliplo</spellName>
+      <value>80</value>
+      <element>Electricite</element>
+      <offensive>true</offensive>
+    </SpellEntry>
+    <SpellEntry>
+      <spellName>ISTALIPLO</spellName>
+      <value>160</value>
       <element>Electricite</element>
       <offensive>false</offensive>
     </SpellEntry>
