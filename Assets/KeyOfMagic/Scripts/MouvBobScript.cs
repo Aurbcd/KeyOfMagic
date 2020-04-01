@@ -23,9 +23,13 @@ public class MouvBobScript : MonoBehaviour
         {
             mNavMeshAgent.ResetPath();
             mAnimator.SetBool("Moving", false);
-        }else
-        mAnimator.SetBool("Moving", true);
-        mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
+        }
+        else
+            mAnimator.SetBool("Moving", true);
+        if(ClickToMove.playerRotation.y < 170 && ClickToMove.playerRotation.y > 10)
+            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
+        else
+            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {

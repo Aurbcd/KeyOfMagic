@@ -16,6 +16,7 @@ public class ClickToMove : MonoBehaviour {
     public bool doubleclick;
     public GameObject pausePanel;
     public static Vector3 playerPosition;
+    public static Vector3 playerRotation;
     private float doubleClickTimeLimit = 0.25f;
     public Projector projector;
     bool walkautomonstre = true;
@@ -41,8 +42,8 @@ public class ClickToMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
         playerPosition = GetComponent<Transform> ().position;
+        playerRotation = GetComponent<Transform>().eulerAngles;
         Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
         RaycastHit hit;

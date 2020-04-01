@@ -23,7 +23,7 @@ public class BarresInventaire : MonoBehaviour
         image.sprite = e.Item.Image;
         if (e.Item.rarete == 0)
         {
-            fond.color = new Color32(0, 0, 0, 255);
+            fond.color = new Color32(255, 255, 255, 150);
         }
         if (e.Item.rarete == 1)
         {
