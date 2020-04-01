@@ -63,7 +63,6 @@ public class AI_GolemBoss : MonoBehaviour
         int vie_actuelle = GetComponent<MonsterStatText>().PV;
         int vie_max = GetComponent<MonsterStatText>().PVMax;
         int pourcentage = (int) (((float)vie_actuelle/(float)vie_max)*100f);
-        Debug.Log("pourcentage : " + pourcentage);
         if (pourcentage >= 80 )
         {
             GetComponent<MonsterStatText>().element = "Terre";
