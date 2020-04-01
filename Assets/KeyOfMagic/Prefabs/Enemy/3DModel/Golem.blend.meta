@@ -1,0 +1,829 @@
+fileFormatVersion: 2
+guid: bfaded4871ca70a44a544350e62e6b31
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature.001
+    100004: Armature.002
+    100006: Armature.003
+    100008: Armature.004
+    100010: Bone
+    100012: Bone 1
+    100014: Bone 2
+    100016: Bone 3
+    100018: Bone 4
+    100020: Bone.001
+    100022: Bone.001 1
+    100024: Bone.001 2
+    100026: Bone.001 3
+    100028: Bone.001 4
+    100030: Bone.001_end
+    100032: Bone.001_end 1
+    100034: Bone.001_end 2
+    100036: Bone.001_end 3
+    100038: Bone.001_end 4
+    100040: Bone.002
+    100042: Bone.002 1
+    100044: Bone.002 2
+    100046: Bone.002 3
+    100048: Bone.002 4
+    100050: Bone.002_end
+    100052: Bone.002_end 1
+    100054: Bone.002_end 2
+    100056: Bone.002_end 3
+    100058: Bone.002_end 4
+    100060: Bone.003
+    100062: Bone.003 1
+    100064: Bone.003 2
+    100066: Bone.003 3
+    100068: Bone.003 4
+    100070: Bone.003_end
+    100072: Bone.003_end 1
+    100074: Bone.003_end 2
+    100076: Bone.003_end 3
+    100078: Bone.003_end 4
+    100080: Bone.004
+    100082: Bone.004 1
+    100084: Bone.004 2
+    100086: Bone.004 3
+    100088: Bone.004 4
+    100090: Bone.004_end
+    100092: Bone.004_end 1
+    100094: Bone.004_end 2
+    100096: Bone.004_end 3
+    100098: Bone.004_end 4
+    100100: Bone.005
+    100102: Bone.005 1
+    100104: Bone.005 2
+    100106: Bone.005 3
+    100108: Bone.005 4
+    100110: Bone.005_end
+    100112: Bone.005_end 1
+    100114: Bone.005_end 2
+    100116: Bone.005_end 3
+    100118: Bone.005_end 4
+    100120: Bone.006
+    100122: Bone.006 1
+    100124: Bone.006 2
+    100126: Bone.006 3
+    100128: Bone.006 4
+    100130: Bone.007
+    100132: Bone.007 1
+    100134: Bone.007 2
+    100136: Bone.007 3
+    100138: Bone.007 4
+    100140: Bone.007_end
+    100142: Bone.007_end 1
+    100144: Bone.007_end 2
+    100146: Bone.007_end 3
+    100148: Bone.007_end 4
+    100150: Bone.008
+    100152: Bone.008 1
+    100154: Bone.008 2
+    100156: Bone.008 3
+    100158: Bone.008 4
+    100160: Bone.009
+    100162: Bone.009 1
+    100164: Bone.009 2
+    100166: Bone.009 3
+    100168: Bone.009 4
+    100170: Bone.009_end
+    100172: Bone.009_end 1
+    100174: Bone.009_end 2
+    100176: Bone.009_end 3
+    100178: Bone.009_end 4
+    100180: Bone.010
+    100182: Bone.010 1
+    100184: Bone.010 2
+    100186: Bone.010 3
+    100188: Bone.010 4
+    100190: Bone.010_end
+    100192: Bone.010_end 1
+    100194: Bone.010_end 2
+    100196: Bone.010_end 3
+    100198: Bone.010_end 4
+    100200: Bone.011
+    100202: Bone.011 1
+    100204: Bone.011 2
+    100206: Bone.011 3
+    100208: Bone.011 4
+    100210: Bone.011_end
+    100212: Bone.011_end 1
+    100214: Bone.011_end 2
+    100216: Bone.011_end 3
+    100218: Bone.011_end 4
+    100220: Cube.000
+    100222: Cube.001
+    100224: Cube.002
+    100226: Cube.003
+    100228: Cube.004
+    100230: //RootNode
+    100232: Bone.013
+    100234: Bone.014
+    100236: Bone.014_end
+    100238: Bone.015
+    100240: Bone.016
+    100242: Bone.016_end
+    400000: Armature
+    400002: Armature.001
+    400004: Armature.002
+    400006: Armature.003
+    400008: Armature.004
+    400010: Bone
+    400012: Bone 1
+    400014: Bone 2
+    400016: Bone 3
+    400018: Bone 4
+    400020: Bone.001
+    400022: Bone.001 1
+    400024: Bone.001 2
+    400026: Bone.001 3
+    400028: Bone.001 4
+    400030: Bone.001_end
+    400032: Bone.001_end 1
+    400034: Bone.001_end 2
+    400036: Bone.001_end 3
+    400038: Bone.001_end 4
+    400040: Bone.002
+    400042: Bone.002 1
+    400044: Bone.002 2
+    400046: Bone.002 3
+    400048: Bone.002 4
+    400050: Bone.002_end
+    400052: Bone.002_end 1
+    400054: Bone.002_end 2
+    400056: Bone.002_end 3
+    400058: Bone.002_end 4
+    400060: Bone.003
+    400062: Bone.003 1
+    400064: Bone.003 2
+    400066: Bone.003 3
+    400068: Bone.003 4
+    400070: Bone.003_end
+    400072: Bone.003_end 1
+    400074: Bone.003_end 2
+    400076: Bone.003_end 3
+    400078: Bone.003_end 4
+    400080: Bone.004
+    400082: Bone.004 1
+    400084: Bone.004 2
+    400086: Bone.004 3
+    400088: Bone.004 4
+    400090: Bone.004_end
+    400092: Bone.004_end 1
+    400094: Bone.004_end 2
+    400096: Bone.004_end 3
+    400098: Bone.004_end 4
+    400100: Bone.005
+    400102: Bone.005 1
+    400104: Bone.005 2
+    400106: Bone.005 3
+    400108: Bone.005 4
+    400110: Bone.005_end
+    400112: Bone.005_end 1
+    400114: Bone.005_end 2
+    400116: Bone.005_end 3
+    400118: Bone.005_end 4
+    400120: Bone.006
+    400122: Bone.006 1
+    400124: Bone.006 2
+    400126: Bone.006 3
+    400128: Bone.006 4
+    400130: Bone.007
+    400132: Bone.007 1
+    400134: Bone.007 2
+    400136: Bone.007 3
+    400138: Bone.007 4
+    400140: Bone.007_end
+    400142: Bone.007_end 1
+    400144: Bone.007_end 2
+    400146: Bone.007_end 3
+    400148: Bone.007_end 4
+    400150: Bone.008
+    400152: Bone.008 1
+    400154: Bone.008 2
+    400156: Bone.008 3
+    400158: Bone.008 4
+    400160: Bone.009
+    400162: Bone.009 1
+    400164: Bone.009 2
+    400166: Bone.009 3
+    400168: Bone.009 4
+    400170: Bone.009_end
+    400172: Bone.009_end 1
+    400174: Bone.009_end 2
+    400176: Bone.009_end 3
+    400178: Bone.009_end 4
+    400180: Bone.010
+    400182: Bone.010 1
+    400184: Bone.010 2
+    400186: Bone.010 3
+    400188: Bone.010 4
+    400190: Bone.010_end
+    400192: Bone.010_end 1
+    400194: Bone.010_end 2
+    400196: Bone.010_end 3
+    400198: Bone.010_end 4
+    400200: Bone.011
+    400202: Bone.011 1
+    400204: Bone.011 2
+    400206: Bone.011 3
+    400208: Bone.011 4
+    400210: Bone.011_end
+    400212: Bone.011_end 1
+    400214: Bone.011_end 2
+    400216: Bone.011_end 3
+    400218: Bone.011_end 4
+    400220: Cube.000
+    400222: Cube.001
+    400224: Cube.002
+    400226: Cube.003
+    400228: Cube.004
+    400230: //RootNode
+    400232: Bone.013
+    400234: Bone.014
+    400236: Bone.014_end
+    400238: Bone.015
+    400240: Bone.016
+    400242: Bone.016_end
+    2100000: Material.000
+    2100002: Material.001
+    2100004: Material.002
+    2100006: Material.004
+    2100008: Material.003
+    4300000: Cube.000
+    4300002: Cube.002
+    4300004: Cube.003
+    4300006: Cube.004
+    4300008: Cube.001
+    7400000: Idle.001
+    7400002: Armature.001|Attack
+    7400004: Armature.001|Attack.001
+    7400006: Armature.001|Attack.002
+    7400008: Armature.001|Attack.003
+    7400010: Armature.001|Attack.004
+    7400012: Armature.001|Die
+    7400014: Armature.001|Die.001
+    7400016: Armature.001|Die.002
+    7400018: Armature.001|Die.003
+    7400020: Armature.001|Die.004
+    7400022: Armature.001|Hit
+    7400024: Armature.001|Hit.001
+    7400026: Armature.001|Hit.002
+    7400028: Armature.001|Hit.003
+    7400030: Armature.001|Hit.004
+    7400032: Armature.001|Idle
+    7400034: Armature.001|Idle.001
+    7400036: Armature.001|Idle.002
+    7400038: Armature.001|Idle.003
+    7400040: Armature.001|Idle.004
+    7400042: Armature.001|Jump
+    7400044: Armature.001|Jump.001
+    7400046: Armature.001|Jump.002
+    7400048: Armature.001|Jump.003
+    7400050: Armature.001|Jump.004
+    7400052: Armature.001|Poses
+    7400054: Armature.001|Poses.001
+    7400056: Armature.001|Poses.002
+    7400058: Armature.001|Poses.003
+    7400060: Armature.001|Poses.004
+    7400062: Armature.001|Spelling
+    7400064: Armature.001|Spelling.001
+    7400066: Armature.001|Spelling.002
+    7400068: Armature.001|Spelling.003
+    7400070: Armature.001|Spelling.004
+    7400072: Armature.001|Walk
+    7400074: Armature.001|Walk.001
+    7400076: Armature.001|Walk.002
+    7400078: Armature.001|Walk.003
+    7400080: Armature.001|Walk.004
+    7400082: Armature.002|Attack
+    7400084: Armature.002|Attack.001
+    7400086: Armature.002|Attack.002
+    7400088: Armature.002|Attack.003
+    7400090: Armature.002|Attack.004
+    7400092: Armature.002|Die
+    7400094: Armature.002|Die.001
+    7400096: Armature.002|Die.002
+    7400098: Armature.002|Die.003
+    7400100: Armature.002|Die.004
+    7400102: Armature.002|Hit
+    7400104: Armature.002|Hit.001
+    7400106: Armature.002|Hit.002
+    7400108: Armature.002|Hit.003
+    7400110: Armature.002|Hit.004
+    7400112: Armature.002|Idle
+    7400114: Armature.002|Idle.001
+    7400116: Armature.002|Idle.002
+    7400118: Armature.002|Idle.003
+    7400120: Armature.002|Idle.004
+    7400122: Armature.002|Jump
+    7400124: Armature.002|Jump.001
+    7400126: Armature.002|Jump.002
+    7400128: Armature.002|Jump.003
+    7400130: Armature.002|Jump.004
+    7400132: Armature.002|Poses
+    7400134: Armature.002|Poses.001
+    7400136: Armature.002|Poses.002
+    7400138: Armature.002|Poses.003
+    7400140: Armature.002|Poses.004
+    7400142: Armature.002|Spelling
+    7400144: Armature.002|Spelling.001
+    7400146: Armature.002|Spelling.002
+    7400148: Armature.002|Spelling.003
+    7400150: Armature.002|Spelling.004
+    7400152: Armature.002|Walk
+    7400154: Armature.002|Walk.001
+    7400156: Armature.002|Walk.002
+    7400158: Armature.002|Walk.003
+    7400160: Armature.002|Walk.004
+    7400162: Armature.003|Attack
+    7400164: Armature.003|Attack.001
+    7400166: Armature.003|Attack.002
+    7400168: Armature.003|Attack.003
+    7400170: Armature.003|Attack.004
+    7400172: Armature.003|Die
+    7400174: Armature.003|Die.001
+    7400176: Armature.003|Die.002
+    7400178: Armature.003|Die.003
+    7400180: Armature.003|Die.004
+    7400182: Armature.003|Hit
+    7400184: Armature.003|Hit.001
+    7400186: Armature.003|Hit.002
+    7400188: Armature.003|Hit.003
+    7400190: Armature.003|Hit.004
+    7400192: Armature.003|Idle
+    7400194: Armature.003|Idle.001
+    7400196: Armature.003|Idle.002
+    7400198: Armature.003|Idle.003
+    7400200: Armature.003|Idle.004
+    7400202: Armature.003|Jump
+    7400204: Armature.003|Jump.001
+    7400206: Armature.003|Jump.002
+    7400208: Armature.003|Jump.003
+    7400210: Armature.003|Jump.004
+    7400212: Armature.003|Poses
+    7400214: Armature.003|Poses.001
+    7400216: Armature.003|Poses.002
+    7400218: Armature.003|Poses.003
+    7400220: Armature.003|Poses.004
+    7400222: Armature.003|Spelling
+    7400224: Armature.003|Spelling.001
+    7400226: Armature.003|Spelling.002
+    7400228: Armature.003|Spelling.003
+    7400230: Armature.003|Spelling.004
+    7400232: Armature.003|Walk
+    7400234: Armature.003|Walk.001
+    7400236: Armature.003|Walk.002
+    7400238: Armature.003|Walk.003
+    7400240: Armature.003|Walk.004
+    7400242: Armature.004|Attack
+    7400244: Armature.004|Attack.001
+    7400246: Armature.004|Attack.002
+    7400248: Armature.004|Attack.003
+    7400250: Armature.004|Attack.004
+    7400252: Armature.004|Die
+    7400254: Armature.004|Die.001
+    7400256: Armature.004|Die.002
+    7400258: Armature.004|Die.003
+    7400260: Armature.004|Die.004
+    7400262: Armature.004|Hit
+    7400264: Armature.004|Hit.001
+    7400266: Armature.004|Hit.002
+    7400268: Armature.004|Hit.003
+    7400270: Armature.004|Hit.004
+    7400272: Armature.004|Idle
+    7400274: Armature.004|Idle.001
+    7400276: Armature.004|Idle.002
+    7400278: Armature.004|Idle.003
+    7400280: Armature.004|Idle.004
+    7400282: Armature.004|Jump
+    7400284: Armature.004|Jump.001
+    7400286: Armature.004|Jump.002
+    7400288: Armature.004|Jump.003
+    7400290: Armature.004|Jump.004
+    7400292: Armature.004|Poses
+    7400294: Armature.004|Poses.001
+    7400296: Armature.004|Poses.002
+    7400298: Armature.004|Poses.003
+    7400300: Armature.004|Poses.004
+    7400302: Armature.004|Spelling
+    7400304: Armature.004|Spelling.001
+    7400306: Armature.004|Spelling.002
+    7400308: Armature.004|Spelling.003
+    7400310: Armature.004|Spelling.004
+    7400312: Armature.004|Walk
+    7400314: Armature.004|Walk.001
+    7400316: Armature.004|Walk.002
+    7400318: Armature.004|Walk.003
+    7400320: Armature.004|Walk.004
+    7400322: Armature|Attack
+    7400324: Armature|Attack.001
+    7400326: Armature|Attack.002
+    7400328: Armature|Attack.003
+    7400330: Armature|Attack.004
+    7400332: Armature|Die
+    7400334: Armature|Die.001
+    7400336: Armature|Die.002
+    7400338: Armature|Die.003
+    7400340: Armature|Die.004
+    7400342: Armature|Hit
+    7400344: Armature|Hit.001
+    7400346: Armature|Hit.002
+    7400348: Armature|Hit.003
+    7400350: Armature|Hit.004
+    7400352: Armature|Idle
+    7400354: Armature|Idle.001
+    7400356: Armature|Idle.002
+    7400358: Armature|Idle.003
+    7400360: Armature|Idle.004
+    7400362: Armature|Jump
+    7400364: Armature|Jump.001
+    7400366: Armature|Jump.002
+    7400368: Armature|Jump.003
+    7400370: Armature|Jump.004
+    7400372: Armature|Poses
+    7400374: Armature|Poses.001
+    7400376: Armature|Poses.002
+    7400378: Armature|Poses.003
+    7400380: Armature|Poses.004
+    7400382: Armature|Spelling
+    7400384: Armature|Spelling.001
+    7400386: Armature|Spelling.002
+    7400388: Armature|Spelling.003
+    7400390: Armature|Spelling.004
+    7400392: Armature|Walk
+    7400394: Armature|Walk.001
+    7400396: Armature|Walk.002
+    7400398: Armature|Walk.003
+    7400400: Armature|Walk.004
+    9500000: //RootNode
+    13700000: Cube.000
+    13700002: Cube.001
+    13700004: Cube.002
+    13700006: Cube.003
+    13700008: Cube.004
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.000
+    second: {fileID: 2100000, guid: 391a45b7275485d44aa0763714b7edb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: e01abd8789c3831428e8eaafe1465a63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: db4fdf3f3c22d2f419a619fb5c7dff04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: b1c1906b1546ac849b93829c733ac808, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 00415e2f7d39b494c805bd90f3f1ab1d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle.001
+      takeName: Idle.001
+      firstFrame: 0
+      lastFrame: 51
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Attack
+      takeName: Armature|Attack
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Die
+      takeName: Armature|Die
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Hit
+      takeName: Armature|Hit
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 51
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Jump
+      takeName: Armature|Jump
+      firstFrame: 0
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Poses.004
+      takeName: Armature|Poses.004
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Spelling
+      takeName: Armature|Spelling
+      firstFrame: 0
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

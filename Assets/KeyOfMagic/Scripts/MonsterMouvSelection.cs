@@ -42,6 +42,10 @@ public class MonsterMouvSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (estSelectionne)
+        {
+            BobScript.element = GetComponent<MonsterStatText>().element;
+        }
         mAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         DistanceBase = Vector3.Distance(basePositions, transform.position);
@@ -85,7 +89,6 @@ public class MonsterMouvSelection : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject)
             {
                 estSelectionne = true;
-                BobScript.element = GetComponent<MonsterStatText>().element;
             }
             else
             {
