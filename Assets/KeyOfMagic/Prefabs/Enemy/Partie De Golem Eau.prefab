@@ -601,9 +601,9 @@ MonoBehaviour:
   monsterName: Partie de Golem
   PV: 1500
   PVMax: 1500
-  element: Feu
-  weakness: Eau
-  resistance: "Electricit\xE9"
+  element: Eau
+  weakness: Electricite
+  resistance: Terre
   Barre: {fileID: 7886032980064505569}
   CanvasGBarre: {fileID: 8288141265081501994}
   Text: {fileID: 5733315573184057478}

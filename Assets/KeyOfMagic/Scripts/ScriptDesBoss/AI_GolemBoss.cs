@@ -23,6 +23,7 @@ public class AI_GolemBoss : MonoBehaviour
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +95,6 @@ public class AI_GolemBoss : MonoBehaviour
         System.Random aleatoire = new System.Random();
         valeurAleatoire = aleatoire.Next(100);
         element =  GetComponent<MonsterStatText>().element;
-        Debug.Log(element);
 
         //75% de lancer l'élément != Terre
 
@@ -239,7 +239,6 @@ public class AI_GolemBoss : MonoBehaviour
                 }
             }
         }
-
     }
 
     IEnumerator HeAttac()
