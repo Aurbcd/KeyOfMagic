@@ -61,24 +61,25 @@ public class AI_GolemBoss : MonoBehaviour
     {
         int vie_actuelle = GetComponent<MonsterStatText>().PV;
         int vie_max = GetComponent<MonsterStatText>().PVMax;
-        int pourcentage = (int) ((vie_actuelle/vie_max)*100);
+        int pourcentage = (int) (((float)vie_actuelle/(float)vie_max)*100f);
+        Debug.Log("pourcentage : " + pourcentage);
         if (pourcentage >= 80 )
         {
             GetComponent<MonsterStatText>().element = "Terre";
         }
-        else if (pourcentage < 80 && pourcentage >= 60)
+        if (pourcentage < 80 && pourcentage >= 60)
         {
             GetComponent<MonsterStatText>().element = "Electricite";
         }
-        else if (pourcentage < 60 && pourcentage >= 40)
+        if (pourcentage < 60 && pourcentage >= 40)
         {
             GetComponent<MonsterStatText>().element = "Eau";
         }
-        else if (pourcentage < 40 && pourcentage >= 20)
+        if (pourcentage < 40 && pourcentage >= 20)
         {
             GetComponent<MonsterStatText>().element = "Feu";
         }
-        else if (pourcentage < 20)
+        if (pourcentage < 20)
         {
             GetComponent<MonsterStatText>().element = "Air";
         }
@@ -212,8 +213,6 @@ public class AI_GolemBoss : MonoBehaviour
 
         if (element.Equals("Terre"))
         {
-            Debug.Log("coucou");
-            Debug.Log(valeurAleatoire);
 
             if (valeurAleatoire <= 50) //Terre
             {
@@ -239,8 +238,6 @@ public class AI_GolemBoss : MonoBehaviour
                     choix = "opinalica";
                 }
             }
-
-            Debug.Log(choix);
         }
 
     }
@@ -250,14 +247,12 @@ public class AI_GolemBoss : MonoBehaviour
         boule = false;
         choixElement();
         choixSpell();
-        Debug.Log("2 : " + choix);
         affichage = "";
         mAnimator.SetBool("Spelling", true);
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
-            Debug.Log(i);
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {

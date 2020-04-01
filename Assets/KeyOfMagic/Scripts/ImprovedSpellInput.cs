@@ -368,7 +368,14 @@ public class ImprovedSpellInput : MonoBehaviour
             }
             if (affichageRes) //Si le monstre est resistant contre l'élément du sort
             {
-                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
+                int hauteur = (int) monstreSelectionne.GetComponent<BoxCollider>().size.y;
+                Vector3 decallage = new Vector3(0,0,0);
+                Debug.Log("hauteur :" + hauteur);
+                if (hauteur > 4)
+                {
+                    decallage.y += hauteur;
+                }
+                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position + decallage, Quaternion.identity);
                 for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
                 {
                     if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
