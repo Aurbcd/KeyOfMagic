@@ -495,7 +495,6 @@ GameObject:
   - component: {fileID: 2281746084761069653}
   - component: {fileID: 6572569499185163309}
   - component: {fileID: 114190508878000956}
-  - component: {fileID: 7276744646123274383}
   m_Layer: 10
   m_Name: SlimeDeFeu
   m_TagString: Ennemy
@@ -612,7 +611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c95b58d8da0e943b6cdb00b990f3d9, type: 3}
   m_Name: 
@@ -669,32 +668,6 @@ MonoBehaviour:
     SpellBook: []
   ElementDatabase:
     Elementdb: []
---- !u!114 &7276744646123274383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02fc446c68fad54c936ca114f37585a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
-  element: 
-  choix: 
-  displayText: {fileID: 4221106119751356392}
-  curPos: {x: 0, y: 0, z: 0}
-  LastPos: {x: 0, y: 0, z: 0}
-  "aBoug\xE9": 0
-  affichage: 
-  VisuelSorts:
-  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
-  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
-  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
-  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
-  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
 --- !u!1 &7518567346675445552
 GameObject:
   m_ObjectHideFlags: 0
