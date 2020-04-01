@@ -23,6 +23,7 @@ public class AI_GolemBoss : MonoBehaviour
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,7 +94,6 @@ public class AI_GolemBoss : MonoBehaviour
         System.Random aleatoire = new System.Random();
         valeurAleatoire = aleatoire.Next(100);
         element =  GetComponent<MonsterStatText>().element;
-        Debug.Log(element);
 
         //75% de lancer l'élément != Terre
 
@@ -212,8 +212,6 @@ public class AI_GolemBoss : MonoBehaviour
 
         if (element.Equals("Terre"))
         {
-            Debug.Log("coucou");
-            Debug.Log(valeurAleatoire);
 
             if (valeurAleatoire <= 50) //Terre
             {
@@ -239,10 +237,7 @@ public class AI_GolemBoss : MonoBehaviour
                     choix = "opinalica";
                 }
             }
-
-            Debug.Log(choix);
         }
-
     }
 
     IEnumerator HeAttac()
@@ -250,14 +245,12 @@ public class AI_GolemBoss : MonoBehaviour
         boule = false;
         choixElement();
         choixSpell();
-        Debug.Log("2 : " + choix);
         affichage = "";
         mAnimator.SetBool("Spelling", true);
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
             yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
-            Debug.Log(i);
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {
