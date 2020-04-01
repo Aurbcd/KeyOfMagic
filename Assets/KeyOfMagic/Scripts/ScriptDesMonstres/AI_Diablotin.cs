@@ -106,7 +106,7 @@ public class AI_Diablotin : MonoBehaviour
             }
             if (element.Equals("Terre") && valeurAleatoire <= 40) //Cas Terre
             {
-                choix = "orno";
+                choix = "otera";
             }
             if (element.Equals("Terre") && valeurAleatoire > 60)
             {
