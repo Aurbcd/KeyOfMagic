@@ -4921,6 +4921,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6936828702449953765, guid: 52b9de371eae8284aa5c1fa9847d2776,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ca3d5595281d77448237e4452d67282,
+        type: 3}
     - target: {fileID: 7391512986643692861, guid: 52b9de371eae8284aa5c1fa9847d2776,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -4949,6 +4955,11 @@ PrefabInstance:
     - target: {fileID: 7391512986643692861, guid: 52b9de371eae8284aa5c1fa9847d2776,
         type: 3}
       propertyPath: m_textInfo.materialCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699766445942312320, guid: 52b9de371eae8284aa5c1fa9847d2776,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9131100278986839134, guid: 52b9de371eae8284aa5c1fa9847d2776,
