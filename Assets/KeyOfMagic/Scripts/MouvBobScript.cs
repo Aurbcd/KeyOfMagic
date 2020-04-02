@@ -26,9 +26,14 @@ public class MouvBobScript : MonoBehaviour
         }
         else
             mAnimator.SetBool("Moving", true);
-        if(ClickToMove.playerRotation.y < 170 && ClickToMove.playerRotation.y > 10)
+        Debug.Log(ClickToMove.playerRotation);
+        if(ClickToMove.playerRotation.y < 135 && ClickToMove.playerRotation.y > 45)
             mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
-        else
+        if (ClickToMove.playerRotation.y < 225 && ClickToMove.playerRotation.y >= 135)
+            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-3f, 0f, 0f);
+        if (ClickToMove.playerRotation.y < 315 && ClickToMove.playerRotation.y >= 225)
+            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 3f);
+        if ((ClickToMove.playerRotation.y < 45 && ClickToMove.playerRotation.y >= 0) || (ClickToMove.playerRotation.y < 380 && ClickToMove.playerRotation.y >= 315))
             mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
