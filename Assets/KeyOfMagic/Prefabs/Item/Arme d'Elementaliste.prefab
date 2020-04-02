@@ -265,7 +265,7 @@ MonoBehaviour:
   titre: {fileID: 4380336586046492704}
   "description_affich\xE9": {fileID: 7391512986643692861}
   "lore_affich\xE9": {fileID: 1881866965341826196}
-  _Image: {fileID: 21300000, guid: 817978a104180f046a66eb942ae84455, type: 3}
+  _Image: {fileID: 21300000, guid: 1ca3d5595281d77448237e4452d67282, type: 3}
 --- !u!208 &5837749614567439990
 NavMeshObstacle:
   m_ObjectHideFlags: 0
