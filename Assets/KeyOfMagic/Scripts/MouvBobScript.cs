@@ -26,7 +26,6 @@ public class MouvBobScript : MonoBehaviour
         }
         else
             mAnimator.SetBool("Moving", true);
-        Debug.Log(ClickToMove.playerRotation);
         if(ClickToMove.playerRotation.y < 135 && ClickToMove.playerRotation.y > 45)
             mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
         if (ClickToMove.playerRotation.y < 225 && ClickToMove.playerRotation.y >= 135)
