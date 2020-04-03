@@ -39,7 +39,7 @@ public class ArmeDElementaliste : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Parmi les maîtres des arcanes, rares sont ceux qui peuvent prétendre au titre d'élémentaliste. À ceux-là sont reservées les essences de bois les plus exceptionnelles, capables de canaliser leur pouvoir démesuré. \"";
+            return "\" Parmi les maîtres des arcanes, rares sont ceux qui peuvent prétendre au titre d'élémentaliste. À ceux-là sont réservées les essences de bois les plus exceptionnelles, capables de canaliser leur pouvoir démesuré. \"";
         }
     }
 

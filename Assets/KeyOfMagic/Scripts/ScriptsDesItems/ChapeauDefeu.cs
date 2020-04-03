@@ -33,7 +33,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return 2;
+            return 3;
         }
     }
 

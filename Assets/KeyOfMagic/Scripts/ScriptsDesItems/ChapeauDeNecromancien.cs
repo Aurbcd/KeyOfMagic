@@ -48,7 +48,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return 3;
+            return 2;
         }
     }
 
