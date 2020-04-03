@@ -71,7 +71,7 @@ public class AnneauOuvrage : MonoBehaviour, ItemInterface
     {
         MonsterMouvSelection.modificateurApparitionPotions -= 0.1f;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
 
