@@ -995,8 +995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231.09, y: 2.3363}
-  m_SizeDelta: {x: 30.53, y: 38.145}
+  m_AnchoredPosition: {x: -232.99, y: -0.00000047684}
+  m_SizeDelta: {x: 38.34, y: 47.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144475901
 MonoBehaviour:
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c32a4a5d6ac82b347bbb32b60c745300, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3aa7d1c875411743993fe1baf7020d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4018,8 +4018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -18.7, y: 0.000016212}
-  m_SizeDelta: {x: 37.4, y: 34.8}
+  m_AnchoredPosition: {x: -20.2, y: 0.000013113}
+  m_SizeDelta: {x: 44, y: 38.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023274165
 MonoBehaviour:
@@ -4039,7 +4039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ead558ecba6f0f644829f64fe32259ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 595b9c1beed556645b4eeb4d7d0fe86c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8423,6 +8423,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_PressedColor.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_ContentType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_KeyboardType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_CharacterValidation
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812052472016879327, guid: 71854c37b51d54e41b1583bcd0dc6760,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 722206610429522428, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
