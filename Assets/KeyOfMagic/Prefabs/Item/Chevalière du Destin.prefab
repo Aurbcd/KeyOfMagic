@@ -281,7 +281,7 @@ MonoBehaviour:
   titre: {fileID: 4380336586046492704}
   "description_affich\xE9": {fileID: 7391512986643692861}
   "lore_affich\xE9": {fileID: 1881866965341826196}
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: ba866dbac5f821c4ea93801d2b59a9c7, type: 3}
 --- !u!1 &1709535644401678520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,7 +5207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 199ad0cfda21d074b93d3ab506e50fe7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba866dbac5f821c4ea93801d2b59a9c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
