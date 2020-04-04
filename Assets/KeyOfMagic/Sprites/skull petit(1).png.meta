@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 8b3eb5f36031b8e47bee7804346c149b
+guid: 9e671cb593d6dc241ad07fcb1b4e9cb7
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: skull petit(1)_0
+    21300002: skull petit(1)_1
+    21300004: skull petit(1)_2
+    21300006: skull petit(1)_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,11 +97,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: skull petit(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 3400
+        height: 4000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c606f7a5936767f4b9586dfff7b63ca0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull petit(1)_1
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 4000
+        width: 3400
+        height: 4000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a983ab994d00bac4494a7550d481a344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull petit(1)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3400
+        height: 4000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc34845de81efef4a9786353e2ddb2e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull petit(1)_3
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 3400
+        height: 4000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb9fe87fd3fa8647aec1ef156491fde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6bbff086a7148b745bfcb87d0ec4c42d
+    spriteID: ed476d83b094a3b4aae1549c8ed32d8c
     vertices: []
     indices: 
     edges: []
