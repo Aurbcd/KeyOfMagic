@@ -27,13 +27,25 @@ public class MouvBobScript : MonoBehaviour
         else
             mAnimator.SetBool("Moving", true);
         if(ClickToMove.playerRotation.y < 135 && ClickToMove.playerRotation.y > 45)
-            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
+            if(!attack)
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
+            else
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -4f);
         if (ClickToMove.playerRotation.y < 225 && ClickToMove.playerRotation.y >= 135)
-            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-3f, 0f, 0f);
+            if (!attack)
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-3f, 0f, 0f);
+            else
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-4f, 0f, 0f);
         if (ClickToMove.playerRotation.y < 315 && ClickToMove.playerRotation.y >= 225)
-            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 3f);
+            if(!attack)
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 3f);
+            else
+              mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 4f);
         if ((ClickToMove.playerRotation.y < 45 && ClickToMove.playerRotation.y >= 0) || (ClickToMove.playerRotation.y < 380 && ClickToMove.playerRotation.y >= 315))
-            mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
+            if(!attack)
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
+            else
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(4f, 0f, 0f);
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
@@ -49,6 +61,7 @@ public class MouvBobScript : MonoBehaviour
 
         if (memoire != BobScript.element)
         {
+            if(!attack)
             mAnimator.SetTrigger("changing");
             memoire = BobScript.element;
         }
@@ -56,10 +69,19 @@ public class MouvBobScript : MonoBehaviour
         if (attack)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-            if ((montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18)
+            GetComponent<NavMeshAgent>().radius = 1.5f;
+            if (montreSelectionne !=null && (montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18) {
+                transform.LookAt(montreSelectionne.transform);
                 mAnimator.SetBool("Attacking", true);
+            }
             else
                 mAnimator.SetBool("Attacking", false);
+
+        }
+        else
+        {
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            GetComponent<NavMeshAgent>().radius = 2.95f;
         }
     }
 }

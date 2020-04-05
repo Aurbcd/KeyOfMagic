@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: c383213674834b14c8377a49d921d908
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box01
+    100004: Box03
+    100006: Box04
+    100008: Box05
+    100010: Group01
+    100012: Group02
+    100014: OilTank01
+    100016: OilTank02
+    100018: OilTank03
+    100020: OilTank04
+    100022: OilTank05
+    100024: OilTank06
+    100026: OilTank07
+    100028: OilTank08
+    100030: OilTank09
+    100032: OilTank10
+    100034: OilTank11
+    100036: OilTank12
+    100038: OilTank13
+    100040: OilTank14
+    100042: OilTank15
+    100044: OilTank16
+    400000: //RootNode
+    400002: Box01
+    400004: Box03
+    400006: Box04
+    400008: Box05
+    400010: Group01
+    400012: Group02
+    400014: OilTank01
+    400016: OilTank02
+    400018: OilTank03
+    400020: OilTank04
+    400022: OilTank05
+    400024: OilTank06
+    400026: OilTank07
+    400028: OilTank08
+    400030: OilTank09
+    400032: OilTank10
+    400034: OilTank11
+    400036: OilTank12
+    400038: OilTank13
+    400040: OilTank14
+    400042: OilTank15
+    400044: OilTank16
+    2100000: 02 - Default
+    2100002: 'Material #38'
+    2100004: 03 - Default
+    2100006: 'Material #37'
+    2300000: Box01
+    2300002: Box03
+    2300004: Box04
+    2300006: Box05
+    2300008: OilTank01
+    2300010: OilTank02
+    2300012: OilTank03
+    2300014: OilTank04
+    2300016: OilTank05
+    2300018: OilTank06
+    2300020: OilTank07
+    2300022: OilTank08
+    2300024: OilTank09
+    2300026: OilTank10
+    2300028: OilTank11
+    2300030: OilTank12
+    2300032: OilTank13
+    2300034: OilTank14
+    2300036: OilTank15
+    2300038: OilTank16
+    3300000: Box01
+    3300002: Box03
+    3300004: Box04
+    3300006: Box05
+    3300008: OilTank01
+    3300010: OilTank02
+    3300012: OilTank03
+    3300014: OilTank04
+    3300016: OilTank05
+    3300018: OilTank06
+    3300020: OilTank07
+    3300022: OilTank08
+    3300024: OilTank09
+    3300026: OilTank10
+    3300028: OilTank11
+    3300030: OilTank12
+    3300032: OilTank13
+    3300034: OilTank14
+    3300036: OilTank15
+    3300038: OilTank16
+    4300000: Box01
+    4300002: Box03
+    4300004: OilTank01
+    4300006: OilTank02
+    4300008: OilTank03
+    4300010: OilTank04
+    4300012: OilTank05
+    4300014: OilTank06
+    4300016: OilTank07
+    4300018: OilTank08
+    4300020: Box04
+    4300022: Box05
+    4300024: OilTank09
+    4300026: OilTank10
+    4300028: OilTank11
+    4300030: OilTank12
+    4300032: OilTank13
+    4300034: OilTank14
+    4300036: OilTank15
+    4300038: OilTank16
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: e59cca43a55b2864eb8bbc1eada03e7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: e73695a467e030e43911a31da15cbb60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #37'
+    second: {fileID: 2100000, guid: 7ce4fa6ae024d38459d6ef693018c6d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #38'
+    second: {fileID: 2100000, guid: ede05a08a916c4d4a82d076733657e4d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

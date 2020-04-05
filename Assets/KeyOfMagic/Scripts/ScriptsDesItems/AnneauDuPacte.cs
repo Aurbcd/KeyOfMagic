@@ -71,7 +71,7 @@ public class AnneauDuPacte : MonoBehaviour, ItemInterface
     {
         PlayerStats.volDeVie -= 0.05f;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
     public void Start()

@@ -74,7 +74,7 @@ public class BotteElfique : MonoBehaviour, ItemInterface
         GameObject.Find("Player").GetComponent<NavMeshAgent>().speed -= 5;
         ImprovedSpellInput.tempsReset += 20;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
     public void Start()

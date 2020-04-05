@@ -96,7 +96,7 @@ public class AI_Diablotin : MonoBehaviour
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Feu") && valeurAleatoire <= 40) //Cas Feu
+            if (element.Equals("Feu") && valeurAleatoire <= 60) //Cas Feu
             {
                 choix = "urbex";
             }
@@ -104,7 +104,7 @@ public class AI_Diablotin : MonoBehaviour
             {
                 choix = "unifulopa";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 40) //Cas Terre
+            if (element.Equals("Terre") && valeurAleatoire <= 60) //Cas Terre
             {
                 choix = "otera";
             }
@@ -120,6 +120,7 @@ public class AI_Diablotin : MonoBehaviour
     {
         boule = false;
         choixSpell();
+        Debug.Log(choix);
         affichage = "";
         mAnimator.SetBool("Spelling", true);
         aBougé = false;
