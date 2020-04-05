@@ -10,12 +10,13 @@ public class DisplayStatCard : MonoBehaviour
     public CanvasGroup canvasGroup;
     public TextMeshProUGUI titre;
     public TextMeshProUGUI description;
+    private int rarete;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
     void Start()
     {
         canvasGroup.alpha = 0f;
-        
+        rarete = this.GetComponent<ItemInterface>().rarete;
     }
 
     void Update()
@@ -23,6 +24,7 @@ public class DisplayStatCard : MonoBehaviour
         if(isDisplayed)
         {
             canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1f, fadeSpeed * Time.deltaTime);
+            Debug.Log(rarete);
         }
         else
         {

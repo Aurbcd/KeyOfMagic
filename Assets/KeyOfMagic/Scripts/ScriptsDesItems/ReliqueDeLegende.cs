@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.UI;
 using TMPro;
 
 public class ReliqueDeLegende : MonoBehaviour, ItemInterface
@@ -12,6 +12,8 @@ public class ReliqueDeLegende : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -79,7 +81,8 @@ public class ReliqueDeLegende : MonoBehaviour, ItemInterface
 
     public void Start()
     {
-
+        cadreCarte.color = new Color32(155, 119, 0, 255);
+        cadreSprite.color = new Color32(155, 119, 0, 255);
         canvasGroup.alpha = 0f;
         titre.text = this.Nom;
         description_affiché.text = this.description;

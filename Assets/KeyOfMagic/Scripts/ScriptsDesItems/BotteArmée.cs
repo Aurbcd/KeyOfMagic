@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using TMPro;
-
+using UnityEngine.UI;
 public class BotteArmée : MonoBehaviour, ItemInterface
 {
     public CanvasGroup canvasGroup;
@@ -12,6 +11,8 @@ public class BotteArmée : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -63,14 +64,14 @@ public class BotteArmée : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        GameObject.Find("Player").GetComponent<NavMeshAgent>().speed +=2;
+        GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed +=2;
         PlayerStats.resistanceMultiplier -= 0.1f; 
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        GameObject.Find("Player").GetComponent<NavMeshAgent>().speed -= 2;
+        GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed -= 2;
         PlayerStats.resistanceMultiplier += 0.1f;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
@@ -83,6 +84,8 @@ public class BotteArmée : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
+        cadreCarte.color = new Color32(19, 114, 113, 255);
+        cadreSprite.color = new Color32(19, 114, 113, 255);
 
     }
 

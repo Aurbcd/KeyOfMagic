@@ -282,7 +282,9 @@ MonoBehaviour:
   titre: {fileID: 4380336586046492704}
   "description_affich\xE9": {fileID: 7391512986643692861}
   "lore_affich\xE9": {fileID: 1881866965341826196}
-  _Image: {fileID: 21300000, guid: 567b8bae468214e4ebfae04111585278, type: 3}
+  cadreCarte: {fileID: 6304605754613685620}
+  cadreSprite: {fileID: 1873397889653960548}
+  _Image: {fileID: 0}
 --- !u!1 &1709535644401678520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,7 +5122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 242a069d2c27a7b4f8bfdfa71ec010b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb39b20d3db30d542b8438680092a5fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -10449,7 +10451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 605d4f0d30499464b94db209a38011ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bca50110f4251ce428298d6403a46b2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

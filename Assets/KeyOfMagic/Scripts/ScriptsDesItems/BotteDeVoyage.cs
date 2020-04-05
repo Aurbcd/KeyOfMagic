@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using TMPro;
+using UnityEngine.UI;
 
 public class BotteDeVoyage : MonoBehaviour, ItemInterface
 {
@@ -12,6 +12,8 @@ public class BotteDeVoyage : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -63,13 +65,13 @@ public class BotteDeVoyage : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        GameObject.Find("Player").GetComponent<NavMeshAgent>().speed +=2;
+        GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed +=2;
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        GameObject.Find("Player").GetComponent<NavMeshAgent>().speed -= 2;
+        GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed -= 2;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
@@ -81,7 +83,8 @@ public class BotteDeVoyage : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
-
+        cadreCarte.color = new Color32(255, 255, 255, 150);
+        cadreSprite.color = new Color32(255, 255, 255, 150);
     }
 
     public void Update()

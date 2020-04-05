@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class ChapeauDeMage : MonoBehaviour, ItemInterface
 {
     public CanvasGroup canvasGroup;
@@ -10,6 +11,8 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -78,6 +81,8 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
+        cadreCarte.color = new Color32(255, 255, 255, 150);
+        cadreSprite.color = new Color32(255, 255, 255, 150);
 
     }
 

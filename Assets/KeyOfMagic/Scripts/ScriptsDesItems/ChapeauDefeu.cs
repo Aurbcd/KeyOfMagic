@@ -13,6 +13,8 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -90,6 +92,8 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
+        cadreCarte.color = new Color32(155, 119, 0, 255);
+        cadreSprite.color = new Color32(155, 119, 0, 255);
     }
 
     public void Update()
