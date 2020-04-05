@@ -7,7 +7,6 @@ public class InventaireScript : MonoBehaviour
 {
     private List<int> itemsType = new List<int>();
     public static List<ItemInterface> items = new List<ItemInterface>();
-    public static List<ItemInterface> itemsRencontres = new List<ItemInterface>();
     public event EventHandler<InventoryEventArgs> ItemAjouté;
     public event EventHandler<InventoryEventArgs> ItemJeté;
 
@@ -23,6 +22,7 @@ public class InventaireScript : MonoBehaviour
         {
             collider.enabled = false;
             items.Add(item);
+
             item.Ramasse();
         }
         ItemAjouté?.Invoke(this, new InventoryEventArgs(item));
