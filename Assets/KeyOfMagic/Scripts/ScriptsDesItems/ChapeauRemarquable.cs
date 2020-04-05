@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ChapeauRemarquable : MonoBehaviour, ItemInterface
@@ -11,6 +12,8 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -80,7 +83,8 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
-
+        cadreCarte.color = new Color32(19, 114, 113, 255);
+        cadreSprite.color = new Color32(19, 114, 113, 255);
     }
 
     public void Update()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class RobeSimple : MonoBehaviour, ItemInterface
 {
@@ -11,6 +12,8 @@ public class RobeSimple : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -74,7 +77,8 @@ public class RobeSimple : MonoBehaviour, ItemInterface
 
     public void Start()
     {
-
+        cadreCarte.color = new Color32(255, 255, 255, 150);
+        cadreSprite.color = new Color32(255, 255, 255, 150);
         canvasGroup.alpha = 0f;
         titre.text = this.Nom;
         description_affiché.text = this.description;

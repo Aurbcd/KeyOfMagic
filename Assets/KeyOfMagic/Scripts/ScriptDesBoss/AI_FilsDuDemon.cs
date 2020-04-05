@@ -7,6 +7,11 @@ using UnityEngine.UI;
 
 public class AI_FilsDuDemon : MonoBehaviour
 {
+    private int compteurSort = 0;
+    private float pourcentage;
+    private bool phaseUne = true;
+    private bool phaseDeux = false;
+    private bool phaseTrois = false;
     private int valeurAleatoire;
     public float distanceToPlayer;
     private Animator mAnimator;
@@ -45,7 +50,46 @@ public class AI_FilsDuDemon : MonoBehaviour
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
         if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
+            int vie_actuelle = GetComponent<MonsterStatText>().PV;
+            int vie_max = GetComponent<MonsterStatText>().PVMax;
+            int pourcentage = (int)(((float)vie_actuelle / (float)vie_max) * 100f);
+            Debug.Log(pourcentage <= 70 && phaseUne && compteurSort <= 10);
+            if (pourcentage <= 70 && phaseUne && compteurSort <= 10) //Entrée dans la phase 1
+            {
+                StartCoroutine(HeAttacFaster());
+                if (compteurSort == 10)
+                {
+                    phaseUne = false; //Sortie de la phase 2
+                    phaseDeux = true; 
+                    compteurSort = 0;
+                    Debug.Log("Fin phase 1");
+                }
+            }
+            else if (pourcentage <= 50 && phaseDeux && compteurSort <= 10) //Entrée dans la phase 2
+            {
+                StartCoroutine(HeAttacFaster());
+                if (compteurSort == 10)
+                {
+                    phaseDeux = false; //Sortie de la phase 2
+                    phaseTrois = true;
+                    compteurSort = 0;
+                    Debug.Log("Fin phase 2");
+                }
+            }
+            else if (pourcentage <= 20 && phaseTrois && compteurSort <= 10) //Entrée dans la phase 3
+            {
+                StartCoroutine(HeAttacFaster());
+                if (compteurSort == 10)
+                {
+                    phaseTrois = false; //Sortie de la phase 3
+                    compteurSort = 0;
+                    Debug.Log("Fin phase 3");
+                }
+            }
+            else //Sinon attaque normale
+            {
             StartCoroutine(HeAttac());
+            }
         }
         LastPos = curPos;
         if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
@@ -123,8 +167,6 @@ public class AI_FilsDuDemon : MonoBehaviour
 
         if (element.Equals("Electricite"))
         {
-            if (valeurAleatoire <= 75) //Electricite
-            {
                 valeurAleatoire = aleatoire.Next(100);
                 if (valeurAleatoire <= 75) //Petit sort
                 {
@@ -134,25 +176,10 @@ public class AI_FilsDuDemon : MonoBehaviour
                 {
                     choix = "istaliplo";
                 }
-            }
-            else //Terre
-            {
-                valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
-                {
-                    choix = "otera";
-                }
-                else //Gros sort
-                {
-                    choix = "opinalica";
-                }
-            }
         }
 
         if (element.Equals("Eau"))
         {
-            if (valeurAleatoire <= 75) //Eau
-            {
                 valeurAleatoire = aleatoire.Next(100);
                 if (valeurAleatoire <= 75) //Petit sort
                 {
@@ -162,26 +189,10 @@ public class AI_FilsDuDemon : MonoBehaviour
                 {
                     choix = "aliquamira";
                 }
-            }
-            else //Terre
-            {
-                valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
-                {
-                    choix = "otera";
-                }
-                else //Gros sort
-                {
-                    choix = "opinalica";
-                }
-            }
         }
 
         if (element.Equals("Terre"))
         {
-
-            if (valeurAleatoire <= 50) //Terre
-            {
                 valeurAleatoire = aleatoire.Next(100);
                 if (valeurAleatoire <= 50) //Petit sort
                 {
@@ -191,24 +202,12 @@ public class AI_FilsDuDemon : MonoBehaviour
                 {
                     choix = "omisteria";
                 }
-            }
-            else //Terre
-            {
-                valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
-                {
-                    choix = "otera";
-                }
-                else //Gros sort
-                {
-                    choix = "opinalica";
-                }
-            }
         }
     }
 
-    IEnumerator HeAttac()
+    IEnumerator HeAttacFaster()
     {
+        Debug.Log("Phase");
         boule = false;
         choixElement();
         choixSpell();
@@ -217,7 +216,7 @@ public class AI_FilsDuDemon : MonoBehaviour
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
-            yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
+            yield return new WaitForSeconds(1 / (PlayerStats.Difficulte + 2));
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {
@@ -239,6 +238,49 @@ public class AI_FilsDuDemon : MonoBehaviour
             mAnimator.SetBool("Attacking", false);
             mAnimator.SetBool("Spelling", false);
             Destroy(clone);
+            compteurSort++;
+        }
+        else
+        {
+            mAnimator.SetBool("Attacking", false);
+            mAnimator.SetBool("Spelling", false);
+        }
+        boule = true;
+    }
+
+    IEnumerator HeAttac()
+    {
+        boule = false;
+        choixElement();
+        choixSpell();
+        affichage = "";
+        mAnimator.SetBool("Spelling", true);
+        aBougé = false;
+        for (int i = 0; i < choix.Length; i++)
+        {
+            yield return new WaitForSeconds(1 / (PlayerStats.Difficulte));
+            affichage += choix[i];
+            if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
+            {
+                affichage = "";
+                break;
+            }
+        }
+        if (distanceToPlayer < 15 && !aBougé && !GetComponent<MonsterMouvSelection>().IsDead)
+        {
+            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("Sort" + element + " (UnityEngine.GameObject)"));
+            mAnimator.SetBool("Attacking", true);
+            yield return new WaitForSeconds(0.25f);
+            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            clone = Instantiate(sortAnim, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+            clone.tag = "ADetruireMonstre";
+            GameObject Joueur = GameObject.Find("Player");
+            Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);
+            yield return new WaitForSeconds(0.25f);
+            mAnimator.SetBool("Attacking", false);
+            mAnimator.SetBool("Spelling", false);
+            Destroy(clone);
+            compteurSort++;
         }
         else
         {

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using TMPro;
+using UnityEngine.UI;
 
 public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
 {
@@ -12,6 +12,8 @@ public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
     public TextMeshProUGUI lore_affiché;
     private bool isDisplayed;
     private float fadeSpeed = 5f;
+    public Image cadreCarte;
+    public Image cadreSprite;
     public string Nom
     {
         get
@@ -47,7 +49,7 @@ public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
     {
         get
         {
-            return 4;
+            return 3;
         }
     }
 
@@ -85,7 +87,8 @@ public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
         titre.text = this.Nom;
         description_affiché.text = this.description;
         lore_affiché.text = this.lore;
-
+        cadreCarte.color = new Color32(155, 119, 0, 255);
+        cadreSprite.color = new Color32(155, 119, 0, 255);
     }
 
     public void Update()
