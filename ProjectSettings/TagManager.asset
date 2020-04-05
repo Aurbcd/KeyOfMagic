@@ -12,6 +12,7 @@ TagManager:
   - ADetruire
   - Bob
   - ADetruireMonstre
+  - CoffreAFermer
   layers:
   - Default
   - TransparentFX
