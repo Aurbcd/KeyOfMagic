@@ -81,7 +81,7 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
         PlayerStats.resistanceMultiplier += 0.05f;
         GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed += 3;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
 
