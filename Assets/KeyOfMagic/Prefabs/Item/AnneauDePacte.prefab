@@ -104,7 +104,7 @@ RectTransform:
   m_GameObject: {fileID: 345406899143419597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.2265625}
-  m_LocalScale: {x: 0.0050147655, y: 0.0050147655, z: 0.0050147655}
+  m_LocalScale: {x: 0.005196445, y: 0.005196445, z: 0.005196445}
   m_Children:
   - {fileID: 8004961693238875408}
   - {fileID: 5683868267283643069}
@@ -113,7 +113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.01, y: 4.58}
+  m_AnchoredPosition: {x: -0.01, y: 4.18}
   m_SizeDelta: {x: 1648.487, y: 931.491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6629747201628511607
@@ -247,8 +247,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.4, z: 0.25}
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Size: {x: 0.3, y: 0.4, z: 0.25}
+  m_Center: {x: 0.01, y: 0.3, z: 0}
 --- !u!208 &5837749614567439990
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -259,11 +259,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.1, y: 0.2, z: 0.125}
+  m_Extents: {x: 0.15, y: 0.2, z: 0.125}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Center: {x: 0.01, y: 0.3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!114 &880058979248889817
 MonoBehaviour:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5237618605496299660}
   - component: {fileID: 5498352775215411565}
   m_Layer: 10
-  m_Name: CoffreArme
+  m_Name: 3CoffreArme
   m_TagString: CoffreAFermer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,12 +77,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ListeItem:
   - {fileID: 1591322530080062945, guid: 457268d238df6c44a924c23f50f3e639, type: 3}
-  - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}
+  - {fileID: 1591322530080062945, guid: 2457da33b89e111499b96b62437cef3f, type: 3}
   - {fileID: 1591322530080062945, guid: b1409f658ec3c6140997adf92ef3a15b, type: 3}
   - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}
   - {fileID: 1591322530080062945, guid: 28d2e623f52d0874e9534a1d9cac461c, type: 3}
   - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}
-  - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}
+  - {fileID: 1591322530080062945, guid: 6040d82c0ecc87144a40aa7d822f11a0, type: 3}
   - {fileID: 1591322530080062945, guid: 52b9de371eae8284aa5c1fa9847d2776, type: 3}
   - {fileID: 1591322530080062945, guid: cf81a16437c99b54a84ad375ab153a4e, type: 3}
   - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}

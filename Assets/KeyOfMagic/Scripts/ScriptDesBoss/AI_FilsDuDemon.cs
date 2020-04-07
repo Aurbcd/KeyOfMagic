@@ -28,6 +28,7 @@ public class AI_FilsDuDemon : MonoBehaviour
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+    private ParticleSystem PS;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,8 @@ public class AI_FilsDuDemon : MonoBehaviour
         displayText.text = "";
         LastPos = curPos;
         aBougé = false;
+        PS = this.gameObject.transform.GetComponentInChildren<ParticleSystem>();
+        PS.Stop();
     }
     private void Update()
     {
@@ -53,13 +56,14 @@ public class AI_FilsDuDemon : MonoBehaviour
             int vie_actuelle = GetComponent<MonsterStatText>().PV;
             int vie_max = GetComponent<MonsterStatText>().PVMax;
             int pourcentage = (int)(((float)vie_actuelle / (float)vie_max) * 100f);
-            Debug.Log(pourcentage <= 70 && phaseUne && compteurSort <= 10);
             if (pourcentage <= 70 && phaseUne && compteurSort <= 10) //Entrée dans la phase 1
             {
+                PS.Play();
                 StartCoroutine(HeAttacFaster());
                 if (compteurSort == 10)
                 {
-                    phaseUne = false; //Sortie de la phase 2
+                    PS.Stop();
+                    phaseUne = false; //Sortie de la phase 1
                     phaseDeux = true; 
                     compteurSort = 0;
                     Debug.Log("Fin phase 1");
@@ -67,9 +71,11 @@ public class AI_FilsDuDemon : MonoBehaviour
             }
             else if (pourcentage <= 50 && phaseDeux && compteurSort <= 10) //Entrée dans la phase 2
             {
+                PS.Play();
                 StartCoroutine(HeAttacFaster());
                 if (compteurSort == 10)
                 {
+                    PS.Stop();
                     phaseDeux = false; //Sortie de la phase 2
                     phaseTrois = true;
                     compteurSort = 0;
@@ -78,9 +84,11 @@ public class AI_FilsDuDemon : MonoBehaviour
             }
             else if (pourcentage <= 20 && phaseTrois && compteurSort <= 10) //Entrée dans la phase 3
             {
+                PS.Play();
                 StartCoroutine(HeAttacFaster());
                 if (compteurSort == 10)
                 {
+                    PS.Stop();
                     phaseTrois = false; //Sortie de la phase 3
                     compteurSort = 0;
                     Debug.Log("Fin phase 3");

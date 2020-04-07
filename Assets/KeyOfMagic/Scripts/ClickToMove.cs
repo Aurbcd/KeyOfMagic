@@ -83,7 +83,7 @@ public class ClickToMove : MonoBehaviour {
                     mNavMeshAgent.destination = hit.collider.transform.position;
                     walkautomonstre = true;
                 }
-                if (hit.collider.tag == "Potion" && doubleclick) {
+                if (hit.collider.tag == "Potion" && doubleclick || hit.collider.tag == "CoffreAFermer" && doubleclick) {
                     selectionne = false;
                     mNavMeshAgent.destination = hit.collider.transform.position;
                     walkautoItem = true;
