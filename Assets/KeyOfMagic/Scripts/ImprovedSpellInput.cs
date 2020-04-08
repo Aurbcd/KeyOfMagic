@@ -263,8 +263,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 else //Si le sort est défensif
                 {
                     PlayerStats.shieldElement = spellEntry.element;
-                    PlayerStats.playerShieldPoints = spellEntry.value;
                     GetComponent<PlayerStats>().playerMaxShieldPoints = (int)(spellEntry.value * PlayerStats.shieldMultiplier);
+                    PlayerStats.playerShieldPoints =(int)(spellEntry.value * PlayerStats.shieldMultiplier);
                     spell = "";
                     inputField.text = "";
                 }
