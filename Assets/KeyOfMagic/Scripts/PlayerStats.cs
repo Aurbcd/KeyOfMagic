@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public static int playerHealthPoints;   
     public ShieldBar shieldBar;
     public static int playerShieldPoints;
+    public static int playerMaxHeathPointsInitial;
     public static int playerMaxHeathPoints;
     public int playerMaxShieldPoints;
     public static string shieldElement;
@@ -25,6 +26,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start() 
     {
+        playerMaxHeathPointsInitial = 200;
         playerMaxHeathPoints = 200;
         playerHealthPoints = 200;
         playerShieldPoints = 0;

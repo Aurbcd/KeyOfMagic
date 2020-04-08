@@ -63,14 +63,14 @@ public class RobeAnscestrale : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        PlayerStats.playerMaxHeathPoints += (int)(PlayerStats.playerMaxHeathPoints*0.15f);
+        PlayerStats.playerMaxHeathPoints += (int)(PlayerStats.playerMaxHeathPointsInitial * 0.15f);
         MonsterMouvSelection.modificateurMinimumPotions += 1;
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        PlayerStats.playerMaxHeathPoints -= (int)(PlayerStats.playerMaxHeathPoints * 0.15f);
+        PlayerStats.playerMaxHeathPoints -= (int)(PlayerStats.playerMaxHeathPointsInitial * 0.15f);
         MonsterMouvSelection.modificateurMinimumPotions -= 1;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);

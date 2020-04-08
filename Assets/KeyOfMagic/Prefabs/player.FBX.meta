@@ -138,7 +138,32 @@ ModelImporter:
     13700010: legs
     13700012: Sphere
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Baguette
+    second: {fileID: 2100000, guid: dcb1ade1f1249de45b45bfa535a82c1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chapeau
+    second: {fileID: 2100000, guid: e62f95509390d30409df35a22d5bf82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main
+    second: {fileID: 2100000, guid: 5c175de4be9a9a4469a655933ac90eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mantea
+    second: {fileID: 2100000, guid: 2c8caaeca24225e45b488ca5637b8d68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pant et shoes
+    second: {fileID: 2100000, guid: 20f194ba5f993f4429fc5d578b1f3a18, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -189,7 +214,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: NewEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.62355214
+        functionName: Hit
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

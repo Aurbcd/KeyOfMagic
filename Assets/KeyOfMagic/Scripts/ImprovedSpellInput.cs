@@ -173,6 +173,7 @@ public class ImprovedSpellInput : MonoBehaviour
             {
                 choix = spellEntry.spellName;
                 choixOffDef = spellEntry.offensive;
+                mAnimator.Play("Redo", 0, 1);
                 pAttack = true;
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Ne cherche que parmis les sorts offensifs
@@ -344,11 +345,11 @@ public class ImprovedSpellInput : MonoBehaviour
         if (pAttack && choixOffDef)
         {
             sortAnim = VisuelSorts.Find(x => x.ToString().Equals("O" + choix + "Anim" + " (UnityEngine.GameObject)"));
-            mAnimator.SetTrigger("Attack1Trigger");
             yield return new WaitForSeconds(0.5f);
             if (!animSortLance)
             {
                 clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
+                clone.transform.position = Gemme.transform.position;
                 clone.tag = "ADetruire";
                 animSortLance = true;
             }

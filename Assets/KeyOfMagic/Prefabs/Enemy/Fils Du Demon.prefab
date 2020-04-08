@@ -19284,7 +19284,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6572569499185163307}
   - component: {fileID: 2698813143177938510}
-  - component: {fileID: 114308405756073940}
   - component: {fileID: 6572569499185163302}
   - component: {fileID: 114819798102086262}
   - component: {fileID: 6572569499185163303}
@@ -19293,7 +19292,7 @@ GameObject:
   - component: {fileID: 6572569499185163309}
   - component: {fileID: 114190508878000956}
   m_Layer: 10
-  m_Name: Fils Du Diable
+  m_Name: Fils Du Demon
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19335,32 +19334,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114308405756073940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9135f658b677a664db621490215c96e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
-  element: 
-  choix: 
-  displayText: {fileID: 4221106119751356392}
-  curPos: {x: 0, y: 0, z: 0}
-  LastPos: {x: 0, y: 0, z: 0}
-  "aBoug\xE9": 0
-  affichage: 
-  VisuelSorts:
-  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
-  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
-  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
-  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
-  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
 --- !u!65 &6572569499185163302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19428,7 +19401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: Fils du Diable
+  monsterName: "Fils du D\xE9mon"
   PV: 1000
   PVMax: 1000
   element: Feu

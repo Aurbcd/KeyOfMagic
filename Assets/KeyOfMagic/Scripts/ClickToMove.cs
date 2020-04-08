@@ -35,6 +35,7 @@ public class ClickToMove : MonoBehaviour {
         StartCoroutine (InputListener ());
         mAnimator = GetComponent<Animator> ();
         mNavMeshAgent = GetComponent<NavMeshAgent> ();
+        mAnimator.SetBool("Selectionne", false);
         projector.enabled = false;
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
         Cursor.SetCursor (CursorClassique, hotSpot, cursormode);
@@ -56,7 +57,7 @@ public class ClickToMove : MonoBehaviour {
         }
         if (Input.GetMouseButton (0) && !pausePanel.activeSelf) {
             if (Physics.Raycast (ray, out hit, 100)) {
-
+                mAnimator.SetBool("Selectionne", false);
                 if (hit.collider.tag == "Sol") {
                     walkautomonstre = false;
                     walkautoItem = false;
@@ -66,6 +67,7 @@ public class ClickToMove : MonoBehaviour {
                 }
                 if (hit.collider.tag == "Ennemy") {
                     selectionne = true;
+                    mAnimator.SetBool("Selectionne", true);
                     transform.LookAt (hit.collider.transform);
                 }
                 if (hit.collider.tag == "Item")
@@ -100,6 +102,7 @@ public class ClickToMove : MonoBehaviour {
         }
         if ((playerPosition - mNavMeshAgent.destination).magnitude < 20 && walkautomonstre) {
             mNavMeshAgent.ResetPath ();
+            mAnimator.SetBool("Selectionne", true);
             walkautomonstre = false;
         }
         if ((playerPosition - mNavMeshAgent.destination).magnitude < 3 && walkautoItem) {
