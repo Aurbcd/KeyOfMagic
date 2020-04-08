@@ -55,7 +55,7 @@ public class ClickToMove : MonoBehaviour {
                 Cursor.SetCursor (CursorRamasser, hotSpot, cursormode);
             }
         }
-        if (Input.GetMouseButton (0) && !pausePanel.activeSelf) {
+        if (Input.GetMouseButton (0) && !PlayerStats.IsDead) {
             if (Physics.Raycast (ray, out hit, 100)) {
                 mAnimator.SetBool("Selectionne", false);
                 if (hit.collider.tag == "Sol") {
@@ -161,10 +161,5 @@ public class ClickToMove : MonoBehaviour {
             count += Time.deltaTime; // increment counter by change in time between frames
             yield return null; // wait for the next frame
         }
-    }
-
-    void OnCollisionStay () {
-        //isGrounded = true;
-        mNavMeshAgent.enabled = true;
     }
 }

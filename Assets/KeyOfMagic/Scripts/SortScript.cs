@@ -14,21 +14,15 @@ public class SortScript : MonoBehaviour
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne || monstre.GetComponent<MonsterMouvSelection>().IsDead)
                 {
-                    transform.LookAt(monstre.transform.position + new Vector3(0f,0.8f,0f));
+                    transform.LookAt(monstre.transform.position + new Vector3(0f, 0.8f, 0f));
                 }
             }
         }
-        Die();
+        Destroy(gameObject, 0.5f);
     }
-    private IEnumerator Die()
-    {
-        yield return new WaitForSeconds(2f);
-        Destroy(this);
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

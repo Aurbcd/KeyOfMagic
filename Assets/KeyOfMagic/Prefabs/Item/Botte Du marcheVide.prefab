@@ -283,7 +283,7 @@ MonoBehaviour:
   "lore_affich\xE9": {fileID: 1881866965341826196}
   cadreCarte: {fileID: 6304605754613685620}
   cadreSprite: {fileID: 1873397889653960548}
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: c384910f60dfb104c8fcf7243900bf97, type: 3}
 --- !u!1 &1709535644401678520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,7 +5194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 817978a104180f046a66eb942ae84455, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c384910f60dfb104c8fcf7243900bf97, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

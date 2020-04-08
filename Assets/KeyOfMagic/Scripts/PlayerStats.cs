@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public static int playerShieldPoints;
     public static int playerMaxHeathPointsInitial;
     public static int playerMaxHeathPoints;
+    public static bool IsDead;
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
@@ -22,10 +24,12 @@ public class PlayerStats : MonoBehaviour
     public static float resistanceMultiplier;
     private bool amHero = false;
     private bool trouve;
-
+    private Animator mAnimator;
 
     void Start() 
     {
+        IsDead = false;
+        mAnimator = GetComponent<Animator>();
         playerMaxHeathPointsInitial = 200;
         playerMaxHeathPoints = 200;
         playerHealthPoints = 200;
@@ -69,6 +73,25 @@ public class PlayerStats : MonoBehaviour
         {
             amHero = false;
         }
+
+        if (playerHealthPoints < 0 && !IsDead)
+        {
+            IsDead = true;
+            mAnimator.SetBool("IsDead",true);
+            mAnimator.Play("OnYourWayToDie");
+        }
+    }
+
+    public void GameOverEvent()
+    {
+        Invoke("GameOver", 2f);
+    }
+
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void DamagePlayer(int damage, string attackElement){

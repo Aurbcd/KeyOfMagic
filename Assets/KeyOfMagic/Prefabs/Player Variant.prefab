@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1240840241427316046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5239358036738624386}
+  m_Layer: 0
+  m_Name: GemmeD
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5239358036738624386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240840241427316046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.49, y: 2.76, z: 1.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1972791196520416317}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &722206610429522428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +149,8 @@ MonoBehaviour:
   choix: 
   choixOffDef: 0
   animSortLance: 0
-  Gemme: {fileID: 5041575748592903818}
+  GemmeA: {fileID: 5041575748592903818}
+  GemmeD: {fileID: 1240840241427316046}
   VisuelSorts:
   - {fileID: 670263812431943585, guid: 27d17cfc5326c3e40b750f76b998dc5c, type: 3}
   - {fileID: 670263812431943585, guid: babb207d46bbcb04eb02d4d5fc0e405d, type: 3}
@@ -141,6 +172,26 @@ MonoBehaviour:
   - {fileID: 3835050707202631650, guid: 944878013d763c94bacff12262cbf05f, type: 3}
   - {fileID: 3835050707202631650, guid: 486766c70b210ab489e9dfe9ff219edc, type: 3}
   - {fileID: 3688634752232416654, guid: 25f2ffc09b5e6d947afabb12a213d120, type: 3}
+  - {fileID: 670263812431943585, guid: 75222ce9d2c41a9458c6debff460fb5f, type: 3}
+  - {fileID: 670263812431943585, guid: cb9d5ce971d4a0a4a8d9c4302c45fe41, type: 3}
+  - {fileID: 670263812431943585, guid: 9e4b6d2c377496e419bb6499afc2e534, type: 3}
+  - {fileID: 670263812431943585, guid: 0ae2f1b5747291c49b1b8613eb4612fd, type: 3}
+  - {fileID: 670263812431943585, guid: de31c123d16caa44aaf224eefc824d2e, type: 3}
+  - {fileID: 3835050707202631650, guid: 84f1b9d9f316018479d0394ff77fb079, type: 3}
+  - {fileID: 3835050707202631650, guid: 827baf53a90c1454b904af330cb4cc41, type: 3}
+  - {fileID: 3835050707202631650, guid: 4e7e971fd87f05f469895c48f93c9efb, type: 3}
+  - {fileID: 3835050707202631650, guid: 04100cb8eec5e5448a5aa4151a96def4, type: 3}
+  - {fileID: 3835050707202631650, guid: 750bdeeecf6cd8e47802e6c88a251d92, type: 3}
+  - {fileID: 670263812431943585, guid: 3439a8100d33b224f8ba5f8aa797249f, type: 3}
+  - {fileID: 4506787999873237425, guid: 0b122dfd60c14ec40bb5af7757f3fc96, type: 3}
+  - {fileID: 95195413383450130, guid: 59ca6b2e5d37b604caa39f0cc18868a0, type: 3}
+  - {fileID: 3688634752232416654, guid: b3cbb8d425d449b4b8bcd90e0b317a88, type: 3}
+  - {fileID: 3958356365806743759, guid: 5dda2585fc6a1404a9005c1f4c58ad35, type: 3}
+  - {fileID: 3835050707202631650, guid: 7aeb073efca03ad4292b6022da39efff, type: 3}
+  - {fileID: 3835050707202631650, guid: c696b749d11fa314085ef97ac794bd4b, type: 3}
+  - {fileID: 3835050707202631650, guid: fcb833a727e78e9419bf6f2ab48862e4, type: 3}
+  - {fileID: 3835050707202631650, guid: 97e724a63f14a224394a2b4a8e1443f9, type: 3}
+  - {fileID: 3835050707202631650, guid: 63dcf53fd4f041449a54ee12cd279315, type: 3}
   "tempsSansAppuy\xE9": 4
   spellsPanel: {fileID: 0}
   spellsList: {fileID: 0}
@@ -367,7 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1401163221139066381}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GemmeA
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1014,15 +1065,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11484642, guid: bad0018eb9256e6409155981dd5af9a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bad0018eb9256e6409155981dd5af9a2, type: 3}
---- !u!1 &1972791196520126493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: bad0018eb9256e6409155981dd5af9a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1972791196520029885}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1972791196520416317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bad0018eb9256e6409155981dd5af9a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972791196520029885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1972791196520126493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bad0018eb9256e6409155981dd5af9a2,
     type: 3}
   m_PrefabInstance: {fileID: 1972791196520029885}
   m_PrefabAsset: {fileID: 0}

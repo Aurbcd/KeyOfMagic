@@ -16,7 +16,7 @@ public class Pointer : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, 50 * Time.deltaTime);
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !PlayerStats.IsDead)
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

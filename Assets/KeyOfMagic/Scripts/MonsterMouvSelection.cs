@@ -138,6 +138,13 @@ public class MonsterMouvSelection : MonoBehaviour
         mNavMeshAgent.destination = direction;
     }
 
+    public void HitP()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (!PlayerStats.IsDead)
+            player.GetComponent<Animator>().Play("GetHit");
+    }
+
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();

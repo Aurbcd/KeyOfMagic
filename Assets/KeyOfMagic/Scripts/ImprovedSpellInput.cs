@@ -20,7 +20,8 @@ public class ImprovedSpellInput : MonoBehaviour
     //Affichage de sort et Efficace/Resistant
     public bool animSortLance;
     private GameObject clone;
-    public GameObject Gemme;
+    public GameObject GemmeA;
+    public GameObject GemmeD;
     private bool affichageEff;
     private bool affichageRes;
     private GameObject sortAnim;
@@ -89,6 +90,72 @@ public class ImprovedSpellInput : MonoBehaviour
             }
         }
     }
+    public void SpellAff()
+    {
+        sortAnim = VisuelSorts.Find(x => x.ToString().Equals("O" + choix + "Anim" + " (UnityEngine.GameObject)"));
+        if (!animSortLance)
+        {
+            clone = Instantiate(sortAnim, GemmeA.transform.position, Quaternion.identity);
+            clone.transform.position = GemmeA.transform.position;
+            clone.tag = "ADetruire";
+            animSortLance = true;
+        }
+    }
+    public void DefAff()
+    {
+        sortAnim = VisuelSorts.Find(x => x.ToString().Equals("D" + choix + "Anim" + " (UnityEngine.GameObject)"));
+        if (!animSortLance)
+        {
+            clone = Instantiate(sortAnim, GemmeD.transform.position, Quaternion.identity);
+            clone.tag = "ADetruire";
+            animSortLance = true;
+        }
+        animSortLance = false;
+    }
+    public void AffEffRest()
+    {
+        if (affichageEff) //Si le monstre est faible contre l'élément du sort
+        {
+            //Calcul du décalage de l'affichage des popuptexts
+            int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
+            Vector3 decallage = new Vector3(0f, 0f, 0f);
+            if (hauteur > 4)
+            {
+                decallage.y += (float)hauteur - 3;
+            }
+            GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
+            for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
+            {
+                if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
+                {
+                    instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
+                    instance.transform.position = monstreSelectionne.transform.position + decallage;
+                    affichageEff = false;
+                }
+            }
+        }
+
+        if (affichageRes) //Si le monstre est resistant contre l'élément du sort
+        {
+            GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
+            //Calcul du décalage de l'affichage des popuptexts
+            int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
+            Vector3 decallage = new Vector3(0f, 0f, 0f);
+            if (hauteur > 4)
+            {
+                decallage.y += (float)hauteur - 3;
+            }
+            for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
+            {
+                if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
+                {
+                    instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
+                    instance.transform.position = monstreSelectionne.transform.position + decallage;
+                    affichageRes = false;
+                }
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -112,7 +179,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
 
-        if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20)
+        if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20 && !PlayerStats.IsDead)
         {
             inputField.ActivateInputField();
             spell = inputField.text;
@@ -173,7 +240,6 @@ public class ImprovedSpellInput : MonoBehaviour
             {
                 choix = spellEntry.spellName;
                 choixOffDef = spellEntry.offensive;
-                mAnimator.Play("Redo", 0, 1);
                 pAttack = true;
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Ne cherche que parmis les sorts offensifs
@@ -236,6 +302,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
                 if (spellEntry.offensive) //SI le sort est offensif
                 {
+                    mAnimator.Play("RedoA", 0, 1);
                     if (monstreSelectionne.GetComponent<MonsterStatText>().weakness.Equals(spellEntry.element)) //Si le monstre est faible contre l'élément du sort
                     {
                         affichageEff = true;
@@ -263,6 +330,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
                 else //Si le sort est défensif
                 {
+                    mAnimator.Play("RedoD", 0, 1);
                     PlayerStats.shieldElement = spellEntry.element;
                     GetComponent<PlayerStats>().playerMaxShieldPoints = (int)(spellEntry.value * PlayerStats.shieldMultiplier);
                     PlayerStats.playerShieldPoints =(int)(spellEntry.value * PlayerStats.shieldMultiplier);
@@ -272,7 +340,7 @@ public class ImprovedSpellInput : MonoBehaviour
             }
 
             //FIN
-
+            animSortLance = false;
             if (!Input.anyKey)
             {
                 tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
@@ -335,90 +403,19 @@ public class ImprovedSpellInput : MonoBehaviour
             }
             spellsList.text = spellList;
         }
-        StartCoroutine(WaitForAnimation());
-    }
-
-
-
-    private IEnumerator WaitForAnimation()
+    if (!ClickToMove.selectionne)
     {
-        if (pAttack && choixOffDef)
-        {
-            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("O" + choix + "Anim" + " (UnityEngine.GameObject)"));
-            yield return new WaitForSeconds(0.5f);
-            if (!animSortLance)
-            {
-                clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
-                clone.transform.position = Gemme.transform.position;
-                clone.tag = "ADetruire";
-                animSortLance = true;
-            }
-            yield return new WaitForSeconds(0.1f);
-            //Calcul du décalage de l'affichage des popuptexts
-            int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
-            Vector3 decallage = new Vector3(0f, 0f, 0f);
-            if (hauteur > 4)
-            {
-                decallage.y += (float)hauteur - 3;
-            }
-
-            if(affichageEff) //Si le monstre est faible contre l'élément du sort
-            {
-                GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
-                for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
-                {
-                    if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
-                    {
-                        instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
-                        instance.transform.position = monstreSelectionne.transform.position + decallage;
-                        affichageEff = false;
-                    }
-                }
-            }
-            
-            if (affichageRes) //Si le monstre est resistant contre l'élément du sort
-            {
-                GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
-                for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
-                {
-                    if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
-                    {
-                        instance.transform.SetParent(monstreSelectionne.transform.GetChild(i).transform, false);
-                        instance.transform.position = monstreSelectionne.transform.position + decallage;
-                        affichageRes = false;
-                    }
-                }
-            }
-            yield return new WaitForSeconds(0.2f);
-            pAttack = false;
-            Destroy(clone);
-            yield return new WaitForSeconds(0.5f);
-            animSortLance = false;
-        }
-        if (pAttack && !choixOffDef)
-        {
-            sortAnim = VisuelSorts.Find(x => x.ToString().Equals("D" + choix + "Anim" + " (UnityEngine.GameObject)"));
-            mAnimator.SetTrigger("Attack1Trigger");
-            yield return new WaitForSeconds(0.5f);
-            if (!animSortLance)
-            {
-                clone = Instantiate(sortAnim, Gemme.transform.position, Quaternion.identity);
-                clone.tag = "ADetruire";
-                animSortLance = true;
-            }
-            yield return new WaitForSeconds(0.5f);
-            pAttack = false;
-            Destroy(clone);
-            yield return new WaitForSeconds(0.5f);
-            animSortLance = false;
-        }
-        if (!ClickToMove.selectionne)
-        {
-            GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruire");
-            foreach (GameObject s in aDetruire)
-               Destroy(s);
-        }
+        GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruire");
+        foreach (GameObject s in aDetruire)
+            Destroy(s);
     }
+        if (PlayerStats.IsDead)
+        {
+            inputField.text = "";
+        }
+}
+
+
 
     public class SpellStorageEntry{
         public string nom;
