@@ -869,6 +869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellDatabase:
     SpellBook: []
+  PlayerSpellDatabase:
+    SpellBook: []
   ElementDatabase:
     Elementdb: []
 --- !u!1 &7518567346675445552

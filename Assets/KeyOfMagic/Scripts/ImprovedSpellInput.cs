@@ -182,12 +182,15 @@ public class ImprovedSpellInput : MonoBehaviour
                 }
             }
         }
+        if (!ClickToMove.selectionne)
+        {
+            mAnimator.speed = 1;
+        }
 
         if (Input.GetKeyDown(KeyCode.CapsLock))
         {
             isCapsLockOn = !isCapsLockOn;
         }
-
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
         if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20 && !PlayerStats.IsDead)
         {

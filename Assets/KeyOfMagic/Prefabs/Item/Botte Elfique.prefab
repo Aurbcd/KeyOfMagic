@@ -284,7 +284,7 @@ MonoBehaviour:
   "lore_affich\xE9": {fileID: 1881866965341826196}
   cadreCarte: {fileID: 6304605754613685620}
   cadreSprite: {fileID: 1873397889653960548}
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: 567b8bae468214e4ebfae04111585278, type: 3}
 --- !u!1 &1709535644401678520
 GameObject:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        PlayerStats.volDeVie += 0.1f;
+        PlayerStats.volDeVie += 0.2f;
         PlayerStats.DamageMultiplier -= 0.4f;
         gameObject.SetActive(false);
     }
