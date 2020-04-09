@@ -267,7 +267,7 @@ MonoBehaviour:
   "lore_affich\xE9": {fileID: 1881866965341826196}
   cadreCarte: {fileID: 1873397889653960548}
   cadreSprite: {fileID: 6304605754613685620}
-  _Image: {fileID: 21300000, guid: 817978a104180f046a66eb942ae84455, type: 3}
+  _Image: {fileID: 21300000, guid: 0a08e1fdaa8696546b83c8a0253ccea5, type: 3}
 --- !u!208 &5837749614567439990
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 817978a104180f046a66eb942ae84455, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a08e1fdaa8696546b83c8a0253ccea5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
