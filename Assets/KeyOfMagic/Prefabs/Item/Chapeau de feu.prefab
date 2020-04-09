@@ -378,7 +378,7 @@ MonoBehaviour:
   "lore_affich\xE9": {fileID: 121486912200628177}
   cadreCarte: {fileID: 9002767479251537619}
   cadreSprite: {fileID: 1556677613864395130}
-  _Image: {fileID: 21300000, guid: 2aa32c130dc05424583c5f504813b779, type: 3}
+  _Image: {fileID: 21300000, guid: f45f7711da45bb8409934fe58d89c511, type: 3}
 --- !u!208 &5237618605496299660
 NavMeshObstacle:
   m_ObjectHideFlags: 0
