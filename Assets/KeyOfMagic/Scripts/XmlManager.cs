@@ -12,11 +12,13 @@ public class XmlManager : MonoBehaviour
 
     //List of items
     public SpellDatabase SpellDatabase;
+    public SpellDatabase PlayerSpellDatabase;
     public ElementDatabase ElementDatabase;
     void Awake()
     {
         ins = this;
         this.LoadSpells();
+        this.LoadPlayerSpells();
         this.LoadElements();
     }
 
@@ -28,6 +30,17 @@ public class XmlManager : MonoBehaviour
         serializer.Serialize(stream, SpellDatabase);
         stream.Close();
     }
+
+    //save functions (create a button if you wanna use these bad boys)
+    public void SavePlayerSpells()
+    {
+        //open a new xml file
+        XmlSerializer serializer = new XmlSerializer(typeof(SpellDatabase));
+        FileStream stream = new FileStream(Application.dataPath + "/KeyOfMagic/XML/player_spell_data.xml", FileMode.OpenOrCreate);
+        serializer.Serialize(stream, PlayerSpellDatabase);
+        stream.Close();
+    }
+
     public void SaveElements()
     {
         //open a new xml file
@@ -42,6 +55,14 @@ public class XmlManager : MonoBehaviour
         XmlSerializer serializer = new XmlSerializer(typeof(SpellDatabase));
         FileStream stream = new FileStream(Application.dataPath + "/KeyOfMagic/XML/spell_data.xml", FileMode.Open);
         SpellDatabase = serializer.Deserialize(stream) as SpellDatabase;
+        stream.Close();
+    }
+
+    public void LoadPlayerSpells()
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(SpellDatabase));
+        FileStream stream = new FileStream(Application.dataPath + "/KeyOfMagic/XML/player_spell_data.xml", FileMode.Open);
+        PlayerSpellDatabase = serializer.Deserialize(stream) as SpellDatabase;
         stream.Close();
     }
 
