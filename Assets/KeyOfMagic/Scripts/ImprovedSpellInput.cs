@@ -189,13 +189,17 @@ public class ImprovedSpellInput : MonoBehaviour
         }
 
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
-
         if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20 && !PlayerStats.IsDead)
         {
             inputField.ActivateInputField();
             spell = inputField.text;
             Text text = inputField.transform.Find("Text").GetComponent<Text>();
-
+            if (inputField.text.Length == 0)
+            {
+                mAnimator.speed = 1;
+            }
+            else if (mAnimator.speed<5)
+                mAnimator.speed = 1 + 0.5f * inputField.text.Length;
             if (string.Compare(spell,"") != 0)
             {
                 if (spell[0].Equals('a') || spell[0].Equals('A'))
