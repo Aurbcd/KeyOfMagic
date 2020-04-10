@@ -74,7 +74,7 @@ public class PlayerStats : MonoBehaviour
             amHero = false;
         }
 
-        if (playerHealthPoints < 0 && !IsDead)
+        if (playerHealthPoints <= 0 && !IsDead)
         {
             IsDead = true;
             mAnimator.SetBool("IsDead",true);
@@ -86,7 +86,10 @@ public class PlayerStats : MonoBehaviour
     {
         Invoke("GameOver", 2f);
     }
-
+    public void GameOverSound()
+    {
+        SoundManager.PlaySound("GameOver");
+    }
 
     public void GameOver()
     {

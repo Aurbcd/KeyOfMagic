@@ -68,6 +68,7 @@ public class CoffreScriptType : MonoBehaviour
                 InventaireScript.itemsRencontres.Add(choix);
                 ouvert = true;
                 this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Open", true);
+                SoundManager.PlaySound("Coffre");
                 Instantiate(Drop, (transform.position + ClickToMove.playerPosition) / 2, Quaternion.identity);
                 Collider collider = (choix as MonoBehaviour).GetComponent<Collider>();
                 if (!collider.enabled)

@@ -57,7 +57,6 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             bool present = false;
             //Ajout à la spellListStorage
-                    Debug.Log("coucou");
             foreach (SpellStorageEntry sse in spellListStorage)
             {
                 if (sse.nom.Equals(spellEntry.spellName.ToLower()))
@@ -101,6 +100,13 @@ public class ImprovedSpellInput : MonoBehaviour
             }
         }
     }
+
+    public void Sound()
+    {
+        SoundManager.PlaySound(choix);
+    }
+
+
     public void SpellAff()
     {
         sortAnim = VisuelSorts.Find(x => x.ToString().Equals("O" + choix + "Anim" + " (UnityEngine.GameObject)"));

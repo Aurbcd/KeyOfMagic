@@ -38,7 +38,7 @@ public class MonsterMouvSelection : MonoBehaviour
         mAnimator = GetComponent<Animator>();
         mAnimator.updateMode = AnimatorUpdateMode.Normal;
         basePositions = transform.position;
-        potion = GameObject.Find("Potion");
+        potion = Resources.Load<GameObject>("Potion");
     }
 
     // Update is called once per frame
@@ -142,9 +142,15 @@ public class MonsterMouvSelection : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (!PlayerStats.IsDead)
+        {
+            SoundManager.PlaySound("hitP");
             player.GetComponent<Animator>().Play("GetHit");
+        }
     }
-
+    public void AttackSound()
+    {
+        SoundManager.PlaySound("enemyA");
+    }
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();

@@ -14,7 +14,7 @@ public class CoffreScript : MonoBehaviour
         ouvert = false;
     }
 
-    // Update is called once per frame
+   // Update is called once per frame
     void OnMouseDown() { 
         if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 9)
         {
@@ -69,6 +69,7 @@ public class CoffreScript : MonoBehaviour
                 InventaireScript.itemsRencontres.Add(choix);
                 ouvert = true;
                 this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Open", true);
+                SoundManager.PlaySound("Coffre");
                 Instantiate(Drop, (transform.position + ClickToMove.playerPosition) / 2, Quaternion.identity);
                 Collider collider = (choix as MonoBehaviour).GetComponent<Collider>();
                 if (!collider.enabled)
