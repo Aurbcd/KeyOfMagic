@@ -29,6 +29,10 @@ public class MonsterMouvSelection : MonoBehaviour
     private float DistanceBase;
     private Vector3 basePositions;
 
+    //Son
+    public static AudioClip hitPAudio;
+    public static AudioClip enemyA;
+
     void Start()
     {
         BobAttackRate = true;
@@ -39,6 +43,8 @@ public class MonsterMouvSelection : MonoBehaviour
         mAnimator.updateMode = AnimatorUpdateMode.Normal;
         basePositions = transform.position;
         potion = Resources.Load<GameObject>("Potion");
+        hitPAudio = Resources.Load<AudioClip>("HitP");
+        enemyA = Resources.Load<AudioClip>("Woosh");
     }
 
     // Update is called once per frame
@@ -143,13 +149,13 @@ public class MonsterMouvSelection : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (!PlayerStats.IsDead)
         {
-            SoundManager.PlaySound("hitP");
-            player.GetComponent<Animator>().Play("GetHit");
+            player.GetComponent<AudioSource>().PlayOneShot(hitPAudio, 0.5f);
+            player.GetComponent<Animator>().Play("GetHit") ;
         }
     }
     public void AttackSound()
     {
-        SoundManager.PlaySound("enemyA");
+        GetComponent<AudioSource>().PlayOneShot(enemyA,0.5f);
     }
     public void StopMovement()
     {

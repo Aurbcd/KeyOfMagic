@@ -10,10 +10,28 @@ public class MouvBobScript : MonoBehaviour
     private GameObject montreSelectionne;
     public static bool attack=false;
     private string memoire="";
+    public static AudioClip bobAttack;
+    public static AudioClip bobWalk;
+
+
     void Start()
     {
         mAnimator = GetComponent<Animator>();
         mNavMeshAgent = GetComponent<NavMeshAgent>();
+        bobAttack = Resources.Load<AudioClip>("BobAttack");
+        bobWalk = Resources.Load<AudioClip>("BobJump");
+    }
+    void walkSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(bobWalk);
+    }
+    void jumpSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(bobWalk);
+    }
+    void attackSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(bobAttack);
     }
 
     // Update is called once per frame

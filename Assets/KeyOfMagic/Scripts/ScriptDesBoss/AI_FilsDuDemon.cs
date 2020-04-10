@@ -29,6 +29,10 @@ public class AI_FilsDuDemon : MonoBehaviour
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
     private ParticleSystem PS;
+    //SON
+    public static AudioClip filsDuDemonGroan1;
+    public static AudioClip filsDuDemonGroan2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +45,8 @@ public class AI_FilsDuDemon : MonoBehaviour
         aBougé = false;
         PS = this.gameObject.transform.GetComponentInChildren<ParticleSystem>();
         PS.Stop();
+        filsDuDemonGroan1 = Resources.Load<AudioClip>("MonsterHit1");
+        filsDuDemonGroan2 = Resources.Load<AudioClip>("MonsterHit2");
     }
     private void Update()
     {
@@ -135,6 +141,18 @@ public class AI_FilsDuDemon : MonoBehaviour
             element = "Air";
         }
 
+    }
+
+    void groan()
+    {
+        System.Random aleatoire = new System.Random();
+        int pourcentage = aleatoire.Next(100);
+        if (pourcentage < 50)
+        {
+            GetComponent<AudioSource>().PlayOneShot(filsDuDemonGroan1);
+        }
+        else
+            GetComponent<AudioSource>().PlayOneShot(filsDuDemonGroan2);
     }
 
     void choixSpell()

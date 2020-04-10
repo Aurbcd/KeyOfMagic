@@ -15,7 +15,6 @@ public class BobScript : MonoBehaviour
         rend = GetComponent<Renderer>();
         rend.enabled = true;
     }
-
     // Update is called once per frame
     void Update()
     {

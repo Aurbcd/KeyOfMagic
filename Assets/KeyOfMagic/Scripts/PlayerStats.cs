@@ -25,10 +25,12 @@ public class PlayerStats : MonoBehaviour
     private bool amHero = false;
     private bool trouve;
     private Animator mAnimator;
+    public static AudioClip GameOverAudio;
 
     void Start() 
     {
         IsDead = false;
+        GameOverAudio = Resources.Load<AudioClip>("GameOver");
         mAnimator = GetComponent<Animator>();
         playerMaxHeathPointsInitial = 200;
         playerMaxHeathPoints = 200;
@@ -88,7 +90,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void GameOverSound()
     {
-        SoundManager.PlaySound("GameOver");
+        GetComponent<AudioSource>().PlayOneShot(GameOverAudio);
     }
 
     public void GameOver()

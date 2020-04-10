@@ -23,6 +23,11 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+    //Son
+    public static AudioClip diablotin1;
+    public static AudioClip diablotin2;
+    public static AudioClip lightWalk;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,9 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
         displayText.text = "";
         LastPos = curPos;
         aBougé = false;
+        diablotin1 = Resources.Load<AudioClip>("MonsterDiablotin1");
+        diablotin2 = Resources.Load<AudioClip>("MonsterDiablotin2");
+        lightWalk = Resources.Load<AudioClip>("LightWalk");
     }
     private void Update()
     {
@@ -114,6 +122,22 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
             }
 
             //ENGEANCE DE LA FORET : TERRE/AIR       
+    }
+    void groan()
+    {
+        System.Random aleatoire = new System.Random();
+        int pourcentage = aleatoire.Next(100);
+        if (pourcentage < 50)
+        {
+            GetComponent<AudioSource>().PlayOneShot(diablotin1);
+        }
+        else
+            GetComponent<AudioSource>().PlayOneShot(diablotin2);
+    }
+
+    void walkSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(lightWalk);
     }
 
     IEnumerator HeAttac()

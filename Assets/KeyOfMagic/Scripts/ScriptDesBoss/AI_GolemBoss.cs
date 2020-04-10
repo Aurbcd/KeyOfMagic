@@ -17,12 +17,16 @@ public class AI_GolemBoss : MonoBehaviour
     public Text displayText;
     public Vector3 curPos;
     public Vector3 LastPos;
+    public GameObject attackPoint;
     private int damage;
     public bool aBougé;
     public string affichage;
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+    //Son
+    public static AudioClip heavyWalk;
+    public static AudioClip GolemA;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,8 @@ public class AI_GolemBoss : MonoBehaviour
         displayText.text = "";
         LastPos = curPos;
         aBougé = false;
+        GolemA = Resources.Load<AudioClip>("GolemGroan");
+        heavyWalk = Resources.Load<AudioClip>("HeavyWalk");
     }
     private void Update()
     {
@@ -239,7 +245,14 @@ public class AI_GolemBoss : MonoBehaviour
             }
         }
     }
-
+    void walkSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(heavyWalk);
+    }
+    void groan()
+    { 
+        GetComponent<AudioSource>().PlayOneShot(GolemA);
+    }
     IEnumerator HeAttac()
     {
         boule = false;
@@ -264,7 +277,7 @@ public class AI_GolemBoss : MonoBehaviour
             mAnimator.SetBool("Attacking", true);
             yield return new WaitForSeconds(0.25f);
             damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
-            clone = Instantiate(sortAnim, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+            clone = Instantiate(sortAnim, attackPoint.transform.position, Quaternion.identity);
             clone.tag = "ADetruireMonstre";
             GameObject Joueur = GameObject.Find("Player");
             Joueur.GetComponent<PlayerStats>().DamagePlayer(damage, element);

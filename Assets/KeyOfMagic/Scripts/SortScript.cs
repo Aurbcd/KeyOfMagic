@@ -14,7 +14,13 @@ public class SortScript : MonoBehaviour
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne || monstre.GetComponent<MonsterMouvSelection>().IsDead)
                 {
-                    transform.LookAt(monstre.transform.position + new Vector3(0f, 0.8f, 0f));
+                    int hauteur = (int)monstre.GetComponent<BoxCollider>().size.y;
+                    Vector3 decallage = new Vector3(0f, 0f, 0f);
+                    if (hauteur > 4)
+                    {
+                        decallage.y += (float)hauteur - 3;
+                    }
+                    transform.LookAt(monstre.transform.position + new Vector3(0f, 0.8f, 0f) + decallage);
                 }
             }
         }

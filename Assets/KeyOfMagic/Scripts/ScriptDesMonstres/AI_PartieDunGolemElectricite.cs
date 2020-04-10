@@ -23,6 +23,9 @@ public class AI_PartieDunGolemElectricite : MonoBehaviour
     private GameObject clone;
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
+    //SON
+    public static AudioClip PartieGolemA;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class AI_PartieDunGolemElectricite : MonoBehaviour
         displayText.text = "";
         LastPos = curPos;
         aBougé = false;
+        PartieGolemA = Resources.Load<AudioClip>("PGolemGroan");
     }
     private void Update()
     {
@@ -115,7 +119,12 @@ public class AI_PartieDunGolemElectricite : MonoBehaviour
 
             //PARTIE D'UN GOLEM FEU : FEU/TERRE
     }
-
+    void groan()
+    {
+        System.Random aleatoire = new System.Random();
+        int pourcentage = aleatoire.Next(100);
+        GetComponent<AudioSource>().PlayOneShot(PartieGolemA);
+    }
     IEnumerator HeAttac()
     {
         boule = false;

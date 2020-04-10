@@ -28,7 +28,8 @@ public class ClickToMove : MonoBehaviour {
     public Texture2D CursorClassique;
     //Inventaire
     public InventaireScript inventaire;
-
+    //Son
+    public static AudioClip walkClip;
 
     // Start is called before the first frame update
     void Start () {
@@ -39,6 +40,7 @@ public class ClickToMove : MonoBehaviour {
         projector.enabled = false;
         //jump = new Vector3(0.0f, 2.0f, 0.0f);
         Cursor.SetCursor (CursorClassique, hotSpot, cursormode);
+        walkClip = Resources.Load<AudioClip>("Walk");
     }
 
     // Update is called once per frame
@@ -162,4 +164,12 @@ public class ClickToMove : MonoBehaviour {
             yield return null; // wait for the next frame
         }
     }
+
+    void walk()
+    {
+        if(mRunning)
+        GetComponent<AudioSource>().PlayOneShot(walkClip, 0.25f);
+    }
+
+
 }

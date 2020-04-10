@@ -9,10 +9,14 @@ public class CoffreScriptType : MonoBehaviour
     public int Type;
     public GameObject Drop;
     private ItemInterface choix;
+    //Son
+    public static AudioClip coffre;
+
     // Start is called before the first frame update
     void Start()
     {
         ouvert = false;
+        coffre = Resources.Load<AudioClip>("Coffre");
     }
 
     // Update is called once per frame
@@ -68,7 +72,7 @@ public class CoffreScriptType : MonoBehaviour
                 InventaireScript.itemsRencontres.Add(choix);
                 ouvert = true;
                 this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Open", true);
-                SoundManager.PlaySound("Coffre");
+                GetComponent<AudioSource>().PlayOneShot(coffre);
                 Instantiate(Drop, (transform.position + ClickToMove.playerPosition) / 2, Quaternion.identity);
                 Collider collider = (choix as MonoBehaviour).GetComponent<Collider>();
                 if (!collider.enabled)

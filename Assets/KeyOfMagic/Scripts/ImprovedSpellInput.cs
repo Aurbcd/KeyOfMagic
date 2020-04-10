@@ -31,6 +31,8 @@ public class ImprovedSpellInput : MonoBehaviour
 
     //Mécanique d'objet sur l'hésitation
     public static int tempsReset;
+    //Son
+    public static AudioClip notifEff, notifBlinker, notifResist, bouclierLong, bouclierCourt, sortCourt, sortLong;
 
     private Animator mAnimator;
     public int tempsSansAppuyé = 0;
@@ -82,7 +84,14 @@ public class ImprovedSpellInput : MonoBehaviour
         var tempColor = shieldSpriteImage.color;
         tempColor.a = 0f;
         shieldSpriteImage.color = tempColor;
-
+        //SON
+        bouclierLong = Resources.Load<AudioClip>("DefLong");
+        bouclierCourt = Resources.Load<AudioClip>("DefCourt");
+        sortCourt = Resources.Load<AudioClip>("sortCourt");
+        sortLong = Resources.Load<AudioClip>("SortLong");
+        notifResist = Resources.Load<AudioClip>("NotifResist");
+        notifBlinker = Resources.Load<AudioClip>("NotifBlinker");
+        notifEff = Resources.Load<AudioClip>("NotifEff");
         newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
 }
 
@@ -103,7 +112,130 @@ public class ImprovedSpellInput : MonoBehaviour
 
     public void Sound()
     {
-        SoundManager.PlaySound(choix);
+        switch (choix)
+        {
+            //SORTS
+            case "awali":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "AWALI":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "aloni":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "ALONI":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "atosophila":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "ATOSOPHILA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "aliquamira":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "ALIQUAMIRA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "urbex":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "URBEX":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "ustus":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "USTUS":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "unifulopa":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "UNIFULOPA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "ugnimaril":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "UGNIMARIL":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "estek":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "ESTEK":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "eario":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "EARIO":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "eminitasi":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "EMINITASI":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "eterialam":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "ETERIALAM":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "otera":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "OTERA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "oreca":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "ORECA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "opinalica":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "OPINALICA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "omistera":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "OMISTERIA":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "inuji":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "INUJI":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "iobre":
+                GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
+                break;
+            case "IOBRE":
+                GetComponent<AudioSource>().PlayOneShot(bouclierCourt, 0.25f);
+                break;
+            case "istaliplo":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "ISTALIPLO":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+            case "ilectrame":
+                GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
+                break;
+            case "ILECTRAME":
+                GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
+                break;
+        }
     }
 
 
@@ -141,6 +273,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 decallage.y += (float)hauteur - 3;
             }
             GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(notifEff);
             for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
             {
                 if (monstreSelectionne.transform.GetChild(i).transform.name == "UICanvas")
@@ -155,6 +288,7 @@ public class ImprovedSpellInput : MonoBehaviour
         if (affichageRes) //Si le monstre est resistant contre l'élément du sort
         {
             GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
+            GetComponent<AudioSource>().PlayOneShot(notifResist);
             //Calcul du décalage de l'affichage des popuptexts
             int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
             Vector3 decallage = new Vector3(0f, 0f, 0f);
@@ -273,6 +407,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Vérifie que ce sort n'appartient pas au spellbook
                 {
+                    if (!newSpellBlinker.enabled)
+                        GetComponent<AudioSource>().PlayOneShot(notifBlinker);
                     newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                     spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell))); //Ajout au sort au spellbook
                     bool present = false;
@@ -335,6 +471,8 @@ public class ImprovedSpellInput : MonoBehaviour
                     {
                         if (sse.nom.Equals(spell.ToLower()) && (sse.valAtk == -1 || sse.valDef == -1))
                         {
+                            if (!newSpellBlinker.enabled)
+                                GetComponent<AudioSource>().PlayOneShot(notifBlinker);
                             newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                             if (spell.ToLower().Equals(spell))
                             {
