@@ -484,7 +484,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 {
                     foreach (SpellStorageEntry sse in spellListStorage)
                     {
-                        if (sse.nom.Equals(spell.ToLower()) && (sse.valAtk == -1 || sse.valDef == -1))
+                        if (sse.nom.Equals(spell.ToLower()) && ((sse.valAtk == -1 && spell.ToLower().Equals(spell) )||( sse.valDef == -1 && !spell.ToLower().Equals(spell))))
                         {
                             if (!newSpellBlinker.enabled)
                             {
