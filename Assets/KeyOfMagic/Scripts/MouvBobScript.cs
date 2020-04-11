@@ -88,6 +88,7 @@ public class MouvBobScript : MonoBehaviour
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<NavMeshAgent>().radius = 1.5f;
+            GetComponent<AudioSource>().pitch = 0.6f;
             if (montreSelectionne !=null && (montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18) {
                 transform.LookAt(montreSelectionne.transform);
                 mAnimator.SetBool("Attacking", true);
@@ -100,6 +101,7 @@ public class MouvBobScript : MonoBehaviour
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             GetComponent<NavMeshAgent>().radius = 2.95f;
+            GetComponent<AudioSource>().pitch = 1;
         }
     }
 }

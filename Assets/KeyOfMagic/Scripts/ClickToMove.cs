@@ -168,7 +168,7 @@ public class ClickToMove : MonoBehaviour {
     void walk()
     {
         if(mRunning)
-        GetComponent<AudioSource>().PlayOneShot(walkClip, 0.25f);
+        GetComponent<AudioSource>().PlayOneShot(walkClip, 0.4f);
     }
 
 

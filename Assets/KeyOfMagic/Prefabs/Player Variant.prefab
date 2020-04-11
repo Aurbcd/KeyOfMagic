@@ -817,11 +817,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430020460072824668, guid: 3360885a9c9230046a0e2ea8d28c50f0,
         type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430020460072824668, guid: 3360885a9c9230046a0e2ea8d28c50f0,
-        type: 3}
       propertyPath: lengthInSec
       value: 1
       objectReference: {fileID: 0}
@@ -829,6 +824,16 @@ PrefabInstance:
         type: 3}
       propertyPath: useUnscaledTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430020460072824668, guid: 3360885a9c9230046a0e2ea8d28c50f0,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430020460072824668, guid: 3360885a9c9230046a0e2ea8d28c50f0,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 25.65
       objectReference: {fileID: 0}
     - target: {fileID: 430020460072824669, guid: 3360885a9c9230046a0e2ea8d28c50f0,
         type: 3}

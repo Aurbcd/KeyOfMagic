@@ -5,17 +5,23 @@ using UnityEngine;
 public class ScriptBouclier : MonoBehaviour
 {
     private ParticleSystem PS;
-    
+    string curElement;
     // Start is called before the first frame update
     void Start()
     {
         PS = GetComponent<ParticleSystem>();
         PS.Stop();
+        curElement = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(curElement != PlayerStats.shieldElement)
+        {
+            PS.Clear();
+            curElement = PlayerStats.shieldElement;
+        }
         if(PlayerStats.shieldElement == "")
         {
             PS.Stop();

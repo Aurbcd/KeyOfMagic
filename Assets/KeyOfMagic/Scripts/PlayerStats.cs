@@ -26,11 +26,13 @@ public class PlayerStats : MonoBehaviour
     private bool trouve;
     private Animator mAnimator;
     public static AudioClip GameOverAudio;
+    public static AudioClip shieldBroken;
 
     void Start() 
     {
         IsDead = false;
         GameOverAudio = Resources.Load<AudioClip>("GameOver");
+        shieldBroken = Resources.Load<AudioClip>("ShieldBroken");
         mAnimator = GetComponent<Animator>();
         playerMaxHeathPointsInitial = 200;
         playerMaxHeathPoints = 200;
@@ -124,6 +126,9 @@ public class PlayerStats : MonoBehaviour
                 scaledDamage = damage;
                 Debug.Log("Neutre");
             }
+
+            if (playerShieldPoints > 0 && (playerShieldPoints - scaledDamage) < 0)
+                GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.4f);
 
             //Application des dégâts et/ou au shield
             if ( (playerShieldPoints - scaledDamage) >0 )

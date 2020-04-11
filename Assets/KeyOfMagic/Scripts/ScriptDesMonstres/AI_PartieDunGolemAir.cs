@@ -25,6 +25,7 @@ public class AI_PartieDunGolemAir : MonoBehaviour
     public List<GameObject> VisuelSorts;
     //SON
     public static AudioClip PartieGolemA;
+    public static AudioClip PartieGolemW;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +36,16 @@ public class AI_PartieDunGolemAir : MonoBehaviour
         LastPos = curPos;
         aBougé = false;
         PartieGolemA = Resources.Load<AudioClip>("PGolemGroan");
+        PartieGolemW = Resources.Load<AudioClip>("PartieGolemW");
     }
     private void Update()
     {
         curPos = transform.position;
         if (curPos != LastPos)
         {
+            GetComponent<AudioSource>().clip = PartieGolemW;
+            if (!GetComponent<AudioSource>().isPlaying)
+                GetComponent<AudioSource>().Play();
             aBougé = true;
             displayText.text = "";
         }
@@ -58,6 +63,8 @@ public class AI_PartieDunGolemAir : MonoBehaviour
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
             }
         }
+
+
     }
 
     void choixSpell()

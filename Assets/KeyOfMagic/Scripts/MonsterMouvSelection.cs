@@ -31,6 +31,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
     //Son
     public static AudioClip hitPAudio;
+    public static AudioClip hitSAudio;
     public static AudioClip enemyA;
 
     void Start()
@@ -44,6 +45,7 @@ public class MonsterMouvSelection : MonoBehaviour
         basePositions = transform.position;
         potion = Resources.Load<GameObject>("Potion");
         hitPAudio = Resources.Load<AudioClip>("HitP");
+        hitSAudio = Resources.Load<AudioClip>("HitS");
         enemyA = Resources.Load<AudioClip>("Woosh");
     }
 
@@ -149,8 +151,15 @@ public class MonsterMouvSelection : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (!PlayerStats.IsDead)
         {
-            player.GetComponent<AudioSource>().PlayOneShot(hitPAudio, 0.5f);
-            player.GetComponent<Animator>().Play("GetHit") ;
+            if(PlayerStats.playerShieldPoints == 0)
+            {
+                player.GetComponent<AudioSource>().PlayOneShot(hitPAudio, 0.5f);
+                player.GetComponent<Animator>().Play("GetHit");
+            }
+            if (PlayerStats.playerShieldPoints > 0)
+            {
+                player.GetComponent<AudioSource>().PlayOneShot(hitSAudio, 0.5f);
+            }
         }
     }
     public void AttackSound()
