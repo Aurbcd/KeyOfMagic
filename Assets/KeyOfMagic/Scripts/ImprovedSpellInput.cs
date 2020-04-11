@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -33,7 +34,8 @@ public class ImprovedSpellInput : MonoBehaviour
     public static int tempsReset;
     //Son
     public static AudioClip notifEff, notifBlinker, notifResist, bouclierLong, bouclierCourt, sortCourt, sortLong;
-
+    public AudioMixerGroup soundEffectSorts;
+    public AudioMixerGroup soundEffectNotif;
     private Animator mAnimator;
     public int tempsSansAppuyé = 0;
     public GameObject spellsPanel;
@@ -110,8 +112,16 @@ public class ImprovedSpellInput : MonoBehaviour
         }
     }
 
+    public void SonNotifBlinker()
+    {
+        GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
+        GetComponent<AudioSource>().PlayOneShot(notifBlinker, 0.1f);
+    }
+
+
     public void Sound()
     {
+        GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectSorts;
         switch (choix)
         {
             //SORTS
@@ -273,6 +283,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 decallage.y += (float)hauteur - 3;
             }
             GameObject instance = Instantiate(popUpText, monstreSelectionne.transform.position, Quaternion.identity);
+            GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
             GetComponent<AudioSource>().PlayOneShot(notifEff);
             for (int i = 0; i < monstreSelectionne.transform.childCount - 1; i++)
             {
@@ -288,6 +299,7 @@ public class ImprovedSpellInput : MonoBehaviour
         if (affichageRes) //Si le monstre est resistant contre l'élément du sort
         {
             GameObject instance = Instantiate(popUpTextResist, monstreSelectionne.transform.position, Quaternion.identity);
+            GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
             GetComponent<AudioSource>().PlayOneShot(notifResist);
             //Calcul du décalage de l'affichage des popuptexts
             int hauteur = (int)monstreSelectionne.GetComponent<BoxCollider>().size.y;
@@ -408,7 +420,10 @@ public class ImprovedSpellInput : MonoBehaviour
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Vérifie que ce sort n'appartient pas au spellbook
                 {
                     if (!newSpellBlinker.enabled)
+                    {
+                        GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
                         GetComponent<AudioSource>().PlayOneShot(notifBlinker);
+                    }
                     newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                     spellBook.SpellBook.Add(XmlManager.ins.SpellDatabase.SpellBook.Find(x => x.spellName.Equals(spell))); //Ajout au sort au spellbook
                     bool present = false;
@@ -472,7 +487,10 @@ public class ImprovedSpellInput : MonoBehaviour
                         if (sse.nom.Equals(spell.ToLower()) && (sse.valAtk == -1 || sse.valDef == -1))
                         {
                             if (!newSpellBlinker.enabled)
+                            {
+                                GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
                                 GetComponent<AudioSource>().PlayOneShot(notifBlinker);
+                            }
                             newSpellBlinker.enabled = true; //Allume le symbole qui clignotte
                             if (spell.ToLower().Equals(spell))
                             {

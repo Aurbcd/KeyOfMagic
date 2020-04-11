@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -27,6 +28,8 @@ public class PlayerStats : MonoBehaviour
     private Animator mAnimator;
     public static AudioClip GameOverAudio;
     public static AudioClip shieldBroken;
+    public AudioMixerGroup soundEffectNotif;
+    public AudioMixerGroup soundEffectPlayer;
 
     void Start() 
     {
@@ -92,6 +95,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void GameOverSound()
     {
+        GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectNotif;
         GetComponent<AudioSource>().PlayOneShot(GameOverAudio);
     }
 
@@ -128,7 +132,11 @@ public class PlayerStats : MonoBehaviour
             }
 
             if (playerShieldPoints > 0 && (playerShieldPoints - scaledDamage) < 0)
+            {
+                GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectPlayer;
                 GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.4f);
+
+            }
 
             //Application des dégâts et/ou au shield
             if ( (playerShieldPoints - scaledDamage) >0 )

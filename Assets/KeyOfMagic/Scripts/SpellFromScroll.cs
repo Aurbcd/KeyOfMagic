@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 public class SpellFromScroll : MonoBehaviour
 {
     private bool ouvert;
     public static AudioClip notifBlinker;
     public static AudioClip parchemin;
-
+    public AudioMixerGroup soundEffectAutres;
+    public AudioMixerGroup soundEffectNotif;
     void Start()
     {
         ouvert = false;
@@ -60,7 +62,8 @@ public class SpellFromScroll : MonoBehaviour
 
                     spellList += nouvmark + "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(sse.nom)).element)).hexColor + ">" + sse.nom.ToLower() + "</color>     <sprite=3>  " + valAtk + "  |    <sprite=1>  " + valDef + "  \n";
                     ouvert = true;
-                    GetComponent<AudioSource>().PlayOneShot(notifBlinker, 0.5f);
+                    player.GetComponent<ImprovedSpellInput>().SonNotifBlinker();
+                    GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectAutres;
                     GetComponent<AudioSource>().PlayOneShot(parchemin, 0.8f);
                     gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Read", true);
                 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.AI;
 
 public class ClickToMove : MonoBehaviour {
@@ -30,6 +31,7 @@ public class ClickToMove : MonoBehaviour {
     public InventaireScript inventaire;
     //Son
     public static AudioClip walkClip;
+    public AudioMixerGroup soundEffectPlayer;
 
     // Start is called before the first frame update
     void Start () {
@@ -167,9 +169,10 @@ public class ClickToMove : MonoBehaviour {
 
     void walk()
     {
-        if(mRunning)
-        GetComponent<AudioSource>().PlayOneShot(walkClip, 0.4f);
+        if (mRunning)
+        {
+            GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectPlayer;
+            GetComponent<AudioSource>().PlayOneShot(walkClip, 0.4f);
+        }
     }
-
-
 }

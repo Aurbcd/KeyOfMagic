@@ -237,6 +237,10 @@ MonoBehaviour:
   canvasGHealthBar: {fileID: 0}
   shieldBar: {fileID: 1750123520}
   playerMaxShieldPoints: 0
+  soundEffectNotif: {fileID: 243023876282429428, guid: 954701f1fcc7a4446a420b1ccc29e177,
+    type: 2}
+  soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
+    type: 2}
 --- !u!114 &62560142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,102 +259,6 @@ MonoBehaviour:
     SpellBook: []
   ElementDatabase:
     Elementdb: []
---- !u!82 &62560144
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62560135}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &70713085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +3998,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2CoffreRobe
       objectReference: {fileID: 0}
+    - target: {fileID: 6945601746242280042, guid: 8524ff28c726fad4ca3a4ecac3f15e3f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243917813310423282, guid: 954701f1fcc7a4446a420b1ccc29e177,
+        type: 2}
     - target: {fileID: 9131100278986839134, guid: 8524ff28c726fad4ca3a4ecac3f15e3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8140,24 +8054,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1767066678 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1591322530080062945, guid: c25edb93f95925f4dbecd1e135aecbf9,
-    type: 3}
-  m_PrefabInstance: {fileID: 747071002}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1767066682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767066678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a00e23398f4644d96db67cc0aea9d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1798883952
 GameObject:
   m_ObjectHideFlags: 0
@@ -10050,14 +9946,6 @@ PrefabInstance:
       propertyPath: pausePanel
       value: 
       objectReference: {fileID: 723507884}
-    - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
-      propertyPath: CursorClassique
-      value: 
-      objectReference: {fileID: 2800000, guid: c0b55e16840fbb642b2d8836c473dc39, type: 3}
-    - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
-      propertyPath: CursorRamasser
-      value: 
-      objectReference: {fileID: 2800000, guid: 4fee88e7ef452b146aa4add22a3da773, type: 3}
     - target: {fileID: 1983202722, guid: 71854c37b51d54e41b1583bcd0dc6760, type: 3}
       propertyPath: projector
       value: 
