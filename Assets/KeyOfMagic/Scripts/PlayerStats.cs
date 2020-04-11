@@ -134,7 +134,7 @@ public class PlayerStats : MonoBehaviour
             if (playerShieldPoints > 0 && (playerShieldPoints - scaledDamage) < 0)
             {
                 GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectPlayer;
-                GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.4f);
+                GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.5f);
 
             }
 
