@@ -326,7 +326,7 @@ public class ImprovedSpellInput : MonoBehaviour
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
-            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
+            if (monstre.GetComponent<MonsterMouvSelection>()!= null && monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                 {

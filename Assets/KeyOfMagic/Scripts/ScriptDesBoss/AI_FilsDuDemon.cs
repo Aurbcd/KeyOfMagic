@@ -161,12 +161,10 @@ public class AI_FilsDuDemon : MonoBehaviour
         System.Random aleatoire = new System.Random();
         valeurAleatoire = aleatoire.Next(100);
 
-        //75% de lancer l'élément != Terre
-
         if (element.Equals("Feu") )
         {
                 valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
+                if (valeurAleatoire <= 90) //Petit sort
                 {
                    choix = "ustus"; 
                 }
@@ -180,7 +178,7 @@ public class AI_FilsDuDemon : MonoBehaviour
         if (element.Equals("Air"))
         {
                 valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
+                if (valeurAleatoire <= 90) //Petit sort
                 {
                     choix = "estek";
                 }
@@ -193,7 +191,7 @@ public class AI_FilsDuDemon : MonoBehaviour
         if (element.Equals("Electricite"))
         {
                 valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 75) //Petit sort
+                if (valeurAleatoire <= 90) //Petit sort
                 {
                     choix = "inuji";
                 }
@@ -206,7 +204,7 @@ public class AI_FilsDuDemon : MonoBehaviour
         if (element.Equals("Eau"))
         {
                 valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 75) //Petit sort
+                if (valeurAleatoire <= 90) //Petit sort
                 {
                     choix = "awali";
                 }
@@ -219,7 +217,7 @@ public class AI_FilsDuDemon : MonoBehaviour
         if (element.Equals("Terre"))
         {
                 valeurAleatoire = aleatoire.Next(100);
-                if (valeurAleatoire <= 50) //Petit sort
+                if (valeurAleatoire <= 90) //Petit sort
                 {
                     choix = "oreca";
                 }
@@ -229,13 +227,85 @@ public class AI_FilsDuDemon : MonoBehaviour
                 }
         }
     }
+    void choixSpellFaster()
+    {
+        //BOSS IL A TOUS LES ELEMENTS
 
+        System.Random aleatoire = new System.Random();
+        valeurAleatoire = aleatoire.Next(100);
+
+        if (element.Equals("Feu"))
+        {
+            valeurAleatoire = aleatoire.Next(100);
+            if (valeurAleatoire <= 10) //Petit sort
+            {
+                choix = "ustus";
+            }
+            else //Gros sort
+            {
+                choix = "ugniramil";
+            }
+        }
+
+
+        if (element.Equals("Air"))
+        {
+            valeurAleatoire = aleatoire.Next(100);
+            if (valeurAleatoire <= 10) //Petit sort
+            {
+                choix = "estek";
+            }
+            else //Gros sort
+            {
+                choix = "eminitasi";
+            }
+        }
+
+        if (element.Equals("Electricite"))
+        {
+            valeurAleatoire = aleatoire.Next(100);
+            if (valeurAleatoire <= 10) //Petit sort
+            {
+                choix = "inuji";
+            }
+            else //Gros sort
+            {
+                choix = "istaliplo";
+            }
+        }
+
+        if (element.Equals("Eau"))
+        {
+            valeurAleatoire = aleatoire.Next(100);
+            if (valeurAleatoire <= 10) //Petit sort
+            {
+                choix = "awali";
+            }
+            else //Gros sort
+            {
+                choix = "aliquamira";
+            }
+        }
+
+        if (element.Equals("Terre"))
+        {
+            valeurAleatoire = aleatoire.Next(100);
+            if (valeurAleatoire <= 10) //Petit sort
+            {
+                choix = "oreca";
+            }
+            else //Gros sort
+            {
+                choix = "omisteria";
+            }
+        }
+    }
     IEnumerator HeAttacFaster()
     {
         Debug.Log("Phase");
         boule = false;
         choixElement();
-        choixSpell();
+        choixSpellFaster();
         affichage = "";
         mAnimator.SetBool("Spelling", true);
         aBougé = false;

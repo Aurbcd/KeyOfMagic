@@ -45,7 +45,7 @@ public class PlayerStats : MonoBehaviour
         shieldElement = "";
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
-        Difficulte = 1.5f;
+        Difficulte = 1f;
         DamageMultiplier = 1;
         volDeVie = 0;
         resistanceMultiplier = 1;

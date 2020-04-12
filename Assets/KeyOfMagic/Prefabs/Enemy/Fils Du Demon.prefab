@@ -19403,8 +19403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: "Fils du D\xE9mon"
-  PV: 1000
-  PVMax: 1000
+  PV: 2500
+  PVMax: 2500
   element: Feu
   weakness: Eau
   resistance: Electricite

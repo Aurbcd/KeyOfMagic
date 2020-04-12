@@ -16,11 +16,8 @@ public class SortScript : MonoBehaviour
                 {
                     int hauteur = (int)monstre.GetComponent<BoxCollider>().size.y;
                     Vector3 decallage = new Vector3(0f, 0f, 0f);
-                    if (hauteur > 4)
-                    {
-                        decallage.y += (float)hauteur - 3;
-                    }
-                    transform.LookAt(monstre.transform.position + new Vector3(0f, 0.8f, 0f) + decallage);
+                    decallage.y += (float)hauteur/1.5f;
+                    transform.LookAt(monstre.transform.position + decallage);
                 }
             }
         }

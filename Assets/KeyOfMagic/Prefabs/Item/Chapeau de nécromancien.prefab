@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6230412393199975529}
   - component: {fileID: 4442000190873314934}
   - component: {fileID: 7878658844164416718}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: TMP SubMeshUI [TextMeshPro/Sprite]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1245687423292697575}
   - component: {fileID: 8137948477489295419}
   - component: {fileID: 6100858453632226385}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Datacard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 8004961693238875408}
   - component: {fileID: 3068380516808938944}
   - component: {fileID: 7013032426997262010}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 5683868267283643069}
   - component: {fileID: 3278625536097234692}
   - component: {fileID: 1873397889653960548}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: CadreCarte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 3081145745172856123}
   - component: {fileID: 5132741354816963015}
   - component: {fileID: 6936828702449953765}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 6150718660928532217}
   - component: {fileID: 2615036500420524985}
   - component: {fileID: 1881866965341826196}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Lore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 606611605776297442}
   - component: {fileID: 2453575823638386622}
   - component: {fileID: 1565012230376945404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5369,7 @@ GameObject:
   - component: {fileID: 5661788921844469028}
   - component: {fileID: 259055422409955291}
   - component: {fileID: 7391512986643692861}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Descritption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5529,7 +5529,7 @@ GameObject:
   - component: {fileID: 4517132012535820475}
   - component: {fileID: 8089817542708245003}
   - component: {fileID: 4380336586046492704}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Titre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5684,7 +5684,7 @@ GameObject:
   - component: {fileID: 6095656368883887842}
   - component: {fileID: 7168937621652720538}
   - component: {fileID: 6304605754613685620}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Cadre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5768,9 +5768,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9131100278986839134}
     m_Modifications:
+    - target: {fileID: 100000, guid: e8b3797e945aab141b17f7115020836e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e8b3797e945aab141b17f7115020836e, type: 3}
       propertyPath: m_Name
       value: Necromancien
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e8b3797e945aab141b17f7115020836e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: e8b3797e945aab141b17f7115020836e, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e8b3797e945aab141b17f7115020836e, type: 3}
       propertyPath: m_LocalPosition.x
