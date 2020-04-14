@@ -4,12 +4,27 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cube
+    100004: Cube.001
     400000: //RootNode
+    400002: Cube
+    400004: Cube.001
     2100000: Test
+    2100002: No Name
     2300000: //RootNode
+    2300002: Cube
+    2300004: Cube.001
     3300000: //RootNode
+    3300002: Cube
+    3300004: Cube.001
     4300000: Cube
+    4300002: Cube.001
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c719e38f25a9480abd2480ab621a2949, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
