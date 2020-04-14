@@ -3265,8 +3265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1307660566}
-  enemy: {fileID: 6572569499185163300, guid: 1ea9abd9c5804a94bb1bcbc4c54d7df1, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 1ea9abd9c5804a94bb1bcbc4c54d7df1, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!4 &466351414
 Transform:
   m_ObjectHideFlags: 0
@@ -3294,8 +3296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 802570676}
-  enemy: {fileID: 6572569499185163300, guid: 0d738eae81c201e4ea90d889bc2d3c17, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 0d738eae81c201e4ea90d889bc2d3c17, type: 3}
+  - {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
+  - {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,8 +3315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1840663355}
-  enemy: {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,8 +3332,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 534732504}
-  enemy: {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
-  player: {fileID: 62560135}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
+  player: {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
+  valeurAleatoire: 0
 --- !u!114 &466351419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3339,8 +3349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 795008732}
-  enemy: {fileID: 6572569499185163300, guid: a223c84fadf8d8e48be01833d4912da5, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: a223c84fadf8d8e48be01833d4912da5, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3354,8 +3366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1820329822}
-  enemy: {fileID: 6572569499185163300, guid: b10114c022921f34b8338aa960546af6, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: b10114c022921f34b8338aa960546af6, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,8 +3383,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1936775309}
-  enemy: {fileID: 6572569499185163300, guid: a561cb804cf0aa2449625ea7d48dadd7, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: a561cb804cf0aa2449625ea7d48dadd7, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,8 +3400,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1356851914}
-  enemy: {fileID: 6572569499185163300, guid: a60963f340c44e94f91512dfb9d110ce, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: a60963f340c44e94f91512dfb9d110ce, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,8 +3417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 2146329750}
-  enemy: {fileID: 6572569499185163300, guid: 42b11674b2070e84dbda76e83461ba7a, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 42b11674b2070e84dbda76e83461ba7a, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!114 &466351424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3414,8 +3434,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1386038580}
-  enemy: {fileID: 6572569499185163300, guid: 7986f5039970e4546a78afb91ddd7c1d, type: 3}
+  enemyPool:
+  - {fileID: 6572569499185163300, guid: 7986f5039970e4546a78afb91ddd7c1d, type: 3}
   player: {fileID: 62560135}
+  valeurAleatoire: 0
 --- !u!1 &534732503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,8 +3678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f897a392267c841a6224d114ce7868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compteur: 0
-  termine: 0
+  Combat: 0
 --- !u!1 &649866994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6251,7 +6272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307660566}
   m_Layer: 0
-  m_Name: SpawnDuFilsDuDiable
+  m_Name: SpawnDuFilsDuDemon
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
