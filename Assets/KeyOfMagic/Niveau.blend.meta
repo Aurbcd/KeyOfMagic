@@ -19,6 +19,7 @@ ModelImporter:
     3300004: Cube.001
     4300000: Cube
     4300002: Cube.001
+    6400000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material

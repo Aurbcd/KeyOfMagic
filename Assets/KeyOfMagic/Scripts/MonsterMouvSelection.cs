@@ -11,7 +11,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
     private Animator mAnimator;
 
-    public GameObject potion;
+    private GameObject potion;
     
     private bool loot;
     public bool IsDead;
@@ -65,14 +65,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 22) 
+        if(distanceToPlayer < 22 && !IsDead) 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 20 && distanceToPlayer > 15)
+        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
