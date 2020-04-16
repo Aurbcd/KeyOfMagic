@@ -65,14 +65,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 22 && !IsDead) 
+        if(distanceToPlayer < 22 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead)
+        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
@@ -111,7 +111,8 @@ public class MonsterMouvSelection : MonoBehaviour
         }
         if (DistanceBase < 2 && distanceToPlayer > 22)
         {
-            GetComponent<MonsterStatText>().PV += 3;
+            if (GetComponent<MonsterStatText>().monsterName != "Portail")
+                GetComponent<MonsterStatText>().PV += 3;
             mAnimator.SetBool("Backing", false);
         }
 
@@ -136,13 +137,14 @@ public class MonsterMouvSelection : MonoBehaviour
                 }
                 loot = true;
             }
-            Destroy(transform.gameObject, 5);
+            Destroy(transform.gameObject, 2);
         }
     }
 
     public void MoveInDirection(Vector3 direction)
     {
-        GetComponent<MonsterStatText>().PV += 3;
+        if(GetComponent<MonsterStatText>().monsterName != "Portail")
+            GetComponent<MonsterStatText>().PV += 3;
         mNavMeshAgent.destination = direction;
     }
 
@@ -182,7 +184,8 @@ public class MonsterMouvSelection : MonoBehaviour
     }
     public void BackBase()
     {
-        GetComponent<MonsterStatText>().PV += 3;
+        if (GetComponent<MonsterStatText>().monsterName != "Portail")
+            GetComponent<MonsterStatText>().PV += 3;
         mAnimator.SetBool("Backing", true);
         MoveInDirection(basePositions);
     }
