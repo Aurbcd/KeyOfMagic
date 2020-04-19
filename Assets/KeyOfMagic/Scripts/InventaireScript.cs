@@ -29,7 +29,7 @@ public class InventaireScript : MonoBehaviour
             collider.enabled = false;
             items.Add(item);
             item.Ramasse();
-            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(ItemRamasseS);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(ItemRamasseS, 0.4f);
         }
         ItemAjouté?.Invoke(this, new InventoryEventArgs(item));
     }

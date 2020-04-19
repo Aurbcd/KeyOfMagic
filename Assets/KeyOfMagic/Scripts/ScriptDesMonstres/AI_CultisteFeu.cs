@@ -24,8 +24,7 @@ public class AI_CultisteFeu : MonoBehaviour
     private GameObject sortAnim;
     public List<GameObject> VisuelSorts;
     //Son
-    public static AudioClip diablotin1;
-    public static AudioClip diablotin2;
+    public static AudioClip CultistGroan;
     public static AudioClip lightWalk;
 
     // Start is called before the first frame update
@@ -37,8 +36,7 @@ public class AI_CultisteFeu : MonoBehaviour
         displayText.text = "";
         LastPos = curPos;
         aBougé = false;
-        diablotin1 = Resources.Load<AudioClip>("MonsterDiablotin1"); //ACHANGER
-        diablotin2 = Resources.Load<AudioClip>("MonsterDiablotin2"); //ACHANGER
+        CultistGroan = Resources.Load<AudioClip>("CultistGroan"); //ACHANGER
         lightWalk = Resources.Load<AudioClip>("LightWalk");
     }
     private void Update()
@@ -83,14 +81,7 @@ public class AI_CultisteFeu : MonoBehaviour
     }
     void groan()
     {
-        System.Random aleatoire = new System.Random();
-        int pourcentage = aleatoire.Next(100);
-        if (pourcentage < 50)
-        {
-            GetComponent<AudioSource>().PlayOneShot(diablotin1);
-        }
-        else
-            GetComponent<AudioSource>().PlayOneShot(diablotin2);
+        GetComponent<AudioSource>().PlayOneShot(CultistGroan);
     }
 
     void walkSound()
