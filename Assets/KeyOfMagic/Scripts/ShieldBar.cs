@@ -21,7 +21,7 @@ public class ShieldBar : MonoBehaviour
         }
         if (string.Compare(element, "Terre") == 0)
         {
-            fill.color = new Color32(2, 87, 13, 255)
+            fill.color = new Color32(2, 87, 13, 255);
         }
         if (string.Compare(element, "Air") == 0)
         {
