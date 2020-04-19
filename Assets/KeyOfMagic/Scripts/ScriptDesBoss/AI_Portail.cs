@@ -14,7 +14,7 @@ public class AI_Portail : MonoBehaviour
     private int pv;
     private bool boule;
     //Son
-    public static AudioClip GolemA;
+    public static AudioClip PortailG,PortalOpen;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,8 @@ public class AI_Portail : MonoBehaviour
         Air = false;
         estInvoqué = false;
         Electricite = false;
-        GolemA = Resources.Load<AudioClip>("GolemGroan"); //Achanger
+        PortalOpen = Resources.Load<AudioClip>("PortalOpen");
+        PortailG = Resources.Load<AudioClip>("GolemGroan"); //Achanger
     }
     private void Update()
     {
@@ -60,10 +61,12 @@ public class AI_Portail : MonoBehaviour
         ParticleSystem PS = GetComponentInChildren<ParticleSystem>();
         if (ouvert & !PS.isPlaying)
         {
+            GetComponent<AudioSource>().PlayOneShot(PortalOpen);
             PS.Play();
         }
         if (!ouvert && PS.isPlaying)
         {
+            GetComponent<AudioSource>().PlayOneShot(PortalOpen);
             PS.Stop();
         }
     }
@@ -86,7 +89,7 @@ public class AI_Portail : MonoBehaviour
     }
     void groan()
     { 
-        GetComponent<AudioSource>().PlayOneShot(GolemA);
+        GetComponent<AudioSource>().PlayOneShot(PortailG);
     }
     IEnumerator HeAttac()
     {
@@ -96,6 +99,7 @@ public class AI_Portail : MonoBehaviour
         {
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
             {
+                GetComponent<AudioSource>().PlayOneShot(PortalOpen);
                 pv = GetComponent<MonsterStatText>().PV;
                 estInvoqué = true;
                 clone = Instantiate(Cultists[0], invokPosition, Quaternion.identity); //Done
@@ -111,7 +115,7 @@ public class AI_Portail : MonoBehaviour
             pv = GetComponent<MonsterStatText>().PV;
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
             {
-                Debug.Log(estInvoqué);
+                GetComponent<AudioSource>().PlayOneShot(PortalOpen);
                 estInvoqué = true;
                 clone = Instantiate(Cultists[1], invokPosition, Quaternion.identity); //Done
             }
@@ -125,6 +129,7 @@ public class AI_Portail : MonoBehaviour
         {
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
             {
+                GetComponent<AudioSource>().PlayOneShot(PortalOpen);
                 pv = GetComponent<MonsterStatText>().PV;
                 estInvoqué = true;
                 clone = Instantiate(Cultists[2], invokPosition, Quaternion.identity); //Done
@@ -139,6 +144,7 @@ public class AI_Portail : MonoBehaviour
         {
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
             {
+                GetComponent<AudioSource>().PlayOneShot(PortalOpen);
                 pv = GetComponent<MonsterStatText>().PV;
                 estInvoqué = true;
                 clone = Instantiate(Cultists[3], invokPosition, Quaternion.identity); //Done
@@ -153,6 +159,7 @@ public class AI_Portail : MonoBehaviour
         {
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
             {
+                GetComponent<AudioSource>().PlayOneShot(PortalOpen);
                 pv = GetComponent<MonsterStatText>().PV;
                 estInvoqué = true;
                 clone = Instantiate(Cultists[4], invokPosition, Quaternion.identity); //Done

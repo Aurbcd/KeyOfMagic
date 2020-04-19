@@ -10,6 +10,11 @@ public class InventaireScript : MonoBehaviour
     public static List<ItemInterface> itemsRencontres = new List<ItemInterface>();
     public event EventHandler<InventoryEventArgs> ItemAjouté;
     public event EventHandler<InventoryEventArgs> ItemJeté;
+    public static AudioClip ItemRamasseS;
+    private void Start()
+    {
+        ItemRamasseS = Resources.Load<AudioClip>("PickUp");
+    }
 
     public void AjouterItem(ItemInterface item)
     {
@@ -24,6 +29,7 @@ public class InventaireScript : MonoBehaviour
             collider.enabled = false;
             items.Add(item);
             item.Ramasse();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(ItemRamasseS);
         }
         ItemAjouté?.Invoke(this, new InventoryEventArgs(item));
     }

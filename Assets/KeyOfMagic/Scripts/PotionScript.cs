@@ -6,10 +6,12 @@ public class PotionScript : MonoBehaviour
 {
     //Mécanique d'objet de le valeur de potion
     public static float modificateurValeur = 1;
-    
+    public static AudioClip PotionS;
+
     // Start is called before the first frame update
     void Start()
     {
+        PotionS = Resources.Load<AudioClip>("Potion");
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class PotionScript : MonoBehaviour
             if(Physics.Raycast(ray, out hit, 100) && hit.collider.gameObject == gameObject && PlayerStats.playerHealthPoints != PlayerStats.playerMaxHeathPoints)
             {   
                 if((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 5) {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(PotionS,0.75f);
                     PlayerStats.playerHealthPoints += (int)(modificateurValeur * PlayerStats.playerMaxHeathPoints * 10 / 100);
                     Destroy(transform.gameObject);
                 }
@@ -31,6 +34,7 @@ public class PotionScript : MonoBehaviour
         }
         if((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 2 && PlayerStats.playerMaxHeathPoints != PlayerStats.playerHealthPoints)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>().PlayOneShot(PotionS, 0.75f);
             PlayerStats.playerHealthPoints += PlayerStats.playerMaxHeathPoints * 10 / 100;
             Destroy(transform.gameObject);
         }

@@ -137,7 +137,7 @@ public class MonsterMouvSelection : MonoBehaviour
                 }
                 loot = true;
             }
-            Destroy(transform.gameObject, 2);
+            Destroy(transform.gameObject, 2f);
         }
     }
 

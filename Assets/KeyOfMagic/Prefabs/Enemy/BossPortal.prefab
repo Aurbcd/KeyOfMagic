@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 215101615617328253}
   - component: {fileID: 6283251044562442870}
   - component: {fileID: 1346153594305714571}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5637,7 +5637,7 @@ GameObject:
   - component: {fileID: 5206243021874989183}
   - component: {fileID: 6877942420599942627}
   - component: {fileID: 552506785314595204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10331,9 +10331,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6572569499185163307}
     m_Modifications:
+    - target: {fileID: 100000, guid: 03ae005707c34a249b572d265049e0fb, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 03ae005707c34a249b572d265049e0fb, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 03ae005707c34a249b572d265049e0fb, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 03ae005707c34a249b572d265049e0fb, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 03ae005707c34a249b572d265049e0fb, type: 3}
       propertyPath: m_LocalPosition.x
