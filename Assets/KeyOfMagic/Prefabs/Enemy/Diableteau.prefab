@@ -753,8 +753,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.71, y: 3.31, z: 2.54}
-  m_Center: {x: -0.03, y: 1.43, z: 0.08}
+  m_Size: {x: 2.71, y: 3.2, z: 2.54}
+  m_Center: {x: -0.03, y: 1.45, z: 0.08}
 --- !u!54 &6572569499185163303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -784,8 +784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Diabloteau
-  PV: 2000
-  PVMax: 2000
+  PV: 1300
+  PVMax: 1300
   element: Eau
   weakness: Electricite
   resistance: Terre

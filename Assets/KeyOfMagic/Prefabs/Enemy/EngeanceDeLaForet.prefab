@@ -754,7 +754,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.71, y: 3.31, z: 2.54}
-  m_Center: {x: -0.03, y: 1.43, z: 0.08}
+  m_Center: {x: -0.03, y: 1.5, z: 0.08}
 --- !u!54 &6572569499185163303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -784,8 +784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: "Engeance de la For\xEAt"
-  PV: 1800
-  PVMax: 1800
+  PV: 800
+  PVMax: 800
   element: Terre
   weakness: Air
   resistance: Eau

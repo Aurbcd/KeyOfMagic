@@ -74,7 +74,7 @@ public class BotteArmée : MonoBehaviour, ItemInterface
         GameObject.Find("Player").GetComponent<UnityEngine.AI.NavMeshAgent>().speed -= 2;
         PlayerStats.resistanceMultiplier += 0.1f;
         gameObject.SetActive(true);
-        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
+        gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
     }
 
     public void Start()

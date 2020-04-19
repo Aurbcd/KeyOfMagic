@@ -45,7 +45,7 @@ public class PlayerStats : MonoBehaviour
         shieldElement = "";
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
-        Difficulte = 1.5f;
+        Difficulte = 1f;
         DamageMultiplier = 1;
         volDeVie = 0;
         resistanceMultiplier = 1;
@@ -134,7 +134,7 @@ public class PlayerStats : MonoBehaviour
             if (playerShieldPoints > 0 && (playerShieldPoints - scaledDamage) < 0)
             {
                 GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectPlayer;
-                GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.4f);
+                GetComponent<AudioSource>().PlayOneShot(shieldBroken, 0.5f);
 
             }
 

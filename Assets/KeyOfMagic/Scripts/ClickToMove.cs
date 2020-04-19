@@ -73,6 +73,7 @@ public class ClickToMove : MonoBehaviour {
                     selectionne = true;
                     mAnimator.SetBool("Selectionne", true);
                     transform.LookAt (hit.collider.transform);
+                    GameObject.Find("Bob").transform.LookAt(hit.collider.transform);
                 }
                 if (hit.collider.tag == "Item")
                 {
