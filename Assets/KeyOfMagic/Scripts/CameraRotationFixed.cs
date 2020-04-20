@@ -43,8 +43,11 @@ public class CameraRotationFixed : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        offset *= 1 - 0.02f;
-        transform.position = player.position + offset;
-        transform.LookAt(playerHeadPosition);
+        if ((transform.position - player.position).magnitude > 3)
+        {
+            offset *= 1 - 0.02f;
+            transform.position = player.position + offset;
+            transform.LookAt(playerHeadPosition);
+        }
     }
 }
