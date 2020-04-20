@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class GenerationDeMonstre : MonoBehaviour
 {
-    public Transform spawn;
+    public List<Transform> spawns;
     public List<GameObject> enemyPool;
     public GameObject player;
     public int valeurAleatoire;
     // Start is called before the first frame update
-    void Awake()
+    public void generer()
     {
-
-        valeurAleatoire = Random.Range(0,enemyPool.Count);
-        Instantiate(enemyPool[valeurAleatoire], spawn.position, Quaternion.identity);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (enemyPool.Capacity != 0)
+        {
+            foreach(Transform spawn in spawns)
+            {
+                valeurAleatoire = Random.Range(0, enemyPool.Count);
+                Instantiate(enemyPool[valeurAleatoire], spawn.position, Quaternion.identity);
+            }
+        }
     }
 }

@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3640300687200472336}
   - component: {fileID: 3640300687198475217}
   m_Layer: 0
-  m_Name: Candelier_Single
+  m_Name: Chandelier_Single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
