@@ -66,6 +66,7 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
     public void Ramasse()
     {
         PlayerStats.playerMaxHeathPoints += (int)(PlayerStats.playerMaxHeathPointsInitial * 0.2f);
+        PlayerStats.playerHealthPoints += (int)(PlayerStats.playerMaxHeathPointsInitial * 0.2f);
         MonsterMouvSelection.modificateurMinimumPotions += 1;
         MonsterMouvSelection.modificateurMaximumPotions += 1;
         PlayerStats.resistanceMultiplier -= 0.05f;
@@ -75,6 +76,7 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
 
     public void Jete()
     {
+        PlayerStats.playerHealthPoints -= (int)(PlayerStats.playerMaxHeathPointsInitial * 0.2f);
         PlayerStats.playerMaxHeathPoints -= (int)(PlayerStats.playerMaxHeathPointsInitial * 0.2f);
         MonsterMouvSelection.modificateurMinimumPotions -= 1;
         MonsterMouvSelection.modificateurMaximumPotions -= 1;
