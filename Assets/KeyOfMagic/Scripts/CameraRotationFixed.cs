@@ -32,7 +32,7 @@ public class CameraRotationFixed : MonoBehaviour
         playerHeadPosition = new Vector3(player.position.x, player.position.y +2, player.position.z);
         
 
-        if ((offset.magnitude > 6 && Input.mouseScrollDelta.y >= 0) || (Input.mouseScrollDelta.y <= 0 && offset.magnitude < 25))
+        if ((offset.magnitude > 6 && Input.mouseScrollDelta.y >= 0) || (Input.mouseScrollDelta.y <= 0 && offset.magnitude < 15))
         {
                 offset *= 1 - Input.mouseScrollDelta.y * 0.1f;
         }
@@ -45,7 +45,7 @@ public class CameraRotationFixed : MonoBehaviour
     {
         if ((transform.position - player.position).magnitude > 3)
         {
-            offset *= 1 - 0.02f;
+            offset *= 1 - 0.1f;
             transform.position = player.position + offset;
             transform.LookAt(playerHeadPosition);
         }

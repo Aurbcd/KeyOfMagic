@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
         compteur = 0;
         foreach (GameObject monstre in GameObject.FindGameObjectsWithTag("Ennemy"))
         {
-            if ((monstre.transform.position - ClickToMove.playerPosition).magnitude < 22) {
+            if ((monstre.transform.position - ClickToMove.playerPosition).magnitude < 22 && monstre.GetComponent<MonsterStatText>().monsterName != "Mannequin") {
                 Combat = true;
                 compteur -= 1;
             }

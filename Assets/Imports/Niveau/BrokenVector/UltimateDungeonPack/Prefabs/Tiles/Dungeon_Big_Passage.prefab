@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8011076794461407144}
   - component: {fileID: 8990168755917783631}
   - component: {fileID: 7787867036480748200}
+  - component: {fileID: 1632043848332801290}
+  - component: {fileID: 6657444740610137783}
   m_Layer: 0
   m_Name: Dungeon_Big_Passage
   m_TagString: Untagged
@@ -87,7 +89,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011076794459216232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.035, y: 0.006011031, z: 0.051827215}
@@ -100,8 +102,37 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011076794459216232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.035, y: 0.006011031, z: 0.051827215}
   m_Center: {x: -0.025, y: -5.820767e-10, z: 0.023913603}
+--- !u!65 &1632043848332801290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011076794459216232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.079999976, y: 0.006011034, z: 0.028338287}
+  m_Center: {x: 0.00000006357829, y: -5.960465e-10, z: 0.03565811}
+--- !u!54 &6657444740610137783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011076794459216232}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
