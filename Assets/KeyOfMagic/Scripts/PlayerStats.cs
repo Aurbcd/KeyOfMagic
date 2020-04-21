@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     public int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
+    public static int niveau;
     //mécaniques item
     public static float DamageMultiplier; //Aucun est en pourcentage
     public static float volDeVie;
@@ -33,6 +34,9 @@ public class PlayerStats : MonoBehaviour
 
     void Start() 
     {
+        //A RETIRER !!
+        niveau = 1;
+        //A RETIRER !!
         IsDead = false;
         GameOverAudio = Resources.Load<AudioClip>("GameOver");
         shieldBroken = Resources.Load<AudioClip>("ShieldBroken");

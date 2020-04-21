@@ -6,6 +6,7 @@ public class Porte : MonoBehaviour
 {
     public bool ouvert;
     public List<GameObject> lumieresAAllumer;
+    private string objet;
     //Son
     public static AudioClip door;
 
@@ -19,7 +20,7 @@ public class Porte : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 15)
+        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 20)
         {
             if (!ouvert)
             {
@@ -29,16 +30,21 @@ public class Porte : MonoBehaviour
                     GetComponent<AudioSource>().PlayOneShot(door);
                     GetComponent<Animator>().SetBool("ouverture", true);
 
+                    if(GetComponent<GenerationDeMonstre>() != null)
+                        GetComponent<GenerationDeMonstre>().Generer();
+                    if (GetComponent<GenerationSpecial>() != null)
+                        objet = GetComponent<GenerationSpecial>().Generer();
+
                     foreach (GameObject lum in lumieresAAllumer)
                     {
-                        foreach(Light light in lum.GetComponentsInChildren<Light>())
+                        foreach (Light light in lum.GetComponentsInChildren<Light>())
                         {
                             light.enabled = true;
+                            if (objet != null && objet.Equals("Coffre"))
+                                Debug.Log("Changerdecoluerur");
                         }
-                        
-                    }
 
-                    GetComponent<GenerationDeMonstre>().generer();
+                    }
                 }
             }
         }
