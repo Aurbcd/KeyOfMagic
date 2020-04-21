@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3373645002612683155}
   - component: {fileID: 82074892443458230}
   m_Layer: 10
-  m_Name: "CoffreAl\xE9atoire"
+  m_Name: Coffre
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalPosition.y
@@ -248,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.39
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalRotation.x
@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalRotation.z
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_RootOrder
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 0e668c03a7d673447a72fb83a07cec00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

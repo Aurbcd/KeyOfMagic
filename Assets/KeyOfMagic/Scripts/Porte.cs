@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Porte : MonoBehaviour
 {
+    //Niveau
+    public string cote;
+    public string salle;
+
     public bool ouvert;
     public List<GameObject> lumieresAAllumer;
     //Son
@@ -28,17 +32,27 @@ public class Porte : MonoBehaviour
                     ouvert = true;
                     GetComponent<AudioSource>().PlayOneShot(door);
                     GetComponent<Animator>().SetBool("ouverture", true);
-
+                    
+                    if(GetComponent<GenerationDeSalle>() != null)
+                    {
+                        salle = GetComponent<GenerationDeSalle>().Generer(cote);
+                        if(salle.Equals("PasDeSalle"))
+                        {
+                            GetComponent<GenerationDeMonstre>().Generer();
+                        }
+                    }
+                    else
+                    {
+                        GetComponent<GenerationDeMonstre>().Generer();
+                    }
                     foreach (GameObject lum in lumieresAAllumer)
                     {
-                        foreach(Light light in lum.GetComponentsInChildren<Light>())
+                        foreach (Light light in lum.GetComponentsInChildren<Light>())
                         {
                             light.enabled = true;
                         }
-                        
-                    }
 
-                    GetComponent<GenerationDeMonstre>().generer();
+                    }
                 }
             }
         }

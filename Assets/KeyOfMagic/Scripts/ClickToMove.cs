@@ -47,6 +47,10 @@ public class ClickToMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log(GenerationDeSalle.PoolG[0]);
+        }
         playerPosition = GetComponent<Transform> ().position;
         playerRotation = GetComponent<Transform>().eulerAngles;
         Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);

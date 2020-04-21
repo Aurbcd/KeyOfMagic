@@ -81,9 +81,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.43532717
-  m_Height: 2.8750696
+  m_Height: 2.7
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4175348, z: -0.014672875}
+  m_Center: {x: 0, y: 1.29, z: -0.014672875}
 --- !u!82 &5987391922355657989
 AudioSource:
   m_ObjectHideFlags: 0
