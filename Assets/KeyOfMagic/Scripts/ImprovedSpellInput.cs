@@ -416,6 +416,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 choix = spellEntry.spellName;
                 choixOffDef = spellEntry.offensive;
                 pAttack = true;
+                transform.LookAt(monstreSelectionne.transform);
                 //Mise à jour du spellbook du joueur;
                 if (!(spellBook.SpellBook.Exists(x => x.spellName.Equals(spell)))) //Vérifie que ce sort n'appartient pas au spellbook
                 {

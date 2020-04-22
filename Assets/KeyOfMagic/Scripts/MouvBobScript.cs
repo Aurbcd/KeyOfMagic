@@ -46,24 +46,24 @@ public class MouvBobScript : MonoBehaviour
             mAnimator.SetBool("Moving", true);
         if(ClickToMove.playerRotation.y < 135 && ClickToMove.playerRotation.y > 45)
             if(!attack)
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -2f);
             else
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -4f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, -3f);
         if (ClickToMove.playerRotation.y < 225 && ClickToMove.playerRotation.y >= 135)
             if (!attack)
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-3f, 0f, 0f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-2f, 0f, 0f);
             else
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-4f, 0f, 0f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(-3f, 0f, 0f);
         if (ClickToMove.playerRotation.y < 315 && ClickToMove.playerRotation.y >= 225)
             if(!attack)
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 3f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 2f);
             else
-              mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 4f);
+              mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(0f, 0f, 3f);
         if ((ClickToMove.playerRotation.y < 45 && ClickToMove.playerRotation.y >= 0) || (ClickToMove.playerRotation.y < 380 && ClickToMove.playerRotation.y >= 315))
             if(!attack)
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(2f, 0f, 0f);
             else
-                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(4f, 0f, 0f);
+                mNavMeshAgent.destination = ClickToMove.playerPosition + new Vector3(3f, 0f, 0f);
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
@@ -87,7 +87,7 @@ public class MouvBobScript : MonoBehaviour
         if (attack)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-            GetComponent<NavMeshAgent>().radius = 1.5f;
+            GetComponent<NavMeshAgent>().radius = 0.3f;
             GetComponent<AudioSource>().pitch = 0.6f;
             if (montreSelectionne !=null && (montreSelectionne.transform.position - ClickToMove.playerPosition).magnitude < 18) {
                 transform.LookAt(montreSelectionne.transform);
@@ -100,7 +100,7 @@ public class MouvBobScript : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            GetComponent<NavMeshAgent>().radius = 2.95f;
+            GetComponent<NavMeshAgent>().radius = 0.6f;
             GetComponent<AudioSource>().pitch = 1;
         }
     }

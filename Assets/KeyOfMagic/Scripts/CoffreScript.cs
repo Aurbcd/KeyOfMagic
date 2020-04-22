@@ -26,9 +26,9 @@ public class CoffreScript : MonoBehaviour
             transform.position = hit.point;
             break;
         }
+        transform.LookAt(ClickToMove.playerPosition);
     }
 
-   // Update is called once per frame
     void OnMouseDown() { 
         if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 9)
         {

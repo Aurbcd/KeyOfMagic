@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/KeyOfMagic/First Scene.unity
     guid: 4ea6870a437130a4b8486f92cbd51baf
   - enabled: 1
-    path: Assets/KeyOfMagic/Niveau 1.unity
+    path: Assets/KeyOfMagic/Niveau1A.unity
     guid: 288a282c024b7f843933febebdd8243d
   m_configObjects: {}

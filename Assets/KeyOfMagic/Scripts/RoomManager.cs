@@ -27,14 +27,16 @@ public class RoomManager : MonoBehaviour
         {
             PoolG1.Add(monstre);
         }
-        PoolG1.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
+        if (poolSpecialG.Count != 0)
+            PoolG1.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
         
         PoolD1.Add(Droite);
         foreach (GameObject monstre in poolMonstreD1)
         {
             PoolD1.Add(monstre);
         }
-        PoolD1.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
+        if(poolSpecialD.Count != 0)
+             PoolD1.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
 
         //Niveau 2
         PoolG2.Add(Gauche);
@@ -42,14 +44,16 @@ public class RoomManager : MonoBehaviour
         {
             PoolG2.Add(monstre);
         }
-        PoolG2.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
+        if (poolSpecialG.Count != 0)
+            PoolG2.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
 
         PoolD2.Add(Droite);
         foreach (GameObject monstre in poolMonstreD2)
         {
             PoolD2.Add(monstre);
         }
-        PoolD2.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
+        if (poolSpecialD.Count != 0)
+            PoolD2.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
 
         //Niveau 3
         PoolG3.Add(Gauche);
@@ -57,19 +61,15 @@ public class RoomManager : MonoBehaviour
         {
             PoolG3.Add(monstre);
         }
-        PoolG3.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
+        if (poolSpecialG.Count != 0)
+            PoolG3.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
 
         PoolD3.Add(Droite);
         foreach (GameObject monstre in poolMonstreD3)
         {
             PoolD1.Add(monstre);
         }
-        PoolD3.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (poolSpecialD.Count != 0)
+            PoolD3.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
     }
 }
