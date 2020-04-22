@@ -16,23 +16,23 @@ public class ChangeDiff : MonoBehaviour
 
     public void changeDiff(){
         float currdiff = PlayerStats.Difficulte;
-        if (currdiff == 0.5f)
+        if (currdiff == 1.5f)
         {
             tmp.text = "<u>Difficulté : Facile</u>";
             button.GetComponent<OnHover>().textancien = "Difficulté : Facile";
-            PlayerStats.Difficulte = 2.5f;
+            PlayerStats.Difficulte = 0.5f;
         }
-        if (currdiff == 1.5f)
+        if (currdiff == 1f)
         {
             tmp.text = "<u>Difficulté : Difficile</u>";
             button.GetComponent<OnHover>().textancien = "Difficulté : Difficile";
-            PlayerStats.Difficulte = 0.5f;
+            PlayerStats.Difficulte = 1.5f;
         }
-        if (currdiff == 2.5f)
+        if (currdiff == 0.5f)
         {
             tmp.text = "<u>Difficulté : Normale</u>";
             button.GetComponent<OnHover>().textancien = "Difficulté : Normale";
-            PlayerStats.Difficulte = 1.5f;
+            PlayerStats.Difficulte = 1f;
         }
     }
 
