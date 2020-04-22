@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 946505192305894088}
   - component: {fileID: 2953736548735300638}
   m_Layer: 0
-  m_Name: OornoAnim
+  m_Name: OoteraAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3624,7 +3624,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.75
       minScalar: 0
       maxCurve:
         serializedVersion: 2
