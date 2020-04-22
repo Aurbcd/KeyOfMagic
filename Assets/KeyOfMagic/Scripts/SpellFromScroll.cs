@@ -14,6 +14,16 @@ public class SpellFromScroll : MonoBehaviour
         ouvert = false;
         notifBlinker = Resources.Load<AudioClip>("NotifBlinker");
         parchemin = Resources.Load<AudioClip>("Parchemin");
+
+        var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f);
+        foreach (var hit in hits)
+        {
+            if (hit.collider.gameObject == transform.gameObject)
+                continue;
+
+            transform.position = hit.point;
+            break;
+        }
     }
 
     void OnMouseDown()

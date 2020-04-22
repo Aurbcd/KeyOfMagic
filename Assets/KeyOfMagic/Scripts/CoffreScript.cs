@@ -16,6 +16,16 @@ public class CoffreScript : MonoBehaviour
     {
         ouvert = false;
         coffre = Resources.Load<AudioClip>("Coffre");
+
+        var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f);
+        foreach (var hit in hits)
+        {
+            if (hit.collider.gameObject == transform.gameObject)
+                continue;
+
+            transform.position = hit.point;
+            break;
+        }
     }
 
    // Update is called once per frame

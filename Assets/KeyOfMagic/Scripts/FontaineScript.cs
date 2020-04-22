@@ -13,6 +13,16 @@ public class FontaineScript : MonoBehaviour
     {
         ouvert = false;
         fontaine = Resources.Load<AudioClip>("Fontaine");
+
+        var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f); //Tout le monde à terre !
+        foreach (var hit in hits)
+        {
+            if (hit.collider.gameObject == transform.gameObject)
+                continue;
+
+            transform.position = hit.point;
+            break;
+        }
     }
 
    // Update is called once per frame

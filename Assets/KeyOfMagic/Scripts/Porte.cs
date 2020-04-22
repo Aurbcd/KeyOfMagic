@@ -7,6 +7,7 @@ public class Porte : MonoBehaviour
     public bool ouvert;
     public List<GameObject> lumieresAAllumer;
     private string objet;
+    public string cote;
     //Son
     public static AudioClip door;
 
@@ -33,7 +34,7 @@ public class Porte : MonoBehaviour
                     if(GetComponent<GenerationDeMonstre>() != null)
                         GetComponent<GenerationDeMonstre>().Generer();
                     if (GetComponent<GenerationSpecial>() != null)
-                        objet = GetComponent<GenerationSpecial>().Generer();
+                        objet = GetComponent<GenerationSpecial>().Generer(cote);
 
                     foreach (GameObject lum in lumieresAAllumer)
                     {
@@ -41,9 +42,14 @@ public class Porte : MonoBehaviour
                         {
                             light.enabled = true;
                             if (objet != null && objet.Equals("Coffre"))
-                                Debug.Log("Changerdecoluerur");
+                                light.color = new Color(0.18f, 0.5f, 0.95f, 1f);
+                            if (objet != null && objet.Equals("Fontaine"))
+                                light.color = new Color(1f, 1f, 1f, 1f);
+                            if (objet != null && objet.Equals("Parchemin"))
+                                light.color = new Color(0.18f, 0.95f, 0.19f, 1f);
+                            if (objet != null && objet.Equals("Enigme"))
+                                light.color = new Color(0.85f, 0.18f, 0.95f, 1f);
                         }
-
                     }
                 }
             }
