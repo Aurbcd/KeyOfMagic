@@ -33,9 +33,12 @@ public class Trapdoor : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (OpenTrapdoor)
+        if((transform.position - ClickToMove.playerPosition).magnitude < 8)
         {
-            StartCoroutine(Ouverture());
+            if (OpenTrapdoor)
+            {
+                StartCoroutine(Ouverture());
+            }
         }
     }
 
@@ -49,6 +52,7 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
+        PlayerStats.niveau += 1;
         int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
         Debug.Log(nomNiveauAGenerer[rand]);
         yield return new WaitForSeconds(1);
