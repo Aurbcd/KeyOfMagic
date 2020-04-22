@@ -43,7 +43,22 @@ ModelImporter:
     4300008: Box002
     4300010: Box003
     4300012: Torus001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: cfd517b1c1bac544ab0a848fbbda094d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 8260f7391e964bc4d8cc007e27289fae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 47c4cf602b2f7564a9d6f43af3e62d6c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
