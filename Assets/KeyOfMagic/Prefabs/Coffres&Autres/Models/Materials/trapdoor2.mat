@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: trapdoor2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP _PARALLAXMAP
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 5c06d13c3e8ef154d95b6650469ff087, type: 3}
+        m_Texture: {fileID: 2800000, guid: eca0c20875990f248addfbc09a8cba03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 41e5cd7c6f0fed14e82bee37a1b05e7e, type: 3}
+        m_Texture: {fileID: 2800000, guid: abcebb8797a03ec43a01b6df442e125b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -48,11 +48,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: f52d6673530b2c34495318d60817fecd, type: 3}
+        m_Texture: {fileID: 2800000, guid: ea3e6da8e8b432643b70d416d44de26a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 5a3465848b25912419799f704badc1ec, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -61,9 +61,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.553
+    - _Glossiness: 0.409
     - _GlossyReflections: 1
-    - _Metallic: 0.127
+    - _Metallic: 0.415
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.0283
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
