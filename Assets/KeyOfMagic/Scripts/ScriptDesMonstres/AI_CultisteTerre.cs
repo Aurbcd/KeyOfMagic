@@ -27,9 +27,13 @@ public class AI_CultisteTerre : MonoBehaviour
     public static AudioClip CultistGroan;
     public static AudioClip lightWalk;
 
+    //XmlManager
+    private GameObject XmlManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        XmlManager = GameObject.Find("XmlManager");
         element = "Terre";
         mAnimator = GetComponent<Animator>();
         boule = true;
@@ -53,9 +57,9 @@ public class AI_CultisteTerre : MonoBehaviour
             StartCoroutine(HeAttac());
         }
         LastPos = curPos;
-        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
+        if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
         {
-            hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
+            hexcolor = XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
             if (affichage != null)
             {
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
@@ -112,7 +116,7 @@ public class AI_CultisteTerre : MonoBehaviour
             sortAnim = VisuelSorts.Find(x => x.ToString().Equals("Sort" + element + " (UnityEngine.GameObject)"));
             mAnimator.SetBool("Attacking", true);
             yield return new WaitForSeconds(0.25f);
-            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            damage = XmlManager.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
             clone = Instantiate(sortAnim, transform.position + new Vector3(0f,2f,0f), Quaternion.identity);
             clone.tag = "ADetruireMonstre";
             GameObject Joueur= GameObject.Find("Player");

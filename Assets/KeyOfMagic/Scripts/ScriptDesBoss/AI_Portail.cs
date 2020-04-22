@@ -15,10 +15,13 @@ public class AI_Portail : MonoBehaviour
     private bool boule;
     //Son
     public static AudioClip PortailG,PortalOpen;
+    //XmlManager
+    private GameObject XmlManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        XmlManager = GameObject.Find("XmlManager");
         boule = true;
         changeElement("Eau");
         Portail(true);
@@ -84,8 +87,8 @@ public class AI_Portail : MonoBehaviour
             settings.startColor = new ParticleSystem.MinMaxGradient(new Color(9.5f, 8.1f, 0f, 1f));
         if (element.Equals("Air"))
             settings.startColor = new ParticleSystem.MinMaxGradient(new Color(0.5f, 0.08f, 0.65f, 1f));
-        GetComponent<MonsterStatText>().weakness = GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == GetComponent<MonsterStatText>().element).weakness;
-        GetComponent<MonsterStatText>().resistance = GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == GetComponent<MonsterStatText>().element).resistance;
+        GetComponent<MonsterStatText>().weakness = XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == GetComponent<MonsterStatText>().element).weakness;
+        GetComponent<MonsterStatText>().resistance = XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == GetComponent<MonsterStatText>().element).resistance;
     }
     void groan()
     { 

@@ -603,6 +603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
+  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
+  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
   SpellDatabase:
     SpellBook: []
   PlayerSpellDatabase:

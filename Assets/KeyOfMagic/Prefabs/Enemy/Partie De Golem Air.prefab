@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 6572569499185163306}
   - component: {fileID: 6572569499185163309}
   - component: {fileID: 6509761515560823648}
-  - component: {fileID: 114190508878000956}
   - component: {fileID: 5616499073037802245}
   m_Layer: 10
   m_Name: Partie De Golem Air
@@ -671,24 +670,6 @@ MonoBehaviour:
   - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
   - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
   - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
---- !u!114 &114190508878000956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpellDatabase:
-    SpellBook: []
-  PlayerSpellDatabase:
-    SpellBook: []
-  ElementDatabase:
-    Elementdb: []
 --- !u!82 &5616499073037802245
 AudioSource:
   m_ObjectHideFlags: 0

@@ -33,10 +33,13 @@ public class AI_FilsDuDemon : MonoBehaviour
     public static AudioClip filsDuDemonGroan;
     public static AudioClip filsDuDemonWalk;
 
+    //XmlManager
+    private GameObject XmlManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        XmlManager = GameObject.Find("XmlManager");
         mAnimator = GetComponent<Animator>();
         choixElement();
         boule = true;
@@ -106,9 +109,9 @@ public class AI_FilsDuDemon : MonoBehaviour
             }
         }
         LastPos = curPos;
-        if (this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
+        if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element) != null && distanceToPlayer < 15)
         {
-            hexcolor = this.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
+            hexcolor = XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == element).hexColor;
             if (affichage != null)
             {
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
@@ -324,7 +327,7 @@ public class AI_FilsDuDemon : MonoBehaviour
             sortAnim = VisuelSorts.Find(x => x.ToString().Equals("Sort" + element + " (UnityEngine.GameObject)"));
             mAnimator.SetBool("Attacking", true);
             yield return new WaitForSeconds(0.25f);
-            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            damage = XmlManager.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
             clone = Instantiate(sortAnim, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
             clone.tag = "ADetruireMonstre";
             GameObject Joueur = GameObject.Find("Player");
@@ -366,7 +369,7 @@ public class AI_FilsDuDemon : MonoBehaviour
             sortAnim = VisuelSorts.Find(x => x.ToString().Equals("Sort" + element + " (UnityEngine.GameObject)"));
             mAnimator.SetBool("Attacking", true);
             yield return new WaitForSeconds(0.25f);
-            damage = this.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
+            damage = XmlManager.GetComponent<XmlManager>().SpellDatabase.SpellBook.Find(SpellEntry => SpellEntry.spellName == choix).value;
             clone = Instantiate(sortAnim, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
             clone.tag = "ADetruireMonstre";
             GameObject Joueur = GameObject.Find("Player");
