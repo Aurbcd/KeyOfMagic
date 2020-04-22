@@ -324,7 +324,7 @@ public class ImprovedSpellInput : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.Space))
-            Debug.Log(PlayerStats.Difficulte);
+            Trapdoor.OpenTrapdoor = true;
 
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
