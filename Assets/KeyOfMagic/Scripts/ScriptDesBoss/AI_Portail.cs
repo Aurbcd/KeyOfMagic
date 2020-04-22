@@ -57,6 +57,8 @@ public class AI_Portail : MonoBehaviour
         {
             Portail(true);
         }
+        if (GetComponent<MonsterMouvSelection>().IsDead)
+            Trapdoor.OpenTrapdoor = true;
     }
 
     void Portail(bool ouvert)

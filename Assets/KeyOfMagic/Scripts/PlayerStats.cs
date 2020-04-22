@@ -9,21 +9,21 @@ public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
     public CanvasGroup canvasGHealthBar;
-    public static int playerHealthPoints;   
+    public static int playerHealthPoints=200;   
     public ShieldBar shieldBar;
-    public static int playerShieldPoints;
-    public static int playerMaxHeathPointsInitial;
-    public static int playerMaxHeathPoints;
+    public static int playerShieldPoints=0;
+    public static int playerMaxHeathPointsInitial = 200;
+    public static int playerMaxHeathPoints = 200;
     public static bool IsDead;
-    public static int playerMaxShieldPoints;
-    public static string shieldElement;
-    public static float Difficulte;
-    public static int niveau;
+    public static int playerMaxShieldPoints = 0;
+    public static string shieldElement ="";
+    public static float Difficulte = 1.5f;
+    public static int niveau = 1;
     //mécaniques item
-    public static float DamageMultiplier; //Aucun est en pourcentage
-    public static float volDeVie;
-    public static float shieldMultiplier;
-    public static float resistanceMultiplier;
+    public static float DamageMultiplier=1; //Aucun est en pourcentage
+    public static float volDeVie=0;
+    public static float shieldMultiplier=1;
+    public static float resistanceMultiplier=1;
     private bool amHero = false;
     private bool trouve;
     private Animator mAnimator;

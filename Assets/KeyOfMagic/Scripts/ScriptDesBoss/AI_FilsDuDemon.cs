@@ -117,6 +117,8 @@ public class AI_FilsDuDemon : MonoBehaviour
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
             }
         }
+        if (GetComponent<MonsterMouvSelection>().IsDead)
+            Trapdoor.OpenTrapdoor = true;
     }
 
     void choixElement() //Vraiment aléatoire

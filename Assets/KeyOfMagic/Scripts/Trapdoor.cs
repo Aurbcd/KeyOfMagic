@@ -35,11 +35,23 @@ public class Trapdoor : MonoBehaviour
     {
         if (OpenTrapdoor)
         {
-            GetComponent<AudioSource>().PlayOneShot(trapdoor);
-            GetComponent<Animator>().SetBool("Open", true); 
-            int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
-            Debug.Log(nomNiveauAGenerer[rand]);
-            SceneManager.LoadScene(nomNiveauAGenerer[rand]);
+            StartCoroutine(Ouverture());
         }
+    }
+
+    IEnumerator Ouverture()
+    {
+        GetComponent<AudioSource>().PlayOneShot(trapdoor);
+        GetComponent<Animator>().SetBool("Open", true);
+        RoomManager.PoolD1.Clear();
+        RoomManager.PoolD2.Clear();
+        RoomManager.PoolD3.Clear();
+        RoomManager.PoolG1.Clear();
+        RoomManager.PoolG2.Clear();
+        RoomManager.PoolG3.Clear();
+        int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
+        Debug.Log(nomNiveauAGenerer[rand]);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(nomNiveauAGenerer[rand]);
     }
 }

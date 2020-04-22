@@ -66,6 +66,8 @@ public class AI_GolemBoss : MonoBehaviour
                 displayText.text = "<color=" + hexcolor + ">" + affichage + "</color>";
             }
         }
+        if (GetComponent<MonsterMouvSelection>().IsDead)
+            Trapdoor.OpenTrapdoor = true;
     }
 
     void choixElement() //En fonction du pourcentage de vie restante
