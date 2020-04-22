@@ -105,7 +105,7 @@ public class ClickToMove : MonoBehaviour {
                 doubleclick = false;
             }
         }
-        if ((playerPosition - mNavMeshAgent.destination).magnitude < 20 && walkautomonstre) {
+        if ((playerPosition - mNavMeshAgent.destination).magnitude < 14 && walkautomonstre) {
             mNavMeshAgent.ResetPath ();
             mAnimator.SetBool("Selectionne", true);
             walkautomonstre = false;

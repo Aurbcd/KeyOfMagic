@@ -65,14 +65,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 22 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
+        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin")
+        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
@@ -80,7 +80,7 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", true);
         }
         
-        if (distanceToPlayer < 15)
+        if (distanceToPlayer < 10)
         {
             StopMovement();
             mAnimator.SetBool("Moving", false);
@@ -105,11 +105,11 @@ public class MonsterMouvSelection : MonoBehaviour
                 estSelectionne = false;
             }
         }
-        if (distanceToPlayer > 22 && DistanceBase > 2)
+        if (distanceToPlayer > 16 && DistanceBase > 2)
         {
             BackBase();
         }
-        if (DistanceBase < 2 && distanceToPlayer > 22)
+        if (DistanceBase < 2 && distanceToPlayer > 16)
         {
             if (GetComponent<MonsterStatText>().monsterName != "Portail")
                 GetComponent<MonsterStatText>().PV += 3;

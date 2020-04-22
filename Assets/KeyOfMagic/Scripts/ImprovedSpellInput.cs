@@ -102,7 +102,7 @@ public class ImprovedSpellInput : MonoBehaviour
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
-            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
+            if (monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 16)
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                 {
@@ -329,7 +329,7 @@ public class ImprovedSpellInput : MonoBehaviour
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
-            if (monstre.GetComponent<MonsterMouvSelection>()!= null && monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 22)
+            if (monstre.GetComponent<MonsterMouvSelection>()!= null && monstre.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 16)
             {
                 if (monstre.GetComponent<MonsterMouvSelection>().estSelectionne)
                 {
@@ -347,7 +347,7 @@ public class ImprovedSpellInput : MonoBehaviour
             isCapsLockOn = !isCapsLockOn;
         }
         projector.material.SetColor("_Color", new Color32(255, 255, 255, 255));
-        if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 20 && !PlayerStats.IsDead)
+        if (ClickToMove.selectionne && monstreSelectionne != null && monstreSelectionne.GetComponent<MonsterMouvSelection>().distanceToPlayer <= 14 && !PlayerStats.IsDead)
         {
             inputField.ActivateInputField();
             spell = inputField.text;
