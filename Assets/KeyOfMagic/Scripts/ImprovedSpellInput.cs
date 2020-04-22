@@ -323,6 +323,9 @@ public class ImprovedSpellInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+            Debug.Log(PlayerStats.Difficulte);
+
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {
@@ -559,7 +562,7 @@ public class ImprovedSpellInput : MonoBehaviour
                 {
                     mAnimator.Play("RedoD", 0, 1);
                     PlayerStats.shieldElement = spellEntry.element;
-                    GetComponent<PlayerStats>().playerMaxShieldPoints = (int)(spellEntry.value * PlayerStats.shieldMultiplier);
+                    PlayerStats.playerMaxShieldPoints = (int)(spellEntry.value * PlayerStats.shieldMultiplier);
                     PlayerStats.playerShieldPoints =(int)(spellEntry.value * PlayerStats.shieldMultiplier);
                     spell = "";
                     inputField.text = "";

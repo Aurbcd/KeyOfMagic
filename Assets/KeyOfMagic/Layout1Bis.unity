@@ -1723,7 +1723,6 @@ MonoBehaviour:
   healthBar: {fileID: 2029596222}
   canvasGHealthBar: {fileID: 0}
   shieldBar: {fileID: 1750123520}
-  playerMaxShieldPoints: 0
   soundEffectNotif: {fileID: 243023876282429428, guid: 954701f1fcc7a4446a420b1ccc29e177,
     type: 2}
   soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
@@ -27844,27 +27843,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1047921584}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1050178984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 21543d2b66928224f8a9536ff3811682,
-    type: 3}
-  m_PrefabInstance: {fileID: 1412742194}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1050178985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050178984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a178201cb164f4ca44e18b2d20c249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1679463179}
-  smoothSpeed: 1
-  offset: {x: 0, y: 7.5, z: 0}
 --- !u!119 &1050178986 stripped
 Projector:
   m_CorrespondingSourceObject: {fileID: 11900000, guid: 21543d2b66928224f8a9536ff3811682,
@@ -38066,6 +38044,11 @@ PrefabInstance:
       propertyPath: m_IgnoreLayers.m_Bits
       value: 1536
       objectReference: {fileID: 0}
+    - target: {fileID: 2757444579989328930, guid: 21543d2b66928224f8a9536ff3811682,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1679463179}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21543d2b66928224f8a9536ff3811682, type: 3}
 --- !u!1001 &1413917061
