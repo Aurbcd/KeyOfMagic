@@ -40,7 +40,7 @@ public class BotteArmée : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Des bottes particulièrement confortables. Bien que possédant des renforts conséquents, leur poids ne semble pas contraindre leur porteur. Leur semelle très épaisse permet à l'utilisateur de marcher bien plus vite, puiqu'il n'a plus besoin de regarder où il met les pieds. \"";
+            return "\" Des bottes particulièrement confortables. Bien que possédant des renforts conséquents, leur poids ne semble pas contraindre leur porteur. Leur semelle renforcée permet à l'utilisateur de marcher bien plus vite, puisqu'il n'a plus besoin de regarder où il met les pieds. \"";
         }
     }
 

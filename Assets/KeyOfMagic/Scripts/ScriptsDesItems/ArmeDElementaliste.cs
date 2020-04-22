@@ -41,7 +41,7 @@ public class ArmeDElementaliste : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Parmi les maîtres des arcanes, rares sont ceux qui peuvent prétendre au titre d'élémentaliste. À ceux-là sont réservées les essences de bois les plus exceptionnelles, capables de canaliser leur pouvoir démesuré. \"";
+            return "\" Parmi les maîtres des arcanes, rares sont ceux qui peuvent prétendre maîtriser les 5 éléments à la perfection. À ceux-là est réservé le titre d'élémentaliste. Il est dit que les cristaux de cette arme renferment une partie du pouvoir démesuré de son créateur. \"";
         }
     }
 
