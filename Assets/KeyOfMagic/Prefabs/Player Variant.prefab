@@ -224,6 +224,25 @@ MonoBehaviour:
   inventaire: {fileID: 0}
   soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
     type: 2}
+--- !u!114 &605839188721467597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972791196520126493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd017bd56792ca45a0ff0f44734981f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  canvasGHealthBar: {fileID: 0}
+  shieldBar: {fileID: 0}
+  soundEffectNotif: {fileID: 243023876282429428, guid: 954701f1fcc7a4446a420b1ccc29e177,
+    type: 2}
+  soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
+    type: 2}
 --- !u!114 &8200998447441163474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +324,7 @@ MonoBehaviour:
   spellsList: {fileID: 0}
   shieldSpriteImage: {fileID: 0}
   spellListStorage: []
---- !u!114 &605839188721467597
+--- !u!114 &6728041762349379166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,16 +333,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1972791196520126493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd017bd56792ca45a0ff0f44734981f, type: 3}
+  m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  canvasGHealthBar: {fileID: 0}
-  shieldBar: {fileID: 0}
-  soundEffectNotif: {fileID: 243023876282429428, guid: 954701f1fcc7a4446a420b1ccc29e177,
-    type: 2}
-  soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
-    type: 2}
+  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
+  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
+  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
+  SpellDatabase:
+    SpellBook: []
+  PlayerSpellDatabase:
+    SpellBook: []
+  ElementDatabase:
+    Elementdb: []
 --- !u!1 &3339304713358601230
 GameObject:
   m_ObjectHideFlags: 0
