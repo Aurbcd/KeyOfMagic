@@ -1272,64 +1272,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1248858309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1248858312}
-  - component: {fileID: 1248858311}
-  - component: {fileID: 1248858310}
-  m_Layer: 0
-  m_Name: "Difficult\xE9"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1248858310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248858309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2357fc9b508d074b93960122c1c082b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficulte: 0
---- !u!114 &1248858311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248858309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2357fc9b508d074b93960122c1c082b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficulte: 0
---- !u!4 &1248858312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248858309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 466.56702, y: 316.4046, z: -5.0854135}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1269719022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65a6d12548609a46bc9cccf35ef1a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomNiveauxAleatoire:
+  - Layout1
+  - Layout1Bis
 --- !u!114 &1742838064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,7 +1670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmp: {fileID: 958196712}
-  difficulte: {fileID: 1248858309}
   button: {fileID: 625373541}
 --- !u!1 &1824246052
 GameObject:

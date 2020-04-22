@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
     public static int playerMaxHeathPointsInitial;
     public static int playerMaxHeathPoints;
     public static bool IsDead;
-    public int playerMaxShieldPoints;
+    public static int playerMaxShieldPoints;
     public static string shieldElement;
     public static float Difficulte;
     public static int niveau;
@@ -34,26 +34,12 @@ public class PlayerStats : MonoBehaviour
 
     void Start() 
     {
-        //A RETIRER !!
-        niveau = 1;
-        //A RETIRER !!
         IsDead = false;
         GameOverAudio = Resources.Load<AudioClip>("GameOver");
         shieldBroken = Resources.Load<AudioClip>("ShieldBroken");
         mAnimator = GetComponent<Animator>();
-        playerMaxHeathPointsInitial = 200;
-        playerMaxHeathPoints = 200;
-        playerHealthPoints = 200;
-        playerShieldPoints = 0;
-        playerMaxShieldPoints = 0;
-        shieldElement = "";
         healthBar.SetMaxHealth(playerMaxHeathPoints);
         healthBar.SetHealth(playerHealthPoints);
-        Difficulte = 1f;
-        DamageMultiplier = 1;
-        volDeVie = 0;
-        resistanceMultiplier = 1;
-        shieldMultiplier = 1;
     }
 
     // Update is called once per frame

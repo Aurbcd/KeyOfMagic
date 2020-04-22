@@ -9,10 +9,4 @@ public class SortMonstreScript : MonoBehaviour
     {
         transform.LookAt(ClickToMove.playerPosition + new Vector3(0f, 0.8f, 0f));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

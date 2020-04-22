@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class MonsterStatText : MonoBehaviour
 {
     public string monsterName;
-    public int PV = 150;
-    public int PVMax = 200;
+    public int PV;
+    public int PVMax;
 
     public string element;
     public string weakness;
