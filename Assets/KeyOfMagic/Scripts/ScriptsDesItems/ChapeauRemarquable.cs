@@ -40,7 +40,7 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Un chapeau aux détails d'une rare beauté, dont les motifs rafinés attirent l'oeil. En plus d'être un atout aux soirées chics, il permet de distraire les ennemis qui manquent de vigilance. \"";
+            return "\" Un chapeau aux lignes sobres et raffinées. En plus d'être un atout aux soirées chics, il permet de distraire les ennemis qui manquent de vigilance. \"";
         }
     }
     public int rarete
