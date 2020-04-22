@@ -22331,6 +22331,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 672e720ef69a65b44a71577cd7cc26ed, type: 3}
+--- !u!1 &754751612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754751614}
+  - component: {fileID: 754751613}
+  m_Layer: 0
+  m_Name: RoomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &754751613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754751612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16257ded6925fa240ba27c8df01cde3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolMonstreG1:
+  - {fileID: 6572569499185163300, guid: aaa3610f874241b499449e9f1497a18f, type: 3}
+  poolMonstreG2: []
+  poolMonstreG3: []
+  poolMonstreD1: []
+  poolMonstreD2: []
+  poolMonstreD3: []
+  Droite: {fileID: 1591322530080062945, guid: c25edb93f95925f4dbecd1e135aecbf9, type: 3}
+  Gauche: {fileID: 1591322530080062945, guid: fb69d41e25f1c5045a89f249349dc28f, type: 3}
+  poolSpecialG:
+  - {fileID: 4397478347723793963, guid: bc1cc8f66de45f74197562c6603a0b46, type: 3}
+  poolSpecialD: []
+--- !u!4 &754751614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754751612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 228.32979, y: -2.8937569, z: 164.99858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 256
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &755653403
 PrefabInstance:
   m_ObjectHideFlags: 0
