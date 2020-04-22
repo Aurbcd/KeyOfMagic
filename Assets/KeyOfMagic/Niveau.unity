@@ -305,7 +305,6 @@ MonoBehaviour:
   healthBar: {fileID: 2029596222}
   canvasGHealthBar: {fileID: 0}
   shieldBar: {fileID: 1750123520}
-  playerMaxShieldPoints: 0
   soundEffectNotif: {fileID: 243023876282429428, guid: 954701f1fcc7a4446a420b1ccc29e177,
     type: 2}
   soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
@@ -322,6 +321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spelldata: {fileID: 0}
+  playerspell: {fileID: 0}
+  elementdata: {fileID: 0}
   SpellDatabase:
     SpellBook: []
   PlayerSpellDatabase:
@@ -6111,6 +6113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
+  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
+  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
   SpellDatabase:
     SpellBook:
     - spellName: amoi
