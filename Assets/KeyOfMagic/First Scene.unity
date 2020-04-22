@@ -253,6 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spelldata: {fileID: 0}
+  playerspell: {fileID: 0}
+  elementdata: {fileID: 0}
   SpellDatabase:
     SpellBook: []
   PlayerSpellDatabase:
@@ -3263,10 +3266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1307660566}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 1ea9abd9c5804a94bb1bcbc4c54d7df1, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!4 &466351414
 Transform:
@@ -3294,12 +3297,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 802570676}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 0d738eae81c201e4ea90d889bc2d3c17, type: 3}
-  - {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
-  - {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351417
 MonoBehaviour:
@@ -3313,10 +3314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1840663355}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 6626cf996e2833a43908291940e37d39, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351418
 MonoBehaviour:
@@ -3330,10 +3331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 534732504}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
-  player: {fileID: 6572569499185163300, guid: 1d252a73c4684174a9f69bd3254e46f7, type: 3}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351419
 MonoBehaviour:
@@ -3347,10 +3348,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 795008732}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: a223c84fadf8d8e48be01833d4912da5, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351420
 MonoBehaviour:
@@ -3364,10 +3365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1820329822}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: b10114c022921f34b8338aa960546af6, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351421
 MonoBehaviour:
@@ -3381,10 +3382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1936775309}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: a561cb804cf0aa2449625ea7d48dadd7, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351422
 MonoBehaviour:
@@ -3398,10 +3399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1356851914}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: a60963f340c44e94f91512dfb9d110ce, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351423
 MonoBehaviour:
@@ -3415,10 +3416,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 2146329750}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 42b11674b2070e84dbda76e83461ba7a, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &466351424
 MonoBehaviour:
@@ -3432,10 +3433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 1386038580}
-  enemyPool:
-  - {fileID: 6572569499185163300, guid: 7986f5039970e4546a78afb91ddd7c1d, type: 3}
-  player: {fileID: 62560135}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!1 &534732503
 GameObject:
@@ -9465,6 +9466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
+  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
+  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
   SpellDatabase:
     SpellBook:
     - spellName: amoi
