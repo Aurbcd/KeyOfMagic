@@ -65,14 +65,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 22 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail") 
+        if(distanceToPlayer < 22 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail")
+        if (distanceToPlayer < 20 && distanceToPlayer > 15 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);

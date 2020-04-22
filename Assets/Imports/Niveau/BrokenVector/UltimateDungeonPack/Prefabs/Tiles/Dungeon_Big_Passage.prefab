@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7787867036480748200}
   - component: {fileID: 1632043848332801290}
   - component: {fileID: 6657444740610137783}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dungeon_Big_Passage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
