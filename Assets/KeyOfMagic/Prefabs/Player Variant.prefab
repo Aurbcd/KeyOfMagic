@@ -322,7 +322,7 @@ MonoBehaviour:
   "tempsSansAppuy\xE9": 4
   spellsPanel: {fileID: 0}
   spellsList: {fileID: 0}
-  shieldSpriteImage: {fileID: 0}
+  shieldSpriteImage: {fileID: 6588455381552108135}
   spellListStorage: []
 --- !u!114 &6728041762349379166
 MonoBehaviour:
