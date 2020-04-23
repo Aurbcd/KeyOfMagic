@@ -53,6 +53,10 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
+        foreach(Object item in InventaireScript.items)
+        {
+            DontDestroyOnLoad(item);
+        }
         if(PlayerStats.niveau == 3)
         {
             PlayerStats.niveau = 1;
