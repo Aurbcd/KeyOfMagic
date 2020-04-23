@@ -5,17 +5,19 @@ using UnityEngine;
 public class Porte : MonoBehaviour
 {
     public bool ouvert;
+    public bool sallePreBoss;
     public List<GameObject> lumieresAAllumer;
     private string objet;
     public string cote;
     //Son
-    public static AudioClip door;
+    public static AudioClip door,boss;
 
     // Start is called before the first frame update
     void Start()
     {
         ouvert = false;
         door = Resources.Load<AudioClip>("Porte");
+        boss = Resources.Load<AudioClip>("BossSFX");
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class Porte : MonoBehaviour
                 {
                     ouvert = true;
                     GetComponent<AudioSource>().PlayOneShot(door);
+                    if(sallePreBoss)
+                        GetComponent<AudioSource>().PlayOneShot(boss);
                     GetComponent<Animator>().SetBool("ouverture", true);
 
                     if(GetComponent<GenerationDeMonstre>() != null)

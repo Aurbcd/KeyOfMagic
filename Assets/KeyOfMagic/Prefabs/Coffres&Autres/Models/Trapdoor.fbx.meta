@@ -11,6 +11,8 @@ ModelImporter:
     100010: Marco3
     100012: Torus001
     100014: //RootNode
+    100016: Box001.001
+    100018: Box001.002
     400000: Box001
     400002: Box002
     400004: Box003
@@ -19,9 +21,12 @@ ModelImporter:
     400010: Marco3
     400012: Torus001
     400014: //RootNode
+    400016: Box001.001
+    400018: Box001.002
     2100000: 01 - Default
     2100002: 02 - Default
     2100004: 03 - Default
+    2100006: Material.001
     2300000: Box001
     2300002: Box002
     2300004: Box003
@@ -29,6 +34,8 @@ ModelImporter:
     2300008: Marco2
     2300010: Marco3
     2300012: Torus001
+    2300014: Box001.001
+    2300016: Box001.002
     3300000: Box001
     3300002: Box002
     3300004: Box003
@@ -36,6 +43,8 @@ ModelImporter:
     3300008: Marco2
     3300010: Marco3
     3300012: Torus001
+    3300014: Box001.001
+    3300016: Box001.002
     4300000: Marco1
     4300002: Marco2
     4300004: Marco3
@@ -43,6 +52,8 @@ ModelImporter:
     4300008: Box002
     4300010: Box003
     4300012: Torus001
+    4300014: Box001.001
+    4300016: Box001.002
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -59,6 +70,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: 03 - Default
     second: {fileID: 2100000, guid: 47c4cf602b2f7564a9d6f43af3e62d6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100004, guid: 4de4af86a2784124ba9101867359ec0b, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

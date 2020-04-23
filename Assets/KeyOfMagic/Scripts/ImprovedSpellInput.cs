@@ -322,12 +322,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log(PlayerStats.Difficulte);
-        }
-            
+    {           
         GameObject[] ListeMonstre = GameObject.FindGameObjectsWithTag("Ennemy");
         foreach (GameObject monstre in ListeMonstre)
         {

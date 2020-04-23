@@ -11,7 +11,7 @@ public class ChangeDiff : MonoBehaviour
     public Button button;
     private void Start()
     {
-        PlayerStats.Difficulte = 1.5f;
+        PlayerStats.Difficulte = 1f;
     }
 
     public void changeDiff(){

@@ -118,6 +118,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
         if (gameObject.GetComponent<MonsterStatText>().PV <= 0) //Mort
         {
+            GetComponent<BoxCollider>().enabled = false;
             mAnimator.SetBool("IsDead", true);
             GameObject[] aDetruire = GameObject.FindGameObjectsWithTag("ADetruireMonstre");
             foreach (GameObject s in aDetruire)

@@ -11,6 +11,10 @@ public class BarresInventaire : MonoBehaviour
     {
         inventaire.ItemAjouté += InventoryScript_ObjetAjoute;
         inventaire.ItemJeté += InventoryScript_ObjetJeté;
+        foreach(ItemInterface item in InventaireScript.items)
+        {
+            InventoryScript_ObjetAjoute(this, new InventoryEventArgs(item));
+        }
     }
 
 
