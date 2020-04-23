@@ -48,7 +48,7 @@ public class AI_PartieDunGolemTerre : MonoBehaviour
             displayText.text = "";
         }
         distanceToPlayer = (GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude;
-        if (distanceToPlayer < 15 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
+        if (distanceToPlayer < 10 && gameObject.GetComponent<MonsterStatText>().PV >= 0 && boule)
         {
             StartCoroutine(HeAttac());
         }

@@ -37,6 +37,7 @@ public class Trapdoor : MonoBehaviour
         {
             if (OpenTrapdoor)
             {
+                OpenTrapdoor = false;
                 StartCoroutine(Ouverture());
             }
         }
@@ -52,6 +53,12 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
+        if(PlayerStats.niveau == 3)
+        {
+            PlayerStats.niveau = 1;
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("MainMenu");
+        }
         PlayerStats.niveau += 1;
         int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
         Debug.Log(nomNiveauAGenerer[rand]);

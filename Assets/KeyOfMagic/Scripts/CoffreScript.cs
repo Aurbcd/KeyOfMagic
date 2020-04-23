@@ -30,7 +30,7 @@ public class CoffreScript : MonoBehaviour
     }
 
     void OnMouseDown() { 
-        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 9)
+        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 14)
         {
             if (!ouvert)
             {

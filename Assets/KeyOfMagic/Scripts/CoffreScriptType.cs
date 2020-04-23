@@ -21,7 +21,7 @@ public class CoffreScriptType : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseDown() { 
-        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 9)
+        if ((GetComponent<Transform>().position - ClickToMove.playerPosition).magnitude < 14)
         {
             if (!ouvert)
             {

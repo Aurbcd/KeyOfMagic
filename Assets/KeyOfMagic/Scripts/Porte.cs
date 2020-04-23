@@ -47,6 +47,8 @@ public class Porte : MonoBehaviour
                             light.enabled = true;
                             if (objet != null && objet.Equals("Coffre"))
                                 light.color = new Color(0.18f, 0.5f, 0.95f, 1f);
+                            if (objet != null && objet.Equals("Mimic"))
+                                light.color = new Color(0.18f, 0.5f, 0.95f, 1f);
                             if (objet != null && objet.Equals("Fontaine"))
                                 light.color = new Color(1f, 1f, 1f, 1f);
                             if (objet != null && objet.Equals("Parchemin"))

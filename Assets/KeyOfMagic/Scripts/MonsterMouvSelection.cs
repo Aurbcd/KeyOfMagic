@@ -47,6 +47,7 @@ public class MonsterMouvSelection : MonoBehaviour
         hitPAudio = Resources.Load<AudioClip>("HitP");
         hitSAudio = Resources.Load<AudioClip>("HitS");
         enemyA = Resources.Load<AudioClip>("Woosh");
+        transform.LookAt(ClickToMove.playerPosition);
     }
 
     // Update is called once per frame
@@ -65,7 +66,7 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
+        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
