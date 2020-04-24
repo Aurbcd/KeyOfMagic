@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: Partie de Golem
   PV: 750
-  PVMax: 7500
+  PVMax: 750
   element: Feu
   weakness: Eau
   resistance: "Electricit\xE9"

@@ -597,6 +597,7 @@ public class ImprovedSpellInput : MonoBehaviour
 
         if (Input.GetKeyDown("tab"))
         {
+            Trapdoor.OpenTrapdoor = true;
             spellsPanel.SetActive(true);
             newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
             foreach (SpellStorageEntry sse in spellListStorage)

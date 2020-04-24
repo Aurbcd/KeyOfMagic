@@ -22,7 +22,7 @@ public class RoomManager : MonoBehaviour
     void Start() 
     {
         //Niveau 1
-        if(Gauche.Capacity == 1 || Random.Range(0, 100) > 95)
+        if(Gauche.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolG1.Add(Gauche[0]);
         else
         {
@@ -35,7 +35,7 @@ public class RoomManager : MonoBehaviour
         if (poolSpecialG.Count != 0)
             PoolG1.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
 
-        if (Droite.Capacity == 1 || Random.Range(0, 100) > 95)
+        if (Droite.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolD1.Add(Droite[0]);
         else
         {
@@ -49,7 +49,7 @@ public class RoomManager : MonoBehaviour
              PoolD1.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
 
         //Niveau 2
-        if (Gauche.Capacity == 1 || Random.Range(0, 100) > 95)
+        if (Gauche.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolG2.Add(Gauche[0]);
         else
         {
@@ -62,7 +62,7 @@ public class RoomManager : MonoBehaviour
         if (poolSpecialG.Count != 0)
             PoolG2.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
 
-        if (Droite.Capacity == 1 || Random.Range(0, 100) > 95)
+        if (Droite.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolD2.Add(Droite[0]);
         else
         {
@@ -76,7 +76,7 @@ public class RoomManager : MonoBehaviour
             PoolD2.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement
 
         //Niveau 3
-        if (Gauche.Capacity == 1 || Random.Range(0, 100) > 95)
+        if (Gauche.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolG3.Add(Gauche[0]);
         else
         {
@@ -89,7 +89,7 @@ public class RoomManager : MonoBehaviour
         if (poolSpecialG.Count != 0)
             PoolG3.Add(poolSpecialG[Random.Range(0, poolSpecialG.Count)]); //Choisi un spécial aléatoirement
 
-        if (Droite.Capacity == 1 || Random.Range(0, 100) > 95)
+        if (Droite.Capacity == 1 || Random.Range(0, 100) > 5)
             PoolD3.Add(Droite[0]);
         else
         {
@@ -97,7 +97,7 @@ public class RoomManager : MonoBehaviour
         }
         foreach (GameObject monstre in poolMonstreD3)
         {
-            PoolD1.Add(monstre);
+            PoolD3.Add(monstre);
         }
         if (poolSpecialD.Count != 0)
             PoolD3.Add(poolSpecialD[Random.Range(0, poolSpecialD.Count)]); //Choisi un spécial aléatoirement

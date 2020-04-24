@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         //Generation aléatoire
         int rand = Random.Range(0, nomNiveauxAleatoire.Capacity);
+        PlayerStats.niveau = 1;
         Debug.Log(nomNiveauxAleatoire[rand]);
         SceneManager.LoadScene(nomNiveauxAleatoire[rand]);   
     }

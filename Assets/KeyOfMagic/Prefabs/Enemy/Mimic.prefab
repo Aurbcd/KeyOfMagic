@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 6572569499185163309}
   - component: {fileID: 114675402612241490}
   - component: {fileID: 3993538485302956838}
+  - component: {fileID: 114570187223025324}
   m_Layer: 10
   m_Name: Mimic
   m_TagString: Ennemy
@@ -951,6 +952,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114570187223025324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572569499185163300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67dac9b6fb8fda14f8fac0d51484c53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListeItem:
+  - {fileID: 1591322530080062945, guid: 457268d238df6c44a924c23f50f3e639, type: 3}
+  - {fileID: 1591322530080062945, guid: 2457da33b89e111499b96b62437cef3f, type: 3}
+  - {fileID: 1591322530080062945, guid: b1409f658ec3c6140997adf92ef3a15b, type: 3}
+  - {fileID: 1591322530080062945, guid: 2b383462e52eafc43ac0e2e3ec08686a, type: 3}
+  - {fileID: 1591322530080062945, guid: 28d2e623f52d0874e9534a1d9cac461c, type: 3}
+  - {fileID: 1591322530080062945, guid: b469283b899b2e344a159cec741c364f, type: 3}
+  - {fileID: 1591322530080062945, guid: 6040d82c0ecc87144a40aa7d822f11a0, type: 3}
+  - {fileID: 1591322530080062945, guid: 52b9de371eae8284aa5c1fa9847d2776, type: 3}
+  - {fileID: 1591322530080062945, guid: cf81a16437c99b54a84ad375ab153a4e, type: 3}
+  - {fileID: 1591322530080062945, guid: 9c6db2cc9d1872446959c8bb3724ed37, type: 3}
+  - {fileID: 1591322530080062945, guid: b3e85a87321e98d4e82bd1f4b5459265, type: 3}
+  - {fileID: 1591322530080062945, guid: 7e67ea907758fb64db72c96123cbec13, type: 3}
+  - {fileID: 1591322530080062945, guid: cc0c4152f03fc2145a8982927cfdaf63, type: 3}
+  - {fileID: 1591322530080062945, guid: 1a4aab5da783cec4e914c3b00b5d4c66, type: 3}
+  - {fileID: 1591322530080062945, guid: 87515ab62977c2a4da7656bbba7158ba, type: 3}
+  - {fileID: 1591322530080062945, guid: daa9acc56f0a7c241a334d938150e1c5, type: 3}
+  - {fileID: 1591322530080062945, guid: 04b5cac0afd95a34788537cd6abee4cb, type: 3}
+  - {fileID: 1591322530080062945, guid: 330ee7e134ee7324490405f98e70bd1b, type: 3}
+  - {fileID: 1591322530080062945, guid: 5ddb2111f7df4c748b2971aed97271e7, type: 3}
+  - {fileID: 1591322530080062945, guid: 7ac7c23325a520f4584b1dacb2d5909e, type: 3}
+  Drop: {fileID: 0}
 --- !u!1 &7518567346675445552
 GameObject:
   m_ObjectHideFlags: 0

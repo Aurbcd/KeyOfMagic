@@ -53,20 +53,22 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
-        foreach(Object item in InventaireScript.items)
-        {
-            DontDestroyOnLoad(item);
-        }
         if(PlayerStats.niveau == 3)
         {
-            PlayerStats.niveau = 1;
-            yield return new WaitForSeconds(1);
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Start Menu");
         }
         PlayerStats.niveau += 1;
         int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
         Debug.Log(nomNiveauAGenerer[rand]);
         yield return new WaitForSeconds(1);
+        foreach (Object item in InventaireScript.items)
+        {
+            DontDestroyOnLoad(item);
+        }
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
+        {
+            Destroy(item);
+        }
         SceneManager.LoadScene(nomNiveauAGenerer[rand]);
     }
 }
