@@ -64,7 +64,7 @@ public class ClickToMove : MonoBehaviour {
                 mAnimator.SetBool("Selectionne", false);
                 if (hit.collider.tag == "Sol") {
                     walkautomonstre = false;
-                    walkautoItem = false;
+                    walkautoItem = false; 
                     selectionne = false;
                     destination = hit.point;
                     mNavMeshAgent.destination = destination;

@@ -696,9 +696,9 @@ GameObject:
   - component: {fileID: 1664014399735710677}
   - component: {fileID: 6572569499185163306}
   - component: {fileID: 6572569499185163309}
-  - component: {fileID: 114675402612241490}
   - component: {fileID: 3993538485302956838}
   - component: {fileID: 114570187223025324}
+  - component: {fileID: 8385653577052107912}
   m_Layer: 10
   m_Name: Mimic
   m_TagString: Ennemy
@@ -829,32 +829,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &114675402612241490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572569499185163300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67618bd4c25cdc5488686b23f205f032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToPlayer: 0
-  element: 
-  choix: 
-  displayText: {fileID: 4221106119751356392}
-  curPos: {x: 0, y: 0, z: 0}
-  LastPos: {x: 0, y: 0, z: 0}
-  "aBoug\xE9": 0
-  affichage: 
-  VisuelSorts:
-  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
-  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
-  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
-  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
-  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
 --- !u!82 &3993538485302956838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -986,6 +960,32 @@ MonoBehaviour:
   - {fileID: 1591322530080062945, guid: 5ddb2111f7df4c748b2971aed97271e7, type: 3}
   - {fileID: 1591322530080062945, guid: 7ac7c23325a520f4584b1dacb2d5909e, type: 3}
   Drop: {fileID: 0}
+--- !u!114 &8385653577052107912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572569499185163300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89407e53ab7e3d94d8140a463ce47eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToPlayer: 0
+  element: 
+  choix: 
+  displayText: {fileID: 4221106119751356392}
+  curPos: {x: 0, y: 0, z: 0}
+  LastPos: {x: 0, y: 0, z: 0}
+  "aBoug\xE9": 0
+  affichage: 
+  VisuelSorts:
+  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
+  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
+  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
+  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
+  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
 --- !u!1 &7518567346675445552
 GameObject:
   m_ObjectHideFlags: 0
