@@ -7,6 +7,7 @@ public class CameraRotationFixed : MonoBehaviour
     public float turnSpeedX = 7.0f;
     public float turnSpeedY = 5.0f;
 
+    public bool touch;
     public Transform player;
     public Vector3 offset;
     private Vector3 vectorRotation;
@@ -33,15 +34,20 @@ public class CameraRotationFixed : MonoBehaviour
 
         if ((offset.magnitude > 6 && Input.mouseScrollDelta.y >= 0) || (Input.mouseScrollDelta.y <= 0 && offset.magnitude < 15))
         {
-                offset *= 1 - Input.mouseScrollDelta.y * 0.2f / ((offset.magnitude - 4));
+            if(touch)
+                offset *= 1 - Input.mouseScrollDelta.y * 0.05f;
+            else
+                offset *= 1 - Input.mouseScrollDelta.y * 0.2f;
         }
 
         transform.position = player.position + offset;
         transform.LookAt(playerHeadPosition);
+        touch = false;
     }
 
     void OnTriggerStay(Collider col)
     {
+        touch = true;
         if ((transform.position - player.position).magnitude > 3)
         {
             offset *= 1 - 0.1f;
