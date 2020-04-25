@@ -41,7 +41,7 @@ public class FICHETUTO : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" J'ai bien fait de la faire celle là ! \" - Vous";
+            return "\" J'ai bien fait de la faire celle-là ! \" - Vous";
         }
     }
 
