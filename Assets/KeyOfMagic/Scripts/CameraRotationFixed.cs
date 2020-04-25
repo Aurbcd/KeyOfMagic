@@ -8,13 +8,13 @@ public class CameraRotationFixed : MonoBehaviour
     public float turnSpeedY = 5.0f;
 
     public Transform player;
-    private Vector3 offset;
+    public Vector3 offset;
     private Vector3 vectorRotation;
     private Vector3 playerHeadPosition;
 
     void Start()
     {
-        offset = new Vector3(0, 5, -10);
+        offset = new Vector3(10, 5, 0);
         playerHeadPosition = new Vector3(player.position.x, player.position.y + 2, player.position.z);
     }
 
@@ -30,11 +30,10 @@ public class CameraRotationFixed : MonoBehaviour
             }
         }
         playerHeadPosition = new Vector3(player.position.x, player.position.y +2, player.position.z);
-        
 
         if ((offset.magnitude > 6 && Input.mouseScrollDelta.y >= 0) || (Input.mouseScrollDelta.y <= 0 && offset.magnitude < 15))
         {
-                offset *= 1 - Input.mouseScrollDelta.y * 0.1f;
+                offset *= 1 - Input.mouseScrollDelta.y * 0.2f / ((offset.magnitude - 4));
         }
 
         transform.position = player.position + offset;
