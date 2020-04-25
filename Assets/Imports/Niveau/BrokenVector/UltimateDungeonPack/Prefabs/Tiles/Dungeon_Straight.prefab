@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4054863357285806363}
   m_Layer: 0
   m_Name: Dungeon_Straight
-  m_TagString: Untagged
+  m_TagString: Sol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -66689,7 +66689,7 @@ PrefabInstance:
     - target: {fileID: 7000565256221777937, guid: 6b4084012e3eb484d9ef50bbbcf8a26a,
         type: 3}
       propertyPath: nomNiveauAGenerer.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7000565256221777937, guid: 6b4084012e3eb484d9ef50bbbcf8a26a,
         type: 3}
@@ -66700,6 +66700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nomNiveauAGenerer.Array.data[0]
       value: Layout1Bis
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000565256221777937, guid: 6b4084012e3eb484d9ef50bbbcf8a26a,
+        type: 3}
+      propertyPath: nomNiveauAGenerer.Array.data[1]
+      value: Layout2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b4084012e3eb484d9ef50bbbcf8a26a, type: 3}

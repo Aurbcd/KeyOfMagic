@@ -1657,6 +1657,7 @@ MonoBehaviour:
   nomNiveauxAleatoire:
   - Layout1
   - Layout1Bis
+  - Layout2
 --- !u!114 &1742838064
 MonoBehaviour:
   m_ObjectHideFlags: 0

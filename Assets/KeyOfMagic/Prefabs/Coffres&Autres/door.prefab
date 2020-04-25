@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3843913982182548688}
   - component: {fileID: 5147821539627769893}
   - component: {fileID: 1212758197436125060}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,9 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86253be8cafc2ee4a8a94e3b5c26cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 0}
-  enemyPool: []
-  player: {fileID: 0}
+  spawns: []
+  enemyPool1: []
+  enemyPool2: []
+  enemyPool3: []
   valeurAleatoire: 0
 --- !u!114 &5147821539627769893
 MonoBehaviour:
@@ -161,10 +162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ouvert: 0
+  sallePreBoss: 0
   lumieresAAllumer:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  cote: 
 --- !u!82 &1212758197436125060
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3754544204705501442}
   m_Layer: 0
   m_Name: "Dungeon_Straight_14\xB0"
-  m_TagString: Untagged
+  m_TagString: Sol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
