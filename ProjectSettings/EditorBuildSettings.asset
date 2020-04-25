@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/KeyOfMagic/Layout1Bis.unity
     guid: ff72e0722603e2d4d9c86af0d32dac9d
+  - enabled: 1
+    path: Assets/KeyOfMagic/Layout2.unity
+    guid: ff88f9020a6b94945b234538013a82f0
   m_configObjects: {}
