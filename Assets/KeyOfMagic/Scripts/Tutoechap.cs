@@ -19,7 +19,6 @@ public Canvas tutoBlinker;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             tutopanel.SetActive(true);
-            Debug.Log("Coucou");
             tutoBlinker.enabled = false; //Eteint le symbole qui clignotte
         }
         else if (Input.GetKeyUp(KeyCode.Escape))

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4108335079458519739}
   - component: {fileID: 4108335079459649659}
   - component: {fileID: 4108335079457384120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CoatHook_Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}

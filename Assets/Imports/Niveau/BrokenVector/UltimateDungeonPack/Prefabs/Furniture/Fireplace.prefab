@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2922107562325671190}
   - component: {fileID: 2922107562325671189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 2922107563029181350}
   - component: {fileID: 2922107563028214118}
   - component: {fileID: 597029741513522486}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
