@@ -21,7 +21,7 @@ public class IntroScript : MonoBehaviour
 
     IEnumerator Tutoriel()
     {
-        yield return new WaitForSeconds(13);
+        yield return new WaitForSeconds(19);
         SceneManager.LoadScene("Tutoriel");
     }
 }
