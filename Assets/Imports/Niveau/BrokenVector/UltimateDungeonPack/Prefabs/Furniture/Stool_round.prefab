@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 357478072314351367}
   - component: {fileID: 357478072317742887}
   - component: {fileID: 357478072316644839}
-  - component: {fileID: 5393336918001328538}
+  - component: {fileID: 3306868516454233775}
   m_Layer: 0
   m_Name: Stool_round
   m_TagString: Untagged
@@ -78,16 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5393336918001328538
-BoxCollider:
+--- !u!208 &3306868516454233775
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357478072314647335}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0048435675, y: 0.004843568, z: 0.004785037}
-  m_Center: {x: -8.1490725e-10, y: 0, z: 0.0023925186}
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.002, y: 0.002, z: 0.002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.002}
+  m_TimeToStationary: 0.5

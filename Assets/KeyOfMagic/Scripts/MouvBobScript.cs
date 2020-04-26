@@ -103,5 +103,12 @@ public class MouvBobScript : MonoBehaviour
             GetComponent<NavMeshAgent>().radius = 2.95f;
             GetComponent<AudioSource>().pitch = 1;
         }
+
+
+        if ((transform.position - ClickToMove.playerPosition).magnitude > 25)
+        {
+            mNavMeshAgent.Warp(mNavMeshAgent.destination);
+            mNavMeshAgent.ResetPath();
+        }            
     }
 }
