@@ -188,6 +188,7 @@ public class MonsterMouvSelection : MonoBehaviour
     {
         if (GetComponent<MonsterStatText>().monsterName != "Portail")
             GetComponent<MonsterStatText>().PV += 3;
+        mAnimator.SetBool("Moving", true);
         mAnimator.SetBool("Backing", true);
         MoveInDirection(basePositions);
     }
