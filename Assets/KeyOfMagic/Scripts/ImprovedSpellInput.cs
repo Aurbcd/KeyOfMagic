@@ -44,6 +44,7 @@ public class ImprovedSpellInput : MonoBehaviour
     private SpellDatabase spellBook;
     public List<SpellStorageEntry> spellListStorage = new List<SpellStorageEntry> { };
     private string spellList = "Sorts du grimoire :\n";
+    public Canvas tutoBlinker;
     bool isCapsLockOn;
     private GameObject monstreSelectionne;
     [DllImport("user32.dll")]
@@ -597,7 +598,6 @@ public class ImprovedSpellInput : MonoBehaviour
 
         if (Input.GetKeyDown("tab"))
         {
-            Trapdoor.OpenTrapdoor = true;
             spellsPanel.SetActive(true);
             newSpellBlinker.enabled = false; //Eteint le symbole qui clignotte
             foreach (SpellStorageEntry sse in spellListStorage)

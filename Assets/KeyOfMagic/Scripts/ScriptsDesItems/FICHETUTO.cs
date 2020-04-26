@@ -65,7 +65,7 @@ public class FICHETUTO : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        //ARTHUR FAIT LES CHOSES
+        GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<ImprovedSpellInput>().tutoBlinker.enabled = true;
         gameObject.SetActive(false);
     }
 
