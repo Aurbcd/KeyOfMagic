@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e73bcf720f7288439610bb135b4530e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouvementVertical: 1
-  mouvementRot: 1
+  mouvementVertical: 4
+  mouvementRot: 0.25
   axeRot: y
 --- !u!1 &345406899143419597
 GameObject:

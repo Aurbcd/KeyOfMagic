@@ -80,10 +80,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.43532717
-  m_Height: 2.8750696
+  m_Radius: 0.2
+  m_Height: 2.75
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4175348, z: -0.014672875}
+  m_Center: {x: 0, y: 1.23, z: -0.014672875}
 --- !u!82 &5987391922355657989
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,8 +219,8 @@ MonoBehaviour:
   projector: {fileID: 0}
   cursormode: 0
   hotSpot: {x: 0, y: 0}
-  CursorRamasser: {fileID: 2800000, guid: 4fee88e7ef452b146aa4add22a3da773, type: 3}
-  CursorClassique: {fileID: 2800000, guid: c0b55e16840fbb642b2d8836c473dc39, type: 3}
+  CursorRamasser: {fileID: 2800000, guid: bcfa8928f2842f54ba9950373c94f30a, type: 3}
+  CursorClassique: {fileID: 2800000, guid: f68734a896923fd4398790ddb268eaf2, type: 3}
   inventaire: {fileID: 0}
   soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
     type: 2}
@@ -243,6 +243,27 @@ MonoBehaviour:
     type: 2}
   soundEffectPlayer: {fileID: 243918193422275204, guid: 954701f1fcc7a4446a420b1ccc29e177,
     type: 2}
+--- !u!114 &6728041762349379166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972791196520126493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
+  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
+  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
+  SpellDatabase:
+    SpellBook: []
+  PlayerSpellDatabase:
+    SpellBook: []
+  ElementDatabase:
+    Elementdb: []
 --- !u!114 &8200998447441163474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,27 +345,6 @@ MonoBehaviour:
   spellsList: {fileID: 0}
   shieldSpriteImage: {fileID: 6588455381552108135}
   spellListStorage: []
---- !u!114 &6728041762349379166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972791196520126493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40116925db3df2b4ead8eb40ed061bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spelldata: {fileID: 4900000, guid: 241b4c6b5364cf94686d87d01a08d047, type: 3}
-  playerspell: {fileID: 4900000, guid: 7561f4f23b555a641b78833811d056de, type: 3}
-  elementdata: {fileID: 4900000, guid: e35276c3ba5722640b5148207978127a, type: 3}
-  SpellDatabase:
-    SpellBook: []
-  PlayerSpellDatabase:
-    SpellBook: []
-  ElementDatabase:
-    Elementdb: []
 --- !u!1 &3339304713358601230
 GameObject:
   m_ObjectHideFlags: 0
