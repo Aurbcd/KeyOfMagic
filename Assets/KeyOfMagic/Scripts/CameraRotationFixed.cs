@@ -34,10 +34,7 @@ public class CameraRotationFixed : MonoBehaviour
 
         if ((offset.magnitude > 6 && Input.mouseScrollDelta.y >= 0) || (Input.mouseScrollDelta.y <= 0 && offset.magnitude < 15))
         {
-            if(touch)
-                offset *= 1 - Input.mouseScrollDelta.y * 0.01f;
-            else
-                offset *= 1 - Input.mouseScrollDelta.y * 0.1f;
+            offset *= 1 - Input.mouseScrollDelta.y * 0.1f;
         }
 
         transform.position = player.position + offset;
@@ -46,18 +43,11 @@ public class CameraRotationFixed : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        touch = true;
         if ((transform.position - player.position).magnitude > 3)
         {
             offset *= 1 - 0.1f;
             transform.position = player.position + offset;
             transform.LookAt(playerHeadPosition);
         }
-        StartCoroutine(Att());
-    }
-    IEnumerator Att()
-    {
-        yield return new WaitForSeconds(1);
-        touch = false;
     }
 }
