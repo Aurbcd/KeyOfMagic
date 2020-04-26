@@ -10,7 +10,7 @@ public class PauseScript : MonoBehaviour
     public GameObject pauseMenuUI;
 
     void Update()
-    {
+    {/* 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameIsPaused = !GameIsPaused;
@@ -22,7 +22,7 @@ public class PauseScript : MonoBehaviour
             {
                 Pause();
             }
-        }
+        } */
     }
 
     public void Resume()
