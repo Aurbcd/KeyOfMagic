@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/KeyOfMagic/IntroVideo.unity
+    guid: 973271191eba79f43ad516df50b71456
+  - enabled: 1
+    path: Assets/KeyOfMagic/Tutoriel.unity
+    guid: 6dd79d98e8292f7429cf49068db37820
+  - enabled: 1
     path: Assets/KeyOfMagic/Start Menu.unity
     guid: 637ab4fd0ee7ad54e94054e9f61e0e7e
   - enabled: 0
