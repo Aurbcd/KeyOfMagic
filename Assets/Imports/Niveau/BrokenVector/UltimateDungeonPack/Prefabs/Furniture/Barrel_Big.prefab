@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5754540700685751215}
   - component: {fileID: 5754540700684424079}
   - component: {fileID: 5754540700683456847}
-  - component: {fileID: 68778741349484893}
+  - component: {fileID: 6955370495503497733}
   m_Layer: 0
   m_Name: Barrel_Big
   m_TagString: Untagged
@@ -79,16 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &68778741349484893
-BoxCollider:
+--- !u!208 &6955370495503497733
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5754540700685389711}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.025062185, y: 0.020737268, z: 0.027938845}
-  m_Center: {x: 0.0000000013969839, y: -0.00015011991, z: 0.013991202}
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.013, y: 0.010000001, z: 0.014}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.014}
+  m_TimeToStationary: 0.5
