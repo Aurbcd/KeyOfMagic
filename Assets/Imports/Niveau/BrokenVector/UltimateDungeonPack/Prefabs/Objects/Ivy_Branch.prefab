@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4601402560072701251}
   - component: {fileID: 4601402560071702403}
   - component: {fileID: 4601402560069699904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ivy_Branch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

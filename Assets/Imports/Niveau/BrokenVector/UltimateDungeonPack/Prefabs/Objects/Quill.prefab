@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8954041185956608008}
   - component: {fileID: 8954041185957608136}
   - component: {fileID: 8954041185955669001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Quill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3875462458775336980}
   - component: {fileID: 3875462458776435412}
   - component: {fileID: 3875462458774234133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Book_DeepRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

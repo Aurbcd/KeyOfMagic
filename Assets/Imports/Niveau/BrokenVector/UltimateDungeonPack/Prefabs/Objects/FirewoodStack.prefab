@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3392177451023102306}
   - component: {fileID: 3392177451022103458}
   - component: {fileID: 3164927517884080493}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirewoodStack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

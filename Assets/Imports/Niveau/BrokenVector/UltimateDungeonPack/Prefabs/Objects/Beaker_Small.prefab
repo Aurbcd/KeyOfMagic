@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7400456941557368596}
   - component: {fileID: 7400456941556237780}
   - component: {fileID: 7400456941558438677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Beaker_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2640387059951069713}
   - component: {fileID: 2640387059952036049}
   - component: {fileID: 2640387059949778450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scroll_Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}

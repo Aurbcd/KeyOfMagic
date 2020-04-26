@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1517516592174690488}
   - component: {fileID: 1517516592173560440}
   - component: {fileID: 1517516592175819959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ivy_Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}

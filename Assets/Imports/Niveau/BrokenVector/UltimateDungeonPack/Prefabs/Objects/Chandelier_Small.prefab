@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3918751410480782500}
   - component: {fileID: 3918751410480782499}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chandelier_Small_Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 3918751411055445868}
   - component: {fileID: 3918751411056412076}
   - component: {fileID: 3918751411058678635}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chandelier_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3918751411303488596}
   - component: {fileID: 3918751411303488595}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chandelier_Small_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
