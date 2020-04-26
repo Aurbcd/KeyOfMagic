@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2350066920135643178}
   - component: {fileID: 2350066920136413194}
   - component: {fileID: 2350066920137544394}
-  - component: {fileID: 2350066920135543817}
+  - component: {fileID: 3497756101121633194}
   m_Layer: 0
   m_Name: Amphora_Stand
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2350066920135543817
-MeshCollider:
+--- !u!65 &3497756101121633194
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +88,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: e21b6c9b113d50a4b865c5a99ce0a58e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.007858687, y: 0.017580938, z: 0.0059889723}
+  m_Center: {x: -0.0000000018626451, y: 0, z: 0.0029944861}
