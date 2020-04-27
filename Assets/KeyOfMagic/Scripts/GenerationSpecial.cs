@@ -17,7 +17,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolG1[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolG1[valeurAleatoire];
                 RoomManager.PoolG1.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -28,7 +28,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolG2[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolG2[valeurAleatoire];
                 RoomManager.PoolG2.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -39,7 +39,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolG3[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolG3[valeurAleatoire];
                 RoomManager.PoolG3.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -57,7 +57,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolD1[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolD1[valeurAleatoire];
                 RoomManager.PoolD1.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -68,7 +68,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolD2[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolD2[valeurAleatoire];
                 RoomManager.PoolD2.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -79,7 +79,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolD3[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolD3[valeurAleatoire];
                 RoomManager.PoolD3.RemoveAt(valeurAleatoire);
-                if (res.tag.Equals("Enigme"))
+                if (res.name.Equals("Tableaux"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;

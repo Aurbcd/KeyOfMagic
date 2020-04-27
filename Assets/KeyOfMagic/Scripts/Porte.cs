@@ -9,12 +9,14 @@ public class Porte : MonoBehaviour
     public List<GameObject> lumieresAAllumer;
     private string objet;
     public string cote;
+    public static int NombrePNJ;
     //Son
     public static AudioClip door,boss;
 
     // Start is called before the first frame update
     void Start()
     {
+        NombrePNJ = 1;
         ouvert = false;
         door = Resources.Load<AudioClip>("Porte");
         boss = Resources.Load<AudioClip>("BossSFX");
@@ -27,10 +29,10 @@ public class Porte : MonoBehaviour
         {
             if (!ouvert)
             {
-                if (GameObject.FindGameObjectsWithTag("Ennemy").Length == 1)
+                if (GameObject.FindGameObjectsWithTag("Ennemy").Length == NombrePNJ)
                 {
                     ouvert = true;
-                    GetComponent<AudioSource>().PlayOneShot(door);
+                    GetComponent<AudioSource>().PlayOneShot(door,0.5f);
                     if(sallePreBoss)
                         GetComponent<AudioSource>().PlayOneShot(boss);
                     GetComponent<Animator>().SetBool("ouverture", true);

@@ -82,7 +82,6 @@ public class ClickToMove : MonoBehaviour {
                     ItemInterface item = hit.collider.GetComponent<ItemInterface>();
                     if(item != null && (playerPosition - hit.collider.transform.position).magnitude < 5 && item.Nom !="Votre Fiche")
                     {
-                        Debug.Log("Oui");
                         inventaire.AjouterItem(item);
                     }
                     if(item != null && item.Nom.Equals("Votre Fiche"))

@@ -13,6 +13,7 @@ TagManager:
   - Bob
   - ADetruireMonstre
   - CoffreAFermer
+  - Tableau
   layers:
   - Default
   - TransparentFX
