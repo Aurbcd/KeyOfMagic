@@ -9,10 +9,6 @@ public class Buffer : MonoBehaviour
     void Update()
     {
         string element = transform.GetComponentInParent<EngimeTableau>().buffer[numero];
-        if(element == null)
-        {
-            GetComponent<ParticleSystem>().Stop();
-        }
         if (element != null && element.Equals("Terre")){
             GetComponent<ParticleSystem>().Play();
             ParticleSystem.MainModule settings = GetComponent<ParticleSystem>().main;

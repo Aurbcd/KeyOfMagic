@@ -53,6 +53,8 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
+        //Enigmes
+        EngimeChasseur.compteur = 0;
         if(PlayerStats.niveau == 3)
         {
             SceneManager.LoadScene("Start Menu");

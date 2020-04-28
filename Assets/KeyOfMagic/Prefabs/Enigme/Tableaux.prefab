@@ -9988,7 +9988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: Statue de peintre
+  monsterName: Statue du peintre
   PV: 500
   PVMax: 500
   element: 
@@ -10009,7 +10009,7 @@ NavMeshAgent:
   m_Radius: 0.95
   m_Speed: 0
   m_Acceleration: 0
-  avoidancePriority: 50
+  avoidancePriority: 0
   m_AngularSpeed: 0
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1

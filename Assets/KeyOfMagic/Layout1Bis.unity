@@ -47528,6 +47528,7 @@ MonoBehaviour:
   poolSpecialG:
   - {fileID: 4397478347723793963, guid: bc1cc8f66de45f74197562c6603a0b46, type: 3}
   - {fileID: 6572569499185163300, guid: 5e0cad28ded28ad40abe329a99a0d58c, type: 3}
+  - {fileID: 6572569499185163300, guid: 737bb4b6407a5c14d81a405b6bd2356b, type: 3}
   poolSpecialD: []
 --- !u!4 &1083082096
 Transform:
