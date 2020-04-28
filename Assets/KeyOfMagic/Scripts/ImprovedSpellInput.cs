@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using System.IO;
 using System.Runtime.InteropServices;
 using TMPro;
@@ -358,6 +359,8 @@ public class ImprovedSpellInput : MonoBehaviour
                 mAnimator.speed = 1 + 0.5f * inputField.text.Length;
             if (string.Compare(spell,"") != 0)
             {
+                GetComponent<NavMeshAgent>().ResetPath();
+                transform.LookAt(monstreSelectionne.transform);
                 if (spell[0].Equals('a') || spell[0].Equals('A'))
                 {
                     text.color = new Color32(28, 33, 238, 255); //BLEU EAU
