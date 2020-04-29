@@ -37,7 +37,7 @@ public class SpellFromScroll : MonoBehaviour
                 int counter = 0; //Pour savoir si on a vu tous les sorts
                 System.Random rand = new System.Random();
                 GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
-                while (player.GetComponent<ImprovedSpellInput>().spellListStorage.Exists(x => XmlManager.ins.SpellDatabase.SpellBook[spellIndice].spellName.ToLower().Equals(x.nom)) && counter < spellCount) //Test pour savoir si le sort est déjà dans la liste des sorts connues et si on a pas déjà testé tous les sorts
+                while (ImprovedSpellInput.spellListStorage.Exists(x => XmlManager.ins.SpellDatabase.SpellBook[spellIndice].spellName.ToLower().Equals(x.nom)) && counter < spellCount) //Test pour savoir si le sort est déjà dans la liste des sorts connues et si on a pas déjà testé tous les sorts
                 {
                     spellIndice = rand.Next(spellCount);
                     counter++;
@@ -48,11 +48,11 @@ public class SpellFromScroll : MonoBehaviour
                     return;
                 }
                 Debug.Log(XmlManager.ins.SpellDatabase.SpellBook[spellIndice].spellName.ToLower());
-                player.GetComponent<ImprovedSpellInput>().spellListStorage.Add(new ImprovedSpellInput.SpellStorageEntry(XmlManager.ins.SpellDatabase.SpellBook[spellIndice].spellName.ToLower(), -1, -1));
-                player.GetComponent<ImprovedSpellInput>().spellListStorage.Sort(delegate (ImprovedSpellInput.SpellStorageEntry s1, ImprovedSpellInput.SpellStorageEntry s2) { return s1.nom.CompareTo(s2.nom); });
+                ImprovedSpellInput.spellListStorage.Add(new ImprovedSpellInput.SpellStorageEntry(XmlManager.ins.SpellDatabase.SpellBook[spellIndice].spellName.ToLower(), -1, -1));
+                ImprovedSpellInput.spellListStorage.Sort(delegate (ImprovedSpellInput.SpellStorageEntry s1, ImprovedSpellInput.SpellStorageEntry s2) { return s1.nom.CompareTo(s2.nom); });
                 player.GetComponent<ImprovedSpellInput>().newSpellBlinker.enabled = true;
                 string spellList = "Sorts du grimoire :\n";
-                foreach (ImprovedSpellInput.SpellStorageEntry sse in player.GetComponent<ImprovedSpellInput>().spellListStorage) //Reconstruction du panneau tab car on ajouté un nouveau sort
+                foreach (ImprovedSpellInput.SpellStorageEntry sse in ImprovedSpellInput.spellListStorage) //Reconstruction du panneau tab car on ajouté un nouveau sort
                 {
                     string nouvmark = "";
                     string valAtk = "<sprite=2>";
