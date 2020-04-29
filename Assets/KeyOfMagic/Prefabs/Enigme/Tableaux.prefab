@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5723853509219897094}
   - component: {fileID: 3420158175068152149}
   - component: {fileID: 8041496033959341281}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Buffer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5000,7 +5000,7 @@ GameObject:
   - component: {fileID: 2894803785414031183}
   - component: {fileID: 5678517587161544361}
   - component: {fileID: 8383075906758855837}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Buffer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10294,7 +10294,7 @@ GameObject:
   - component: {fileID: 3500885486483006640}
   - component: {fileID: 3727717596054707344}
   - component: {fileID: 5105436173868382767}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Buffer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15001,9 +15001,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6572569499185163307}
     m_Modifications:
+    - target: {fileID: 100000, guid: 157d42151c0af5e42a3d90eababc8f07, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 157d42151c0af5e42a3d90eababc8f07, type: 3}
       propertyPath: m_Name
       value: Sclture painture (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 157d42151c0af5e42a3d90eababc8f07, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 157d42151c0af5e42a3d90eababc8f07, type: 3}
       propertyPath: m_LocalPosition.x
