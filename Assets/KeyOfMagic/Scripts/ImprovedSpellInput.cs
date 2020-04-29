@@ -193,10 +193,10 @@ public class ImprovedSpellInput : MonoBehaviour
             case "EMINITASI":
                 GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
                 break;
-            case "eterialam":
+            case "eterialim":
                 GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
                 break;
-            case "ETERIALAM":
+            case "ETERIALIM":
                 GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
                 break;
             case "otera":
