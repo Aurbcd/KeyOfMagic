@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.8862745, b: 0, a: 0.98039216}
+  m_Color: {r: 0.5131491, g: 1, b: 0.495283, a: 0.98039216}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -22746,7 +22746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appuyez sur Tab...
+  m_Text: Maintenir Tab...
 --- !u!222 &1013707626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30111,7 +30111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appuyez sur Echap...
+  m_Text: Maintenir Echap...
 --- !u!222 &1341292374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45594,7 +45594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2031450628
 RectTransform:
   m_ObjectHideFlags: 0
