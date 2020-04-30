@@ -84,7 +84,6 @@ public class AI_CultisteElectricite : MonoBehaviour
     }
     void groan()
     {
-        Debug.Log("test");
         GetComponent<AudioSource>().PlayOneShot(CultistGroan);
     }
 

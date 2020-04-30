@@ -9,22 +9,23 @@ public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
     public CanvasGroup canvasGHealthBar;
-    public static int playerHealthPoints=200;   
+    public static int playerHealthPoints;   
     public ShieldBar shieldBar;
-    public static int playerShieldPoints=0;
+    public static int playerShieldPoints;
     public static int playerMaxHeathPointsInitial = 200;
-    public static int playerMaxHeathPoints = 200;
+    public static int playerMaxHeathPoints;
     public static bool IsDead;
-    public static int playerMaxShieldPoints = 0;
-    public static string shieldElement ="";
+    public static int playerMaxShieldPoints;
+    public static string shieldElement;
     public static float Difficulte = 1.5f;
-    public static int niveau = 1;
+    public static int niveau;
     //mécaniques item
-    public static float DamageMultiplier=1; //Aucun est en pourcentage
-    public static float volDeVie=0;
-    public static float shieldMultiplier=1;
-    public static float resistanceMultiplier=1;
+    public static float DamageMultiplier; //Aucun est en pourcentage
+    public static float volDeVie;
+    public static float shieldMultiplier;
+    public static float resistanceMultiplier;
     private bool amHero = false;
+    private bool notHero = false;
     private bool trouve;
     private Animator mAnimator;
     public static AudioClip GameOverAudio;
@@ -86,6 +87,12 @@ public class PlayerStats : MonoBehaviour
     public void GameOverEvent()
     {
         Invoke("GameOver", 2f);
+        foreach (ItemInterface item in InventaireScript.items)
+        {
+            item.Jete();
+        }
+        InventaireScript.items.Clear();
+        InventaireScript.itemsRencontres.Clear();
     }
     public void GameOverSound()
     {
@@ -95,8 +102,16 @@ public class PlayerStats : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game Over");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        RoomManager.PoolD1.Clear();
+        RoomManager.PoolD2.Clear();
+        RoomManager.PoolD3.Clear();
+        RoomManager.PoolG1.Clear();
+        RoomManager.PoolG2.Clear();
+        RoomManager.PoolG3.Clear();
+        ImprovedSpellInput.spellListStorage.Clear();
+        //Enigmes
+        EngimeChasseur.compteur = 0;
+        SceneManager.LoadScene("Start Menu");
     }
 
     public void DamagePlayer(int damage, string attackElement){
@@ -112,15 +127,18 @@ public class PlayerStats : MonoBehaviour
             if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).weakness == attackElement)
             {
                 scaledDamage = (int) (2*damage);
+                notHero = true;
                 Debug.Log( attackElement + " est très efficace contre " + shieldElement);
             }
             else if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).resistance == attackElement)
             {
                 scaledDamage = (int) (0.5*damage);
                 Debug.Log(attackElement + " est pas efficace contre " + shieldElement);
+                notHero = false;
             }
             else
             {
+                notHero = false;
                 scaledDamage = damage;
                 Debug.Log("Neutre");
             }
@@ -136,9 +154,10 @@ public class PlayerStats : MonoBehaviour
             if ( (playerShieldPoints - scaledDamage) >0 )
             {
                 playerShieldPoints -= scaledDamage;
-                if (amHero)
+                if (amHero && notHero)
                 {
                     playerShieldPoints = 0;
+                    playerHealthPoints -= playerShieldPoints - scaledDamage;
                 }
             }
             else

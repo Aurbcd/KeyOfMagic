@@ -178,6 +178,7 @@ public class AI_Portail : MonoBehaviour
             estInvoqué = false;
             Terre = false;
             boule = true;
+            Electricite = false;
         }
     }
 }

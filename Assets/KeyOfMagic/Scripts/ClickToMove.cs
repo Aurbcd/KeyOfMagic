@@ -18,7 +18,7 @@ public class ClickToMove : MonoBehaviour {
     public GameObject pausePanel;
     public static Vector3 playerPosition;
     public static Vector3 playerRotation;
-    private float doubleClickTimeLimit = 0.25f;
+    private float doubleClickTimeLimit = 0.5f;
     public Projector projector;
     bool walkautomonstre = true;
     bool walkautoItem = true;
@@ -157,7 +157,7 @@ public class ClickToMove : MonoBehaviour {
 
     private IEnumerator ClickEvent () {
         //pause a frame so you don't pick up the same mouse down even
-        yield return new WaitForEndOfFrame ();
+        yield return new WaitForSeconds(0.1f);
 
         float count = 0f;
         while (count < doubleClickTimeLimit) {
