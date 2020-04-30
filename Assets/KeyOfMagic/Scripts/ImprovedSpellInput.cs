@@ -601,6 +601,14 @@ public class ImprovedSpellInput : MonoBehaviour
             //FIN
             animSortLance = false;
         }
+        else
+        {
+            inputField.DeactivateInputField(); //On ne peut plus taper de sorts
+            var tempColor = shieldSpriteImage.color;
+            tempColor.a = 0f;
+            shieldSpriteImage.color = tempColor;
+        }
+
         if (!Input.anyKey || Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
             tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
@@ -620,13 +628,6 @@ public class ImprovedSpellInput : MonoBehaviour
 
 
 
-        else
-        {
-            inputField.DeactivateInputField(); //On ne peut plus taper de sorts
-            var tempColor = shieldSpriteImage.color;
-            tempColor.a = 0f;
-            shieldSpriteImage.color = tempColor;
-        }
 
         if (Input.GetKeyDown("tab"))
         {
