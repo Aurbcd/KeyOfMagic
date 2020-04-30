@@ -600,25 +600,26 @@ public class ImprovedSpellInput : MonoBehaviour
 
             //FIN
             animSortLance = false;
-            if (!Input.anyKey)
-            {
-                tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
-            }
-            else
-            {
-                tempsSansAppuyé = 0;
-            }
-
-            if (tempsSansAppuyé >= tempsReset && spell != "") //Reset sort au bout de 3 secondes
-            {
-                tempsSansAppuyé = 0;
-                spell = "";
-                inputField.text = "";
-                Debug.Log("Saisie de sort reset");
-            }
-
-
         }
+        if (!Input.anyKey || Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        {
+            tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
+        }
+        else
+        {
+            tempsSansAppuyé = 0;
+        }
+
+        if (tempsSansAppuyé >= tempsReset && spell != "") //Reset sort au bout de 3 secondes
+        {
+            tempsSansAppuyé = 0;
+            spell = "";
+            inputField.text = "";
+            Debug.Log("Saisie de sort reset");
+        }
+
+
+
         else
         {
             inputField.DeactivateInputField(); //On ne peut plus taper de sorts

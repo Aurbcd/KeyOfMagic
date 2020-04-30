@@ -42,7 +42,7 @@ public class EngimeChasseur : MonoBehaviour
 
     private void Update() 
     {
-        if (nombreDePorte == compteur && !ouvert)
+        if (nombreDePorte >= compteur && !ouvert)
         {
             ouvert = true;
             GetComponent<AudioSource>().PlayOneShot(bravo);
