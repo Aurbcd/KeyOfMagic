@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/KeyOfMagic/Layout3Bis.unity
     guid: 051e921189c243a40aadbcdab909ae99
+  - enabled: 1
+    path: Assets/KeyOfMagic/First Scene.unity
+    guid: 4ea6870a437130a4b8486f92cbd51baf
   m_configObjects: {}

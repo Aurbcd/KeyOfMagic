@@ -25,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     public static float shieldMultiplier;
     public static float resistanceMultiplier;
     private bool amHero = false;
+    private bool notHero = false;
     private bool trouve;
     private Animator mAnimator;
     public static AudioClip GameOverAudio;
@@ -110,7 +111,7 @@ public class PlayerStats : MonoBehaviour
         ImprovedSpellInput.spellListStorage.Clear();
         //Enigmes
         EngimeChasseur.compteur = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Start Menu");
     }
 
     public void DamagePlayer(int damage, string attackElement){
@@ -126,15 +127,18 @@ public class PlayerStats : MonoBehaviour
             if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).weakness == attackElement)
             {
                 scaledDamage = (int) (2*damage);
+                notHero = true;
                 Debug.Log( attackElement + " est très efficace contre " + shieldElement);
             }
             else if (XmlManager.GetComponent<XmlManager>().ElementDatabase.Elementdb.Find(elementEntry => elementEntry.elementName == shieldElement).resistance == attackElement)
             {
                 scaledDamage = (int) (0.5*damage);
                 Debug.Log(attackElement + " est pas efficace contre " + shieldElement);
+                notHero = false;
             }
             else
             {
+                notHero = false;
                 scaledDamage = damage;
                 Debug.Log("Neutre");
             }
@@ -150,9 +154,10 @@ public class PlayerStats : MonoBehaviour
             if ( (playerShieldPoints - scaledDamage) >0 )
             {
                 playerShieldPoints -= scaledDamage;
-                if (amHero)
+                if (amHero && notHero)
                 {
                     playerShieldPoints = 0;
+                    playerHealthPoints -= playerShieldPoints - scaledDamage;
                 }
             }
             else
