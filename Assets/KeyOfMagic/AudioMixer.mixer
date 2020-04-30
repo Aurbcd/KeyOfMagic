@@ -15,7 +15,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 48f9aadd89a56084b8704b28c02145e6
+    name: VolMaster
+  - guid: 2f1e4f4328d46f44b9d4542dcc26ead3
+    name: VolMusic
+  - guid: e69e7e7c96d33ac4bba6649da09cb72d
+    name: VolNotif
   m_AudioMixerGroupViews:
   - guids:
     - b5e0d193c4cfcc54e87b32fbfab2466a
