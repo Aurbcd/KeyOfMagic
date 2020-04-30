@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 1
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e62dc1c391f616a4e8724167892354c9, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3062d58386c2ef340bfd91954780ebd4, type: 2}
 --- !u!1001 &1894393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,6 +1703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dungeon_Wall_Var2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617878760259904322, guid: 1696222c72e89ab4f9026119ef17826b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01461
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617878760259904322, guid: 1696222c72e89ab4f9026119ef17826b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0074530286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1696222c72e89ab4f9026119ef17826b, type: 3}
@@ -29812,17 +29822,17 @@ PrefabInstance:
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.490433
+      value: 13.98
       objectReference: {fileID: 0}
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6320698
+      value: -2.632
       objectReference: {fileID: 0}
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.781311
+      value: -1.91
       objectReference: {fileID: 0}
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
@@ -29867,7 +29877,7 @@ PrefabInstance:
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 300.00024
+      value: 287.70023
       objectReference: {fileID: 0}
     - target: {fileID: 7969972704443486089, guid: 3ef94e73d5607784fbcbba8de4155b1e,
         type: 3}
@@ -29883,6 +29893,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dungeon_Big_Wall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194851009779029006, guid: 3ef94e73d5607784fbcbba8de4155b1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0029
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194851009779029006, guid: 3ef94e73d5607784fbcbba8de4155b1e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07427068
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef94e73d5607784fbcbba8de4155b1e, type: 3}
@@ -34130,7 +34150,7 @@ PrefabInstance:
     - target: {fileID: 8011076794458981704, guid: b78909d98814b3d42aa488a008c30001,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.27
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 8011076794458981704, guid: b78909d98814b3d42aa488a008c30001,
         type: 3}
@@ -57572,7 +57592,7 @@ PrefabInstance:
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.761703
+      value: 24.74
       objectReference: {fileID: 0}
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
@@ -57582,7 +57602,7 @@ PrefabInstance:
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.980003
+      value: -10.389
       objectReference: {fileID: 0}
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
@@ -57627,12 +57647,12 @@ PrefabInstance:
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 300
+      value: 297
       objectReference: {fileID: 0}
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 300
+      value: 282.6
       objectReference: {fileID: 0}
     - target: {fileID: 7730142280078845091, guid: 5ae2b4c7b8cea2f45a6dcfa4fa52fe95,
         type: 3}
@@ -63384,7 +63404,7 @@ PrefabInstance:
     - target: {fileID: 616550316044516726, guid: 181b9cd164adee649bca859315bd668a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 229.65
+      value: 229.53
       objectReference: {fileID: 0}
     - target: {fileID: 616550316044516726, guid: 181b9cd164adee649bca859315bd668a,
         type: 3}

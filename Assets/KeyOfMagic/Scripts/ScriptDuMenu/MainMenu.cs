@@ -10,9 +10,14 @@ public class MainMenu : MonoBehaviour
         InitStats();
         //Generation aléatoire
         int rand = Random.Range(0, nomNiveauxAleatoire.Capacity);
-        PlayerStats.niveau = 1;
         Debug.Log(nomNiveauxAleatoire[rand]);
         SceneManager.LoadScene(nomNiveauxAleatoire[rand]);   
+    }
+
+    public void Tutoriel()
+    {
+        InitStats();
+        SceneManager.LoadScene("Tutoriel");
     }
 
     public void QuitGame()
@@ -20,7 +25,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void InitStats()
+    public static void InitStats()
     {
         PlayerStats.playerMaxHeathPoints = 200;
         PlayerStats.playerHealthPoints = 200;
@@ -32,5 +37,6 @@ public class MainMenu : MonoBehaviour
         PlayerStats.volDeVie = 0;
         PlayerStats.shieldMultiplier = 1;
         PlayerStats.resistanceMultiplier = 1;
+        PlayerStats.niveau = 1;
     }
 }

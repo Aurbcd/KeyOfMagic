@@ -23,7 +23,7 @@ public class MouvBobScript : MonoBehaviour
     }
     void walkSound()
     {
-        GetComponent<AudioSource>().PlayOneShot(bobWalk);
+        GetComponent<AudioSource>().PlayOneShot(bobWalk, 0.25f);
     }
     void jumpSound()
     {
@@ -31,7 +31,7 @@ public class MouvBobScript : MonoBehaviour
     }
     void attackSound()
     {
-        GetComponent<AudioSource>().PlayOneShot(bobAttack);
+        GetComponent<AudioSource>().PlayOneShot(bobAttack, 0.25f);
     }
 
     // Update is called once per frame

@@ -344,7 +344,6 @@ MonoBehaviour:
   spellsPanel: {fileID: 0}
   spellsList: {fileID: 0}
   shieldSpriteImage: {fileID: 6588455381552108135}
-  spellListStorage: []
   tutoBlinker: {fileID: 0}
 --- !u!1 &3339304713358601230
 GameObject:
