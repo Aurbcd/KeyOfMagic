@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 1664014399735710677}
   - component: {fileID: 6572569499185163306}
   - component: {fileID: 6572569499185163309}
-  - component: {fileID: 3992124327274016042}
+  - component: {fileID: 561841661207956891}
   - component: {fileID: 82281513830223324}
   m_Layer: 10
   m_Name: EngeanceDuMistral
@@ -787,7 +787,7 @@ MonoBehaviour:
   PVMax: 950
   element: Terre
   weakness: Air
-  resistance: Feu
+  resistance: Eau
   Barre: {fileID: 7886032980064505569}
   CanvasGBarre: {fileID: 8288141265081501994}
   Text: {fileID: 5733315573184057478}
@@ -828,7 +828,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3992124327274016042
+--- !u!114 &561841661207956891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6572569499185163300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a4068c7dfee5ba4088e42a0b46f61e8, type: 3}
+  m_Script: {fileID: 11500000, guid: e62ccce3d0b91ec49887ddada2f28022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPlayer: 0
@@ -848,12 +848,7 @@ MonoBehaviour:
   LastPos: {x: 0, y: 0, z: 0}
   "aBoug\xE9": 0
   affichage: 
-  VisuelSorts:
-  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
-  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
-  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
-  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
-  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
+  VisuelSorts: []
 --- !u!82 &82281513830223324
 AudioSource:
   m_ObjectHideFlags: 0

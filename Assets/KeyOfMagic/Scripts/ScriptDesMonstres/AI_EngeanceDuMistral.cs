@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class AI_EngeanceDeLaForet : MonoBehaviour
+public class AI_EngeanceDuMistral : MonoBehaviour
 {
     private int valeurAleatoire;
     public float distanceToPlayer;
@@ -69,7 +69,7 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
 
     void choixSpell()
     {
-            //ENGEANCE DE LA FORET : TERRE/AIR       
+            //ENGEANCE DU MISTRAL : TERRE/AIR
 
             //CHOIX 1 : élément
             System.Random aleatoire = new System.Random();
@@ -98,16 +98,16 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
             //Bouclier Autre : 60%/40%
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 60)
             {
-                element = "Terre";
+                element = "Air";
             }
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 60)
             {
-                element = "Air";
+                element = "Terre";
             }
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Feu
             {
                 choix = "estek";
             }
@@ -115,7 +115,7 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
             {
                 choix = "eminitasi";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Terre
+            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
             {
                 choix = "otera";
             }
@@ -124,7 +124,7 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
                 choix = "opinalica";
             }
 
-            //ENGEANCE DE LA FORET : TERRE/AIR       
+            //ENGEANCE DU MISTRAL : TERRE/AIR       
     }
     void groan()
     {
