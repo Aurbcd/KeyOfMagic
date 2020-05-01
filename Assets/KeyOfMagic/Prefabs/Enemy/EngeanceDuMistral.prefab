@@ -848,7 +848,12 @@ MonoBehaviour:
   LastPos: {x: 0, y: 0, z: 0}
   "aBoug\xE9": 0
   affichage: 
-  VisuelSorts: []
+  VisuelSorts:
+  - {fileID: 3835050707202631650, guid: d2bfd1dc6cdfff340808b6f2798159cd, type: 3}
+  - {fileID: 3835050707202631650, guid: a22f83343e68b0e4cab4efc32f79bccb, type: 3}
+  - {fileID: 3835050707202631650, guid: 7153008d0a289224d9a1523ff1b0e4ce, type: 3}
+  - {fileID: 3835050707202631650, guid: d7e27d138b3744c4bb9f02ff9065d192, type: 3}
+  - {fileID: 3835050707202631650, guid: fc601805f43bfe74d9b11970de0bd518, type: 3}
 --- !u!82 &82281513830223324
 AudioSource:
   m_ObjectHideFlags: 0
