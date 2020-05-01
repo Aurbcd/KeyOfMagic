@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
         PlayerStats.shieldMultiplier = 1;
         PlayerStats.resistanceMultiplier = 1;
         PlayerStats.niveau = 1;
+        ImprovedSpellInput.tempsReset = 60;
         PlayerStats.DifficulteInitiale = PlayerStats.Difficulte;
     }
 }

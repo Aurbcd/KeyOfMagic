@@ -32,7 +32,7 @@ public class ImprovedSpellInput : MonoBehaviour
     Renderer rendBag;
 
     //Mécanique d'objet sur l'hésitation
-    public static int tempsReset;
+    public static int tempsReset = 60;
     //Son
     public static AudioClip notifEff, notifBlinker, notifResist, bouclierLong, bouclierCourt, sortCourt, sortLong;
     public AudioMixerGroup soundEffectSorts;
@@ -53,7 +53,6 @@ public class ImprovedSpellInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tempsReset = 120;
         PopUpTextController.Initialize();
         rendBag = gameObject.transform.GetChild(3).transform.GetChild(2).GetComponent<Renderer>();
         //Initialisation du spellbook
@@ -618,7 +617,7 @@ public class ImprovedSpellInput : MonoBehaviour
             tempsSansAppuyé = 0;
         }
 
-        if (tempsSansAppuyé >= tempsReset && spell != "") //Reset sort au bout de 3 secondes
+        if (tempsSansAppuyé >= tempsReset && spell != "") //Reset sort au bout de 2 secondes
         {
             tempsSansAppuyé = 0;
             spell = "";
