@@ -5,7 +5,7 @@ public class CameraRotationFixed : MonoBehaviour
 {
 
     public static float turnSpeed = 5.0f;
-
+    public static int inverser = 1;
     public bool touch;
     public Transform player;
     public Vector3 offset;
@@ -23,7 +23,7 @@ public class CameraRotationFixed : MonoBehaviour
         vectorRotation = player.position - gameObject.GetComponent<Transform>().position;
         if (Input.GetMouseButton(1))
         {
-            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+            offset =  Quaternion.AngleAxis(inverser * Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
             if ((Input.GetAxis("Mouse Y") < 0 && Vector3.Angle(Vector3.up, vectorRotation) < 140) || (Input.GetAxis("Mouse Y") > 0 && Vector3.Angle(Vector3.up, vectorRotation) > 100))
             {
                 offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.Cross(vectorRotation, Vector3.up)) * offset;

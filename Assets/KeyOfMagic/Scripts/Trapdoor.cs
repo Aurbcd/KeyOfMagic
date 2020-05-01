@@ -57,7 +57,7 @@ public class Trapdoor : MonoBehaviour
         EngimeChasseur.compteur = 0;
         if(PlayerStats.niveau == 3)
         {
-            SceneManager.LoadScene("Start Menu");
+            SceneManager.LoadScene("Fin");
         }
         PlayerStats.niveau += 1;
         int rand = Random.Range(0, nomNiveauAGenerer.Capacity);

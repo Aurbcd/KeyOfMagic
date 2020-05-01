@@ -38,5 +38,6 @@ public class MainMenu : MonoBehaviour
         PlayerStats.shieldMultiplier = 1;
         PlayerStats.resistanceMultiplier = 1;
         PlayerStats.niveau = 1;
+        PlayerStats.DifficulteInitiale = PlayerStats.Difficulte;
     }
 }

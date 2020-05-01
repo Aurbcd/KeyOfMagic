@@ -15,7 +15,6 @@ public class MonsterMouvSelection : MonoBehaviour
     
     private bool loot;
     public bool IsDead;
-    private bool BobAttackRate;
 
     private float Position;
     public float distanceToPlayer;
@@ -36,7 +35,6 @@ public class MonsterMouvSelection : MonoBehaviour
 
     void Start()
     {
-        BobAttackRate = true;
         loot = false;
         IsDead = false;
         mNavMeshAgent = GetComponent<NavMeshAgent>();
@@ -85,10 +83,6 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             StopMovement();
             mAnimator.SetBool("Moving", false);
-            if (MouvBobScript.attack)
-            {
-                StartCoroutine(BobAttack());
-            }
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -173,16 +167,6 @@ public class MonsterMouvSelection : MonoBehaviour
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();
-    }
-    IEnumerator BobAttack()
-    {
-        if (BobAttackRate)
-        {
-            BobAttackRate = false;
-            yield return new WaitForSeconds(0.83f);
-            GetComponent<MonsterStatText>().PV -= 5;
-            BobAttackRate = true;
-        }
     }
     public void BackBase()
     {

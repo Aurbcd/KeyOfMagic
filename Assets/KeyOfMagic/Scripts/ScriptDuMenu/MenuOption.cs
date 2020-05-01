@@ -17,6 +17,15 @@ public class MenuOption : MonoBehaviour
         CameraRotationFixed.turnSpeed = sens;
     }
 
+    public void Inverser(bool i)
+    {
+        if(i)
+            CameraRotationFixed.inverser = -1;
+        if (!i)
+            CameraRotationFixed.inverser = 1;
+
+    }
+
 
     public void SetFullscreen(bool isFullscreen)
     {

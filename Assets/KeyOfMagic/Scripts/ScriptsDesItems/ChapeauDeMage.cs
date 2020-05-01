@@ -62,13 +62,13 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        PlayerStats.Difficulte -= 0.2f;
+        PlayerStats.Difficulte -= 0.1f * PlayerStats.DifficulteInitiale;
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        PlayerStats.Difficulte += 0.2f;
+        PlayerStats.Difficulte += 0.1f * PlayerStats.DifficulteInitiale;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 2f, 2f);
     }

@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public ShieldBar shieldBar;
     public static int playerShieldPoints;
     public static int playerMaxHeathPointsInitial = 200;
+    public static float DifficulteInitiale;
     public static int playerMaxHeathPoints;
     public static bool IsDead;
     public static int playerMaxShieldPoints;
