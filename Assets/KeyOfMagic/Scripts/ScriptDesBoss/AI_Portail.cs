@@ -99,7 +99,7 @@ public class AI_Portail : MonoBehaviour
     IEnumerator HeAttac()
     {
         boule = false;
-        Vector3 invokPosition = (transform.position + ClickToMove.playerPosition) / 2;
+        Vector3 invokPosition = transform.position + new Vector3(-5,0,0);
         if((!Eau) && (!Feu) && (!Terre) && (!Air) && (!Electricite))
         {
             if ((clone == null || !clone.activeSelf) && !estInvoqué)
