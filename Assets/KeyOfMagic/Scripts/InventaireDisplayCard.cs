@@ -42,7 +42,7 @@ public class InventaireDisplayCard : MonoBehaviour, IPointerEnterHandler, IPoint
                 return new Color32(19, 114, 113, 255);
             case 2:
                 return new Color32(152, 20, 52, 255);
-            case 4:
+            case 3:
                 return new Color32(155, 119, 0, 255);
             default:
                 return new Color32(255,255,255,0);
