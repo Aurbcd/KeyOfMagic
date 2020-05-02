@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(string niv)
     {
         transition.SetTrigger("Start");
+
+        //On tente de mettre des couleurs dans nos vies
+
+        this.transform.GetChild(3).transform.GetChild(0).transform.GetChild(2).GetComponent<TipsandTricks>().couleur();
+
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(niv);
     }
