@@ -7,6 +7,6 @@ public class PorteTutoriel : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("Start Menu");
+        GameObject.Find("Canvas").GetComponent<LevelLoader>().ChangeScene();
     }
 }

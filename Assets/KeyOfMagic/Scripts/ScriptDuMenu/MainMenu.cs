@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-    public List<string> nomNiveauxAleatoire;
+
+
     public void PlayGame()
     {
         InitStats();
-        //Generation aléatoire
-        int rand = Random.Range(0, nomNiveauxAleatoire.Capacity);
-        Debug.Log(nomNiveauxAleatoire[rand]);
-        SceneManager.LoadScene(nomNiveauxAleatoire[rand]);   
+        GetComponentInParent<LevelLoader>().ChangeScene();
     }
+
+
 
     public void Tutoriel()
     {
