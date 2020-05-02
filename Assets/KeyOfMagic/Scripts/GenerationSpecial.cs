@@ -17,7 +17,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolG1[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolG1[valeurAleatoire];
                 RoomManager.PoolG1.RemoveAt(valeurAleatoire);
-                if (res.name.Equals("Tableaux") || res.name.Equals("Chasseur"))
+                if (res.name.Equals("Tableaux") || res.name.Equals("Musique") || res.name.Equals("Chasseur"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;
@@ -28,7 +28,7 @@ public class GenerationSpecial : MonoBehaviour
                 Instantiate(RoomManager.PoolG2[valeurAleatoire], spawn.position, Quaternion.identity);
                 res = RoomManager.PoolG2[valeurAleatoire];
                 RoomManager.PoolG2.RemoveAt(valeurAleatoire);
-                if (res.name.Equals("Tableaux") || res.name.Equals("Chasseur"))
+                if (res.name.Equals("Tableaux") || res.name.Equals("Musique") || res.name.Equals("Chasseur"))
                     return "Enigme";
                 Debug.Log(res.name);
                 return res.name;

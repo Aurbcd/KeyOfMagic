@@ -12,7 +12,8 @@ public class Enigmezic : MonoBehaviour
     public List<string> choix = new List<string>();
     string type;
     //["u","u","e","e","u","u","o","a"]
-
+    public GameObject coffre;
+    public bool ouvert;
 
     //Son
     public static AudioClip feu;
@@ -22,10 +23,13 @@ public class Enigmezic : MonoBehaviour
     public static AudioClip terre;
     public static AudioClip enonce;
     public static AudioClip final;
+    int compteur;
+    bool victoire;
 
     void Start()
     {
-
+        Porte.NombrePNJ += 1;
+        ouvert = false;
         reponse.Capacity = 8;
         choix.Capacity = 8;
         reponse.Add("u"); reponse.Add("u"); reponse.Add("e"); reponse.Add("e"); reponse.Add("u"); reponse.Add("u"); reponse.Add("o"); reponse.Add("a");
@@ -35,28 +39,61 @@ public class Enigmezic : MonoBehaviour
         terre = Resources.Load<AudioClip>("terre");
         elec = Resources.Load<AudioClip>("elec");
         enonce = Resources.Load<AudioClip>("enonce");
-        final = Resources.Load<AudioClip>("final");
+        final = Resources.Load<AudioClip>("fontaine");
         player = GameObject.Find("Player");
-
-
+        compteur = 0;
+        victoire = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnMouseDown()
     {
         GetComponent<AudioSource>().PlayOneShot(enonce);
+    }
+
+    private void Update()
+    {
+        if (!GetComponent<MonsterMouvSelection>().estSelectionne)
+        {
+            GetComponent<AudioSource>().mute = true;
+            if(compteur <= 5)
+            {
+                compteur += 1;
+            }else
+            {
+                compteur = 0;
+                GetComponent<AudioSource>().Stop();
+            }
+        }
+        else
+        {
+            GetComponent<AudioSource>().mute = false;
+            compteur = 0;
+        }
+        if (victoire && !ouvert)
+        {
+            ouvert = true;
+            GameObject potion = Resources.Load<GameObject>("Potion");
+            Vector3 Aleatoire = new Vector3(UnityEngine.Random.Range(0, 1), 0, UnityEngine.Random.Range(0, 1));
+            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Aleatoire = new Vector3(UnityEngine.Random.Range(0, 2), 0, UnityEngine.Random.Range(0, 2));
+            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Aleatoire = new Vector3(UnityEngine.Random.Range(0, 3), 0, UnityEngine.Random.Range(0, 3));
+            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Aleatoire = new Vector3(UnityEngine.Random.Range(0, 4), 0, UnityEngine.Random.Range(0, 4));
+            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Aleatoire = new Vector3(UnityEngine.Random.Range(0, 4), 0, UnityEngine.Random.Range(0, 4));
+            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Aleatoire = new Vector3(UnityEngine.Random.Range(0, 5), 0, UnityEngine.Random.Range(0, 5));
+            Instantiate(coffre, transform.position + Aleatoire, Quaternion.identity);
+            tag = "Untagged";
+            Porte.NombrePNJ -= 1;
+        }
     }
     void groan()
     {
         if (Convert.ToBoolean(choix.Count.CompareTo(8)))
         {
             type = player.GetComponent<ImprovedSpellInput>().choix;
-
-
             Debug.Log(type);
             if (type[0].Equals('a'))
             {
@@ -87,11 +124,11 @@ public class Enigmezic : MonoBehaviour
             Debug.Log(choix.Count);
             if (CheckMatch(choix, reponse))
             {
-
+                victoire = true;
                 GetComponent<AudioSource>().PlayOneShot(final);
             }
         }
-        if (CheckMatch(choix, reponse))
+        else
         {
             choix.Clear();
         }

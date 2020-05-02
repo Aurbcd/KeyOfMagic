@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(string niv)
     {
         transition.SetTrigger("Start");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(niv);
     }
 }
