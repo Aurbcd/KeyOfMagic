@@ -11,8 +11,9 @@ public class TipsandTricks : MonoBehaviour
             "Vous pouvez apprendre de vos ennemis.",
             "Vous avez vraiment bien fait de faire cette fiche. N'oubliez pas d'appuyer sur Echap pour la consulter",
             "Bob est un cadeau de l'académie. Bien qu'il a toujours été docile, vous sentez une puissance dormante en lui.",
-            "<i>Combien je paye cette école pour y risquer ma vie déjà ?</i> - Vous",
-            "Vous ne pouvez pas vous deséquiper d'un objet. Ils sont de toutes façons bien trop précieux."
+            "<i>'Combien je paye cette école pour y risquer ma vie déjà ?'</i> - Vous",
+            "Vous ne pouvez pas vous deséquiper d'un objet. Ils sont de toutes façons bien trop précieux.",
+            "Explorer pourrait s'avérer utile."
     };
 
     void Start()
