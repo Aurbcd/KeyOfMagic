@@ -580,8 +580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Partie de Golem
-  PV: 750
-  PVMax: 750
+  PV: 1500
+  PVMax: 1500
   element: Terre
   weakness: Air
   resistance: Feu

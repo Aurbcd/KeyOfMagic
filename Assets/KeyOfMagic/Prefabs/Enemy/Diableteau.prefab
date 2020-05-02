@@ -783,8 +783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Diabloteau
-  PV: 1300
-  PVMax: 1300
+  PV: 1100
+  PVMax: 1100
   element: Eau
   weakness: Electricite
   resistance: Terre

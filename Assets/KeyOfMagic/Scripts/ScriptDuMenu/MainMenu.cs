@@ -4,20 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-    public List<string> nomNiveauxAleatoire;
+
+
     public void PlayGame()
     {
         InitStats();
-        //Generation aléatoire
-        int rand = Random.Range(0, nomNiveauxAleatoire.Capacity);
-        Debug.Log(nomNiveauxAleatoire[rand]);
-        SceneManager.LoadScene(nomNiveauxAleatoire[rand]);   
+        GetComponentInParent<LevelLoader>().ChangeScene();
     }
+
+
 
     public void Tutoriel()
     {
         InitStats();
         SceneManager.LoadScene("Tutoriel");
+    }
+
+    public void Back()
+    {
+        InitStats();
+        SceneManager.LoadScene("Start Menu");
     }
 
     public void QuitGame()
@@ -38,5 +44,7 @@ public class MainMenu : MonoBehaviour
         PlayerStats.shieldMultiplier = 1;
         PlayerStats.resistanceMultiplier = 1;
         PlayerStats.niveau = 1;
+        ImprovedSpellInput.tempsReset = 60;
+        PlayerStats.DifficulteInitiale = PlayerStats.Difficulte;
     }
 }

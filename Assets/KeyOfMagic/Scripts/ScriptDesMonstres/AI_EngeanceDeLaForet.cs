@@ -98,16 +98,16 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
             //Bouclier Autre : 60%/40%
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 60)
             {
-                element = "Air";
+                element = "Terre";
             }
             if (!PlayerStats.shieldElement.Equals("Electricite") && !PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 60)
             {
-                element = "Terre";
+                element = "Air";
             }
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Feu
+            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Air
             {
                 choix = "estek";
             }
@@ -115,7 +115,7 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
             {
                 choix = "eminitasi";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Terre
             {
                 choix = "otera";
             }

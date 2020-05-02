@@ -32,6 +32,8 @@ public class MouvBobScript : MonoBehaviour
     void attackSound()
     {
         GetComponent<AudioSource>().PlayOneShot(bobAttack, 0.25f);
+        montreSelectionne.GetComponent<MonsterStatText>().PV -= 4;
+        
     }
 
     // Update is called once per frame

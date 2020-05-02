@@ -15,7 +15,6 @@ public class MonsterMouvSelection : MonoBehaviour
     
     private bool loot;
     public bool IsDead;
-    private bool BobAttackRate;
 
     private float Position;
     public float distanceToPlayer;
@@ -36,7 +35,6 @@ public class MonsterMouvSelection : MonoBehaviour
 
     void Start()
     {
-        BobAttackRate = true;
         loot = false;
         IsDead = false;
         mNavMeshAgent = GetComponent<NavMeshAgent>();
@@ -66,14 +64,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin") 
+        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin")
+        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
@@ -85,10 +83,6 @@ public class MonsterMouvSelection : MonoBehaviour
         {
             StopMovement();
             mAnimator.SetBool("Moving", false);
-            if (MouvBobScript.attack)
-            {
-                StartCoroutine(BobAttack());
-            }
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -173,16 +167,6 @@ public class MonsterMouvSelection : MonoBehaviour
     public void StopMovement()
     {
         mNavMeshAgent.ResetPath();
-    }
-    IEnumerator BobAttack()
-    {
-        if (BobAttackRate)
-        {
-            BobAttackRate = false;
-            yield return new WaitForSeconds(0.83f);
-            GetComponent<MonsterStatText>().PV -= 5;
-            BobAttackRate = true;
-        }
     }
     public void BackBase()
     {

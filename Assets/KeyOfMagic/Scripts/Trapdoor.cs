@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Trapdoor : MonoBehaviour
 {
-    public List<string> nomNiveauAGenerer;
     public bool ouvert;
     private ParticleSystem PS;
     public static bool OpenTrapdoor;
@@ -55,13 +54,7 @@ public class Trapdoor : MonoBehaviour
         RoomManager.PoolG3.Clear();
         //Enigmes
         EngimeChasseur.compteur = 0;
-        if(PlayerStats.niveau == 3)
-        {
-            SceneManager.LoadScene("Start Menu");
-        }
         PlayerStats.niveau += 1;
-        int rand = Random.Range(0, nomNiveauAGenerer.Capacity);
-        Debug.Log(nomNiveauAGenerer[rand]);
         yield return new WaitForSeconds(1);
         foreach (Object item in InventaireScript.items)
         {
@@ -71,6 +64,6 @@ public class Trapdoor : MonoBehaviour
         {
             Destroy(item);
         }
-        SceneManager.LoadScene(nomNiveauAGenerer[rand]);
+        GameObject.Find("Canvas").GetComponent<LevelLoader>().ChangeScene();
     }
 }

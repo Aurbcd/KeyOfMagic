@@ -783,8 +783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: "Engeance de la For\xEAt"
-  PV: 800
-  PVMax: 800
+  PV: 900
+  PVMax: 900
   element: Terre
   weakness: Air
   resistance: Eau

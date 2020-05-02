@@ -65,14 +65,14 @@ public class ChevaliereDuDestin : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        PlayerStats.Difficulte -= 0.75f;
+        PlayerStats.Difficulte -= 0.3f * PlayerStats.DifficulteInitiale;
         ImprovedSpellInput.tempsReset = (int)(ImprovedSpellInput.tempsReset / 2);
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        PlayerStats.Difficulte += 0.75f;
+        PlayerStats.Difficulte += 0.3f * PlayerStats.DifficulteInitiale;
         ImprovedSpellInput.tempsReset = (int)(ImprovedSpellInput.tempsReset * 2);
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);

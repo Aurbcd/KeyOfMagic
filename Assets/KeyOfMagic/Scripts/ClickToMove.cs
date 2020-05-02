@@ -75,8 +75,9 @@ public class ClickToMove : MonoBehaviour {
                     transform.LookAt (hit.collider.transform);
                     GameObject.Find("Bob").transform.LookAt(hit.collider.transform);
                 }
-                if (hit.collider.tag == "Item")
+                if (hit.collider.tag == "Item" && !doubleclick)
                 {
+                    mNavMeshAgent.ResetPath();
                     selectionne = false;
                     transform.LookAt(hit.collider.transform);
                     ItemInterface item = hit.collider.GetComponent<ItemInterface>();

@@ -63,14 +63,14 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
 
     public void Ramasse()
     {
-        PlayerStats.Difficulte -= 0.2f;
+        PlayerStats.Difficulte -= 0.2f * PlayerStats.DifficulteInitiale;
         PlayerStats.shieldMultiplier += 0.1f;
         gameObject.SetActive(false);
     }
 
     public void Jete()
     {
-        PlayerStats.Difficulte += 0.2f;
+        PlayerStats.Difficulte += 0.2f * PlayerStats.DifficulteInitiale;
         PlayerStats.shieldMultiplier -= 0.1f;
         gameObject.SetActive(true);
         gameObject.transform.position = ClickToMove.playerPosition + new Vector3(2f, 0f, 2f);
