@@ -24,8 +24,16 @@ public class LevelLoader : MonoBehaviour
         GameObject.Find("MusicManager").GetComponent<AudioSource>().Stop();
         GameObject.Find("MusicManager").GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>("newgame"));
         //On tente de mettre des couleurs dans nos vies
-        if(!SceneManager.GetActiveScene().name.Equals("Tutoriel"))
-        this.transform.GetChild(3).transform.GetChild(0).transform.GetChild(2).GetComponent<TipsandTricks>().couleur();
+        if(!SceneManager.GetActiveScene().name.Equals("Tutoriel")){
+            if (SceneManager.GetActiveScene().name.Equals("Start Menu"))
+            {
+                this.transform.GetChild(3).transform.GetChild(0).transform.GetChild(2).GetComponent<TipsandTricks>().couleur();
+            }
+            else
+            {
+                this.transform.GetChild(1).transform.GetChild(0).transform.GetChild(2).GetComponent<TipsandTricks>().couleur();
+            }
+        }
 
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(niv);
