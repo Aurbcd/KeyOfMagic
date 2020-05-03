@@ -5,30 +5,50 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-
+    public static bool appuye;
+    private void Start()
+    {
+        appuye = false;
+    }
     public void PlayGame()
     {
-        InitStats();
-        GetComponentInParent<LevelLoader>().ChangeScene();
+        if (!appuye)
+        {
+            appuye = true;
+            InitStats();
+            GetComponentInParent<LevelLoader>().ChangeScene();
+        }
     }
 
 
 
     public void Tutoriel()
     {
-        InitStats();
-        SceneManager.LoadScene("Tutoriel");
-    }
+        if (!appuye)
+        {
+            appuye = true;
+            InitStats();
+            SceneManager.LoadScene("Tutoriel");
 
+        }
+    }
     public void Back()
     {
-        InitStats();
-        SceneManager.LoadScene("Start Menu");
+        if (!appuye)
+        {
+            appuye = true;
+            InitStats();
+            SceneManager.LoadScene("Start Menu");
+        }
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        if (!appuye)
+        {
+            appuye = true;
+            Application.Quit();
+        }
     }
 
     public static void InitStats()

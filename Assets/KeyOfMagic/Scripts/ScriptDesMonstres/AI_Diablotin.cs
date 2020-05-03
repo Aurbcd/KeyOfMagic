@@ -77,21 +77,21 @@ public class AI_Diablotin : MonoBehaviour
             valeurAleatoire = aleatoire.Next(100);
 
             //Bouclier Electricite : 75% Terre, 25% Feu 
-            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 75)
+            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 60)
             {
                 element = "Terre";
             }
-            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 75)
+            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 60)
             {
                 element = "Feu";
             }
 
             //Bouclier Air : 75% Feu, 25% Terre
-            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 75)
+            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire <= 60)
             {
                 element = "Feu";
             }
-            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 75)
+            if (PlayerStats.shieldElement.Equals("Air") && valeurAleatoire > 60)
             {
                 element = "Terre";
             }
@@ -155,7 +155,7 @@ public class AI_Diablotin : MonoBehaviour
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
-            yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
+            yield return new WaitForSeconds(1 / (PlayerStats.Difficulte + 0.25f));
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {

@@ -32,6 +32,8 @@ public class Porte : MonoBehaviour
                 if (GameObject.FindGameObjectsWithTag("Ennemy").Length == NombrePNJ)
                 {
                     ouvert = true;
+                    BoxCollider bx = GetComponent<BoxCollider>();
+                    bx.size = new Vector3(1.34f, 0.33f, 2.174f);
                     EngimeChasseur.compteur += 1;
                     GetComponent<AudioSource>().PlayOneShot(door,0.5f);
                     if(sallePreBoss)

@@ -77,21 +77,21 @@ public class AI_Diabloteau : MonoBehaviour
             valeurAleatoire = aleatoire.Next(100);
 
             //Bouclier Feu : 75% Eau, 25% Terre
-            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire <= 75)
+            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire <= 60)
             {
                 element = "Eau";
             }
-            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire > 75)
+            if (PlayerStats.shieldElement.Equals("Feu") && valeurAleatoire > 60)
             {
                 element = "Terre";
             }
 
             //Bouclier Electricite : 75% Terre, 25% Eau
-            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 75)
+            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire <= 60)
             {
                 element = "Terre";
             }
-            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 75)
+            if (PlayerStats.shieldElement.Equals("Electricite") && valeurAleatoire > 60)
             {
                 element = "Eau";
             }
@@ -154,7 +154,7 @@ public class AI_Diabloteau : MonoBehaviour
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
-            yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
+            yield return new WaitForSeconds(1 / (PlayerStats.Difficulte + 0.25f));
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {
