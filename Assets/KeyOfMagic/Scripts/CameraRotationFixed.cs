@@ -42,9 +42,15 @@ public class CameraRotationFixed : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if ((transform.position - player.position).magnitude > 3)
+        if ((transform.position - player.position).magnitude > 2 && !col.tag.Equals("door"))
         {
             offset *= 1 - 0.1f;
+            transform.position = player.position + offset;
+            transform.LookAt(playerHeadPosition);
+        }
+        if ((transform.position - player.position).magnitude > 2 && col.tag.Equals("door"))
+        {
+            offset *= 1 - 0.2f;
             transform.position = player.position + offset;
             transform.LookAt(playerHeadPosition);
         }

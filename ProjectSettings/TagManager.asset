@@ -14,6 +14,7 @@ TagManager:
   - ADetruireMonstre
   - CoffreAFermer
   - Tableau
+  - door
   layers:
   - Default
   - TransparentFX
