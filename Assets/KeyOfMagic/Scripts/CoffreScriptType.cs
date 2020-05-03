@@ -73,7 +73,7 @@ public class CoffreScriptType : MonoBehaviour
                 ouvert = true;
                 this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Open", true);
                 GetComponent<AudioSource>().PlayOneShot(coffre);
-                Instantiate(Drop, (transform.position + ClickToMove.playerPosition) / 2, Quaternion.identity);
+                Instantiate(Drop, transform.localPosition + transform.TransformDirection(new Vector3(-1.5f, 0,0)), Quaternion.identity);
                 Collider collider = (choix as MonoBehaviour).GetComponent<Collider>();
                 if (!collider.enabled)
                 {
