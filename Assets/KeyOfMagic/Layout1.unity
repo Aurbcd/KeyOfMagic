@@ -24376,11 +24376,6 @@ PrefabInstance:
       propertyPath: "lumi\xE8resAAllumer.Array.data[2]"
       value: 
       objectReference: {fileID: 1537288904}
-    - target: {fileID: 616550316034888342, guid: 181b9cd164adee649bca859315bd668a,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 616550316044411222, guid: 181b9cd164adee649bca859315bd668a,
         type: 3}
       propertyPath: m_Name
@@ -102576,7 +102571,7 @@ PrefabInstance:
     - target: {fileID: 1972791196520416317, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 250.02452
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1972791196520416317, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
@@ -102586,7 +102581,7 @@ PrefabInstance:
     - target: {fileID: 1972791196520416317, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 165.02072
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 1972791196520416317, guid: 71854c37b51d54e41b1583bcd0dc6760,
         type: 3}
