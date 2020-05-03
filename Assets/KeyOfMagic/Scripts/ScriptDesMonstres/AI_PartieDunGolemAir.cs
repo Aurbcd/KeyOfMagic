@@ -144,7 +144,7 @@ public class AI_PartieDunGolemAir : MonoBehaviour
         aBougé = false;
         for (int i = 0; i < choix.Length; i++)
         {
-            yield return new WaitForSeconds(1 / PlayerStats.Difficulte);
+            yield return new WaitForSeconds(1 / (PlayerStats.Difficulte + 0.5f));
             affichage += choix[i];
             if (aBougé || GetComponent<MonsterMouvSelection>().IsDead)
             {

@@ -107,19 +107,19 @@ public class AI_EngeanceDeLaForet : MonoBehaviour
 
             //CHOIX 2 : Sort
             valeurAleatoire = aleatoire.Next(100);
-            if (element.Equals("Air") && valeurAleatoire <= 75) //Cas Air
+            if (element.Equals("Air") && valeurAleatoire <= 60) //Cas Air
             {
                 choix = "estek";
             }
-            if (element.Equals("Air") && valeurAleatoire > 75)
+            if (element.Equals("Air") && valeurAleatoire > 60)
             {
                 choix = "eminitasi";
             }
-            if (element.Equals("Terre") && valeurAleatoire <= 75) //Cas Terre
+            if (element.Equals("Terre") && valeurAleatoire <= 60) //Cas Terre
             {
                 choix = "otera";
             }
-            if (element.Equals("Terre") && valeurAleatoire > 75)
+            if (element.Equals("Terre") && valeurAleatoire > 60)
             {
                 choix = "opinalica";
             }
