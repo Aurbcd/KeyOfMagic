@@ -10,16 +10,20 @@ public class Porte : MonoBehaviour
     private string objet;
     public string cote;
     public static int NombrePNJ;
+    public bool Special;
     //Son
-    public static AudioClip door,boss;
+    public static AudioClip door,boss,jingle;
 
     // Start is called before the first frame update
     void Start()
     {
+        Special = false;
         NombrePNJ = 1;
         ouvert = false;
         door = Resources.Load<AudioClip>("Porte");
         boss = Resources.Load<AudioClip>("BossSFX");
+        jingle = Resources.Load<AudioClip>("jingle");
+
     }
 
     // Update is called once per frame
@@ -51,15 +55,35 @@ public class Porte : MonoBehaviour
                         {
                             light.enabled = true;
                             if (objet != null && objet.Equals("Coffre"))
+                            {
                                 light.color = new Color(0.18f, 0.5f, 0.95f, 1f);
+                                Special = true;
+                            }
                             if (objet != null && objet.Equals("Mimic"))
+                            {
                                 light.color = new Color(0.18f, 0.5f, 0.95f, 1f);
+                                Special = true;
+                            }
                             if (objet != null && objet.Equals("Fontaine"))
+                            {
                                 light.color = new Color(1f, 1f, 1f, 1f);
+                                Special = true;
+                            }
                             if (objet != null && objet.Equals("Parchemin"))
+                            {
                                 light.color = new Color(0.18f, 0.95f, 0.19f, 1f);
+                                Special = true;
+                            }
                             if (objet != null && objet.Equals("Enigme"))
+                            {
                                 light.color = new Color(0.85f, 0.18f, 0.95f, 1f);
+                                Special = true;
+                            }
+                        }
+                        if (Special)
+                        {
+                            GetComponent<AudioSource>().PlayOneShot(jingle, 0.5f);
+                            Special = false;
                         }
                     }
                 }
