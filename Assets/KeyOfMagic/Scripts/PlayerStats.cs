@@ -109,6 +109,7 @@ public class PlayerStats : MonoBehaviour
         RoomManager.PoolG1.Clear();
         RoomManager.PoolG2.Clear();
         RoomManager.PoolG3.Clear();
+        InventaireScript.itemsRencontres.Clear();
         ImprovedSpellInput.spellListStorage.Clear();
         //Enigmes
         EngimeChasseur.compteur = 0;

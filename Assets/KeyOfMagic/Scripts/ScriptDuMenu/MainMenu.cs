@@ -37,6 +37,16 @@ public class MainMenu : MonoBehaviour
         if (!appuye)
         {
             appuye = true;
+            RoomManager.PoolD1.Clear();
+            RoomManager.PoolD2.Clear();
+            RoomManager.PoolD3.Clear();
+            RoomManager.PoolG1.Clear();
+            RoomManager.PoolG2.Clear();
+            RoomManager.PoolG3.Clear();
+            ImprovedSpellInput.spellListStorage.Clear();
+            //Enigmes
+            EngimeChasseur.compteur = 0;
+            InventaireScript.itemsRencontres.Clear();
             InitStats();
             SceneManager.LoadScene("Start Menu");
         }
