@@ -26,7 +26,7 @@ public class CameraRotationFixed : MonoBehaviour
             offset =  Quaternion.AngleAxis(inverser * Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
             if ((Input.GetAxis("Mouse Y") < 0 && Vector3.Angle(Vector3.up, vectorRotation) < 140) || (Input.GetAxis("Mouse Y") > 0 && Vector3.Angle(Vector3.up, vectorRotation) > 100))
             {
-                offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.Cross(vectorRotation, Vector3.up)) * offset;
+                offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed/1.5f, Vector3.Cross(vectorRotation, Vector3.up)) * offset;
             }
         }
         playerHeadPosition = new Vector3(player.position.x, player.position.y +2, player.position.z);
@@ -42,9 +42,15 @@ public class CameraRotationFixed : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if ((transform.position - player.position).magnitude > 3)
+        if ((transform.position - player.position).magnitude > 4 && !col.tag.Equals("door"))
         {
             offset *= 1 - 0.1f;
+            transform.position = player.position + offset;
+            transform.LookAt(playerHeadPosition);
+        }
+        if ((transform.position - player.position).magnitude > 4 && col.tag.Equals("door"))
+        {
+            offset *= 1 - 0.2f;
             transform.position = player.position + offset;
             transform.LookAt(playerHeadPosition);
         }

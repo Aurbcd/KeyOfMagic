@@ -14,6 +14,8 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     //Detect if the Cursor starts to pass over the GameObject
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
+        if (!MainMenu.appuye)
+        {
         //Souligne le texte du TMP du bouton
         string text = this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
         textancien = text;
@@ -23,16 +25,20 @@ public class OnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             animator.SetBool("play",true);
         }
+        }
     }
 
     //Detect when Cursor leaves the GameObject
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        //Dé-souligne le texte du TMP
-        this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = textancien;
-        if (animator != null)
+        if (!MainMenu.appuye)
         {
-            animator.SetBool("play", false);
+            //Dé-souligne le texte du TMP
+            this.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = textancien;
+            if (animator != null)
+            {
+                animator.SetBool("play", false);
+            }
         }
     }
 

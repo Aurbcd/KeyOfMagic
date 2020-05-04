@@ -155,6 +155,7 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             //SORTS
             case "awali":
+                Debug.Log("oui");
                 GetComponent<AudioSource>().PlayOneShot(sortCourt, 0.5f);
                 break;
             case "AWALI":

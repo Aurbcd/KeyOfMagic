@@ -55,7 +55,8 @@ public class Enigmezic : MonoBehaviour
         if (!GetComponent<MonsterMouvSelection>().estSelectionne)
         {
             GetComponent<AudioSource>().mute = true;
-            if(compteur <= 5)
+            choix.Clear();
+            if (compteur <= 5)
             {
                 compteur += 1;
             }else
@@ -74,17 +75,17 @@ public class Enigmezic : MonoBehaviour
             ouvert = true;
             GameObject potion = Resources.Load<GameObject>("Potion");
             Vector3 Aleatoire = new Vector3(UnityEngine.Random.Range(0, 1), 0, UnityEngine.Random.Range(0, 1));
-            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(potion, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             Aleatoire = new Vector3(UnityEngine.Random.Range(0, 2), 0, UnityEngine.Random.Range(0, 2));
-            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(potion, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             Aleatoire = new Vector3(UnityEngine.Random.Range(0, 3), 0, UnityEngine.Random.Range(0, 3));
-            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(potion, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             Aleatoire = new Vector3(UnityEngine.Random.Range(0, 4), 0, UnityEngine.Random.Range(0, 4));
-            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(potion, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             Aleatoire = new Vector3(UnityEngine.Random.Range(0, 4), 0, UnityEngine.Random.Range(0, 4));
-            Instantiate(potion, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(potion, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             Aleatoire = new Vector3(UnityEngine.Random.Range(0, 5), 0, UnityEngine.Random.Range(0, 5));
-            Instantiate(coffre, transform.position + Aleatoire, Quaternion.identity);
+            Instantiate(coffre, transform.localPosition + transform.TransformDirection(Aleatoire), Quaternion.identity);
             tag = "Untagged";
             Porte.NombrePNJ -= 1;
         }

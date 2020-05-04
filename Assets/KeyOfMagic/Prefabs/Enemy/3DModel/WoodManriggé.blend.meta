@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: dfe817a83cdb7ed458ca49796bae890e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: avtbrasDroit
+    100004: avtbrasGauche
+    100006: Bone
+    100008: Bone.001
+    100010: Bone.002
+    100012: Bone.003
+    100014: Bone.003_end
+    100016: Bone.004
+    100018: Bone.005
+    100020: Bone.006
+    100022: Bone.006_end
+    100024: Bone.007
+    100026: Bone.007_end
+    100028: Bone.008
+    100030: Bone.009
+    100032: Bone.010
+    100034: Bone.010_end
+    100036: Bone.011
+    100038: Bone.011_end
+    100040: Bone.012
+    100042: Bone.013
+    100044: Bone.014
+    100046: Bone.014_end
+    100048: Bone.015
+    100050: Bone.016
+    100052: Bone.017
+    100054: Bone.017_end
+    100056: Bone.018
+    100058: Bone.019
+    100060: Bone.020
+    100062: Bone.020_end
+    100064: brasDroit
+    100066: brasGauche
+    100068: chevilleDroite
+    100070: chevilleGauche
+    100072: corps
+    100074: cou
+    100076: coudeDroit
+    100078: coudeGauche
+    100080: Cube
+    100082: Cube.001
+    100084: Cube.002
+    100086: Cube.003
+    100088: Cube.004
+    100090: Cube.005
+    100092: genouDroit
+    100094: genouGauche
+    100096: hancheDroite
+    100098: hancheGauche
+    100100: jambeDroite
+    100102: jambeGauche
+    100104: nez
+    100106: oeilDroit
+    100108: oeilGauche
+    100110: piedDroit
+    100112: piedGauche
+    100114: Plane
+    100116: Sun
+    100118: Sun.001
+    100120: tete
+    100122: tibiaDroit
+    100124: tibiaGauche
+    100126: //RootNode
+    400000: Armature
+    400002: avtbrasDroit
+    400004: avtbrasGauche
+    400006: Bone
+    400008: Bone.001
+    400010: Bone.002
+    400012: Bone.003
+    400014: Bone.003_end
+    400016: Bone.004
+    400018: Bone.005
+    400020: Bone.006
+    400022: Bone.006_end
+    400024: Bone.007
+    400026: Bone.007_end
+    400028: Bone.008
+    400030: Bone.009
+    400032: Bone.010
+    400034: Bone.010_end
+    400036: Bone.011
+    400038: Bone.011_end
+    400040: Bone.012
+    400042: Bone.013
+    400044: Bone.014
+    400046: Bone.014_end
+    400048: Bone.015
+    400050: Bone.016
+    400052: Bone.017
+    400054: Bone.017_end
+    400056: Bone.018
+    400058: Bone.019
+    400060: Bone.020
+    400062: Bone.020_end
+    400064: brasDroit
+    400066: brasGauche
+    400068: chevilleDroite
+    400070: chevilleGauche
+    400072: corps
+    400074: cou
+    400076: coudeDroit
+    400078: coudeGauche
+    400080: Cube
+    400082: Cube.001
+    400084: Cube.002
+    400086: Cube.003
+    400088: Cube.004
+    400090: Cube.005
+    400092: genouDroit
+    400094: genouGauche
+    400096: hancheDroite
+    400098: hancheGauche
+    400100: jambeDroite
+    400102: jambeGauche
+    400104: nez
+    400106: oeilDroit
+    400108: oeilGauche
+    400110: piedDroit
+    400112: piedGauche
+    400114: Plane
+    400116: Sun
+    400118: Sun.001
+    400120: tete
+    400122: tibiaDroit
+    400124: tibiaGauche
+    400126: //RootNode
+    2100000: bois
+    2100002: Metal
+    2100004: oeilvert
+    2100006: Material
+    2300000: avtbrasDroit
+    2300002: avtbrasGauche
+    2300004: brasDroit
+    2300006: brasGauche
+    2300008: chevilleDroite
+    2300010: chevilleGauche
+    2300012: corps
+    2300014: cou
+    2300016: coudeDroit
+    2300018: coudeGauche
+    2300020: Cube
+    2300022: Cube.001
+    2300024: Cube.002
+    2300026: Cube.003
+    2300028: Cube.004
+    2300030: Cube.005
+    2300032: genouDroit
+    2300034: genouGauche
+    2300036: hancheDroite
+    2300038: hancheGauche
+    2300040: jambeDroite
+    2300042: jambeGauche
+    2300044: nez
+    2300046: oeilDroit
+    2300048: oeilGauche
+    2300050: piedDroit
+    2300052: piedGauche
+    2300054: Plane
+    2300056: tete
+    2300058: tibiaDroit
+    2300060: tibiaGauche
+    3300000: avtbrasDroit
+    3300002: avtbrasGauche
+    3300004: brasDroit
+    3300006: brasGauche
+    3300008: chevilleDroite
+    3300010: chevilleGauche
+    3300012: corps
+    3300014: cou
+    3300016: coudeDroit
+    3300018: coudeGauche
+    3300020: Cube
+    3300022: Cube.001
+    3300024: Cube.002
+    3300026: Cube.003
+    3300028: Cube.004
+    3300030: Cube.005
+    3300032: genouDroit
+    3300034: genouGauche
+    3300036: hancheDroite
+    3300038: hancheGauche
+    3300040: jambeDroite
+    3300042: jambeGauche
+    3300044: nez
+    3300046: oeilDroit
+    3300048: oeilGauche
+    3300050: piedDroit
+    3300052: piedGauche
+    3300054: Plane
+    3300056: tete
+    3300058: tibiaDroit
+    3300060: tibiaGauche
+    4300000: corps
+    4300002: hancheGauche
+    4300004: hancheDroite
+    4300006: brasGauche
+    4300008: coudeGauche
+    4300010: avtbrasGauche
+    4300012: Cube
+    4300014: Cube.001
+    4300016: Cube.002
+    4300018: brasDroit
+    4300020: coudeDroit
+    4300022: avtbrasDroit
+    4300024: Cube.003
+    4300026: Cube.004
+    4300028: Cube.005
+    4300030: cou
+    4300032: tete
+    4300034: nez
+    4300036: oeilDroit
+    4300038: oeilGauche
+    4300040: genouDroit
+    4300042: jambeDroite
+    4300044: tibiaDroit
+    4300046: chevilleDroite
+    4300048: piedDroit
+    4300050: genouGauche
+    4300052: jambeGauche
+    4300054: tibiaGauche
+    4300056: chevilleGauche
+    4300058: piedGauche
+    4300060: Plane
+    7400000: tete|Hit
+    7400002: Armature|Attack
+    7400004: Armature|Die
+    7400006: Armature|Hit
+    7400008: Armature|Idle
+    7400010: Armature|Summoning
+    7400012: Armature|Walk
+    9500000: //RootNode
+    10800000: Sun
+    10800002: Sun.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 43680edf6333592429943639ead7858b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bois
+    second: {fileID: 2100000, guid: e9d369b20e071c34ca93ca0e24d51c24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oeilvert
+    second: {fileID: 2100000, guid: 81b6c57c1222a964c8a7b8254a00df6b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: tete|Hit
+      takeName: tete|Hit
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Attack
+      takeName: Armature|Attack
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.2081712
+        functionName: AttackSound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.39277813
+        functionName: HitP
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Die
+      takeName: Armature|Die
+      firstFrame: 0
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Hit
+      takeName: Armature|Hit
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.087548636
+        functionName: groan
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Summoning
+      takeName: Armature|Summoning
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.14980544
+        functionName: walkSound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.659533
+        functionName: walkSound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
