@@ -55,7 +55,8 @@ public class Enigmezic : MonoBehaviour
         if (!GetComponent<MonsterMouvSelection>().estSelectionne)
         {
             GetComponent<AudioSource>().mute = true;
-            if(compteur <= 5)
+            choix.Clear();
+            if (compteur <= 5)
             {
                 compteur += 1;
             }else

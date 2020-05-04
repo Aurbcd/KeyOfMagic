@@ -561,8 +561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Mannequin d'entrainement
-  PV: 500
-  PVMax: 500
+  PV: 9999
+  PVMax: 9999
   element: 
   weakness: 
   resistance: 
