@@ -74,11 +74,11 @@ public class AI_MAir: MonoBehaviour
         //CHOIX 1 : élément
         System.Random aleatoire = new System.Random();
         valeurAleatoire = aleatoire.Next(100);
-        if (valeurAleatoire <= 30)
+        if (valeurAleatoire <= 20)
         {
             element = "Terre";
         }
-        if (valeurAleatoire > 30)
+        if (valeurAleatoire > 20)
         {
             element = "Air";
         }

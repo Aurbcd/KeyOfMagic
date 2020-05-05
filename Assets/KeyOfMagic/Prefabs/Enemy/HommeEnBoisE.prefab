@@ -606,8 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: "Mannequin \xE9veill\xE9"
-  PV: 650
-  PVMax: 650
+  PV: 400
+  PVMax: 400
   element: Eau
   weakness: Electricite
   resistance: Terre

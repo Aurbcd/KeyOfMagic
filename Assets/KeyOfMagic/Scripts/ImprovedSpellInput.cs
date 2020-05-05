@@ -197,10 +197,10 @@ public class ImprovedSpellInput : MonoBehaviour
             case "UNIFULOPA":
                 GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
                 break;
-            case "ugnimaril":
+            case "ugniramil":
                 GetComponent<AudioSource>().PlayOneShot(sortLong, 0.5f);
                 break;
-            case "UGNIMARIL":
+            case "UGNIRAMIL":
                 GetComponent<AudioSource>().PlayOneShot(bouclierLong, 0.5f);
                 break;
             case "estek":
