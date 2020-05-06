@@ -18,7 +18,7 @@ public class RobeAnscestrale : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Robe Anscestrale";
+            return "Anscestral Dress";
         }
     }
 
@@ -33,14 +33,14 @@ public class RobeAnscestrale : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente vos nombres de points de vie maximum \n<sprite=0>  Garanti l'apparition de potion à la mort d'un monstre";
+            return "<sprite=0>  Increase your health \n<sprite=0>  Portions are sure to appear after a fight";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Les nombreuses marques d'usure de cette robe indique un certain vécu. On peut y lire sur la doublure en lettre dorées :<i>Il n'y a pas forcément besoin d'être meilleur que son adversaire, parfois, il suffit simplement d'être capable de rester dans la course plus longtemps. </i> \"";
+            return "\" Many signs indicate a certain lived experience. You can read on the lining in golden letters: <i> You don't necessarily have to be better than your opponent, sometimes, you just have to be able to stay in the race longer. </i>\"";
         }
     }
     public int rarete

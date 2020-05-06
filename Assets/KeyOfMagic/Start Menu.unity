@@ -1235,8 +1235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.900002, y: -150.50002}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 30, y: -150.50002}
+  m_SizeDelta: {x: 255.8, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317269089
 MonoBehaviour:
@@ -3965,7 +3965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Inverser l'axe de rotation
+  m_Text: Reverse the axis of rotation
 --- !u!222 &1262790076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4697,7 +4697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Plein \xE9cran"
+  m_Text: Fullscreen
 --- !u!222 &1655970392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4923,7 +4923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Musique
+  m_Text: 'Music
 
 '
 --- !u!222 &1691922885
@@ -4989,7 +4989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Retour
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -5295,8 +5295,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39, y: -79.000015}
-  m_SizeDelta: {x: 284.4, y: 44.2}
+  m_AnchoredPosition: {x: -36.5, y: -79.000015}
+  m_SizeDelta: {x: 407.1, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806239617
 MonoBehaviour:
@@ -5316,7 +5316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sensibilit\xE9 de la cam\xE9ra"
+  m_text: Sensibility of the camera
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,

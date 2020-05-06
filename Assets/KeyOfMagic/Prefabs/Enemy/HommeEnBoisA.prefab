@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: "Mannequin \xE9veill\xE9"
+  monsterName: Awaken Dummy
   PV: 400
   PVMax: 400
   element: Air

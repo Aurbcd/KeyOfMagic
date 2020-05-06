@@ -19401,7 +19401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: "Fils du D\xE9mon"
+  monsterName: Son of the Demon
   PV: 3000
   PVMax: 3000
   element: Feu

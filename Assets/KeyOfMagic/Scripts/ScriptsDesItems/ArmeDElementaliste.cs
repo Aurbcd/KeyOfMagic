@@ -18,7 +18,7 @@ public class ArmeDElementaliste : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Arme d'Élémentaliste";
+            return "Elementalist Staff";
         }
     }
 
@@ -34,14 +34,14 @@ public class ArmeDElementaliste : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente grandement vos dégats";
+            return "<sprite=0>  Greatly increase your damage";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Parmi les maîtres des arcanes, rares sont ceux qui peuvent prétendre maîtriser les 5 éléments à la perfection. À ceux-là est réservé le titre d'élémentaliste. Il est dit que les cristaux de cette arme renferment une partie du pouvoir démesuré de son créateur. \"";
+            return "\" Among the Arcane Masters, few can pretend to wield all 5 elements flawlessly. Those only are called Elementalists. It is said that this staff's cristals hold a tremendous power. \"";
         }
     }
 

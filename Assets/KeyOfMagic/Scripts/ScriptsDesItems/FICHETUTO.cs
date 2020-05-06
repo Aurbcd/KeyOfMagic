@@ -18,7 +18,7 @@ public class FICHETUTO : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Votre Fiche";
+            return "Your Course Sheet";
         }
     }
 
@@ -34,14 +34,14 @@ public class FICHETUTO : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Permet d'ouvrir la fiche en appuyant sur Echap ";
+            return "<sprite=0>  Allow you to open your sheet by holding Esc ";
         }
     }
     public string lore
     {
         get
         {
-            return "\" J'ai bien fait de la faire celle-là ! \" - Vous";
+            return "\" Good thing I did it ! \" - You";
         }
     }
 

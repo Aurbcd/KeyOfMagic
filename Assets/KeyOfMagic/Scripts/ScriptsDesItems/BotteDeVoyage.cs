@@ -18,7 +18,7 @@ public class BotteDeVoyage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Botte de Voyage";
+            return "Travel Boots";
         }
     }
 
@@ -34,14 +34,14 @@ public class BotteDeVoyage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente la vitesse de déplacement";
+            return "<sprite=0>  Increase your speed";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Le cuir de ces bottes proviendrait d'une race d'herbivores aujourd'hui éteinte, qui confèrerait des immenses pouvoir à celui ou celle capable de prononcer leur nom. Dommage que tous les livres sur cette époque soient partis en fumée dans le Grand Incendie du Havre de la nuit.\"";
+            return "\" The leather of these boots would come from a breed of herbivores now extinct, which would confer immense power on whoever can pronounce their name. Too bad that all the books on that time went up in smoke in the Great Fire of Le Havre de la nuit.\"";
         }
     }
 

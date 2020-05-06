@@ -18,7 +18,7 @@ public class AnneauOuvrage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Anneau Ouvragé";
+            return "Ornated Ring";
         }
     }
 
@@ -34,14 +34,14 @@ public class AnneauOuvrage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente la chance d'apparition des potions";
+            return "<sprite=0>  Potions are more likely to appear";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Un anneau à la fois beau et pratique. Grâce à celui-ci, un mage aurait précipité la chute de l'industrie du verre dans les contrées du Sud, après avoir découvert comment boire les potions de vitalité sans perdre la fiole. C'est un secret aujourd'hui oublié. \"";
+            return "\" A beautiful yet useful ring. Thanks to it, a magician would have create a massive plunge in the glass industry, after finding out how to drink vitality potions without losing the vial. That's a secret long forgotten. \"";
         }
     }
 

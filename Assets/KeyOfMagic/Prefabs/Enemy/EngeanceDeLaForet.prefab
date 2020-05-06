@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: "Engeance de la For\xEAt"
+  monsterName: Brood of the Forest
   PV: 900
   PVMax: 900
   element: Terre

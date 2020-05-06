@@ -17,7 +17,7 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chapeau de Mage";
+            return "Mage Hat";
         }
     }
 
@@ -32,14 +32,14 @@ public class ChapeauDeMage : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Les incantations ennemies sont ralenties";
+            return "<sprite=0>  Slows down foes' summoning";
         }
     }
     public string lore
     {
         get
         {
-            return "\" L'origine de l'attirance qu'ont les mages pour les chapeaux se perd dans les origines du temps. Aussi loin que les écrits remontent, il semble que toute personne ayant un don pour les arcanes éprouve également une attirance démesurée pour les couvre chefs pointus. Bien qu'un peu usé, celui-ci saura satisfaire la votre.\"";
+            return "\" The origin of the attraction that mages have for hats is lost in the origins of time. As far back as the writings go, it seems that anyone with a knack for magic also has an inordinate attraction for pointy hats. Even if it's a little worn, this one will satisfy yours.\"";
         }
     }
     public int rarete

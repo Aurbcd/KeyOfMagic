@@ -18,7 +18,7 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Tunique de Tisse-Sort";
+            return "SpellWeaver Dress";
         }
     }
 
@@ -34,14 +34,14 @@ public class TuniqueDeTisseSort : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente vos nombres de points de vie maximum \n<sprite=0>  Augmente le nombre de potion à la mort d'un monstre \n<sprite=0>  Réduit les dégats subis \n<sprite=1>  Réduit votre vitesse de déplacement";
+            return "<sprite=0>  Increase your health \n<sprite=0>  Potions are more likely to appear \n<sprite=0>  Reduce incoming damage \n<sprite=1>  Reduce your speed";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Elle appartenait autre fois à une des dernières survivantes de la race des Tisse-Sort qui était connue pour son couvre chef inhabituel. Attiré par son pouvoir, un marchand la lui aurait échangée contre un artefact sans valeur. La légende veut que la ville toute entière dans laquelle il résidait en ait payé le prix, rappelant à tous l'implacable puissance du feu de la vengeance. \"";
+            return "\" She once belonged to one of the last survivors of the Spellweaver race who was known for her unusual headgear. Attracted by his power, a merchant would have exchanged it for a worthless artifact. Legend has it that the entire city in which he lived paid the price, reminding everyone of the relentless power of the fire of revenge.\"";
         }
     }
 

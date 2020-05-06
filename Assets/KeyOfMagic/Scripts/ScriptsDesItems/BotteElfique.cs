@@ -18,7 +18,7 @@ public class BotteElfique : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Botte Elfique";
+            return "Elven Boots";
         }
     }
 
@@ -34,14 +34,14 @@ public class BotteElfique : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente grandement la vitesse de déplacement \n<sprite=1>  Réduit votre temps d'hésitation";
+            return "<sprite=0>  Hugely increase your speed \n<sprite=1>  Decrease your time to hesitate";
         }
     }
     public string lore
     {
         get
         {
-            return "\" <i>Dans mon métier madame, on n'a pas le temps de réfléchir pour prendre des décisions, tout doit être instinctif </i> - Väar An Ghart, au comptoir d'un bar la veille de l'accident de course de char qui mit fin à sa carrière de pilote. \"";
+            return "\" <i>In my work ma'am,  don't have time to think 'bout making decisions, everything must be instinctive </i> - Väar An Ghart, at a bar counter, the day before the chariot accident which ended his racing career. \"";
         }
     }
 

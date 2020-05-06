@@ -18,7 +18,7 @@ public class ChevaliereDuDestin : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chevaliere du Destin";
+            return "Signet Ring of Fate";
         }
     }
 
@@ -34,14 +34,14 @@ public class ChevaliereDuDestin : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0> Les incantations des monstres sont ralenties \n<sprite=1> Vous avez moins de temps d'hésitation";
+            return "<sprite=0> Greatly slows down foes' summoning \n<sprite=1> Decrease your time to hesitate";
         }
     }
     public string lore
     {
         get
         {
-            return "\" <i>Sur le champ de bataille, il ne faut pas réfléchir car il n'y a pas de place pour l'hésitation. Il faut se laisser porter par le flot du combat. La vie et la mort n'ont plus de sens, seul l'appel de la destinée compte.</i> - Baron du Comté Rouge. \"";
+            return "\" <i>On the battlefield, do not think, because there is no time for hesitation. You have to let yourself be carried by the flow of the battle. Only Fate's call matters.</i> - Baron of Red County. \"";
         }
     }
 

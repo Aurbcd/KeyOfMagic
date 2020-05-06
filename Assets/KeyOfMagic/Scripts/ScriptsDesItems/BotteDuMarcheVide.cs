@@ -18,7 +18,7 @@ public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Botte du Marche-Vide";
+            return "Boots of the Void Walker";
         }
     }
 
@@ -34,14 +34,14 @@ public class BotteDuMarcheVide : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Vol de vie conséquent \n<sprite=1>  Points de vie maximum grandement réduit";
+            return "<sprite=0>  Tremendous heatlh steal \n<sprite=1>  Health greatly reduce";
         }
     }
     public string lore
     {
         get
         {
-            return "\" L'ordre des Marche-Vide a longtemps terrorisé les plaines de l'Est. Bien que leur corps éthéré ne leur permettait que de brèves apparitions dans notre monde, chacune de celle-ci était signe de désolation et de mort pour toutes les formes de vie alentours. \"";
+            return "\" The Order of the Void Walker has long terrorized the eastern plains. Although their ethereal bodies allowed them only brief appearances in our world, each of them was a sign of desolation. \"";
         }
     }
 

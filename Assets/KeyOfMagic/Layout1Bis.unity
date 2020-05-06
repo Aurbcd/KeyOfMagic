@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Roue des \xE9l\xE9ments :"
+  m_text: 'Element Chart :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24473,9 +24473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Retour au menu
-
-'
+  m_text: Back to main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -24545,10 +24543,10 @@ MonoBehaviour:
   m_margin: {x: -0.000000734587, y: -1.0537692, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 523667416}
-    characterCount: 15
+    characterCount: 17
     spriteCount: 0
     spaceCount: 3
-    wordCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -25563,7 +25561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU 2
+  m_Text: LEVEL 2
 --- !u!222 &553443942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41882,7 +41880,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chargement de votre examen...
+  m_Text: Loading your exam...
 --- !u!222 &936337947
 CanvasRenderer:
   m_ObjectHideFlags: 0

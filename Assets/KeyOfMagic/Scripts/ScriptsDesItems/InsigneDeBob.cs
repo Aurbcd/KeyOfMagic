@@ -18,7 +18,7 @@ public class InsigneDeBob : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Insigne de Bob";
+            return "Bob's Badge";
         }
     }
 
@@ -34,14 +34,14 @@ public class InsigneDeBob : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0> Bob peut désormais attaquer les monstres";
+            return "<sprite=0> Bob can attack foes";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Le monde entier a toujours cru que Bob était une créature passive, un assistant d'aventurier. Mais aujourd'hui, le moment est arrivé. Bob va montrer au monde entier ce dont il est capable. \"";
+            return "\" LThe whole world always believed that Bob was a passive creature, an adventurers' assistant. But today is the time. Bob will show the world what he can do.\"";
         }
     }
 

@@ -17,7 +17,7 @@ public class BatonRunique : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Baton Runique";
+            return "Rune Stick";
         }
     }
 
@@ -33,14 +33,14 @@ public class BatonRunique : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente énormément vos dégats \n<sprite=1>  L'apparition de potions à la mort d'un monstre est plus rare";
+            return "<sprite=0> Hugely rise your damage \n<sprite=1>  Potions are less likely to appear";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Un artefact ancien doté d'une puissance inouïe. Bien qu'il décuple grandement les effets des incantations de son porteur, les anciens propriétaires de cette arme semblent tous avoir connu une fin précoce. \"";
+            return "\" An ancient artifact with incredible power. Although it greatly increases the effects of its user's incantations, former owners of this weapon all seem to have come to an early end. \"";
         }
     }
 

@@ -19,7 +19,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chapeau draconnique";
+            return "Dragonskin Hat";
         }
     }
 
@@ -43,7 +43,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente grandement votre vie \n<sprite=1>  Les incantations ennemies sont plus rapides";
+            return "<sprite=0>  Hugely increase your health \n<sprite=1>  Foes' summoning is faster";
         }
     }
 
@@ -51,7 +51,7 @@ public class ChapeauDefeu : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\"Le Havre de la Nuit était une citée marchande prospère, mais il n'en reste aujourd'hui que des ruines. Dotée d'une force de défense pourtant hors du commun, la légende raconte qu'une seule magicienne l'aurait réduite en cendres, impassible face à l'assaut continu de la garde de la ville.  \"";
+            return "\"Le Havre de la Nuit was a prosperous trading city, but only ruins remain today. Even if it had an extraordinary defense force, legend says that only one magician would have reduced her to ashes.  \"";
         }
     }
 

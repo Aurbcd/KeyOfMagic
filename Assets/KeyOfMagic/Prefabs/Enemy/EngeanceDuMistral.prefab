@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970ec977c9b8e34c8b633fb1982d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: Engeance du Mistral
+  monsterName: Broof of the Wind
   PV: 950
   PVMax: 950
   element: Terre

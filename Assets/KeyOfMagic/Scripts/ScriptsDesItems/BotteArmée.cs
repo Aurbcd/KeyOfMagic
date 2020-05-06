@@ -17,7 +17,7 @@ public class BotteArmée : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Botte Armée";
+            return "Armored Boots";
         }
     }
 
@@ -33,14 +33,14 @@ public class BotteArmée : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente la vitesse de déplacement \n<sprite=0>  Réduit les dégats reçus";
+            return "<sprite=0>  Increase your speed \n<sprite=0>  Reduce incoming damage";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Des bottes particulièrement confortables. Bien que possédant des renforts conséquents, leur poids ne semble pas contraindre leur porteur. Leur semelle renforcée permet à l'utilisateur de marcher bien plus vite, puisqu'il n'a plus besoin de regarder où il met les pieds. \"";
+            return "\" Particularly comfortable boots. Although having metal, their weight does not seem to constrain their wearer. Their sole allows the user to walk much faster, since he no longer has to look where he steps. \"";
         }
     }
 

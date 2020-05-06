@@ -44,7 +44,7 @@ public class ImprovedSpellInput : MonoBehaviour
     public Image shieldSpriteImage;
     private static SpellDatabase spellBook;
     public static List<SpellStorageEntry> spellListStorage = new List<SpellStorageEntry> { };
-    private string spellList = "Sorts du grimoire :\n";
+    private string spellList = "Spellbook :\n";
     public Canvas tutoBlinker;
     bool isCapsLockOn;
     private GameObject monstreSelectionne;
@@ -82,7 +82,7 @@ public class ImprovedSpellInput : MonoBehaviour
         {
             
         }
-            spellList = "Sorts du grimoire :\n";
+            spellList = "Spellbook :\n";
             // foreach (SpellStorageEntry nsse in spellListStorage)
             // {
             //     spellList += "<sprite=0> " + "<color=" + XmlManager.ins.ElementDatabase.Elementdb.Find(x => x.elementName.Equals(XmlManager.ins.SpellDatabase.SpellBook.Find(y => y.spellName.Equals(nsse.nom)).element)).hexColor + ">" + nsse.nom.ToLower() + "</color>     <sprite=3>  " + "<sprite=2>" + "  |    <sprite=1>  " + "<sprite=2>" + "  \n";
@@ -489,7 +489,7 @@ public class ImprovedSpellInput : MonoBehaviour
                         }
                     }
                     spellListStorage.Sort(delegate(SpellStorageEntry s1, SpellStorageEntry s2) {return s1.nom.CompareTo(s2.nom);});
-                    spellList = "Sorts du grimoire :\n";
+                    spellList = "Spellbook :\n";
                     foreach (SpellStorageEntry sse in spellListStorage)
                     {
                         string nouvmark = "";
@@ -536,7 +536,7 @@ public class ImprovedSpellInput : MonoBehaviour
                             sse.nouveau = true;
                         }
                     }
-                    spellList = "Sorts du grimoire :\n";
+                    spellList = "Spellbook :\n";
                     foreach (SpellStorageEntry sse in spellListStorage)
                     {
                         string nouvmark = "";
@@ -641,7 +641,7 @@ public class ImprovedSpellInput : MonoBehaviour
         else if (Input.GetKeyUp("tab"))
         {
             spellsPanel.SetActive(false);
-            spellList = "Sorts du grimoire :\n";
+            spellList = "Spellbook :\n";
             foreach (SpellStorageEntry sse in spellListStorage)
             {
                 string nouvmark = "";

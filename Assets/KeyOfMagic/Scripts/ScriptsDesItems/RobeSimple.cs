@@ -18,7 +18,7 @@ public class RobeSimple : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Robe Simple";
+            return "Simple Dress";
         }
     }
 
@@ -33,14 +33,14 @@ public class RobeSimple : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente votre nombre de points de vie maximum";
+            return "<sprite=0>  Increase your health";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Une lourde robe aux pans larges et mal ajustés. À défaut de vous faire briller lors d'évènements mondains, elle a l'avantage de vous tenir chaud.\" ";
+            return "\" A heavy dress with wide sides and ill-fitting. Failing to make you shine at social events, it has the advantage of keeping you warm.\" ";
         }
     }
 

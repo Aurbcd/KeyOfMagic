@@ -18,7 +18,7 @@ public class ReliqueDeLegende : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Relique de Légende";
+            return "Relic of Legend";
         }
     }
 
@@ -34,14 +34,14 @@ public class ReliqueDeLegende : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Double les dégats que vous infligez \n<sprite=1>  Double vos dégats subits";
+            return "<sprite=0>  Double your damage \n<sprite=1>  Double incoming damage";
         }
     }
     public string lore
     {
         get
         {
-            return "\" <i>Qu'est ce que la puissance sans le goût du risque ?  À tous ces mages qui s'enferment dans leur tour d'argent, je leur dis, vous n'avez jamais pratiqué la vraie magie </i> - Archibald Greyroux, membre de l'escadron de la Lance D'Argent. \"";
+            return "\"<i>What is power without the taste for risk? To all these mages who lock themselves in their silver tower, I tell them, you have never practiced real magic </i> - Archibald Greyroux, member of the Silver Lance squadron.\"";
         }
     }
 

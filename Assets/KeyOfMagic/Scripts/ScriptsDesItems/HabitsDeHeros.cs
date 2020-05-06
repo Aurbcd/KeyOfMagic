@@ -18,7 +18,7 @@ public class HabitsDeHeros : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Habits de Héros";
+            return "Hero Garb";
         }
     }
 
@@ -33,14 +33,14 @@ public class HabitsDeHeros : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente votre nombre de points de vie maximum \n<sprite=0> Double la valeur de vos boucliers \n<sprite=1>  Vos boucliers sont détruits par les éléments efficaces";
+            return "<sprite=0>  Increase your Health \n<sprite=0> Double your shield \n<sprite=1>  Your shiel is destroyed by efficient elements";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Cet habit a été façonné et porté par un aventurier au talent sans précédent. D'une assurance démesurée, il prétendait ne jamais se tromper. Les marques de brûlures qui entourent le bas des manches semblent cependant prouver le contraire. \"";
+            return "\" This habit was created and worn by an adventurer of unprecedented talent. With disproportionate confidence, he claimed never to be wrong. The burn marks surrounding the cuffs, however, seem to prove the opposite.\"";
         }
     }
     public int rarete

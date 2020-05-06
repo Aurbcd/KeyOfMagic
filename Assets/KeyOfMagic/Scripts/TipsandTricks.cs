@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class TipsandTricks : MonoBehaviour {
     private List<string> tips = new List<string> () {
-        "Chaque rareté d'objet est liée à une couleur : Commun<sprite=0> , Rare<sprite=3> , Epique<sprite=1> , et Légendaire<sprite=2> .",
-        "Vous pouvez double-cliquer sur un ennemi pour automatiquement vous mettre à distance d'attaque.",
-        "Vous pouvez apprendre de vos ennemis.",
-        "Vous avez vraiment bien fait de faire cette fiche. N'oubliez pas d'appuyer sur Echap pour la consulter",
-        "Bob est un cadeau de l'académie. Bien qu'il a toujours été docile, vous sentez une puissance dormante en lui.",
-        "<i>Combien je paye cette école pour y risquer ma vie déjà ?</i> - Vous",
-        "Vous ne pouvez pas vous deséquiper d'un objet. Ils sont de toutes façons bien trop précieux.",
-        "Explorer pourrait s'avérer utile."
+        "Each object has a rarety based on its color : Common<sprite=0> , Rare<sprite=3> , Epic<sprite=1> , et Legendary<sprite=2> .",
+        "You can double click to automatically bring yourself to casting range.",
+        "You might learn from your foes.",
+        "Making this sheet was a good idea. Do not forget to hold Esc to consult it.",
+        "Bob was given by the academy. Although he has always been docile, you feel a dormant power in him.",
+        "<i>How much do i pay this school to put myself in danger again ?</i> - You",
+        "You can't drop an item. They're way too precious anyways.",
+        "Exploring might be useful."
     };
 
     public void couleur() {

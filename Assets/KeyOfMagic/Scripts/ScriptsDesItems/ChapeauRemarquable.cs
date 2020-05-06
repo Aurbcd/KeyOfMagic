@@ -18,7 +18,7 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chapeau Remarquable";
+            return "Remarquable Hat";
         }
     }
 
@@ -33,14 +33,14 @@ public class ChapeauRemarquable : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Les incantations ennemies sont ralenties \n<sprite=0>  Vos boucliers sont plus efficaces";
+            return "<sprite=0>  Slows down foes' summoning \n<sprite=0>  Your shields are more efficient";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Un chapeau aux lignes sobres et raffinées. En plus d'être un atout aux soirées chics, il permet de distraire les ennemis qui manquent de vigilance. \"";
+            return "\" A hat with clean and refined lines. In addition to be a plus in meetings, it distract enemies who lack vigilance. \"";
         }
     }
     public int rarete

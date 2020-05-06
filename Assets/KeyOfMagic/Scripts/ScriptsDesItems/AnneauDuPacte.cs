@@ -18,7 +18,7 @@ public class AnneauDuPacte : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Anneau du Pacte";
+            return "Pact Ring";
         }
     }
 
@@ -34,14 +34,14 @@ public class AnneauDuPacte : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0> Vous permet de voler la vie des monstres";
+            return "<sprite=0> Allow you to steal foes' health";
         }
     }
     public string lore
     {
         get
         {
-            return "\" <i>Oui je le veux...</i> - Derniers mots pronnoncés par Jules avant que sa femme n'enfile l'anneau qu'il avait trouvé dans la crypte de sa famille. Sa veuve, accablée par le désastre, serait elle encore en vie, plus de 100 ans après l'accident. \"";
+            return "\" <i>Yes I do...</i> - Last words spoken by Jules before his wife put on the ring found in his parents crypt. His widow, overwhelmed by disaster, is said to be still alive, a 100 years after this incident. \"";
         }
     }
 

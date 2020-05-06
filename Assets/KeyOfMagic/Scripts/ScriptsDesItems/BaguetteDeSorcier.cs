@@ -18,7 +18,7 @@ public class BaguetteDeSorcier : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Baguette de Sorcier";
+            return "Sorcerer wound";
         }
     }
 
@@ -34,14 +34,14 @@ public class BaguetteDeSorcier : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Augmente vos dégats";
+            return "<sprite=0>  Increase your damage";
         }
     }
     public string lore
     {
         get
         {
-            return "\" Une arme équilibrée, à la fois souple et légère. Adaptée aux apprentis comme aux confirmés. Garantie uniquement dans un cadre d'utilisation normal*.\n<i angle=40>*Les situations suivantes ne sont pas couvertes : Fissures après incantation d'un sort de catégorie supérieure ou égale à 4, [...] surchauffe suite à une tentative d'invocation du Grand Démon Ancestral.</i> \"";
+            return "\" A balanced weapon, both flexible and light. Suitable for both beginners and confirmed. Guarantee only applies in normal use*.\n<i angle=40>*Following case aren't guaranteed: Cracks after a spell of category greater than or equal to 4...</i> \"";
         }
     }
 

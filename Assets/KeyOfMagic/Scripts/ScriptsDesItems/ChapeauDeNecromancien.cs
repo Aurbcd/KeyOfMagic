@@ -19,7 +19,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "Chapeau de Nécromancien";
+            return "Necromancer Hat";
         }
     }
 
@@ -34,7 +34,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "<sprite=0>  Vol de vie \n<sprite=1>  Diminution des dégats infligés";
+            return "<sprite=0>  Steal foes' health \n<sprite=1>  Reduce your damage";
         }
     }
 
@@ -42,7 +42,7 @@ public class ChapeauDeNecromancien : MonoBehaviour, ItemInterface
     {
         get
         {
-            return "\" Ce chapeau appartenait autrefois à un puissant mage versé dans l'art de la nécromancie. La puissance de cet art tabou se serait imiscée dans ses vêtements, conférant à leur nouveau propriétaire des pouvoirs hors du commun. \"";
+            return "\" This hat once belonged to a powerful mage related to the art of necromancy. The power of this taboo art would have crept into his clothes, giving their new owner rare powers. \"";
         }
     }
 
