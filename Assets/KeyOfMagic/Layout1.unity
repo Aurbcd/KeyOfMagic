@@ -16314,7 +16314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appuyez sur Echap...
+  m_Text: Hold Esc...
 --- !u!222 &347939057
 CanvasRenderer:
   m_ObjectHideFlags: 0
