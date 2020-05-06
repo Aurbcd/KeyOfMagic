@@ -2190,9 +2190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quitter
-
-'
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -2262,9 +2260,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 713812851}
-    characterCount: 8
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 0
     wordCount: 1
     linkCount: 0
     lineCount: 1
@@ -3059,7 +3057,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Difficult\xE9 : Normale\n"
+  m_text: 'Difficulty : Normal
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -3129,7 +3129,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 958196712}
-    characterCount: 21
+    characterCount: 20
     spriteCount: 0
     spaceCount: 3
     wordCount: 2
@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nouvelle Partie
+  m_text: New Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -3286,7 +3286,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1006814669}
-    characterCount: 15
+    characterCount: 8
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
