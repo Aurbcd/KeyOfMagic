@@ -479,7 +479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quitter
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 399232921}
-    characterCount: 7
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Merci \xE0 vous, joueur  !"
+  m_text: And thank you too, player !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -1173,10 +1173,10 @@ MonoBehaviour:
   m_margin: {x: 0.19891357, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 655410334}
-    characterCount: 23
+    characterCount: 27
     spriteCount: 0
     spaceCount: 5
-    wordCount: 4
+    wordCount: 5
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1678,7 +1678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quitter
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 713812851}
-    characterCount: 7
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Un jeu de : Aur\xE9lien Chambon, Arthur Boyer, Antoine Das Neves et Gauthier
+  m_text: "A game by : Aur\xE9lien Chambon, Arthur Boyer, Antoine Das Neves et Gauthier
     Le Tat"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Remerciements particuliers \xE0 notre tuteur :"
+  m_text: 'Special thanks to our tutor :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_margin: {x: 0.19891357, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 983761804}
-    characterCount: 43
+    characterCount: 29
     spriteCount: 0
     spaceCount: 5
     wordCount: 5
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Merci d'avoir jou\xE9 au jeu"
+  m_text: Thank you for playing !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -2841,10 +2841,10 @@ MonoBehaviour:
   m_margin: {x: 0.19891357, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1222293478}
-    characterCount: 25
+    characterCount: 23
     spriteCount: 0
     spaceCount: 4
-    wordCount: 5
+    wordCount: 4
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -3370,7 +3370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Remerciements
+  m_text: Thanks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -3440,7 +3440,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1439859382}
-    characterCount: 13
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3526,7 +3526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Nous remercions tous nos testeurs :'
+  m_text: 'Thanks to our beta testers  : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -3596,9 +3596,9 @@ MonoBehaviour:
   m_margin: {x: -0.69940186, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1667461421}
-    characterCount: 35
+    characterCount: 30
     spriteCount: 0
-    spaceCount: 5
+    spaceCount: 7
     wordCount: 5
     linkCount: 0
     lineCount: 1
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Un jeu de : Aur\xE9lien Chambon, Arthur Boyer, Antoine Das Neves et Gauthier
+  m_text: "A game by : Aur\xE9lien Chambon, Arthur Boyer, Antoine Das Neves and Gauthier
     Le Tat"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
@@ -3753,7 +3753,7 @@ MonoBehaviour:
   m_margin: {x: 0.19891357, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1714614639}
-    characterCount: 80
+    characterCount: 81
     spriteCount: 0
     spaceCount: 14
     wordCount: 14
@@ -4061,7 +4061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1877142708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4197,7 +4197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 190, y: -163.90002}
+  m_AnchoredPosition: {x: 189, y: -163.90002}
   m_SizeDelta: {x: -771.8, y: -505.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889651416
@@ -4759,7 +4759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2086746823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4899,7 +4899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "F\xE9licitations, vous avez obtenu votre dipl\xF4me !\n"
+  m_text: Congratulations, you got your diploma !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -4969,10 +4969,10 @@ MonoBehaviour:
   m_margin: {x: -0.69940186, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2121457783}
-    characterCount: 48
+    characterCount: 39
     spriteCount: 0
-    spaceCount: 7
-    wordCount: 6
+    spaceCount: 5
+    wordCount: 5
     linkCount: 0
     lineCount: 2
     pageCount: 1
