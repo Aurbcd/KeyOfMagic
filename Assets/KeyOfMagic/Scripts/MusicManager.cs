@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
         compteur = 0;
         foreach (GameObject monstre in GameObject.FindGameObjectsWithTag("Ennemy"))
         {
-            if ((monstre.transform.position - ClickToMove.playerPosition).magnitude < 22 && monstre.GetComponent<MonsterStatText>().monsterName != "Statue du chasseur" && monstre.GetComponent<MonsterStatText>().monsterName != "Statue de peintre" && monstre.GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement") {
+            if ((monstre.transform.position - ClickToMove.playerPosition).magnitude < 22 && monstre.GetComponent<MonsterStatText>().monsterName != "Musician Statue" && monstre.GetComponent<MonsterStatText>().monsterName != "Hunter Statue" && monstre.GetComponent<MonsterStatText>().monsterName != "Painter Statue" && monstre.GetComponent<MonsterStatText>().monsterName != "Training Dummy") {
                 Combat = true;
                 compteur -= 1;
             }

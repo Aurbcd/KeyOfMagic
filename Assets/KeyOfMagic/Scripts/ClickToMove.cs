@@ -81,11 +81,11 @@ public class ClickToMove : MonoBehaviour {
                     selectionne = false;
                     transform.LookAt(hit.collider.transform);
                     ItemInterface item = hit.collider.GetComponent<ItemInterface>();
-                    if(item != null && (playerPosition - hit.collider.transform.position).magnitude < 5 && item.Nom !="Votre Fiche")
+                    if(item != null && (playerPosition - hit.collider.transform.position).magnitude < 5 && item.Nom != "Your Course Sheet")
                     {
                         inventaire.AjouterItem(item);
                     }
-                    if(item != null && item.Nom.Equals("Votre Fiche"))
+                    if(item != null && item.Nom.Equals("Your Course Sheet"))
                         item.Ramasse();
                 }
                 if (hit.collider.tag == "Ennemy" && doubleclick) {

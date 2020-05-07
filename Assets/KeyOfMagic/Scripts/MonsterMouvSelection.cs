@@ -64,14 +64,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Musique" && GetComponent<MonsterStatText>().monsterName != "Chasseur" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement") 
+        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portal" && GetComponent<MonsterStatText>().monsterName != "Musician Statue" && GetComponent<MonsterStatText>().monsterName != "Hunter Statue" && GetComponent<MonsterStatText>().monsterName != "Painter Statue" && GetComponent<MonsterStatText>().monsterName != "Training Dummy") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Musique" && GetComponent<MonsterStatText>().monsterName != "Chasseur" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement")
+        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portal" && GetComponent<MonsterStatText>().monsterName != "Musician Statue" && GetComponent<MonsterStatText>().monsterName != "Hunter Statue" && GetComponent<MonsterStatText>().monsterName != "Painter Statue" && GetComponent<MonsterStatText>().monsterName != "Training Dummy")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
@@ -106,7 +106,7 @@ public class MonsterMouvSelection : MonoBehaviour
         }
         if (DistanceBase < 2 && distanceToPlayer > 16)
         {
-            if (GetComponent<MonsterStatText>().monsterName != "Portail")
+            if (GetComponent<MonsterStatText>().monsterName != "Portal")
                 GetComponent<MonsterStatText>().PV += 3;
             mAnimator.SetBool("Backing", false);
         }
@@ -139,7 +139,7 @@ public class MonsterMouvSelection : MonoBehaviour
 
     public void MoveInDirection(Vector3 direction)
     {
-        if(GetComponent<MonsterStatText>().monsterName != "Portail")
+        if(GetComponent<MonsterStatText>().monsterName != "Portal")
             GetComponent<MonsterStatText>().PV += 3;
         mNavMeshAgent.destination = direction;
     }
@@ -170,7 +170,7 @@ public class MonsterMouvSelection : MonoBehaviour
     }
     public void BackBase()
     {
-        if (GetComponent<MonsterStatText>().monsterName != "Portail")
+        if (GetComponent<MonsterStatText>().monsterName != "Portal")
             GetComponent<MonsterStatText>().PV += 3;
         mAnimator.SetBool("Moving", true);
         mAnimator.SetBool("Backing", true);
