@@ -64,14 +64,14 @@ public class MonsterMouvSelection : MonoBehaviour
             mAnimator.SetBool("Moving", false);
         }
 
-        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimic" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Musique" && GetComponent<MonsterStatText>().monsterName != "Chasseur" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement") 
+        if(distanceToPlayer < 16 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Mimique" && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Statue du musicien" && GetComponent<MonsterStatText>().monsterName != "Statue du chasseur" && GetComponent<MonsterStatText>().monsterName != "Statue du peintre" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement") 
         {
             mAnimator.SetBool("Backing", false);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4 * Time.deltaTime); //SmoothLookAt
         }
 
 
-        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Musique" && GetComponent<MonsterStatText>().monsterName != "Chasseur" && GetComponent<MonsterStatText>().monsterName != "Tableaux" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement")
+        if (distanceToPlayer < 14 && distanceToPlayer > 10 && !IsDead && GetComponent<MonsterStatText>().monsterName != "Portail" && GetComponent<MonsterStatText>().monsterName != "Statue du musicien" && GetComponent<MonsterStatText>().monsterName != "Statue du chasseur" && GetComponent<MonsterStatText>().monsterName != "Statue du peintre" && GetComponent<MonsterStatText>().monsterName != "Mannequin d'entrainement")
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(ClickToMove.playerPosition - transform.position), 4*Time.deltaTime); //SmoothLookAt
             MoveInDirection(ClickToMove.playerPosition);
