@@ -150,7 +150,7 @@ public class AI_FilsDuDemon : MonoBehaviour
 
     void groan()
     {
-        GetComponent<AudioSource>().PlayOneShot(filsDuDemonGroan);
+        GetComponent<AudioSource>().PlayOneShot(filsDuDemonGroan, 0.5f);
     }
 
     void walkS()
