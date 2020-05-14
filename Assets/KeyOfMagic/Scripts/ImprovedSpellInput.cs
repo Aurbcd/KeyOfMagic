@@ -32,7 +32,7 @@ public class ImprovedSpellInput : MonoBehaviour
     Renderer rendBag;
 
     //Mécanique d'objet sur l'hésitation
-    public static int tempsReset = 60;
+    public static int tempsReset;
     //Son
     public static AudioClip notifEff, notifBlinker, notifResist, bouclierLong, bouclierCourt, sortCourt, sortLong;
     public AudioMixerGroup soundEffectSorts;
