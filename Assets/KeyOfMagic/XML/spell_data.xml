@@ -129,7 +129,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>EMINITASI</spellName>
-      <value>90</value>
+      <value>160</value>
       <element>Air</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -141,7 +141,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>ETERIALIM</spellName>
-      <value>160</value>
+      <value>150</value>
       <element>Air</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -189,7 +189,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>OMISTERIA</spellName>
-      <value>180</value>
+      <value>170</value>
       <element>Terre</element>
       <offensive>false</offensive>
     </SpellEntry>

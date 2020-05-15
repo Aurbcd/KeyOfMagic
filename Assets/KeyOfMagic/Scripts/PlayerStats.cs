@@ -113,6 +113,10 @@ public class PlayerStats : MonoBehaviour
         ImprovedSpellInput.spellListStorage.Clear();
         //Enigmes
         EngimeChasseur.compteur = 0;
+        foreach(GameObject it in GameObject.FindGameObjectsWithTag("Item"))
+        {
+            Destroy(it);
+        }
         SceneManager.LoadScene("Start Menu");
     }
 

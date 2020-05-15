@@ -14,7 +14,6 @@ public class SpellFromScroll : MonoBehaviour
         ouvert = false;
         notifBlinker = Resources.Load<AudioClip>("NotifBlinker");
         parchemin = Resources.Load<AudioClip>("Parchemin");
-
         var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f);
         foreach (var hit in hits)
         {
@@ -74,7 +73,7 @@ public class SpellFromScroll : MonoBehaviour
                     ouvert = true;
                     player.GetComponent<ImprovedSpellInput>().SonNotifBlinker();
                     GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectAutres;
-                    GetComponent<AudioSource>().PlayOneShot(parchemin, 0.8f);
+                    GetComponent<AudioSource>().PlayOneShot(parchemin, 0.4f);
                     gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Read", true);
                 }
                 player.GetComponent<ImprovedSpellInput>().spellsList.text = spellList;

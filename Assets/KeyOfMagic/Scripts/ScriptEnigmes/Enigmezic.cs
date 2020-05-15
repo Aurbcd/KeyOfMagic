@@ -47,7 +47,18 @@ public class Enigmezic : MonoBehaviour
 
     void OnMouseDown()
     {
-        GetComponent<AudioSource>().PlayOneShot(enonce);
+        bool actif;
+        actif = false;
+        if(!GetComponent<AudioSource>().isPlaying && !actif)
+        {
+            GetComponent<AudioSource>().PlayOneShot(enonce);
+            actif = true;
+        }
+        if (GetComponent<AudioSource>().isPlaying && !actif)
+        {
+            GetComponent<AudioSource>().Stop();
+            actif = true;
+        }
     }
 
     private void Update()

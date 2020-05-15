@@ -35,7 +35,7 @@ public class ParcheminTuto : MonoBehaviour
                 ouvert = true;
                 player.GetComponent<ImprovedSpellInput>().SonNotifBlinker();
                 GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectAutres;
-                GetComponent<AudioSource>().PlayOneShot(parchemin, 0.8f);
+                GetComponent<AudioSource>().PlayOneShot(parchemin, 0.5f);
                 gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Read", true);
             }
         }

@@ -612,6 +612,7 @@ public class ImprovedSpellInput : MonoBehaviour
         if (!Input.anyKey || Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
             tempsSansAppuyé = tempsSansAppuyé + 1; //CompteurJoueurN'appuiePas
+            Debug.Log(tempsSansAppuyé);
         }
         else
         {
