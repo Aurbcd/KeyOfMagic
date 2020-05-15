@@ -129,7 +129,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>EMINITASI</spellName>
-      <value>90</value>
+      <value>170</value>
       <element>Air</element>
       <offensive>false</offensive>
     </SpellEntry>
@@ -171,7 +171,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>opinalica</spellName>
-      <value>75</value>
+      <value>80</value>
       <element>Terre</element>
       <offensive>true</offensive>
     </SpellEntry>
@@ -189,7 +189,7 @@
     </SpellEntry>
     <SpellEntry>
       <spellName>OMISTERIA</spellName>
-      <value>180</value>
+      <value>170</value>
       <element>Terre</element>
       <offensive>false</offensive>
     </SpellEntry>

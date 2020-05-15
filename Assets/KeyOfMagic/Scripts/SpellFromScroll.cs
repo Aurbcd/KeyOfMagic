@@ -74,7 +74,7 @@ public class SpellFromScroll : MonoBehaviour
                     ouvert = true;
                     player.GetComponent<ImprovedSpellInput>().SonNotifBlinker();
                     GetComponent<AudioSource>().outputAudioMixerGroup = soundEffectAutres;
-                    GetComponent<AudioSource>().PlayOneShot(parchemin, 0.8f);
+                    GetComponent<AudioSource>().PlayOneShot(parchemin, 0.4f);
                     gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Read", true);
                 }
                 player.GetComponent<ImprovedSpellInput>().spellsList.text = spellList;

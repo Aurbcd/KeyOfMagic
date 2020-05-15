@@ -23628,7 +23628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 204
+  m_RootOrder: 205
   m_LocalEulerAnglesHint: {x: 0, y: -269.899, z: 0}
 --- !u!1001 &551957351
 PrefabInstance:
@@ -36270,7 +36270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 171
+  m_RootOrder: 172
   m_LocalEulerAnglesHint: {x: 0, y: -89.993004, z: 0}
 --- !u!1001 &803102347
 PrefabInstance:
@@ -53346,7 +53346,7 @@ Transform:
   - {fileID: 152847060}
   - {fileID: 1555066966}
   m_Father: {fileID: 0}
-  m_RootOrder: 335
+  m_RootOrder: 336
   m_LocalEulerAnglesHint: {x: 1.0370001, y: -85.527, z: 1.1600001}
 --- !u!1001 &1184134509
 PrefabInstance:
@@ -54938,10 +54938,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50.75
+  m_fontSize: 35
   m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -59712,7 +59712,7 @@ Transform:
   - {fileID: 935017987}
   - {fileID: 291236866}
   m_Father: {fileID: 0}
-  m_RootOrder: 179
+  m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 358.957, z: 0}
 --- !u!1001 &1318745286
 PrefabInstance:
@@ -82569,7 +82569,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 141
+  m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 269.899}
 --- !u!1001 &1786939997
 PrefabInstance:
@@ -86904,7 +86904,7 @@ Transform:
   - {fileID: 82122687}
   - {fileID: 2089112938}
   m_Father: {fileID: 0}
-  m_RootOrder: 265
+  m_RootOrder: 266
   m_LocalEulerAnglesHint: {x: 0, y: 89.994, z: 0}
 --- !u!1001 &1892089448
 PrefabInstance:
@@ -88427,7 +88427,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 121
+  m_RootOrder: 122
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 89.897}
 --- !u!1001 &1935927230
 PrefabInstance:
@@ -94670,7 +94670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 85
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &2080071443 stripped
 GameObject:
