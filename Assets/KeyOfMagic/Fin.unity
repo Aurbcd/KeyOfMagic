@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Cr\xE9dits : \nDungeon Mason (pour l'asset de Bob)\r\nBrokenVector (pour
-    les assets de salles)\nZapsplat  (pour les effets sonores)"
+    les assets de d\xE9cor)\nZapsplat  (pour les effets sonores)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a1675cc4870c8c4590a51a18b49b66e, type: 2}
   m_sharedMaterial: {fileID: 21013722058991348, guid: 5a1675cc4870c8c4590a51a18b49b66e,
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 89
+  m_firstOverflowCharacterIndex: 88
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_margin: {x: 0.19891357, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 983761804}
-    characterCount: 124
+    characterCount: 123
     spriteCount: 0
     spaceCount: 20
     wordCount: 18
